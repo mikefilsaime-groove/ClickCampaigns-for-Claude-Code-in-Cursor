@@ -1,0 +1,21 @@
+# Campaigns Folder
+
+Each campaign gets its own folder with this structure:
+
+```
+campaigns/
+└── [campaign-name]/
+    ├── brand-kit/
+    │   ├── brand-knowledge-base/
+    │   └── brand-style-guide/
+    └── output-assets/
+        ├── html/
+        ├── documents/
+        ├── emails/
+        ├── ads/
+        ├── presentations/
+        ├── pdfs/
+        └── images/
+```
+
+Tell Claude: "Create a campaign called '[your-campaign-name]'"

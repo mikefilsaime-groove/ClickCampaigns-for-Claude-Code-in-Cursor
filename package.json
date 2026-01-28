@@ -1,0 +1,16 @@
+{
+  "name": "clickcampaigns",
+  "version": "1.0.0",
+  "description": "Marketing campaign system for Claude Code",
+  "type": "module",
+  "scripts": {
+    "setup": "npm install",
+    "pexels": "node scripts/pexels-search.js",
+    "generate-image": "node scripts/generate-image.js"
+  },
+  "dependencies": {
+    "pexels": "^1.4.0",
+    "@google/genai": "^0.3.1",
+    "dotenv": "^16.4.0"
+  }
+}

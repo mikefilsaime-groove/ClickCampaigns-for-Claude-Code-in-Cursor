@@ -1,0 +1,23 @@
+# Environment variables (contains API keys)
+.env
+.env.local
+.env.*.local
+
+# Node.js
+node_modules/
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.idea/
+.vscode/
+.obsidian/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
