@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - Scale Plus All-in-One Marketing Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --primary: #8b5cf6;
+      --secondary: #7c3aed;
+      --accent: #06b6d4;
+      --bg: #ffffff;
+      --text: #1e293b;
+      --muted: #faf5ff;
+      --border: #e9d5ff;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .gradient-text { background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 0.875rem 2rem; border-radius: 8px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3); display: inline-block; text-align: center; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4); }
+    .btn-secondary { background: transparent; color: var(--primary); padding: 0.875rem 2rem; border-radius: 8px; font-weight: 600; border: 2px solid var(--border); display: inline-block; text-align: center; }
+    .btn-secondary:hover { border-color: var(--primary); background: var(--muted); }
+    .nav-link { color: var(--text); font-weight: 500; transition: color 0.2s; }
+    .nav-link:hover { color: var(--primary); }
+    .pricing-card { background: white; border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; }
+    .pricing-card.featured { border: 2px solid var(--primary); box-shadow: 0 12px 40px rgba(139, 92, 246, 0.2); position: relative; }
+    .pricing-card.featured::before { content: 'MOST POPULAR'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-lg border-b border-violet-100 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-gradient-to-br from-violet-500 to-cyan-500 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-lg">S+</span>
+        </div>
+        <span class="text-xl font-bold">Scale Plus</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="brand-home.html" class="nav-link">Home</a>
+        <a href="brand-about.html" class="nav-link">About</a>
+        <a href="brand-features.html" class="nav-link">Features</a>
+        <a href="brand-pricing.html" class="nav-link text-violet-600">Pricing</a>
+        <a href="brand-contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hidden md:inline nav-link">Login</a>
+        <a href="sales-page.html" class="btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-12 px-6 bg-gradient-to-b from-violet-50 to-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        Simple, <span class="gradient-text">Transparent Pricing</span>
+      </h1>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+        One plan. Everything included. No hidden fees. No add-ons to buy.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards -->
+  <section class="py-12 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+        <!-- Monthly Plan -->
+        <div class="pricing-card">
+          <h3 class="text-xl font-semibold mb-2">Monthly</h3>
+          <p class="text-slate-600 text-sm mb-6">Full access, billed monthly</p>
+          <div class="mb-6">
+            <span class="text-5xl font-bold">$149</span>
+            <span class="text-slate-500">/month</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-sm">
+              <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+              All 25+ integrated tools
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+              Unlimited funnels & pages
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+              AI-powered features included
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+              Zero transaction fees
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+              Full support & tutorials
+            </li>
+          </ul>
+          <a href="sales-page.html" class="btn-secondary w-full">Choose Monthly</a>
+        </div>
+
+        <!-- Annual Plan (Featured) -->
+        <div class="pricing-card featured">
+          <h3 class="text-xl font-semibold mb-2">Annual</h3>
+          <p class="text-slate-600 text-sm mb-6">Best value — save 70%</p>
+          <div class="mb-2">
+            <span class="text-5xl font-bold text-violet-600">$497</span>
+            <span class="text-slate-500">/year</span>
+          </div>
+          <p class="text-sm text-green-600 font-semibold mb-6">
+            <i data-lucide="tag" class="w-4 h-4 inline mr-1"></i>
+            Save $1,291 vs monthly
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-sm">
+              <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+              All 25+ integrated tools
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+              Unlimited funnels & pages
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+              AI-powered features included
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+              Zero transaction fees
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+              Full support & tutorials
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i data-lucide="check" class="w-5 h-5 text-violet-600"></i>
+              <strong>Priority support</strong>
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <i data-lucide="check" class="w-5 h-5 text-violet-600"></i>
+              <strong>Early access to new features</strong>
+            </li>
+          </ul>
+          <a href="sales-page.html" class="btn-primary w-full">Get Started — $497/year</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Guarantee -->
+  <section class="py-12 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="bg-gradient-to-r from-violet-50 to-cyan-50 border border-violet-200 rounded-2xl p-8">
+        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="shield" class="w-8 h-8 text-yellow-600"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">30-Day Money-Back Guarantee</h3>
+        <p class="text-slate-600">
+          Try Scale Plus risk-free. If you're not completely satisfied within 30 days, we'll refund every penny—no questions asked.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="py-20 px-6 bg-slate-50">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Compare With Alternatives</h2>
+        <p class="text-slate-600">See how much you'll save with Scale Plus</p>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+        <table class="w-full">
+          <thead>
+            <tr class="bg-slate-100">
+              <th class="text-left p-4 font-semibold">Tool Category</th>
+              <th class="text-right p-4 font-semibold text-slate-500">Separate Tools</th>
+              <th class="text-right p-4 font-semibold text-violet-600">Scale Plus</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="p-4">Funnels (ClickFunnels)</td>
+              <td class="p-4 text-right text-slate-500">$147/mo</td>
+              <td class="p-4 text-right text-green-600 font-semibold">Included</td>
+            </tr>
+            <tr>
+              <td class="p-4">Courses (Kajabi)</td>
+              <td class="p-4 text-right text-slate-500">$149/mo</td>
+              <td class="p-4 text-right text-green-600 font-semibold">Included</td>
+            </tr>
+            <tr>
+              <td class="p-4">CRM (GoHighLevel)</td>
+              <td class="p-4 text-right text-slate-500">$297/mo</td>
+              <td class="p-4 text-right text-green-600 font-semibold">Included</td>
+            </tr>
+            <tr>
+              <td class="p-4">Email (ActiveCampaign)</td>
+              <td class="p-4 text-right text-slate-500">$49/mo</td>
+              <td class="p-4 text-right text-green-600 font-semibold">Included</td>
+            </tr>
+            <tr>
+              <td class="p-4">Checkout (SamCart)</td>
+              <td class="p-4 text-right text-slate-500">$99/mo</td>
+              <td class="p-4 text-right text-green-600 font-semibold">Included</td>
+            </tr>
+            <tr>
+              <td class="p-4">Community (Skool)</td>
+              <td class="p-4 text-right text-slate-500">$99/mo</td>
+              <td class="p-4 text-right text-green-600 font-semibold">Included</td>
+            </tr>
+            <tr>
+              <td class="p-4">Webinars + More</td>
+              <td class="p-4 text-right text-slate-500">$160+/mo</td>
+              <td class="p-4 text-right text-green-600 font-semibold">Included</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="bg-slate-100 font-bold">
+              <td class="p-4">Monthly Total</td>
+              <td class="p-4 text-right text-red-600">$1,000+/mo</td>
+              <td class="p-4 text-right text-violet-600">$41.42/mo*</td>
+            </tr>
+          </tfoot>
+        </table>
+        <p class="text-sm text-slate-500 p-4 text-center">*Based on annual plan ($497/year)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+
+      <div class="space-y-6">
+        <div class="border border-slate-200 rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">Is everything really included?</h3>
+          <p class="text-slate-600">Yes. All 25+ tools are included in both plans. No add-ons, no extra fees, no surprises.</p>
+        </div>
+        <div class="border border-slate-200 rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">Can I cancel anytime?</h3>
+          <p class="text-slate-600">Absolutely. Cancel anytime from your account settings. For annual plans, we'll pro-rate your refund within the first 30 days.</p>
+        </div>
+        <div class="border border-slate-200 rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">What happens after my first year on annual?</h3>
+          <p class="text-slate-600">You'll continue at $149/month—still a great value. Or you can renew annually for continued savings.</p>
+        </div>
+        <div class="border border-slate-200 rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">Do you offer refunds?</h3>
+          <p class="text-slate-600">Yes. We offer a full 30-day money-back guarantee. If Scale Plus isn't right for you, just email support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6 bg-gradient-to-r from-violet-600 to-cyan-600 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+      <p class="text-xl text-violet-100 mb-8">
+        Join 100,000+ entrepreneurs running their business with Scale Plus.
+      </p>
+      <a href="sales-page.html" class="inline-flex items-center gap-2 bg-white text-violet-600 px-8 py-4 rounded-lg font-semibold hover:bg-violet-50 transition-colors">
+        Start Your Free Trial
+        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white py-16 px-6">
+    <div class="max-w-6xl mx-auto text-center text-slate-400 text-sm">
+      <p>© 2026 Scale Plus. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+</body>
+</html>

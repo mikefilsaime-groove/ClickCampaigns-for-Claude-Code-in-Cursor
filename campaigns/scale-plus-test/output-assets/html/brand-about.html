@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Scale Plus - Our Story & Mission</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --primary: #8b5cf6;
+      --secondary: #7c3aed;
+      --accent: #06b6d4;
+      --bg: #ffffff;
+      --text: #1e293b;
+      --muted: #faf5ff;
+      --border: #e9d5ff;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .gradient-text { background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 0.875rem 2rem; border-radius: 8px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4); }
+    .nav-link { color: var(--text); font-weight: 500; transition: color 0.2s; }
+    .nav-link:hover { color: var(--primary); }
+    .value-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-lg border-b border-violet-100 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-gradient-to-br from-violet-500 to-cyan-500 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-lg">S+</span>
+        </div>
+        <span class="text-xl font-bold">Scale Plus</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="brand-home.html" class="nav-link">Home</a>
+        <a href="brand-about.html" class="nav-link text-violet-600">About</a>
+        <a href="brand-features.html" class="nav-link">Features</a>
+        <a href="brand-pricing.html" class="nav-link">Pricing</a>
+        <a href="brand-contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hidden md:inline nav-link">Login</a>
+        <a href="sales-page.html" class="btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-violet-50 to-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        Built by Entrepreneurs, <span class="gradient-text">for Entrepreneurs</span>
+      </h1>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+        We've spent 20+ years building software for millions of online business owners. Scale Plus is the culmination of everything we've learned.
+      </p>
+    </div>
+  </section>
+
+  <!-- The Story -->
+  <section class="py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-5 gap-12 items-center mb-20">
+        <div class="md:col-span-2">
+          <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=600"
+               alt="Mike Filsaime" class="rounded-2xl shadow-lg">
+        </div>
+        <div class="md:col-span-3">
+          <h2 class="text-3xl font-bold mb-4">Our Story</h2>
+          <p class="text-slate-600 mb-4">
+            I'm Mike Filsaime. Over the past two decades, I've created software used by millions of people—Groove.cm, Kartra, WebinarJam, EverWebinar, and Courses.gg.
+          </p>
+          <p class="text-slate-600 mb-4">
+            I've been on both sides of this industry. I've built the tools, and I've used the tools. I know what works and what doesn't.
+          </p>
+          <p class="text-slate-600">
+            Scale Plus was born from a simple frustration: <strong>most "all-in-one" platforms aren't really all-in-one.</strong> They're missing pieces, charging for add-ons, or priced so high only enterprises can afford them. We set out to change that.
+          </p>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold mb-12 text-center">Our Journey</h2>
+        <div class="space-y-8">
+          <div class="flex gap-6">
+            <div class="w-20 flex-shrink-0 text-right">
+              <span class="text-violet-600 font-bold">2004</span>
+            </div>
+            <div class="w-4 h-4 bg-violet-600 rounded-full mt-1.5 flex-shrink-0"></div>
+            <div>
+              <h3 class="font-semibold text-lg">The Beginning</h3>
+              <p class="text-slate-600">Started building marketing tools for online entrepreneurs, learning what they truly need.</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="w-20 flex-shrink-0 text-right">
+              <span class="text-violet-600 font-bold">2014</span>
+            </div>
+            <div class="w-4 h-4 bg-violet-600 rounded-full mt-1.5 flex-shrink-0"></div>
+            <div>
+              <h3 class="font-semibold text-lg">Kartra & WebinarJam</h3>
+              <p class="text-slate-600">Launched industry-leading tools that transformed how entrepreneurs run webinars and marketing.</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="w-20 flex-shrink-0 text-right">
+              <span class="text-violet-600 font-bold">2020</span>
+            </div>
+            <div class="w-4 h-4 bg-violet-600 rounded-full mt-1.5 flex-shrink-0"></div>
+            <div>
+              <h3 class="font-semibold text-lg">Groove.cm Era</h3>
+              <p class="text-slate-600">Built the foundation for true all-in-one marketing—100,000+ users joined the platform.</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="w-20 flex-shrink-0 text-right">
+              <span class="text-cyan-600 font-bold">2025</span>
+            </div>
+            <div class="w-4 h-4 bg-cyan-600 rounded-full mt-1.5 flex-shrink-0"></div>
+            <div>
+              <h3 class="font-semibold text-lg">Scale Plus Launches</h3>
+              <p class="text-slate-600">Combined 20+ years of learning into one AI-powered platform with 25+ integrated tools.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Values -->
+  <section class="py-20 px-6 bg-gradient-to-b from-violet-50 to-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Mission & Values</h2>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          We believe every entrepreneur deserves access to professional tools without breaking the bank.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="value-card text-center">
+          <div class="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="heart" class="w-8 h-8 text-violet-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Customer-First</h3>
+          <p class="text-slate-600">Every decision we make starts with "How does this help our customers?" Not shareholders. Not investors. Customers.</p>
+        </div>
+
+        <div class="value-card text-center">
+          <div class="w-16 h-16 bg-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="puzzle" class="w-8 h-8 text-cyan-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">True Integration</h3>
+          <p class="text-slate-600">We don't just bundle tools. We build them to work together seamlessly because they were designed together from day one.</p>
+        </div>
+
+        <div class="value-card text-center">
+          <div class="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="wallet" class="w-8 h-8 text-violet-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Accessible Pricing</h3>
+          <p class="text-slate-600">Professional tools shouldn't require enterprise budgets. We keep prices low so everyone can compete.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-violet-600 mb-2">100K+</div>
+          <p class="text-slate-600">Active Users</p>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-violet-600 mb-2">20+</div>
+          <p class="text-slate-600">Years Experience</p>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-violet-600 mb-2">25+</div>
+          <p class="text-slate-600">Integrated Tools</p>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-violet-600 mb-2">$100M+</div>
+          <p class="text-slate-600">Products Sold</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6 bg-gradient-to-r from-violet-600 to-cyan-600 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Join Our Community</h2>
+      <p class="text-xl text-violet-100 mb-8">
+        Become part of 100,000+ entrepreneurs building their dreams with Scale Plus.
+      </p>
+      <a href="sales-page.html" class="inline-flex items-center gap-2 bg-white text-violet-600 px-8 py-4 rounded-lg font-semibold hover:bg-violet-50 transition-colors">
+        Get Started Today
+        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-violet-500 to-cyan-500 rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-lg">S+</span>
+            </div>
+            <span class="text-xl font-bold">Scale Plus</span>
+          </div>
+          <p class="text-slate-400">The all-in-one platform for running your entire online business.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Product</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="brand-features.html" class="hover:text-white">Features</a></li>
+            <li><a href="brand-pricing.html" class="hover:text-white">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Company</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="brand-about.html" class="hover:text-white">About</a></li>
+            <li><a href="brand-contact.html" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Support</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#" class="hover:text-white">Help Center</a></li>
+            <li><a href="#" class="hover:text-white">Documentation</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-800 pt-8 text-center text-slate-400 text-sm">
+        <p>© 2026 Scale Plus. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+</body>
+</html>

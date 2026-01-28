@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scale Plus - The All-in-One AI-Powered Marketing Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --primary: #8b5cf6;
+      --secondary: #7c3aed;
+      --accent: #06b6d4;
+      --bg: #ffffff;
+      --text: #1e293b;
+      --muted: #faf5ff;
+      --border: #e9d5ff;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--primary);
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      border: 2px solid var(--border);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--primary); background: var(--muted); }
+
+    .feature-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(139, 92, 246, 0.15);
+    }
+
+    .hero-gradient {
+      background: linear-gradient(180deg, var(--muted) 0%, white 100%);
+    }
+
+    .nav-link {
+      color: var(--text);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--primary); }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-lg border-b border-violet-100 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-gradient-to-br from-violet-500 to-cyan-500 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-lg">S+</span>
+        </div>
+        <span class="text-xl font-bold">Scale Plus</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="brand-home.html" class="nav-link text-violet-600">Home</a>
+        <a href="brand-about.html" class="nav-link">About</a>
+        <a href="brand-features.html" class="nav-link">Features</a>
+        <a href="brand-pricing.html" class="nav-link">Pricing</a>
+        <a href="brand-contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hidden md:inline nav-link">Login</a>
+        <a href="sales-page.html" class="btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-gradient pt-32 pb-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-violet-100 rounded-full text-violet-700 text-sm font-medium mb-6">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            AI-Powered Marketing Suite
+          </div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Run Your <span class="gradient-text">Entire Business</span> From One Platform
+          </h1>
+          <p class="text-xl text-slate-600 mb-8">
+            25+ integrated tools for funnels, email, courses, CRM, webinars, and AI—all working together seamlessly. One login. One price.
+          </p>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <a href="sales-page.html" class="btn-primary inline-flex items-center gap-2">
+              Start Free Trial
+              <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+            <a href="#demo" class="btn-secondary inline-flex items-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5"></i>
+              Watch Demo
+            </a>
+          </div>
+          <div class="flex items-center gap-6 text-sm text-slate-500">
+            <span class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>
+              No credit card required
+            </span>
+            <span class="flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i>
+              14-day free trial
+            </span>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-cyan-500/20 rounded-3xl blur-3xl"></div>
+          <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
+               alt="Scale Plus Dashboard"
+               class="relative rounded-2xl shadow-2xl border border-violet-100">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos Section -->
+  <section class="py-12 px-6 border-y border-violet-100">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-sm text-slate-500 mb-6">Trusted by 100,000+ entrepreneurs worldwide</p>
+      <div class="flex flex-wrap justify-center items-center gap-12 opacity-50">
+        <span class="text-2xl font-bold text-slate-400">Groove</span>
+        <span class="text-2xl font-bold text-slate-400">Kartra</span>
+        <span class="text-2xl font-bold text-slate-400">WebinarJam</span>
+        <span class="text-2xl font-bold text-slate-400">EverWebinar</span>
+        <span class="text-2xl font-bold text-slate-400">Courses.gg</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Overview -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Everything You Need. <span class="gradient-text">Nothing You Don't.</span></h2>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          Stop paying for 10+ separate tools. Get everything in one integrated platform.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="feature-card">
+          <div class="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="layout" class="w-6 h-6 text-violet-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Funnels & Pages</h3>
+          <p class="text-slate-600">Build high-converting funnels and landing pages with drag-and-drop simplicity.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="mail" class="w-6 h-6 text-cyan-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Email Marketing</h3>
+          <p class="text-slate-600">Powerful automation, segmentation, and sequences that convert subscribers to buyers.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="graduation-cap" class="w-6 h-6 text-violet-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Courses & Memberships</h3>
+          <p class="text-slate-600">Host unlimited courses and build thriving membership communities.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="bot" class="w-6 h-6 text-cyan-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">AI-Powered Tools</h3>
+          <p class="text-slate-600">Let AI create campaigns, chatbots, and content that matches your brand voice.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="users" class="w-6 h-6 text-violet-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">CRM & Pipeline</h3>
+          <p class="text-slate-600">Track every lead, manage deals, and automate follow-up with powerful CRM tools.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="video" class="w-6 h-6 text-cyan-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Webinars & Video</h3>
+          <p class="text-slate-600">Run live or automated webinars and host videos with built-in CTAs.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="brand-features.html" class="btn-secondary inline-flex items-center gap-2">
+          View All 25+ Features
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="py-20 px-6 bg-gradient-to-b from-violet-50 to-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Loved by Entrepreneurs Worldwide</h2>
+        <p class="text-xl text-slate-600">See why 100,000+ businesses trust Scale Plus</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 shadow-lg shadow-violet-100">
+          <div class="flex items-center gap-1 text-yellow-400 mb-4">
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          </div>
+          <p class="text-slate-600 mb-6">"Scale Plus replaced 8 different tools for us. Our monthly software costs dropped from $800 to under $50. Game changer."</p>
+          <div class="flex items-center gap-3">
+            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <p class="font-semibold">Sarah Johnson</p>
+              <p class="text-sm text-slate-500">Course Creator</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-lg shadow-violet-100">
+          <div class="flex items-center gap-1 text-yellow-400 mb-4">
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          </div>
+          <p class="text-slate-600 mb-6">"The AI tools alone are worth the price. ClickCampaigns creates better ad copy than my $5k/month agency did."</p>
+          <div class="flex items-center gap-3">
+            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <p class="font-semibold">Marcus Chen</p>
+              <p class="text-sm text-slate-500">Agency Owner</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-lg shadow-violet-100">
+          <div class="flex items-center gap-1 text-yellow-400 mb-4">
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+          </div>
+          <p class="text-slate-600 mb-6">"Finally, everything just works together. No more Zapier nightmares. No more broken integrations at 2am."</p>
+          <div class="flex items-center gap-3">
+            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <p class="font-semibold">Emily Rodriguez</p>
+              <p class="text-sm text-slate-500">Business Coach</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Simplify Your Business?</h2>
+      <p class="text-xl text-slate-600 mb-8">
+        Join 100,000+ entrepreneurs who've already made the switch. Start your free trial today.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="sales-page.html" class="btn-primary inline-flex items-center gap-2">
+          Start Your Free Trial
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <a href="brand-pricing.html" class="btn-secondary">
+          View Pricing
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-violet-500 to-cyan-500 rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-lg">S+</span>
+            </div>
+            <span class="text-xl font-bold">Scale Plus</span>
+          </div>
+          <p class="text-slate-400">The all-in-one platform for running your entire online business.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Product</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="brand-features.html" class="hover:text-white">Features</a></li>
+            <li><a href="brand-pricing.html" class="hover:text-white">Pricing</a></li>
+            <li><a href="#" class="hover:text-white">Integrations</a></li>
+            <li><a href="#" class="hover:text-white">Updates</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Company</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="brand-about.html" class="hover:text-white">About</a></li>
+            <li><a href="#" class="hover:text-white">Careers</a></li>
+            <li><a href="brand-contact.html" class="hover:text-white">Contact</a></li>
+            <li><a href="#" class="hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Support</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#" class="hover:text-white">Help Center</a></li>
+            <li><a href="#" class="hover:text-white">Documentation</a></li>
+            <li><a href="#" class="hover:text-white">API Reference</a></li>
+            <li><a href="#" class="hover:text-white">Status</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-slate-400 text-sm">© 2026 Scale Plus. All rights reserved.</p>
+        <div class="flex gap-6 text-sm text-slate-400">
+          <a href="#" class="hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-white">Terms of Service</a>
+          <a href="#" class="hover:text-white">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+</body>
+</html>

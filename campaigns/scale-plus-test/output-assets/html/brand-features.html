@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features - Scale Plus All-in-One Marketing Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --primary: #8b5cf6;
+      --secondary: #7c3aed;
+      --accent: #06b6d4;
+      --bg: #ffffff;
+      --text: #1e293b;
+      --muted: #faf5ff;
+      --border: #e9d5ff;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .gradient-text { background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 0.875rem 2rem; border-radius: 8px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4); }
+    .nav-link { color: var(--text); font-weight: 500; transition: color 0.2s; }
+    .nav-link:hover { color: var(--primary); }
+    .feature-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; transition: transform 0.2s, box-shadow 0.2s; }
+    .feature-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(139, 92, 246, 0.1); }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-lg border-b border-violet-100 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-gradient-to-br from-violet-500 to-cyan-500 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-lg">S+</span>
+        </div>
+        <span class="text-xl font-bold">Scale Plus</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="brand-home.html" class="nav-link">Home</a>
+        <a href="brand-about.html" class="nav-link">About</a>
+        <a href="brand-features.html" class="nav-link text-violet-600">Features</a>
+        <a href="brand-pricing.html" class="nav-link">Pricing</a>
+        <a href="brand-contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hidden md:inline nav-link">Login</a>
+        <a href="sales-page.html" class="btn-primary">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-violet-50 to-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        <span class="gradient-text">25+ Tools</span> in One Platform
+      </h1>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+        Everything you need to build, market, and scale your online business—without the tech headaches.
+      </p>
+    </div>
+  </section>
+
+  <!-- Marketing Suite -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-violet-100 rounded-full text-violet-700 text-sm font-medium mb-4">
+          <i data-lucide="layout" class="w-4 h-4"></i>
+          Marketing Suite
+        </div>
+        <h2 class="text-3xl font-bold mb-4">Groove.cm Foundation</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">The complete marketing foundation that powers your entire business.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="feature-card">
+          <i data-lucide="layout-template" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">GrooveFunnels</h3>
+          <p class="text-slate-600 text-sm">Build complete sales funnels with landing pages, upsells, downsells, and order bumps.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="file-text" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">GroovePages</h3>
+          <p class="text-slate-600 text-sm">Drag-and-drop website builder with professional templates and built-in SEO.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="shopping-cart" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">GrooveSell</h3>
+          <p class="text-slate-600 text-sm">Complete checkout system with zero transaction fees. Maximize every sale.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="mail" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">GrooveMail</h3>
+          <p class="text-slate-600 text-sm">Email marketing with automation, tagging, segmentation, and sequences.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="graduation-cap" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">GrooveMember</h3>
+          <p class="text-slate-600 text-sm">Host membership sites and online courses with drip content and student management.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="users" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">GrooveAffiliate</h3>
+          <p class="text-slate-600 text-sm">Launch your own affiliate program with tracking and automated payouts.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="video" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">GrooveWebinar</h3>
+          <p class="text-slate-600 text-sm">Run automated webinars 24/7. Record once, sell forever.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="play-circle" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">GrooveVideo</h3>
+          <p class="text-slate-600 text-sm">Host videos with custom players, in-video CTAs, and engagement tracking.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="rss" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">GrooveBlog</h3>
+          <p class="text-slate-600 text-sm">SEO-friendly blogging that integrates with your entire ecosystem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Tools -->
+  <section class="py-20 px-6 bg-gradient-to-b from-white to-cyan-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-cyan-100 rounded-full text-cyan-700 text-sm font-medium mb-4">
+          <i data-lucide="bot" class="w-4 h-4"></i>
+          AI-Powered Tools
+        </div>
+        <h2 class="text-3xl font-bold mb-4">Your Unfair Advantage</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">AI tools that save hours of work and give you enterprise-level capabilities.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="feature-card border-cyan-200">
+          <i data-lucide="sparkles" class="w-8 h-8 text-cyan-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">ClickCampaigns.ai</h3>
+          <p class="text-slate-600 text-sm">AI builds complete advertising and email campaigns from scratch. Launch in hours.</p>
+        </div>
+        <div class="feature-card border-cyan-200">
+          <i data-lucide="message-circle" class="w-8 h-8 text-cyan-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">ChatBaser.ai</h3>
+          <p class="text-slate-600 text-sm">Train AI chatbots on your business content. Answer questions 24/7 automatically.</p>
+        </div>
+        <div class="feature-card border-cyan-200">
+          <i data-lucide="palette" class="w-8 h-8 text-cyan-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">BrandBaser</h3>
+          <p class="text-slate-600 text-sm">Generate consistent, on-brand marketing content aligned with your voice.</p>
+        </div>
+        <div class="feature-card border-cyan-200">
+          <i data-lucide="pen-tool" class="w-8 h-8 text-cyan-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">HighTicketGPT</h3>
+          <p class="text-slate-600 text-sm">Sales copywriting for high-ticket offers using proven persuasion frameworks.</p>
+        </div>
+        <div class="feature-card border-cyan-200">
+          <i data-lucide="cpu" class="w-8 h-8 text-cyan-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">ScaleGPT</h3>
+          <p class="text-slate-600 text-sm">Build custom AI assistants for your business. Automate support and sales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRM & Business -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-violet-100 rounded-full text-violet-700 text-sm font-medium mb-4">
+          <i data-lucide="briefcase" class="w-4 h-4"></i>
+          Business Operations
+        </div>
+        <h2 class="text-3xl font-bold mb-4">CRM & Operations</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">Everything you need to manage clients, leads, and day-to-day operations.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="feature-card">
+          <i data-lucide="user-check" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">PipeLeads.ai CRM</h3>
+          <p class="text-slate-600 text-sm">Full sales pipeline management. Track leads, manage deals, automate follow-up.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="search" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">LeadFinder</h3>
+          <p class="text-slate-600 text-sm">Find ideal prospects in a massive database. AI writes your outreach.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="receipt" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">Invoicer</h3>
+          <p class="text-slate-600 text-sm">Professional invoicing and payment automation with major payment processors.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="calendar" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">CalendarBug</h3>
+          <p class="text-slate-600 text-sm">Online scheduling that looks professional and reduces no-shows.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="git-branch" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">FunnelMapper.io</h3>
+          <p class="text-slate-600 text-sm">Visually plan and optimize your entire customer journey.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="help-circle" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">QuizFunnels</h3>
+          <p class="text-slate-600 text-sm">Interactive quizzes that capture and qualify leads automatically.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="users" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">Courses.gg</h3>
+          <p class="text-slate-600 text-sm">Unlimited courses and communities—Scale Plus members pay zero platform fees.</p>
+        </div>
+        <div class="feature-card">
+          <i data-lucide="globe" class="w-8 h-8 text-violet-600 mb-3"></i>
+          <h3 class="font-semibold text-lg mb-2">AffiliatePages</h3>
+          <p class="text-slate-600 text-sm">Build affiliate marketing sites with AI-generated content and review blocks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6 bg-gradient-to-r from-violet-600 to-cyan-600 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Try All 25+ Features?</h2>
+      <p class="text-xl text-violet-100 mb-8">
+        Start your free trial and experience the power of a true all-in-one platform.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="sales-page.html" class="inline-flex items-center gap-2 bg-white text-violet-600 px-8 py-4 rounded-lg font-semibold hover:bg-violet-50 transition-colors">
+          Start Free Trial
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <a href="brand-pricing.html" class="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+          View Pricing
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="border-t border-slate-800 pt-8 text-center text-slate-400 text-sm">
+        <p>© 2026 Scale Plus. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+</body>
+</html>

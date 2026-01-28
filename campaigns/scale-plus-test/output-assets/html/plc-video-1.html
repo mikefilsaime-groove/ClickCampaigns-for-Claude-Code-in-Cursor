@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training #1: The Duct-Tape Tech Stack Problem | Scale Plus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --bg-dark: #0c0a09;
+      --bg-section: #1c1917;
+      --accent-red: #ef4444;
+      --accent-orange: #f97316;
+      --accent-green: #22c55e;
+      --accent-blue: #3b82f6;
+      --text-primary: #fafaf9;
+      --text-muted: #a8a29e;
+      --border: #292524;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: var(--sans); background: var(--bg-dark); color: var(--text-primary); line-height: 1.6; }
+    .font-serif { font-family: var(--serif); }
+
+    .progress-bar { background: linear-gradient(90deg, var(--accent-orange), var(--accent-red)); }
+    .video-container {
+      background: #000;
+      aspect-ratio: 16/9;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+    }
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1c1917 0%, #0c0a09 100%);
+    }
+    .play-button {
+      width: 80px;
+      height: 80px;
+      background: var(--accent-red);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 40px rgba(239, 68, 68, 0.4);
+    }
+    .play-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 60px rgba(239, 68, 68, 0.6);
+    }
+    .cta-button {
+      background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
+      color: white;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(239, 68, 68, 0.3);
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(239, 68, 68, 0.4);
+    }
+    .nav-card {
+      background: var(--bg-section);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .nav-card:hover { border-color: var(--accent-orange); transform: translateY(-2px); }
+    .nav-card.active { border-color: var(--accent-red); border-width: 2px; }
+    .nav-card.locked { opacity: 0.5; pointer-events: none; }
+  </style>
+</head>
+<body>
+
+  <!-- Progress Header -->
+  <header class="border-b border-stone-800">
+    <div class="max-w-5xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-sm text-stone-400">Training Progress</span>
+        <span class="text-sm font-semibold text-orange-500">Video 1 of 4</span>
+      </div>
+      <div class="h-2 bg-stone-800 rounded-full overflow-hidden">
+        <div class="progress-bar h-full rounded-full" style="width: 25%"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+
+    <!-- Video Section -->
+    <section class="mb-12">
+      <div class="text-center mb-8">
+        <span class="inline-block px-4 py-1.5 bg-red-500/10 border border-red-500/30 text-red-500 text-sm font-semibold rounded-full mb-4">
+          TRAINING #1
+        </span>
+        <h1 class="font-serif text-3xl md:text-4xl lg:text-5xl mb-4">
+          The <span class="text-red-500">$12,000/Year</span> Problem Nobody Talks About
+        </h1>
+        <p class="text-xl text-stone-400 max-w-2xl mx-auto">
+          Why your "tech stack" is secretly bleeding you dry—and it's not just the money.
+        </p>
+      </div>
+
+      <!-- Video Player -->
+      <div class="video-container mb-8">
+        <div class="video-placeholder">
+          <div class="play-button">
+            <i data-lucide="play" class="w-8 h-8 text-white ml-1"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Description -->
+      <div class="bg-stone-900/50 border border-stone-800 rounded-xl p-6 mb-8">
+        <h3 class="font-semibold text-lg mb-3">In This Video, You'll Discover:</h3>
+        <ul class="space-y-3 text-stone-300">
+          <li class="flex items-start gap-3">
+            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+            <span>Why 97% of entrepreneurs are overpaying for software that doesn't even work together</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+            <span>The hidden costs beyond money: time, energy, growth opportunities, and your sanity</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+            <span>Why the software industry WANTS you fragmented (it's their business model)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+            <span>A preview of the solution I've spent 20 years building...</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="text-center mb-12">
+        <p class="text-stone-400 mb-4">Finished watching? Continue to the next training:</p>
+        <a href="plc-video-2.html" class="cta-button">
+          WATCH VIDEO #2 NOW
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Navigation Cards -->
+    <section>
+      <h2 class="text-xl font-semibold mb-6 text-center">Your Training Roadmap</h2>
+      <div class="grid md:grid-cols-4 gap-4">
+
+        <div class="nav-card active">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-sm font-bold">1</div>
+            <span class="text-sm font-semibold text-red-500">NOW WATCHING</span>
+          </div>
+          <h3 class="font-semibold mb-1">The Problem</h3>
+          <p class="text-sm text-stone-400">Why your tech stack is bleeding you dry</p>
+        </div>
+
+        <a href="plc-video-2.html" class="nav-card">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 bg-stone-700 rounded-full flex items-center justify-center text-sm font-bold">2</div>
+            <span class="text-sm text-stone-500">UP NEXT</span>
+          </div>
+          <h3 class="font-semibold mb-1">The Opportunity</h3>
+          <p class="text-sm text-stone-400">The new model for 2026</p>
+        </a>
+
+        <div class="nav-card locked">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 bg-stone-700 rounded-full flex items-center justify-center text-sm font-bold">
+              <i data-lucide="lock" class="w-4 h-4"></i>
+            </div>
+            <span class="text-sm text-stone-500">LOCKED</span>
+          </div>
+          <h3 class="font-semibold mb-1">The Solution</h3>
+          <p class="text-sm text-stone-400">Introducing Scale Plus</p>
+        </div>
+
+        <div class="nav-card locked">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 bg-stone-700 rounded-full flex items-center justify-center text-sm font-bold">
+              <i data-lucide="lock" class="w-4 h-4"></i>
+            </div>
+            <span class="text-sm text-stone-500">LOCKED</span>
+          </div>
+          <h3 class="font-semibold mb-1">The Offer</h3>
+          <p class="text-sm text-stone-400">Special 2026 pricing revealed</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 px-6 border-t border-stone-800 mt-12">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-stone-500">
+      <div>© 2026 Scale Plus. All rights reserved.</div>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-stone-300">Privacy</a>
+        <a href="#" class="hover:text-stone-300">Terms</a>
+        <a href="#" class="hover:text-stone-300">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+</body>
+</html>
