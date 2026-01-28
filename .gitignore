@@ -21,3 +21,9 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Workspace temp files
+campaigns/*/output-assets/presentations/workspace/node_modules/
+campaigns/*/output-assets/presentations/workspace/create-slides.cjs
+campaigns/*/output-assets/presentations/workspace/package.json
+campaigns/*/output-assets/presentations/workspace/package-lock.json
