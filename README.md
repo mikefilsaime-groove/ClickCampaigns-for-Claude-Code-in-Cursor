@@ -104,6 +104,21 @@ Copy these to your campaign's `brand-kit/` folder and fill them out. Or describe
 
 3. **Open in Claude Code or Cursor**
 
+## Previewing HTML Files
+
+To preview your generated HTML pages locally:
+
+**Option 1: Live Server Extension (Recommended)**
+Install the "Live Server" extension by ritwickdey in VS Code/Cursor. Right-click any HTML file → "Open with Live Server" for auto-refresh on save.
+
+**Option 2: Node.js Server**
+```bash
+npx serve campaigns/your-campaign-name/output-assets/html
+```
+
+**Option 3: Open Directly**
+Just double-click the HTML file in Finder—works fine since all files are self-contained.
+
 ## API Keys (Optional but Recommended)
 
 | Service | Purpose | Get Key |
