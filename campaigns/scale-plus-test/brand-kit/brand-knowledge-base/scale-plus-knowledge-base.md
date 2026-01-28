@@ -7,7 +7,7 @@ In the past, creating software was our passion, but it was costly. A good qualit
 
 What we went with was outsourcing developers in the Philippines or India or Eastern Europe for about 75% off what it would cost for a US developer. But you are also getting 75% less quality. The trade-off wasn't worth it, and so our vision to create quality software fast ended up being poor quality software very slow.
 
-### The Inciting Event-
+### The Inciting Event
 AI coding came around, and with my background in programming in the past and my partner Matt Zeralta's background, we have the ability to use AI coding ourselves and prototype applications very fast. We can do in sometimes hours what would take months and sometimes days what would take a year. And we are now able to create quality software on top of that. Our entire development team is now small, with our other actual programmers now adopting AI development. We are writing quality code, beautiful applications that's allowing us to rethink how we can do software.
 
 ### Life Today
