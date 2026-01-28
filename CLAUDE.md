@@ -498,25 +498,48 @@ Use the chosen design era patterns (Classic or Modern) but swap in the user's br
 
 ## Production Skills
 
-When building assets, **always invoke these Claude Code skills** for production-quality output:
+Production skills ensure high-quality output for final deliverables. These skills are available:
+- **In this repo** at `skills-and-instructions/skills/production/` (works with any AI agent)
+- **Via Claude Code CLI** as slash commands (Claude Code only)
 
-| Asset Type | Skill to Use | What It Does |
-|------------|--------------|--------------|
-| **HTML pages** | `/frontend-design` | Professional design, responsive layouts, polished UI |
-| **PowerPoint decks** | `/pptx` | Properly formatted .pptx files with layouts and styling |
-| **PDF documents** | `/pdf` | Professional PDF generation with formatting |
-| **Word documents** | `/docx` | Editable .docx files with proper structure |
+| Asset Type | Repo Skill File | Claude Code Command |
+|------------|-----------------|---------------------|
+| **HTML pages** | `production/frontend-design/SKILL.md` | `/frontend-design` |
+| **PowerPoint decks** | `production/pptx/SKILL.md` | `/pptx` |
+| **PDF documents** | `production/pdf/SKILL.md` | `/pdf` |
+| **Word documents** | `production/docx/SKILL.md` | `/docx` |
 
-**How these work together:**
-- `skills-and-instructions/` = Marketing expertise (WHAT to write - VSL structure, email sequences, persuasion frameworks)
-- Claude Code skills = Production quality (HOW to output it - well-designed HTML, properly formatted files)
+### For Claude Code CLI Users
+Invoke the slash commands directly (e.g., `/frontend-design`) - they have full tooling support.
 
-**Example workflow for a sales page:**
-1. Read the relevant skill file from `skills-and-instructions/skills/` for copywriting guidance
+### For Cursor, Gemini CLI, or Other AI Agents
+Read the SKILL.md file before creating assets:
+```
+# Before creating HTML pages:
+Read: skills-and-instructions/skills/production/frontend-design/SKILL.md
+
+# Before creating PowerPoint:
+Read: skills-and-instructions/skills/production/pptx/SKILL.md
+(Also read: pptx/html2pptx.md for the workflow)
+
+# Before creating PDFs:
+Read: skills-and-instructions/skills/production/pdf/SKILL.md
+
+# Before creating Word docs:
+Read: skills-and-instructions/skills/production/docx/SKILL.md
+```
+
+### How Skills Work Together
+- **Marketing skills** (`skills/funnels/`, `skills/tasks/`) = WHAT to write (VSL structure, email sequences, persuasion frameworks)
+- **Production skills** (`skills/production/`) = HOW to output it (well-designed HTML, properly formatted files)
+
+### Example Workflow for a Sales Page
+1. Read the marketing skill: `skills/funnels/vsl-hybrid/SKILL.md`
 2. Write the copy following direct response principles
-3. Invoke `/frontend-design` to create production-quality HTML
+3. Read the production skill: `skills/production/frontend-design/SKILL.md`
+4. Create production-quality HTML following the design guidelines
 
-Always use the appropriate production skill when creating final deliverables.
+Always reference the appropriate production skill when creating final deliverables.
 
 ---
 
