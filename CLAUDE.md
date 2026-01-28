@@ -111,11 +111,13 @@ Funnel pages follow **direct response design principles** that are proven to con
 - High-contrast CTA buttons (red, orange, green)
 - Urgency elements and scarcity indicators
 - Specific layouts optimized for conversion
-- ClickFunnels-style visual patterns
+- Proven visual patterns
 
 Corporate brand guidelines often conflict with these principles (muted colors, subtle CTAs, "on-brand" aesthetics over conversion).
 
-**Always ask:**
+**Always ask TWO questions:**
+
+#### Question 1: Styling Approach
 
 > "For your funnel pages, I recommend using **direct response style** (proven conversion patterns) rather than your brand style guide. The copy will still reflect your brand voice.
 >
@@ -129,6 +131,23 @@ Corporate brand guidelines often conflict with these principles (muted colors, s
 | **Direct response style** | Maximum conversions, proven funnel layouts |
 | **Full brand style guide** | Enterprise clients, brand consistency requirements |
 | **DR with brand hints** | Balance of conversion + brand recognition |
+
+#### Question 2: Design Era (if user chose option 1 or 3)
+
+> "What design aesthetic do you prefer?
+> 1. **Classic ClickFunnels** - Traditional direct response look (white backgrounds, bold CTAs, yellow highlights, urgency bars, 2015-2020 aesthetic)
+> 2. **Modern Premium** - Contemporary aesthetic (dark or light themes, elegant typography, subtle gradients, refined spacing, 2024+ aesthetic)"
+
+| Choice | Best For |
+|--------|----------|
+| **Classic ClickFunnels** | Mass market, low-ticket offers, aggressive urgency, proven traditional DR |
+| **Modern Premium** | Higher-ticket, SaaS, professional audiences, sophisticated brands |
+
+#### Question 3: Theme Preference (if user chose Modern Premium)
+
+> "Do you prefer dark or light theme?
+> 1. **Dark theme** (dark backgrounds, light text - more dramatic)
+> 2. **Light theme** (light backgrounds, dark text - more accessible)"
 
 ---
 
@@ -436,14 +455,44 @@ All deliverables are:
 <i data-lucide="star" class="w-4 h-4 text-yellow-400"></i>
 ```
 
-### Direct Response Colors (for funnel pages)
-Used when user chooses "Direct response style" or "DR with brand hints" (see [Funnel Style vs Brand Style](#funnel-style-vs-brand-style)):
-- **CTA Buttons:** Red (#E53E3E), Orange (#ED8936), Green (#38A169)
-- **Backgrounds:** White (#FFFFFF), Light gray (#F7FAFC)
-- **Headlines:** Dark (#1A202C)
-- **Urgency highlights:** Yellow (#ECC94B)
+### Funnel Design Specifications
 
-For "DR with brand hints", use these patterns but swap in the user's brand colors/fonts.
+Used when user chooses "Direct response style" or "DR with brand hints".
+
+#### Classic ClickFunnels Style
+
+The traditional 2015-2020 direct response look:
+
+| Element | Specification |
+|---------|---------------|
+| **Backgrounds** | White (#FFFFFF), Light gray (#F7FAFC) |
+| **CTA Buttons** | Bright red (#E53E3E), Orange (#ED8936), Green (#38A169) |
+| **Headlines** | Dark (#1A202C), bold, often ALL CAPS |
+| **Urgency highlights** | Yellow (#ECC94B) bars and backgrounds |
+| **Typography** | Bold sans-serif (Impact-style headers), clean body text |
+| **Layout** | Stacked sections, thick borders, boxed elements |
+| **Elements** | "As Seen On" logo bars, countdown timers prominent, trust badges |
+| **Feel** | High-energy, infomercial urgency, aggressive conversion focus |
+
+#### Modern Premium Style
+
+The contemporary 2024+ aesthetic:
+
+| Element | Specification |
+|---------|---------------|
+| **Dark Theme** | Dark backgrounds (#0c0a09, #1c1917), light text (#fafaf9) |
+| **Light Theme** | White/cream backgrounds, dark text (#1e293b) |
+| **CTA Buttons** | Gradient buttons with subtle glow/shadow effects |
+| **Headlines** | Elegant serif + clean sans-serif combo (e.g., Instrument Serif + DM Sans) |
+| **Urgency** | Subtle, integrated into design (not screaming) |
+| **Typography** | Refined font pairing, generous line-height |
+| **Layout** | Cards with soft shadows, generous whitespace, fluid sections |
+| **Elements** | Subtle animations, refined icons (Lucide), modern trust indicators |
+| **Feel** | Premium SaaS, sophisticated, professional |
+
+#### For "DR with brand hints"
+
+Use the chosen design era patterns (Classic or Modern) but swap in the user's brand colors and fonts.
 
 ---
 

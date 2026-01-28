@@ -211,3 +211,43 @@ What must be visible before scrolling:
 **Styles that don't fit our brand:**
 -
 -
+
+---
+
+## Funnel Design Preferences
+
+> These settings apply when building funnel pages (opt-in, sales pages, checkout, etc.)
+
+### Design Era
+
+Which aesthetic do you prefer for your funnel pages?
+
+- [ ] **Classic ClickFunnels** - Traditional direct response look
+  - White backgrounds, bold colors, high contrast
+  - Aggressive urgency elements (countdown timers, yellow highlights)
+  - Proven 2015-2020 ClickFunnels aesthetic
+  - Best for: mass market, low-ticket offers, traditional DR audiences
+
+- [ ] **Modern Premium** - Contemporary 2024+ aesthetic
+  - Dark or light themes with sophisticated typography
+  - Subtle gradients, refined spacing, elegant fonts
+  - Urgency elements integrated tastefully
+  - Best for: higher-ticket, SaaS, professional audiences
+
+### Theme Preference (for Modern Premium)
+
+If you chose Modern Premium above, which theme do you prefer?
+
+- [ ] **Dark theme** - Dark backgrounds (#0c0a09), light text
+  - More dramatic and premium feeling
+  - Works well for tech, coaching, high-ticket offers
+
+- [ ] **Light theme** - White/cream backgrounds, dark text
+  - More accessible and familiar
+  - Works well for health, wellness, broader audiences
+
+### Notes on Funnel Style
+
+Any additional notes about how you want your funnels to look:
+-
+-

@@ -65,14 +65,23 @@ Create high-converting Video Sales Letter funnel pages that combine emotionally 
 
 ### Design Guidelines
 
-**Direct Response Colors (Default):**
-- Background: White (#FFFFFF) or light gray (#F7FAFC)
-- Headlines: Dark (#1A202C, #2D3748)
-- Body text: Medium gray (#4A5568)
-- CTA Buttons: RED (#E53E3E), ORANGE (#ED8936), or GREEN (#38A169)
-- Highlights: Yellow (#ECC94B)
+> **Important:** Follow user's chosen design era from their Brand Style Guide (Classic ClickFunnels or Modern Premium). See CLAUDE.md for full specifications.
 
-**Layout Principles:**
+**Classic ClickFunnels Style:**
+- Background: White (#FFFFFF) or light gray (#F7FAFC)
+- Headlines: Dark (#1A202C), bold, high-impact
+- CTA Buttons: Bright RED (#E53E3E), ORANGE (#ED8936), or GREEN (#38A169)
+- Urgency: Yellow (#ECC94B) highlights, prominent countdown timers
+- Feel: High-energy, aggressive conversion focus
+
+**Modern Premium Style:**
+- Dark theme: Dark backgrounds (#0c0a09), light text (#fafaf9)
+- Light theme: White/cream backgrounds, dark text (#1e293b)
+- CTA Buttons: Gradient buttons with subtle glow effects
+- Typography: Elegant serif + clean sans-serif (e.g., Instrument Serif + DM Sans)
+- Feel: Sophisticated, premium SaaS aesthetic
+
+**Layout Principles (Both Styles):**
 - Single column for focus
 - Video is hero element
 - Clear visual hierarchy
