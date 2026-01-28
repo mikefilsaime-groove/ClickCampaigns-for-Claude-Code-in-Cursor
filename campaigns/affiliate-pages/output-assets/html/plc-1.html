@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLC Video 1: The Opportunity | AffiliatePages.com</title>
+    
+    <!-- Tailwind CSS v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts: Montserrat (Headings) & Roboto (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #f97316;
+            --bg: #f8fafc;
+            --text: #0f172a;
+            --highlight: #ECC94B;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        h1, h2, h3, .heading-font {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border: 8px solid #ffffff;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .video-container iframe, .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .plc-nav-item {
+            transition: all 0.3s ease;
+        }
+
+        .plc-nav-item.active {
+            border-bottom: 4px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .plc-nav-item.locked {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .cta-button {
+            background-color: var(--accent);
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 0 #c2410c;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 #c2410c;
+        }
+
+        .yellow-highlight {
+            background-color: var(--highlight);
+            padding: 0 4px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 py-4 px-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-black italic text-blue-600">AFFILIATE<span class="text-slate-800">PAGES</span></div>
+            <div class="text-slate-500 font-bold text-sm uppercase hidden md:block">2026 Launch Workshop Series</div>
+        </div>
+    </header>
+
+    <!-- PLC Navigation -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="plc-1.html" class="plc-nav-item active flex flex-col items-center gap-1 group">
+                    <span class="text-xs font-bold uppercase tracking-tighter">Video 1</span>
+                    <span class="text-sm font-black md:text-base">THE OPPORTUNITY</span>
+                </a>
+                <div class="h-px w-8 bg-slate-200 hidden md:block"></div>
+                <a href="#" class="plc-nav-item locked flex flex-col items-center gap-1">
+                    <span class="text-xs font-bold uppercase tracking-tighter">Video 2</span>
+                    <span class="text-sm font-black md:text-base">TRANSFORMATION</span>
+                </a>
+                <div class="h-px w-8 bg-slate-200 hidden md:block"></div>
+                <a href="#" class="plc-nav-item locked flex flex-col items-center gap-1">
+                    <span class="text-xs font-bold uppercase tracking-tighter">Video 3</span>
+                    <span class="text-sm font-black md:text-base">OWNERSHIP</span>
+                </a>
+                <div class="h-px w-8 bg-slate-200 hidden md:block"></div>
+                <a href="#" class="plc-nav-item locked flex flex-col items-center gap-1">
+                    <span class="text-xs font-bold uppercase tracking-tighter">Video 4</span>
+                    <span class="text-sm font-black md:text-base">THE OPEN</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl md:text-5xl mb-4 leading-tight">
+                    How to Build a <span class="yellow-highlight">"Virtual Vending Machine"</span> That Pays You Every Single Day
+                </h1>
+                <p class="text-xl text-slate-600">Workshop 1: Discover the hidden affiliate marketing secret that Mike Filsaime used to escape the car business.</p>
+            </div>
+
+            <!-- Video Section -->
+            <div class="video-container mb-12">
+                <div class="video-placeholder bg-slate-900 flex items-center justify-center">
+                    <div class="text-center">
+                        <i data-lucide="play-circle" class="w-20 h-20 text-blue-500 mx-auto mb-4 animate-pulse cursor-pointer"></i>
+                        <p class="text-white text-xl font-bold">CLICK TO PLAY VIDEO</p>
+                    </div>
+                </div>
+                <!-- Replace with actual embed when ready -->
+                <!-- <iframe src="https://player.vimeo.com/video/..." frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> -->
+            </div>
+
+            <!-- Action Area -->
+            <div class="bg-blue-50 border-2 border-blue-200 rounded-xl p-8 mb-12 text-center">
+                <h3 class="text-2xl mb-4">Ready to Start Your 2026 Revenue Journey?</h3>
+                <p class="text-slate-600 mb-6">Download the Workshop 1 Action Guide and follow along with Mike and Jitendra.</p>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="#" class="cta-button text-white px-8 py-4 rounded-lg font-black uppercase tracking-wide flex items-center justify-center gap-2">
+                        <i data-lucide="download" class="w-5 h-5"></i>
+                        Download Action Guide
+                    </a>
+                    <a href="plc-2.html" class="bg-white border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-black uppercase tracking-wide flex items-center justify-center gap-2 hover:bg-blue-50 transition-colors">
+                        Next Video: Transformation
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Comments/Engagement Section -->
+            <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 classic-border">
+                <h2 class="text-2xl mb-8 flex items-center gap-3">
+                    <i data-lucide="message-square" class="text-blue-600 w-8 h-8"></i>
+                    Join the Conversation (428 Comments)
+                </h2>
+                
+                <div class="space-y-8">
+                    <!-- Comment 1 -->
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-slate-200 rounded-full flex-shrink-0"></div>
+                        <div>
+                            <p class="font-bold text-slate-800">Sarah Jenkins <span class="text-slate-400 font-normal text-sm ml-2">2 hours ago</span></p>
+                            <p class="text-slate-600 mt-1">Mike, this is incredible. I've been trying to figure out SEO for years and it always felt like a black box. The way you explained the AI knowledge base makes so much sense!</p>
+                        </div>
+                    </div>
+
+                    <!-- Comment 2 -->
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-slate-200 rounded-full flex-shrink-0"></div>
+                        <div>
+                            <p class="font-bold text-slate-800">David Miller <span class="text-slate-400 font-normal text-sm ml-2">5 hours ago</span></p>
+                            <p class="text-slate-600 mt-1">Can't wait for Video 2. I'm already looking at products I can review using AffiliatePages.com. This is going to be a game changer for 2026.</p>
+                        </div>
+                    </div>
+
+                    <!-- Comment Input -->
+                    <div class="pt-8 border-t border-slate-100">
+                        <textarea placeholder="Write your comment here..." class="w-full p-4 rounded-lg border-2 border-slate-200 focus:border-blue-600 focus:outline-none h-32 mb-4"></textarea>
+                        <button class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold uppercase tracking-wide hover:bg-blue-700 transition-colors">
+                            Post Comment
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-4 mt-20">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="text-2xl font-black italic text-white mb-8">AFFILIATE<span class="text-blue-500">PAGES</span></div>
+            <p class="mb-4">&copy; 2026 AffiliatePages.com. All rights reserved.</p>
+            <div class="flex justify-center gap-6 text-sm underline">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+                <a href="#" class="hover:text-white">Contact Us</a>
+                <a href="/JV" class="hover:text-white font-bold text-blue-400">Affiliates / JV</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
