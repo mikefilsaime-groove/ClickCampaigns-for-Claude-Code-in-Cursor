@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Scale Plus!</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #F7FAFC;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* ================================ */
+        /* CONFETTI ANIMATION               */
+        /* ================================ */
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            overflow: hidden;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            top: -20px;
+            opacity: 0;
+            animation: confetti-fall linear forwards;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                opacity: 1;
+                transform: translateY(0) rotate(0deg) scale(1);
+            }
+            75% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100vh) rotate(720deg) scale(0.5);
+            }
+        }
+
+        /* Step connector line */
+        .step-connector {
+            position: absolute;
+            left: 23px;
+            top: 48px;
+            bottom: 0;
+            width: 2px;
+            background: #E2E8F0;
+        }
+
+        /* Pulse on the green celebration banner */
+        @keyframes celebration-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        .celebration-pulse {
+            animation: celebration-pulse 3s ease-in-out infinite;
+        }
+
+        /* Share button hover */
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .share-btn {
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- CONFETTI EFFECT (JS Generated)              -->
+    <!-- ============================================ -->
+    <div class="confetti-container" id="confetti"></div>
+
+    <script>
+        (function() {
+            const container = document.getElementById('confetti');
+            const colors = ['#E53E3E', '#38A169', '#ECC94B', '#3182CE', '#D53F8C', '#805AD5', '#DD6B20', '#38B2AC'];
+            const shapes = ['square', 'circle', 'triangle'];
+            const totalPieces = 80;
+
+            for (let i = 0; i < totalPieces; i++) {
+                const piece = document.createElement('div');
+                piece.classList.add('confetti-piece');
+
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const shape = shapes[Math.floor(Math.random() * shapes.length)];
+                const size = Math.random() * 10 + 6;
+                const left = Math.random() * 100;
+                const delay = Math.random() * 3;
+                const duration = Math.random() * 3 + 3;
+
+                piece.style.left = left + '%';
+                piece.style.animationDelay = delay + 's';
+                piece.style.animationDuration = duration + 's';
+                piece.style.width = size + 'px';
+                piece.style.height = size + 'px';
+                piece.style.backgroundColor = color;
+
+                if (shape === 'circle') {
+                    piece.style.borderRadius = '50%';
+                } else if (shape === 'triangle') {
+                    piece.style.width = '0';
+                    piece.style.height = '0';
+                    piece.style.backgroundColor = 'transparent';
+                    piece.style.borderLeft = (size / 2) + 'px solid transparent';
+                    piece.style.borderRight = (size / 2) + 'px solid transparent';
+                    piece.style.borderBottom = size + 'px solid ' + color;
+                }
+
+                container.appendChild(piece);
+            }
+
+            // Remove confetti after animations complete
+            setTimeout(() => {
+                container.style.display = 'none';
+            }, 7000);
+        })();
+    </script>
+
+    <!-- ============================================ -->
+    <!-- GREEN CELEBRATION BANNER                    -->
+    <!-- ============================================ -->
+    <div class="bg-green-600 text-white py-4 px-4 text-center celebration-pulse">
+        <div class="max-w-3xl mx-auto flex items-center justify-center gap-3 flex-wrap">
+            <i data-lucide="party-popper" class="w-6 h-6 flex-shrink-0"></i>
+            <p class="text-lg sm:text-xl font-bold">
+                Your Purchase Is Complete!
+            </p>
+            <i data-lucide="party-popper" class="w-6 h-6 flex-shrink-0"></i>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MAIN CONTENT                                -->
+    <!-- ============================================ -->
+    <div class="max-w-3xl mx-auto px-4 py-8 sm:py-12">
+
+        <!-- HEADLINE -->
+        <div class="text-center mb-10">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 mb-6">
+                <i data-lucide="check-circle" class="w-12 h-12 text-green-600"></i>
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-4">
+                Congratulations! You're <span class="text-green-600">IN!</span>
+            </h1>
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+                Welcome to Scale Plus
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+                You just made one of the best decisions for your business. Here's exactly what to do next to get started fast.
+            </p>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- WHAT HAPPENS NEXT - ONBOARDING STEPS       -->
+        <!-- ============================================ -->
+        <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 sm:p-8 mb-8">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl sm:text-3xl font-black text-gray-900">Here's What Happens Next...</h2>
+                <p class="text-gray-500 mt-1">Follow these 4 simple steps to get started</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="flex items-start gap-4 relative">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center font-black text-lg shadow-md z-10">
+                        1
+                    </div>
+                    <div class="flex-1 pb-6 border-b border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                            <i data-lucide="mail" class="w-5 h-5 text-green-600"></i>
+                            Check Your Email for Login Credentials
+                        </h3>
+                        <p class="text-gray-600 mt-1">
+                            We've sent your login details to the email you used at checkout. Check your inbox (and spam folder, just in case). You'll receive your username, password, and a direct link to your dashboard.
+                        </p>
+                        <div class="mt-3 bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-2 inline-block">
+                            <p class="text-sm text-yellow-800 font-semibold">
+                                <i data-lucide="info" class="w-4 h-4 inline mr-1"></i>
+                                Tip: Add support@scaleplus.com to your contacts so our emails always land in your inbox.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start gap-4 relative">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center font-black text-lg shadow-md z-10">
+                        2
+                    </div>
+                    <div class="flex-1 pb-6 border-b border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                            <i data-lucide="layout-dashboard" class="w-5 h-5 text-green-600"></i>
+                            Log In to Your Scale Plus Dashboard
+                        </h3>
+                        <p class="text-gray-600 mt-1">
+                            Click the link in your welcome email or go directly to your dashboard. Everything you need &mdash; all 25+ tools &mdash; is waiting for you in one place. Take a few minutes to explore.
+                        </p>
+                        <a href="#dashboard" class="mt-3 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold text-sm py-2.5 px-5 rounded-lg transition-colors">
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                            Go to Your Dashboard
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-start gap-4 relative">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center font-black text-lg shadow-md z-10">
+                        3
+                    </div>
+                    <div class="flex-1 pb-6 border-b border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                            <i data-lucide="play-circle" class="w-5 h-5 text-green-600"></i>
+                            Watch the Quick Start Video (5 min)
+                        </h3>
+                        <p class="text-gray-600 mt-1">
+                            Inside your dashboard, you'll find a 5-minute Quick Start video that walks you through the essentials. It'll show you how to navigate the platform, set up your profile, and get your first win fast.
+                        </p>
+                        <div class="mt-3 bg-gray-100 rounded-lg p-4 flex items-center gap-3">
+                            <div class="flex-shrink-0 w-16 h-16 bg-gray-900 rounded-lg flex items-center justify-center">
+                                <i data-lucide="play" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900 text-sm">Quick Start Guide</p>
+                                <p class="text-gray-500 text-xs">5 minutes &bull; Everything you need to know</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex items-start gap-4 relative">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center font-black text-lg shadow-md z-10">
+                        4
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                            <i data-lucide="rocket" class="w-5 h-5 text-green-600"></i>
+                            Set Up Your First Funnel or CRM
+                        </h3>
+                        <p class="text-gray-600 mt-1">
+                            Whether you're building a sales funnel, setting up your CRM pipeline, or launching an email campaign &mdash; pick one thing and do it today. Momentum is everything. Our templates make it easy to get something live in under 30 minutes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- MEET MIKE FILSAIME                          -->
+        <!-- ============================================ -->
+        <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 sm:p-8 mb-8">
+            <div class="flex flex-col sm:flex-row items-center gap-6">
+                <div class="flex-shrink-0">
+                    <img
+                        src="https://images.pexels.com/photos/7648513/pexels-photo-7648513.jpeg?auto=compress&cs=tinysrgb&h=350"
+                        alt="Mike Filsaime - Founder of Scale Plus"
+                        class="w-36 h-36 rounded-full object-cover border-4 border-green-500 shadow-lg"
+                    >
+                </div>
+                <div class="text-center sm:text-left">
+                    <h2 class="text-2xl font-black text-gray-900 mb-2">Meet Mike Filsaime</h2>
+                    <p class="text-sm text-green-600 font-bold uppercase tracking-wider mb-3">Founder &amp; CEO, Scale Plus</p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Mike has built software used by <strong>millions of people</strong> including Groove.cm, Kartra, WebinarJam, and EverWebinar. With <strong>20+ years</strong> in digital marketing and over <strong>100,000 customers</strong> served, he created Scale Plus to give entrepreneurs the most affordable, complete all-in-one platform on the market.
+                    </p>
+                    <p class="text-gray-700 font-semibold mt-3 italic">
+                        "Welcome aboard. I can't wait to see what you build." &mdash; Mike
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- JOIN THE COMMUNITY                          -->
+        <!-- ============================================ -->
+        <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 sm:p-8 mb-8">
+            <div class="text-center">
+                <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 mb-4">
+                    <i data-lucide="users" class="w-8 h-8 text-blue-600"></i>
+                </div>
+                <h2 class="text-2xl font-black text-gray-900 mb-2">Join the Scale Plus Community</h2>
+                <p class="text-gray-600 max-w-lg mx-auto mb-6">
+                    Connect with thousands of entrepreneurs, digital marketers, coaches, and agency owners. Get support, share wins, and learn from each other.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a href="#community" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        Join the Community
+                    </a>
+                    <a href="#support" class="inline-flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold py-3 px-6 rounded-lg transition-colors">
+                        <i data-lucide="headphones" class="w-5 h-5"></i>
+                        Contact Support
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- WHAT'S INCLUDED REMINDER                    -->
+        <!-- ============================================ -->
+        <div class="bg-gray-900 text-white rounded-xl p-6 sm:p-8 mb-8">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl sm:text-3xl font-black">Everything You Now Have Access To</h2>
+                <p class="text-gray-400 mt-1">25+ tools, one login, one price</p>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div class="bg-gray-800 rounded-lg p-3 text-center">
+                    <i data-lucide="layout" class="w-6 h-6 text-green-400 mx-auto mb-1"></i>
+                    <p class="text-sm font-semibold">Funnel Builder</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-3 text-center">
+                    <i data-lucide="mail" class="w-6 h-6 text-green-400 mx-auto mb-1"></i>
+                    <p class="text-sm font-semibold">Email Marketing</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-3 text-center">
+                    <i data-lucide="shopping-cart" class="w-6 h-6 text-green-400 mx-auto mb-1"></i>
+                    <p class="text-sm font-semibold">Checkout &amp; Sales</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-3 text-center">
+                    <i data-lucide="book-open" class="w-6 h-6 text-green-400 mx-auto mb-1"></i>
+                    <p class="text-sm font-semibold">Course Platform</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-3 text-center">
+                    <i data-lucide="bot" class="w-6 h-6 text-green-400 mx-auto mb-1"></i>
+                    <p class="text-sm font-semibold">AI Tools</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-3 text-center">
+                    <i data-lucide="users" class="w-6 h-6 text-green-400 mx-auto mb-1"></i>
+                    <p class="text-sm font-semibold">CRM &amp; Pipeline</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-3 text-center">
+                    <i data-lucide="video" class="w-6 h-6 text-green-400 mx-auto mb-1"></i>
+                    <p class="text-sm font-semibold">Webinar Platform</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-3 text-center">
+                    <i data-lucide="calendar" class="w-6 h-6 text-green-400 mx-auto mb-1"></i>
+                    <p class="text-sm font-semibold">Scheduling</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-3 text-center">
+                    <i data-lucide="file-text" class="w-6 h-6 text-green-400 mx-auto mb-1"></i>
+                    <p class="text-sm font-semibold">Invoicing</p>
+                </div>
+            </div>
+            <p class="text-center text-gray-400 text-sm mt-4">
+                ...and 16 more tools. All included in your subscription.
+            </p>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- SOCIAL SHARING                              -->
+        <!-- ============================================ -->
+        <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 sm:p-8 mb-8">
+            <div class="text-center">
+                <i data-lucide="share-2" class="w-10 h-10 text-gray-400 mx-auto mb-3"></i>
+                <h2 class="text-2xl font-black text-gray-900 mb-2">Tell Your Friends About Scale Plus</h2>
+                <p class="text-gray-600 mb-6">Spread the word and help other entrepreneurs level up their business.</p>
+
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <!-- Facebook -->
+                    <a href="#share-facebook" class="share-btn inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-5 rounded-lg text-sm">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        Share on Facebook
+                    </a>
+                    <!-- Twitter/X -->
+                    <a href="#share-twitter" class="share-btn inline-flex items-center gap-2 bg-gray-900 hover:bg-black text-white font-bold py-2.5 px-5 rounded-lg text-sm">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        Share on X
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#share-linkedin" class="share-btn inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-bold py-2.5 px-5 rounded-lg text-sm">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        Share on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- AFFILIATE PROGRAM CTA                       -->
+        <!-- ============================================ -->
+        <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-6 sm:p-8 mb-8 text-white">
+            <div class="flex flex-col sm:flex-row items-center gap-6">
+                <div class="flex-shrink-0">
+                    <div class="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center">
+                        <i data-lucide="dollar-sign" class="w-10 h-10 text-white"></i>
+                    </div>
+                </div>
+                <div class="text-center sm:text-left flex-1">
+                    <h2 class="text-2xl sm:text-3xl font-black mb-2">Earn 40% Commission as an Affiliate</h2>
+                    <p class="text-green-100 mb-4">
+                        Love Scale Plus? Share it with your audience and earn <strong class="text-white">40% recurring commission</strong> on every referral. That's <strong class="text-white">$198.80 per sale</strong> at $497/year &mdash; and it recurs every year they stay.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center gap-3">
+                        <a href="#affiliate" class="inline-flex items-center gap-2 bg-white text-green-700 font-black py-3 px-6 rounded-lg hover:bg-green-50 transition-colors">
+                            <i data-lucide="link" class="w-5 h-5"></i>
+                            Get Your Affiliate Link
+                        </a>
+                        <span class="text-green-200 text-sm">Find it in your dashboard under "Affiliates"</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick affiliate math -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6">
+                <div class="bg-white/10 rounded-lg p-3 text-center">
+                    <p class="text-2xl font-black">5 referrals</p>
+                    <p class="text-green-200 text-sm">= $994/year</p>
+                </div>
+                <div class="bg-white/10 rounded-lg p-3 text-center">
+                    <p class="text-2xl font-black">10 referrals</p>
+                    <p class="text-green-200 text-sm">= $1,988/year</p>
+                </div>
+                <div class="bg-white/10 rounded-lg p-3 text-center">
+                    <p class="text-2xl font-black">25 referrals</p>
+                    <p class="text-green-200 text-sm">= $4,970/year</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- NEED HELP?                                  -->
+        <!-- ============================================ -->
+        <div class="text-center mb-12">
+            <p class="text-gray-500 text-sm">
+                <i data-lucide="headphones" class="w-4 h-4 inline mr-1"></i>
+                Need help getting started? Reach out to our support team at
+                <a href="mailto:support@scaleplus.com" class="text-green-600 font-semibold hover:underline">support@scaleplus.com</a>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                      -->
+    <!-- ============================================ -->
+    <footer class="bg-gray-900 text-gray-400 py-6 px-4">
+        <div class="max-w-3xl mx-auto text-center text-sm">
+            <p>&copy; 2026 Scale Plus. All rights reserved.</p>
+            <div class="mt-2 flex items-center justify-center gap-4">
+                <a href="#privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#terms" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#support" class="hover:text-white transition-colors">Support</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

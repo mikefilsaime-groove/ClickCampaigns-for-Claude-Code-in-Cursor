@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale Plus — Replace Every Tool You Use For Less Than $42/Month</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+
+        .urgency-pulse { animation: pulse 2s ease-in-out infinite; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        .cta-btn {
+            background: linear-gradient(180deg, #E53E3E 0%, #C53030 100%);
+            box-shadow: 0 4px 15px rgba(229, 62, 62, 0.5), 0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2);
+            transition: all 0.2s ease;
+        }
+        .cta-btn:hover {
+            background: linear-gradient(180deg, #FC4444 0%, #E53E3E 100%);
+            box-shadow: 0 6px 25px rgba(229, 62, 62, 0.7), 0 4px 8px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .cta-btn-green {
+            background: linear-gradient(180deg, #38A169 0%, #2F855A 100%);
+            box-shadow: 0 4px 15px rgba(56, 161, 105, 0.5), 0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2);
+            transition: all 0.2s ease;
+        }
+        .cta-btn-green:hover {
+            background: linear-gradient(180deg, #48BB78 0%, #38A169 100%);
+            box-shadow: 0 6px 25px rgba(56, 161, 105, 0.7), 0 4px 8px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .highlight-yellow {
+            background-color: #ECC94B;
+            padding: 2px 8px;
+            display: inline;
+        }
+
+        .strikethrough { text-decoration: line-through; color: #A0AEC0; }
+
+        .testimonial-card {
+            border-left: 4px solid #ECC94B;
+        }
+
+        .value-row:nth-child(odd) { background-color: #F7FAFC; }
+        .value-row:nth-child(even) { background-color: #FFFFFF; }
+
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-answer.open { max-height: 800px; }
+        .faq-toggle.open .faq-arrow { transform: rotate(180deg); }
+
+        .guarantee-badge {
+            border: 3px dashed #38A169;
+            background: linear-gradient(135deg, #F0FFF4, #FFFFFF);
+        }
+
+        /* Sticky mobile CTA */
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: white;
+            border-top: 2px solid #E53E3E;
+            padding: 12px 16px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .mobile-sticky-cta { display: block; }
+            body { padding-bottom: 80px; }
+        }
+
+        .countdown-num {
+            background: #1A202C;
+            color: #ECC94B;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            min-width: 40px;
+            display: inline-block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-white m-0 p-0">
+
+    <!-- ============================================ -->
+    <!-- URGENCY / COUNTDOWN BAR                       -->
+    <!-- ============================================ -->
+    <div style="background-color: #ECC94B;" class="py-3 text-center sticky top-0 z-40 shadow-md">
+        <p class="text-sm md:text-base font-bold text-gray-900 tracking-wide uppercase m-0">
+            <i data-lucide="alarm-clock" class="w-4 h-4 inline-block align-middle mr-1"></i>
+            LAUNCH SPECIAL &mdash; CART CLOSES IN:
+            <span class="countdown-num" id="cd-days">03</span>d
+            <span class="countdown-num" id="cd-hours">14</span>h
+            <span class="countdown-num" id="cd-mins">27</span>m
+            <span class="countdown-num" id="cd-secs">51</span>s
+        </p>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 1: ABOVE THE FOLD                     -->
+    <!-- ============================================ -->
+    <div class="bg-white">
+        <div class="max-w-3xl mx-auto px-4 pt-10 pb-6 text-center">
+
+            <!-- Pre-headline -->
+            <p class="text-xs md:text-sm font-bold tracking-widest uppercase mb-4" style="color: #E53E3E;">
+                ATTENTION: COACHES, CONSULTANTS, MARKETERS &amp; AGENCY OWNERS
+            </p>
+
+            <!-- Main Headline -->
+            <h1 class="text-3xl md:text-5xl font-black leading-tight mb-6" style="color: #1A202C;">
+                What If You Could Replace
+                <span class="highlight-yellow">EVERY Tool</span>
+                You Use to Run Your Business... With
+                <span class="highlight-yellow">ONE Platform</span>
+                ... For Less Than
+                <span class="highlight-yellow">$42/Month?</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+                The all-in-one platform that gives you <strong>25+ business tools</strong> &mdash; funnels, email, CRM, courses, webinars, AI, and more &mdash; for a fraction of what you're paying right now. Built by the creator of Kartra, WebinarJam &amp; Groove.cm.
+            </p>
+
+            <!-- Video Placeholder -->
+            <div class="mb-8 rounded-lg overflow-hidden shadow-xl border-4 bg-gray-900 relative" style="border-color: #E53E3E;">
+                <div class="aspect-video flex items-center justify-center">
+                    <img
+                        src="https://images.pexels.com/photos/3779409/pexels-photo-3779409.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                        alt="Scale Plus Product Launch"
+                        class="w-full h-full object-cover opacity-60"
+                    >
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="bg-red-600 rounded-full w-20 h-20 flex items-center justify-center shadow-2xl cursor-pointer hover:bg-red-500 transition-colors">
+                            <i data-lucide="play" class="w-10 h-10 text-white ml-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social proof line -->
+            <p class="text-sm text-gray-500 mb-6">
+                <i data-lucide="users" class="w-4 h-4 inline-block align-middle mr-1"></i>
+                Join <strong>100,000+</strong> entrepreneurs who've already made the switch
+            </p>
+
+            <!-- CTA Button #1 -->
+            <a href="#pricing" class="cta-btn inline-block text-white font-extrabold text-lg md:text-xl px-10 py-5 rounded-lg uppercase tracking-wide no-underline urgency-pulse">
+                YES! Show Me How to Save $1,000+/Month
+            </a>
+            <p class="text-xs text-gray-400 mt-3">30-day money-back guarantee &bull; Cancel anytime</p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 2: PROBLEM AGITATION                  -->
+    <!-- ============================================ -->
+    <div style="background-color: #F7FAFC;">
+        <div class="max-w-3xl mx-auto px-4 py-14">
+            <div class="max-w-2xl mx-auto text-base md:text-lg text-gray-700 leading-relaxed">
+
+                <p class="text-gray-500 italic mb-6">Dear Fellow Entrepreneur,</p>
+
+                <p class="mb-4">Let me ask you something...</p>
+
+                <p class="mb-4"><strong>How many software subscriptions are you paying for right now?</strong></p>
+
+                <p class="mb-4">Go ahead. Think about it.</p>
+
+                <p class="mb-4">Your funnel builder. Your email platform. Your course hosting. Your CRM. Your scheduling tool. Your webinar software. Your affiliate management. Your invoicing. Your video hosting. Your quiz funnels. Your popup tool. Your forms. Your blog.</p>
+
+                <p class="mb-4">I'll wait.</p>
+
+                <p class="mb-6">If you're like most online business owners I talk to, the number is somewhere between <strong>12 and 25 different tools.</strong></p>
+
+                <p class="mb-2">And the cost?</p>
+
+                <div class="bg-white border-l-4 border-red-500 p-6 my-6 rounded-r-lg shadow-md">
+                    <p class="text-2xl md:text-3xl font-black text-red-600 m-0">$500... $800... $1,000... sometimes $2,000+ per month.</p>
+                </div>
+
+                <p class="mb-4">Just to keep the lights on.</p>
+
+                <p class="mb-4">Just to do the <em>basics</em> of running an online business.</p>
+
+                <p class="mb-6">That's <strong class="text-red-600">$12,000 to $24,000 per year</strong> &mdash; before you've made a single sale, booked a single call, or enrolled a single student.</p>
+
+                <p class="mb-4">And here's the part that really gets me...</p>
+
+                <p class="mb-6 text-xl font-bold" style="color: #1A202C;">None of these tools were designed to work together.</p>
+
+                <p class="mb-4">You're spending hours duct-taping Zapier integrations between platforms that were never built to talk to each other. Your funnel builder doesn't natively connect to your email tool. Your email tool doesn't sync with your CRM. Your CRM doesn't talk to your course platform.</p>
+
+                <p class="mb-4">So what happens?</p>
+
+                <p class="mb-6 text-xl font-bold text-red-600">Things break.</p>
+
+                <div class="space-y-3 my-6">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="x-circle" class="w-5 h-5 text-red-500 flex-shrink-0 mt-1"></i>
+                        <p class="m-0">A lead fills out your form but <strong>never gets the welcome email</strong></p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="x-circle" class="w-5 h-5 text-red-500 flex-shrink-0 mt-1"></i>
+                        <p class="m-0">A customer buys but <strong>doesn't get access to the course</strong></p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="x-circle" class="w-5 h-5 text-red-500 flex-shrink-0 mt-1"></i>
+                        <p class="m-0">An affiliate makes a sale but <strong>the tracking pixel fires wrong</strong></p>
+                    </div>
+                </div>
+
+                <p class="mb-4">And you're stuck playing tech support for YOUR OWN business at 11 PM on a Tuesday night...</p>
+
+                <p class="mb-6">...instead of doing the thing you actually started this business to do.</p>
+
+                <p class="mb-4">Sound familiar?</p>
+
+                <p class="mb-4">Here's the truth nobody wants to tell you:</p>
+
+                <div class="bg-yellow-50 border-2 border-yellow-400 p-6 my-6 rounded-lg text-center">
+                    <p class="text-xl md:text-2xl font-black m-0" style="color: #1A202C;">The "stack" approach to running an online business is <span class="text-red-600">broken.</span></p>
+                    <p class="text-base text-gray-600 mt-2 m-0">It was always broken.</p>
+                </div>
+
+                <p class="mb-4">Those platforms <em>want</em> you duct-taping. Because every integration gap is another subscription they can sell you. Every broken connection is another "upgrade to pro" upsell.</p>
+
+                <p class="mb-6"><strong>You are paying thousands of dollars a month to babysit software that should be working FOR you.</strong></p>
+
+                <p class="mb-4">And the worst part?</p>
+
+                <p class="mb-6">You're not alone. This isn't a "you" problem. <strong>It's an industry problem.</strong></p>
+
+                <p class="mb-2">I know... because I helped create it.</p>
+
+                <p class="text-xl font-bold mt-4" style="color: #1A202C;">And now I'm going to fix it.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 3: CREDIBILITY & STORY                -->
+    <!-- ============================================ -->
+    <div class="bg-white">
+        <div class="max-w-3xl mx-auto px-4 py-14">
+            <div class="max-w-2xl mx-auto text-base md:text-lg text-gray-700 leading-relaxed">
+
+                <p class="mb-4">My name is <strong class="text-xl" style="color: #1A202C;">Mike Filsaime.</strong></p>
+
+                <p class="mb-4">If you've been in the digital marketing world for any length of time, you might recognize that name.</p>
+
+                <p class="mb-4">Over the past <strong>20+ years</strong>, I've built some of the most widely-used marketing platforms in our industry:</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <p class="font-bold text-gray-900 m-0 mb-1"><i data-lucide="rocket" class="w-4 h-4 inline mr-1 text-yellow-500"></i> Kartra</p>
+                        <p class="text-sm text-gray-600 m-0">All-in-one platform used by tens of thousands</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <p class="font-bold text-gray-900 m-0 mb-1"><i data-lucide="video" class="w-4 h-4 inline mr-1 text-yellow-500"></i> WebinarJam</p>
+                        <p class="text-sm text-gray-600 m-0">#1 live webinar platform — millions of attendees</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <p class="font-bold text-gray-900 m-0 mb-1"><i data-lucide="repeat" class="w-4 h-4 inline mr-1 text-yellow-500"></i> EverWebinar</p>
+                        <p class="text-sm text-gray-600 m-0">Leading automated webinar solution</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <p class="font-bold text-gray-900 m-0 mb-1"><i data-lucide="layout-dashboard" class="w-4 h-4 inline mr-1 text-yellow-500"></i> Groove.cm</p>
+                        <p class="text-sm text-gray-600 m-0">Complete online business suite — 14+ tools</p>
+                    </div>
+                </div>
+
+                <p class="mb-4">I've been the keynote speaker on stages around the world. I've been invited into the top masterminds. And I've had the privilege of helping <strong>over 100,000 entrepreneurs</strong> build and grow their businesses online.</p>
+
+                <p class="mb-4">But I want to be honest with you about something.</p>
+
+                <p class="mb-6 text-xl font-bold" style="color: #1A202C;">For years, I was frustrated with my own platforms.</p>
+
+                <p class="mb-4">Not because they didn't work. They worked great. Groove.cm alone gave users 14 integrated tools in one dashboard.</p>
+
+                <p class="mb-4">But I knew it wasn't <em>enough.</em></p>
+
+                <p class="mb-4">Groove.cm was incredible for <strong>digital marketers</strong> — people who build funnels, sell courses, run affiliate programs.</p>
+
+                <p class="mb-4">But there's a whole other world of online business owners who were being left behind...</p>
+
+                <div class="space-y-3 my-6 bg-gray-50 p-6 rounded-lg">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="arrow-right" class="w-5 h-5 text-yellow-500 flex-shrink-0 mt-1"></i>
+                        <p class="m-0"><strong>Coaches</strong> who need discovery calls and client management</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="arrow-right" class="w-5 h-5 text-yellow-500 flex-shrink-0 mt-1"></i>
+                        <p class="m-0"><strong>Consultants</strong> who need CRM, invoicing, and proposals</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="arrow-right" class="w-5 h-5 text-yellow-500 flex-shrink-0 mt-1"></i>
+                        <p class="m-0"><strong>Agencies</strong> who juggle multiple clients and lead generation</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="arrow-right" class="w-5 h-5 text-yellow-500 flex-shrink-0 mt-1"></i>
+                        <p class="m-0"><strong>Professionals</strong> &mdash; accountants, lawyers, financial advisors</p>
+                    </div>
+                </div>
+
+                <p class="mb-4">I knew we needed to expand. But expansion meant development. And development meant...</p>
+
+                <p class="mb-4 text-xl font-bold" style="color: #1A202C;">Developers.</p>
+
+                <!-- The Developer Problem -->
+                <div class="border-t-2 border-gray-200 mt-10 pt-10">
+                    <h3 class="text-2xl font-extrabold mb-6" style="color: #1A202C;">The Developer Problem</h3>
+
+                    <p class="mb-4">A good U.S.-based developer costs <strong>$8,000 to $15,000 per month.</strong> That's just ONE developer. And you usually need a team.</p>
+
+                    <p class="mb-4">So what did we do? Same thing everyone does. We outsourced. Philippines. India. Eastern Europe. We'd save 75% on cost.</p>
+
+                    <p class="mb-4">But you know what else we got?</p>
+
+                    <p class="mb-6 font-bold text-red-600">75% less quality.</p>
+
+                    <p class="mb-4">Code that was buggy. Timelines that slipped. Features that took 6 months when they should've taken 6 weeks.</p>
+
+                    <p class="mb-6">Our dream of creating quality software fast became a reality of <strong>poor quality software, very slowly.</strong></p>
+
+                    <p class="mb-4">And then something happened that changed everything.</p>
+                </div>
+
+                <!-- The AI Breakthrough -->
+                <div class="border-t-2 border-gray-200 mt-10 pt-10">
+                    <h3 class="text-2xl font-extrabold mb-6" style="color: #1A202C;">
+                        <i data-lucide="zap" class="w-6 h-6 inline text-yellow-500 mr-1"></i>
+                        The AI Breakthrough
+                    </h3>
+
+                    <p class="mb-4"><strong>AI coding arrived.</strong></p>
+
+                    <p class="mb-4">My partner Matt Zeralta and I both have <strong>programming backgrounds.</strong> So when AI coding tools matured...</p>
+
+                    <p class="mb-4"><strong>We didn't just use AI. We weaponized it.</strong></p>
+
+                    <div class="bg-green-50 border-2 border-green-400 p-6 my-6 rounded-lg">
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="clock" class="w-5 h-5 text-green-600 flex-shrink-0"></i>
+                                <p class="m-0">What took <strong>months</strong> to build &rarr; we prototype in <strong>hours</strong></p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="calendar" class="w-5 h-5 text-green-600 flex-shrink-0"></i>
+                                <p class="m-0">What took a <strong>year</strong> of development &rarr; we ship in <strong>days</strong></p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="award" class="w-5 h-5 text-green-600 flex-shrink-0"></i>
+                                <p class="m-0">Quality? Not 75%... <strong>Better than ever.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="mb-4">Beautiful interfaces. Clean code. Tested. Refined. Production-ready.</p>
+
+                    <p class="mb-6 text-xl font-bold" style="color: #1A202C;">We were building software at the speed of thought.</p>
+
+                    <p class="mb-4">And we realized something massive:</p>
+
+                    <p class="mb-4">Every tool our users were paying someone else for... <strong>we could build it ourselves.</strong> Integrate it natively. Include it in one platform. At one price.</p>
+
+                    <p class="text-xl font-bold" style="color: #1A202C;">And that's exactly what we did.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 4: THE BIG REVEAL                     -->
+    <!-- ============================================ -->
+    <div style="background: linear-gradient(180deg, #1A202C 0%, #2D3748 100%);">
+        <div class="max-w-3xl mx-auto px-4 py-16 text-center">
+
+            <p class="text-yellow-400 font-bold uppercase tracking-widest text-sm mb-4">Introducing</p>
+
+            <h2 class="text-4xl md:text-6xl font-black text-white mb-6">Scale Plus</h2>
+
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">The True All-in-One Business Platform</p>
+
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-2xl mx-auto mb-8">
+                <p class="text-white text-lg md:text-xl leading-relaxed m-0">
+                    <strong class="text-yellow-400">25+ fully integrated business applications</strong> &mdash; everything you need to build, market, sell, and scale ANY type of online business &mdash; unified under one roof, one login, one subscription.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <span class="bg-white/10 text-gray-300 px-4 py-2 rounded-full text-sm">Digital Marketers</span>
+                <span class="bg-white/10 text-gray-300 px-4 py-2 rounded-full text-sm">Coaches</span>
+                <span class="bg-white/10 text-gray-300 px-4 py-2 rounded-full text-sm">Consultants</span>
+                <span class="bg-white/10 text-gray-300 px-4 py-2 rounded-full text-sm">Agencies</span>
+                <span class="bg-white/10 text-gray-300 px-4 py-2 rounded-full text-sm">Beginners</span>
+            </div>
+
+            <!-- Competitor price comparison -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10 max-w-2xl mx-auto">
+                <div class="bg-red-900/40 rounded-lg p-3">
+                    <p class="text-gray-400 text-xs m-0 mb-1">Go High Level</p>
+                    <p class="text-red-400 font-bold text-lg m-0 line-through">$297-497/mo</p>
+                </div>
+                <div class="bg-red-900/40 rounded-lg p-3">
+                    <p class="text-gray-400 text-xs m-0 mb-1">ClickFunnels</p>
+                    <p class="text-red-400 font-bold text-lg m-0 line-through">$97-297/mo</p>
+                </div>
+                <div class="bg-red-900/40 rounded-lg p-3">
+                    <p class="text-gray-400 text-xs m-0 mb-1">Kartra</p>
+                    <p class="text-red-400 font-bold text-lg m-0 line-through">$99-499/mo</p>
+                </div>
+                <div class="bg-green-900/40 rounded-lg p-3 border border-green-500">
+                    <p class="text-green-300 text-xs m-0 mb-1">Scale Plus</p>
+                    <p class="text-green-400 font-extrabold text-lg m-0">$42/mo</p>
+                </div>
+            </div>
+
+            <a href="#pricing" class="cta-btn-green inline-block text-white font-extrabold text-lg md:text-xl px-10 py-5 rounded-lg uppercase tracking-wide no-underline urgency-pulse">
+                Get Scale Plus Now &mdash; $497/Year
+            </a>
+            <p class="text-gray-400 text-xs mt-3">Save $1,000+/month &bull; 30-day guarantee</p>
+
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 5: HOW IT WORKS                       -->
+    <!-- ============================================ -->
+    <div class="bg-white">
+        <div class="max-w-3xl mx-auto px-4 py-14 text-center">
+
+            <h2 class="text-2xl md:text-4xl font-black mb-3" style="color: #1A202C;">
+                3 Steps to Replace Your Entire Software Stack
+            </h2>
+            <p class="text-gray-500 mb-10">It's simpler than you think.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #ECC94B;">
+                        <span class="text-2xl font-black text-gray-900">1</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2" style="color: #1A202C;">Sign Up</h3>
+                    <p class="text-gray-600 text-sm m-0">Create your account in 2 minutes. Instant access to all 25+ tools. No complicated onboarding.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #ECC94B;">
+                        <span class="text-2xl font-black text-gray-900">2</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2" style="color: #1A202C;">Set Up Your Business</h3>
+                    <p class="text-gray-600 text-sm m-0">Build funnels, set up email, create courses, manage clients &mdash; all from one dashboard.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #ECC94B;">
+                        <span class="text-2xl font-black text-gray-900">3</span>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2" style="color: #1A202C;">Scale Without Limits</h3>
+                    <p class="text-gray-600 text-sm m-0">No per-contact pricing. No feature gates. You get everything from day one.</p>
+                </div>
+
+            </div>
+
+            <p class="text-gray-500 italic mt-8">No duct tape. No Zapier. No praying your integrations don't break at 2 AM.</p>
+
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 6: WHAT'S INCLUDED — VALUE STACK      -->
+    <!-- ============================================ -->
+    <div style="background-color: #F7FAFC;">
+        <div class="max-w-4xl mx-auto px-4 py-14">
+
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-4xl font-black mb-3" style="color: #1A202C;">
+                    Everything Inside Scale Plus
+                </h2>
+                <p class="text-gray-600 text-lg max-w-xl mx-auto">Every tool below is something you'd normally pay a separate monthly subscription for.</p>
+            </div>
+
+            <!-- Category: Funnels, Pages & Websites -->
+            <div class="mb-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: #E53E3E;">
+                        <i data-lucide="layout" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold m-0" style="color: #1A202C;">Funnels, Pages &amp; Websites</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GrooveFunnels</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Complete Funnel Building Platform</p>
+                                <p class="text-sm text-gray-600 m-0">Build complete sales funnels — opt-in pages, sales pages, upsells, downsells, order bumps, and thank you pages. Drag-and-drop. A/B split testing.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$297/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GroovePages</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Website &amp; Landing Page Builder</p>
+                                <p class="text-sm text-gray-600 m-0">Stunning websites and landing pages without code. Fully responsive. SEO-optimized out of the box.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$97/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">FunnelMapper.io</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Visual Funnel Planning Tool</p>
+                                <p class="text-sm text-gray-600 m-0">Map your entire customer journey visually. See every page, email, and upsell path before you build.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$49/mo value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Email, Automation & CRM -->
+            <div class="mb-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: #ED8936;">
+                        <i data-lucide="mail" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold m-0" style="color: #1A202C;">Email, Automation &amp; CRM</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GrooveMail</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Email Marketing &amp; Automation</p>
+                                <p class="text-sm text-gray-600 m-0">Tagging, segmentation, behavioral triggers, visual workflows. Natively connected to your funnels and CRM.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$99/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">TinyEmail Partnership</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Email Sending at Unbeatable Rates</p>
+                                <p class="text-sm text-gray-600 m-0">Free: 15,000 emails/mo for 500 contacts. Exclusive: unlimited contacts, 200K emails/mo for just $14.97/mo (96.7% off).</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">FREE+</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GrooveAutomations</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Marketing Automation Engine</p>
+                                <p class="text-sm text-gray-600 m-0">Sophisticated if/then workflows. When a lead does X, trigger Y automatically. Runs 24/7.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$99/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">PipeLeads.ai CRM</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Sales Pipeline &amp; Client Management</p>
+                                <p class="text-sm text-gray-600 m-0">Lead tracking, deal management, pipeline visualization, and task automation. Built for people who actually sell.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$79/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">PipeLeads.ai LeadFinder</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Lead Generation &amp; AI Outreach</p>
+                                <p class="text-sm text-gray-600 m-0">Search a massive database of potential leads. Filter by industry, location, company size. AI-powered outreach.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$99/mo value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Selling & Checkout -->
+            <div class="mb-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: #38A169;">
+                        <i data-lucide="credit-card" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold m-0" style="color: #1A202C;">Selling &amp; Checkout</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GrooveSell</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Complete Sales &amp; Checkout Engine</p>
+                                <p class="text-sm text-gray-600 m-0">Payments, subscriptions, refunds, one-click upsells, order bumps, downsells, payment plans. No SamCart or ThriveCart needed.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$99/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GrooveAffiliate</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Affiliate Program Management</p>
+                                <p class="text-sm text-gray-600 m-0">Recruit, manage, and pay affiliates. Multi-tier commissions, tracking links, real-time reporting.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$79/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">Invoicer</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Professional Billing &amp; Invoicing</p>
+                                <p class="text-sm text-gray-600 m-0">Send invoices, track payments, automate follow-ups. Built for freelancers, agencies, and service providers.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$49/mo value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Courses, Community & Membership -->
+            <div class="mb-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: #805AD5;">
+                        <i data-lucide="graduation-cap" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold m-0" style="color: #1A202C;">Courses, Community &amp; Membership</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">Courses.gg</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Unlimited Course &amp; Community Hosting</p>
+                                <p class="text-sm text-gray-600 m-0">Unlimited courses and communities. Beautiful player. Progress tracking. <strong>ZERO transaction fees</strong> for Scale Plus members (normally 5%).</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$99/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GrooveMember</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Membership Site Platform</p>
+                                <p class="text-sm text-gray-600 m-0">Gated membership areas, multiple access levels, drip content, member management, recurring revenue.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$49/mo value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Video, Webinars & Content -->
+            <div class="mb-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: #3182CE;">
+                        <i data-lucide="video" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold m-0" style="color: #1A202C;">Video, Webinars &amp; Content</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GrooveVideo</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Video Hosting With Marketing Features</p>
+                                <p class="text-sm text-gray-600 m-0">Host videos with CTAs, engagement tracking, and lead capture overlays. Every view becomes a data point.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$79/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GrooveWebinar</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Live &amp; Automated Webinar Platform</p>
+                                <p class="text-sm text-gray-600 m-0">The same technology behind WebinarJam &mdash; the #1 webinar platform &mdash; built right into Scale Plus.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$99/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GrooveBlog</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">SEO-Optimized Blogging</p>
+                                <p class="text-sm text-gray-600 m-0">Publish content that ranks. Built-in SEO tools. Connect content directly to funnels and email lists.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$29/mo value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: AI-Powered Tools -->
+            <div class="mb-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: #ECC94B;">
+                        <i data-lucide="sparkles" class="w-5 h-5 text-gray-900"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold m-0" style="color: #1A202C;">AI-Powered Tools</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">ClickCampaigns.ai</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">AI Marketing Campaign Builder</p>
+                                <p class="text-sm text-gray-600 m-0">Generate complete campaigns &mdash; ads, emails, landing pages, social posts &mdash; in minutes instead of weeks.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$79/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">ChatBaser.ai</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Custom AI Chatbot Builder</p>
+                                <p class="text-sm text-gray-600 m-0">Train chatbots on YOUR content. 24/7 support, lead qualification, and automated sales conversations.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$49/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">BrandBaser.com</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">AI Brand Content Generator</p>
+                                <p class="text-sm text-gray-600 m-0">Consistent, on-brand marketing materials. Social posts, emails, ad copy, website content &mdash; all AI-powered.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$39/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">HighTicketGPT.com</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">AI Sales Copy for Premium Offers</p>
+                                <p class="text-sm text-gray-600 m-0">Persuasion-optimized sales copy for high-ticket offers. Sales pages, VSL scripts, webinar pitches.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$49/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">ScaleGPT.com</h4>
+                                <p class="text-sm text-gray-500 m-0 mb-2">Custom AI Assistant Builder</p>
+                                <p class="text-sm text-gray-600 m-0">Build AI assistants custom-trained for YOUR business. Customer onboarding, content creation, data analysis.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$49/mo value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Lead Capture & Conversion -->
+            <div class="mb-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: #E53E3E;">
+                        <i data-lucide="target" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold m-0" style="color: #1A202C;">Lead Capture &amp; Conversion</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GrooveForms</h4>
+                                <p class="text-sm text-gray-600 m-0">Custom forms with conditional logic, multi-step sequences, native CRM integration.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$29/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GroovePopUps</h4>
+                                <p class="text-sm text-gray-600 m-0">Timed, scroll-triggered, and exit-intent popups. Increase opt-ins 25-40%.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$29/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GrooveProof</h4>
+                                <p class="text-sm text-gray-600 m-0">Real-time social proof notifications. Purchase alerts and activity popups.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$29/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">QuizFunnels</h4>
+                                <p class="text-sm text-gray-600 m-0">Interactive quizzes that segment, qualify, and convert. 2-3x higher opt-in rates.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$49/mo value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Ecommerce & Scheduling -->
+            <div class="mb-10">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background-color: #38A169;">
+                        <i data-lucide="shopping-cart" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold m-0" style="color: #1A202C;">Ecommerce &amp; Scheduling</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">GrooveKart</h4>
+                                <p class="text-sm text-gray-600 m-0">Full e-commerce storefront. Product management, inventory, shipping, checkout optimization.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$79/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">CalendarBug</h4>
+                                <p class="text-sm text-gray-600 m-0">Online scheduling and booking. Syncs with Google Calendar, Outlook, and more.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$29/mo value</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm border border-gray-200">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <div class="flex-1 min-w-0">
+                                <h4 class="font-bold text-gray-900 m-0 mb-1">AffiliatePages.com</h4>
+                                <p class="text-sm text-gray-600 m-0">Pre-designed blocks for product reviews, comparison tables. AI-powered affiliate content.</p>
+                            </div>
+                            <span class="text-green-600 font-bold text-sm whitespace-nowrap">$39/mo value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOTAL VALUE BOX -->
+            <div class="bg-white border-4 border-yellow-400 rounded-xl p-8 text-center shadow-lg">
+                <h3 class="text-xl font-bold text-gray-500 mb-4 uppercase tracking-wide">Total Monthly Value of All Tools</h3>
+                <p class="text-5xl md:text-6xl font-black text-red-600 mb-2">$2,037<span class="text-2xl text-gray-400">/month</span></p>
+                <p class="text-2xl font-bold text-gray-500 mb-6">= $24,444/year if purchased separately</p>
+                <div class="border-t-2 border-yellow-400 pt-6">
+                    <p class="text-lg text-gray-600 mb-2">Your Scale Plus Investment:</p>
+                    <p class="text-5xl md:text-6xl font-black text-green-600">$497<span class="text-2xl text-gray-400">/year</span></p>
+                    <p class="text-lg font-bold text-green-600 mt-2">That's just $41.42/month for EVERYTHING</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 7: BONUSES                            -->
+    <!-- ============================================ -->
+    <div class="bg-white">
+        <div class="max-w-3xl mx-auto px-4 py-14">
+
+            <div class="text-center mb-10">
+                <p class="text-sm font-bold tracking-widest uppercase mb-2 text-red-600">Launch-Only Bonuses</p>
+                <h2 class="text-2xl md:text-4xl font-black mb-3" style="color: #1A202C;">
+                    But Wait &mdash; There's More
+                </h2>
+                <p class="text-gray-600">Available during this launch window ONLY. These will NOT be offered again.</p>
+            </div>
+
+            <div class="space-y-6">
+
+                <!-- Bonus 1 -->
+                <div class="border-2 border-yellow-400 rounded-xl overflow-hidden">
+                    <div style="background-color: #ECC94B;" class="px-6 py-3 flex justify-between items-center">
+                        <span class="font-extrabold text-gray-900">BONUS #1</span>
+                        <span class="font-bold text-gray-900">$2,997 Value</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-extrabold mb-2" style="color: #1A202C;">5-Day Implementation Sprint With Mike</h4>
+                        <p class="text-gray-600 m-0">Five days of LIVE guided implementation where Mike personally walks you through setting up your Scale Plus account from scratch. Funnels, email automations, CRM &mdash; fully operational by Friday. Not a pre-recorded course. LIVE and personal.</p>
+                    </div>
+                </div>
+
+                <!-- Bonus 2 -->
+                <div class="border-2 border-yellow-400 rounded-xl overflow-hidden">
+                    <div style="background-color: #ECC94B;" class="px-6 py-3 flex justify-between items-center">
+                        <span class="font-extrabold text-gray-900">BONUS #2</span>
+                        <span class="font-bold text-gray-900">$997 Value</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-extrabold mb-2" style="color: #1A202C;">Done-For-You Funnel Template Library</h4>
+                        <p class="text-gray-600 m-0">50 professionally designed, high-converting funnel templates pre-built inside Scale Plus. Opt-in, webinar, product launch, high-ticket, tripwire, and more. Pick a template, customize, launch.</p>
+                    </div>
+                </div>
+
+                <!-- Bonus 3 -->
+                <div class="border-2 border-yellow-400 rounded-xl overflow-hidden">
+                    <div style="background-color: #ECC94B;" class="px-6 py-3 flex justify-between items-center">
+                        <span class="font-extrabold text-gray-900">BONUS #3</span>
+                        <span class="font-bold text-gray-900">$497 Value</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-extrabold mb-2" style="color: #1A202C;">AI Mastery Course &mdash; Building Your Business With AI</h4>
+                        <p class="text-gray-600 m-0">Complete training on using AI to accelerate every part of your business. Copy, campaigns, customer service, automation. The entrepreneurs who master AI now will dominate the next decade.</p>
+                    </div>
+                </div>
+
+                <!-- Bonus 4 -->
+                <div class="border-2 border-yellow-400 rounded-xl overflow-hidden">
+                    <div style="background-color: #ECC94B;" class="px-6 py-3 flex justify-between items-center">
+                        <span class="font-extrabold text-gray-900">BONUS #4</span>
+                        <span class="font-bold text-gray-900">$1,200/yr Value</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-extrabold mb-2" style="color: #1A202C;">Private Community &amp; Weekly Live Q&amp;A</h4>
+                        <p class="text-gray-600 m-0">Access to a curated private community of serious entrepreneurs. Plus weekly live Q&A calls where you get your questions answered in real time by the Scale Plus team.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bonus total -->
+            <div class="bg-yellow-50 border-2 border-yellow-400 rounded-xl p-6 mt-8 text-center">
+                <p class="text-gray-600 m-0 mb-1">Total Bonus Value:</p>
+                <p class="text-3xl font-black text-gray-900 m-0">$5,691</p>
+                <p class="text-red-600 font-bold text-sm mt-2 m-0">
+                    <i data-lucide="alert-triangle" class="w-4 h-4 inline mr-1"></i>
+                    These bonuses disappear when the launch window closes
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 8: SOCIAL PROOF / TESTIMONIALS        -->
+    <!-- ============================================ -->
+    <div style="background-color: #F7FAFC;">
+        <div class="max-w-3xl mx-auto px-4 py-14">
+
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-4xl font-black mb-3" style="color: #1A202C;">
+                    What Scale Plus Members Are Saying
+                </h2>
+            </div>
+
+            <div class="space-y-6">
+
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.pexels.com/photos/3727513/pexels-photo-3727513.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Sarah K." class="w-14 h-14 rounded-full object-cover border-2 border-yellow-400">
+                        <div>
+                            <p class="font-bold text-gray-900 m-0">Sarah K.</p>
+                            <p class="text-sm text-gray-500 m-0">Online Course Creator</p>
+                        </div>
+                        <div class="ml-auto flex gap-0.5">
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 mb-2 m-0">"I cancelled 11 subscriptions in my first week."</p>
+                    <p class="text-gray-600 m-0">I was paying $1,247/month across ClickFunnels, ActiveCampaign, Teachable, Calendly, SamCart, and more. Within my first week on Scale Plus, I migrated everything and cancelled 11 subscriptions. I'm saving over $14,000/year.</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.pexels.com/photos/6699295/pexels-photo-6699295.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Marcus T." class="w-14 h-14 rounded-full object-cover border-2 border-yellow-400">
+                        <div>
+                            <p class="font-bold text-gray-900 m-0">Marcus T.</p>
+                            <p class="text-sm text-gray-500 m-0">Digital Marketing Agency Owner</p>
+                        </div>
+                        <div class="ml-auto flex gap-0.5">
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 mb-2 m-0">"We moved our entire agency to Scale Plus."</p>
+                    <p class="text-gray-600 m-0">Managing 15 clients, I was spending over $2,000/month on tools. Scale Plus replaced all of it. The CRM alone is worth the price. My clients love the capabilities. This is the real deal.</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.pexels.com/photos/6572210/pexels-photo-6572210.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Jennifer R." class="w-14 h-14 rounded-full object-cover border-2 border-yellow-400">
+                        <div>
+                            <p class="font-bold text-gray-900 m-0">Jennifer R.</p>
+                            <p class="text-sm text-gray-500 m-0">Health &amp; Wellness Coach</p>
+                        </div>
+                        <div class="ml-auto flex gap-0.5">
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 mb-2 m-0">"I went from zero to my first $10K month."</p>
+                    <p class="text-gray-600 m-0">Brand new to online business. Didn't know what a funnel was 6 months ago. Scale Plus made it simple &mdash; picked a template, used AI for copy, set up emails, launched my course. Last month: $10,400 in sales.</p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.pexels.com/photos/262391/pexels-photo-262391.jpeg?auto=compress&cs=tinysrgb&h=130" alt="David L." class="w-14 h-14 rounded-full object-cover border-2 border-yellow-400">
+                        <div>
+                            <p class="font-bold text-gray-900 m-0">David L.</p>
+                            <p class="text-sm text-gray-500 m-0">Consultant &amp; Author</p>
+                        </div>
+                        <div class="ml-auto flex gap-0.5">
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 mb-2 m-0">"The AI tools alone are worth 10x the price."</p>
+                    <p class="text-gray-600 m-0">I used to spend $500/month on AI tools and copywriting services. ClickCampaigns.ai, ChatBaser, HighTicketGPT have completely replaced my need for external subscriptions AND my freelance copywriter.</p>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.pexels.com/photos/2422287/pexels-photo-2422287.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Amanda P." class="w-14 h-14 rounded-full object-cover border-2 border-yellow-400">
+                        <div>
+                            <p class="font-bold text-gray-900 m-0">Amanda P.</p>
+                            <p class="text-sm text-gray-500 m-0">Executive Business Coach</p>
+                        </div>
+                        <div class="ml-auto flex gap-0.5">
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 mb-2 m-0">"Finally &mdash; a platform that actually works for coaches."</p>
+                    <p class="text-gray-600 m-0">Every "all-in-one" platform was really built for digital marketers. As a coach, I need booking, CRM, invoicing. Scale Plus is the first that truly gets what coaches and consultants need.</p>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.pexels.com/photos/5060973/pexels-photo-5060973.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Ryan M." class="w-14 h-14 rounded-full object-cover border-2 border-yellow-400">
+                        <div>
+                            <p class="font-bold text-gray-900 m-0">Ryan M.</p>
+                            <p class="text-sm text-gray-500 m-0">Affiliate Marketer</p>
+                        </div>
+                        <div class="ml-auto flex gap-0.5">
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-lg font-bold text-gray-900 mb-2 m-0">"Scale Plus pays for itself every month."</p>
+                    <p class="text-gray-600 m-0">AffiliatePages.com for review sites, 40% recurring commissions on referrals, and GrooveSell for my own products. I earned back my annual subscription in the first 3 weeks from affiliate commissions alone.</p>
+                </div>
+
+            </div>
+
+            <!-- CTA after testimonials -->
+            <div class="text-center mt-10">
+                <a href="#pricing" class="cta-btn inline-block text-white font-extrabold text-lg md:text-xl px-10 py-5 rounded-lg uppercase tracking-wide no-underline">
+                    Join Scale Plus Now &mdash; All 25+ Tools for $497/Year
+                </a>
+                <p class="text-xs text-gray-400 mt-3">30-day money-back guarantee</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 9: PRICING                            -->
+    <!-- ============================================ -->
+    <div class="bg-white" id="pricing">
+        <div class="max-w-3xl mx-auto px-4 py-14">
+
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-4xl font-black mb-3" style="color: #1A202C;">
+                    So What's the Investment?
+                </h2>
+                <p class="text-gray-600 text-lg">Let's do the math one more time.</p>
+            </div>
+
+            <!-- Value recap -->
+            <div class="text-center mb-10">
+                <p class="text-gray-500 mb-1">25+ tools combined market value:</p>
+                <p class="text-3xl font-black text-red-600 strikethrough">$24,444/year</p>
+                <p class="text-gray-500 mt-4 mb-1">Launch bonuses:</p>
+                <p class="text-2xl font-black text-red-600 strikethrough">$5,691</p>
+                <p class="text-gray-500 mt-4 mb-1">Total value:</p>
+                <p class="text-4xl font-black text-red-600 strikethrough">$30,000+</p>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-10">
+
+                <!-- Annual Plan -->
+                <div class="border-4 border-green-500 rounded-xl overflow-hidden shadow-lg relative">
+                    <div class="bg-green-500 text-white text-center py-2 font-bold text-sm uppercase tracking-wide">
+                        <i data-lucide="award" class="w-4 h-4 inline mr-1"></i> BEST VALUE &mdash; SAVE 58%
+                    </div>
+                    <div class="p-8 text-center bg-white">
+                        <p class="text-gray-500 text-sm mb-2">Annual Plan</p>
+                        <div class="mb-4">
+                            <span class="text-gray-400 line-through text-xl">$2,997/yr</span>
+                            <span class="text-gray-400 line-through text-xl ml-2">$997/yr</span>
+                        </div>
+                        <p class="text-5xl font-black text-green-600 mb-1">$497</p>
+                        <p class="text-gray-500 text-sm mb-4">per year</p>
+                        <p class="text-sm text-green-600 font-bold mb-6">Just $41.42/month</p>
+                        <a href="#" class="cta-btn-green block text-white font-extrabold text-lg py-4 rounded-lg uppercase tracking-wide no-underline">
+                            Get Annual Access
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Monthly Plan -->
+                <div class="border-2 border-gray-300 rounded-xl overflow-hidden shadow-md">
+                    <div class="bg-gray-200 text-gray-600 text-center py-2 font-bold text-sm uppercase tracking-wide">
+                        FLEXIBLE
+                    </div>
+                    <div class="p-8 text-center bg-white">
+                        <p class="text-gray-500 text-sm mb-2">Monthly Plan</p>
+                        <div class="mb-4">
+                            <span class="text-gray-400 line-through text-xl">$297/mo</span>
+                        </div>
+                        <p class="text-5xl font-black text-gray-800 mb-1">$99</p>
+                        <p class="text-gray-500 text-sm mb-4">per month</p>
+                        <p class="text-sm text-gray-500 mb-6">No annual commitment</p>
+                        <a href="#" class="cta-btn block text-white font-extrabold text-lg py-4 rounded-lg uppercase tracking-wide no-underline">
+                            Start Monthly
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Competitor Comparison Table -->
+            <div class="overflow-x-auto mb-10">
+                <table class="w-full border-collapse text-sm">
+                    <thead>
+                        <tr class="bg-gray-800 text-white">
+                            <th class="text-left p-3 font-bold">Platform</th>
+                            <th class="text-center p-3 font-bold">Monthly Cost</th>
+                            <th class="text-center p-3 font-bold">Tools</th>
+                            <th class="text-center p-3 font-bold">AI Tools</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-gray-50 border-b border-gray-200">
+                            <td class="p-3 font-semibold text-gray-700">Go High Level</td>
+                            <td class="p-3 text-center text-red-600 font-bold">$297-$497/mo</td>
+                            <td class="p-3 text-center text-gray-600">~15 tools</td>
+                            <td class="p-3 text-center text-gray-400">Limited</td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="p-3 font-semibold text-gray-700">ClickFunnels</td>
+                            <td class="p-3 text-center text-red-600 font-bold">$97-$297/mo</td>
+                            <td class="p-3 text-center text-gray-600">~5 tools</td>
+                            <td class="p-3 text-center text-gray-400">No</td>
+                        </tr>
+                        <tr class="bg-gray-50 border-b border-gray-200">
+                            <td class="p-3 font-semibold text-gray-700">Kartra</td>
+                            <td class="p-3 text-center text-red-600 font-bold">$99-$499/mo</td>
+                            <td class="p-3 text-center text-gray-600">~10 tools</td>
+                            <td class="p-3 text-center text-gray-400">No</td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="p-3 font-semibold text-gray-700">Skool</td>
+                            <td class="p-3 text-center text-red-600 font-bold">$99/mo</td>
+                            <td class="p-3 text-center text-gray-600">2 tools</td>
+                            <td class="p-3 text-center text-gray-400">No</td>
+                        </tr>
+                        <tr class="bg-white border-b border-gray-200">
+                            <td class="p-3 font-semibold text-gray-700">Duct-taping tools</td>
+                            <td class="p-3 text-center text-red-600 font-bold">$1,000-$2,000+/mo</td>
+                            <td class="p-3 text-center text-gray-600">Varies</td>
+                            <td class="p-3 text-center text-gray-400">Varies</td>
+                        </tr>
+                        <tr class="bg-green-50 border-2 border-green-500">
+                            <td class="p-3 font-extrabold text-green-700">
+                                <i data-lucide="check-circle" class="w-4 h-4 inline text-green-500 mr-1"></i>
+                                Scale Plus
+                            </td>
+                            <td class="p-3 text-center text-green-700 font-extrabold text-lg">$42/mo</td>
+                            <td class="p-3 text-center text-green-700 font-extrabold">25+ tools</td>
+                            <td class="p-3 text-center text-green-700 font-extrabold">6 AI tools</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="text-center">
+                <a href="#" class="cta-btn-green inline-block text-white font-extrabold text-lg md:text-xl px-12 py-5 rounded-lg uppercase tracking-wide no-underline urgency-pulse">
+                    Lock In $497/Year &mdash; Save Over $23,000
+                </a>
+                <p class="text-xs text-gray-400 mt-3">30-day money-back guarantee &bull; Cancel anytime</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 10: GUARANTEE                         -->
+    <!-- ============================================ -->
+    <div style="background-color: #F7FAFC;">
+        <div class="max-w-3xl mx-auto px-4 py-14">
+
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-4xl font-black mb-3" style="color: #1A202C;">
+                    My "No Excuses" 30-Day<br>Money-Back Guarantee
+                </h2>
+            </div>
+
+            <div class="guarantee-badge max-w-2xl mx-auto rounded-xl p-8 text-center">
+                <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="shield-check" class="w-10 h-10 text-green-600"></i>
+                </div>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    Try Scale Plus for a full <strong>30 days.</strong> Log in. Explore every tool. Build a funnel. Set up your emails. Play with the AI tools. Import your contacts. Test the CRM.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    If at any point during those 30 days you feel like Scale Plus isn't worth <strong>at least 10x</strong> what you paid...
+                </p>
+                <p class="text-xl font-bold text-green-700 mb-4">
+                    Just send us an email. Full refund. No questions. No hoops. No "retention specialists."
+                </p>
+                <p class="text-gray-500 text-sm m-0">
+                    The risk is entirely on us. We're happy to take it &mdash; because we know what happens when people actually start using Scale Plus. They don't leave.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 11: FAQ                               -->
+    <!-- ============================================ -->
+    <div class="bg-white">
+        <div class="max-w-3xl mx-auto px-4 py-14">
+
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-4xl font-black mb-3" style="color: #1A202C;">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+
+            <div class="space-y-3 max-w-2xl mx-auto" id="faq-container">
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-5 bg-white hover:bg-gray-50 flex justify-between items-center cursor-pointer font-bold text-gray-900" onclick="toggleFaq(this)">
+                        <span>Is this really an all-in-one? Or will I still need other tools?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 faq-arrow transition-transform flex-shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-5 pb-5 text-gray-600">
+                            Scale Plus includes 25+ integrated tools covering funnels, email, CRM, courses, webinars, video hosting, e-commerce, scheduling, invoicing, AI, and more. The only external tool you might keep is your payment processor (Stripe, PayPal) &mdash; but those are free.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-5 bg-white hover:bg-gray-50 flex justify-between items-center cursor-pointer font-bold text-gray-900" onclick="toggleFaq(this)">
+                        <span>I'm not tech-savvy. Can I actually use this?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 faq-arrow transition-transform flex-shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-5 pb-5 text-gray-600">
+                            Absolutely. Drag-and-drop builders. Pre-built templates. AI assistants that create content for you. Plus, launch bonus members get the 5-Day Implementation Sprint where Mike personally walks you through setup. If you can use Facebook, you can use Scale Plus.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-5 bg-white hover:bg-gray-50 flex justify-between items-center cursor-pointer font-bold text-gray-900" onclick="toggleFaq(this)">
+                        <span>Can I migrate my existing email list, courses, and funnels?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 faq-arrow transition-transform flex-shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-5 pb-5 text-gray-600">
+                            Yes. Scale Plus includes import tools for contacts, courses, and content. We have migration guides and our support team can help. Most users are fully migrated within 1-2 weeks.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-5 bg-white hover:bg-gray-50 flex justify-between items-center cursor-pointer font-bold text-gray-900" onclick="toggleFaq(this)">
+                        <span>How is this so cheap? What's the catch?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 faq-arrow transition-transform flex-shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-5 pb-5 text-gray-600">
+                            No catch. AI has dramatically reduced our development costs. We'd rather have 500,000 members at $497/year than 50,000 at $2,997/year. Volume wins. We're passing our AI-powered savings directly to you.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-5 bg-white hover:bg-gray-50 flex justify-between items-center cursor-pointer font-bold text-gray-900" onclick="toggleFaq(this)">
+                        <span>What if I only need a few of the tools?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 faq-arrow transition-transform flex-shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-5 pb-5 text-gray-600">
+                            Most people start with 3-5 tools and expand over time. You're not paying per tool. When you're ready to add webinars, courses, AI tools, or CRM &mdash; it's already there. No upgrade. No additional cost.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-5 bg-white hover:bg-gray-50 flex justify-between items-center cursor-pointer font-bold text-gray-900" onclick="toggleFaq(this)">
+                        <span>Is there an affiliate program?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 faq-arrow transition-transform flex-shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-5 pb-5 text-gray-600">
+                            Yes! <strong>40% recurring commission.</strong> Refer someone who pays $497/year &rarr; you earn $198.80/year for as long as they're a member. Refer 3 people and your subscription pays for itself. Refer 100 and you've built a serious recurring income stream.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-5 bg-white hover:bg-gray-50 flex justify-between items-center cursor-pointer font-bold text-gray-900" onclick="toggleFaq(this)">
+                        <span>How does the TinyEmail partnership work?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 faq-arrow transition-transform flex-shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-5 pb-5 text-gray-600">
+                            Free plan: 15,000 emails/month for 500 contacts at no cost. Need more? Our exclusive rate is $14.97/month for unlimited contacts and 200,000 emails/month. That's 96.7% cheaper than standard email platform pricing.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-5 bg-white hover:bg-gray-50 flex justify-between items-center cursor-pointer font-bold text-gray-900" onclick="toggleFaq(this)">
+                        <span>Can I cancel anytime?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 faq-arrow transition-transform flex-shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-5 pb-5 text-gray-600">
+                            Yes. Monthly members cancel anytime. Annual members are covered by the 30-day money-back guarantee. No contracts. No cancellation fees. We want you here because you love the platform, not because you're locked in.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full text-left p-5 bg-white hover:bg-gray-50 flex justify-between items-center cursor-pointer font-bold text-gray-900" onclick="toggleFaq(this)">
+                        <span>Will new tools be added over time?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 faq-arrow transition-transform flex-shrink-0 ml-4"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="px-5 pb-5 text-gray-600">
+                            Yes! We're continuously building. Because AI lets us develop at the speed of thought, new tools are released regularly. Your subscription gives you access to everything we build &mdash; now and in the future. No additional cost.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 12: FINAL CTA                         -->
+    <!-- ============================================ -->
+    <div style="background: linear-gradient(180deg, #1A202C 0%, #2D3748 100%);">
+        <div class="max-w-3xl mx-auto px-4 py-16">
+
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-4xl font-black text-white mb-4">
+                    This Is Your Moment
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-10">
+
+                <!-- Picture 1 -->
+                <div class="bg-red-900/30 border border-red-500/30 rounded-xl p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="x-circle" class="w-6 h-6 text-red-400"></i>
+                        <p class="text-red-400 font-bold m-0">You close this page</p>
+                    </div>
+                    <ul class="text-gray-400 text-sm space-y-2 list-none p-0 m-0">
+                        <li>Same 12-15 platforms tomorrow</li>
+                        <li>Same $1,000+/month in subscriptions</li>
+                        <li>Same broken integrations</li>
+                        <li>Same late-night troubleshooting</li>
+                        <li class="text-red-400 font-bold">$6,000-$12,000 wasted in 6 months</li>
+                    </ul>
+                </div>
+
+                <!-- Picture 2 -->
+                <div class="bg-green-900/30 border border-green-500/30 rounded-xl p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="check-circle" class="w-6 h-6 text-green-400"></i>
+                        <p class="text-green-400 font-bold m-0">You take action now</p>
+                    </div>
+                    <ul class="text-gray-300 text-sm space-y-2 list-none p-0 m-0">
+                        <li>One unified platform this week</li>
+                        <li>Cancel subscriptions for good</li>
+                        <li>Everything integrated, nothing breaks</li>
+                        <li>Time for revenue, not tech support</li>
+                        <li class="text-green-400 font-bold">$6,000+ saved in 6 months</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="text-center mb-6">
+                <p class="text-yellow-400 font-bold text-lg mb-6">
+                    <i data-lucide="alarm-clock" class="w-5 h-5 inline mr-1"></i>
+                    The cart closes on <strong>[LAUNCH CLOSE DATE]</strong>. After that, the bonuses disappear forever.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <a href="#" class="cta-btn-green inline-block text-white font-extrabold text-xl md:text-2xl px-12 py-6 rounded-lg uppercase tracking-wide no-underline urgency-pulse">
+                    YES! I Want Scale Plus &mdash; $497/Year
+                </a>
+                <br>
+                <a href="#" class="cta-btn inline-block text-white font-bold text-base px-8 py-3 rounded-lg uppercase tracking-wide no-underline mt-4">
+                    Or Start Monthly at $99/Month
+                </a>
+                <p class="text-gray-400 text-xs mt-4">30-day money-back guarantee &bull; Cancel anytime &bull; Zero risk</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECTION 13: P.S. CLOSING                      -->
+    <!-- ============================================ -->
+    <div class="bg-white">
+        <div class="max-w-2xl mx-auto px-4 py-14">
+
+            <div class="text-base text-gray-700 leading-relaxed">
+
+                <p class="mb-6">To your success,</p>
+
+                <p class="text-xl font-bold mb-1" style="color: #1A202C;">Mike Filsaime</p>
+                <p class="text-gray-500 mb-8">Founder, Scale Plus &bull; Creator of Kartra, WebinarJam, EverWebinar, Groove.cm &amp; Courses.gg</p>
+
+                <div class="border-t border-gray-200 pt-8">
+
+                    <p class="mb-6">
+                        <strong>P.S.</strong> &mdash; Remember: you're protected by a full <strong>30-day money-back guarantee.</strong> Try Scale Plus, explore every tool, build your funnels, set up your automations. If you don't agree it's worth at least 10x what you paid, just email us for a full refund. No questions, no hassle. The only risk is doing nothing.
+                    </p>
+
+                    <p class="mb-6">
+                        <strong>P.P.S.</strong> &mdash; Quick math: if you're paying just $200/month for software (most pay WAY more), that's $2,400/year. Scale Plus is $497/year. <strong class="text-green-600">You save $1,903 in your first year alone.</strong> And you get MORE tools, not fewer. When was the last time upgrading saved you money?
+                    </p>
+
+                    <p class="mb-6">
+                        <strong>P.P.P.S.</strong> &mdash; Still on the fence? Ask yourself: <em>"If I found out my biggest competitor just got access to 25+ business tools with built-in AI for $42/month... would I be worried?"</em> Don't let them get the edge. Join Scale Plus now.
+                    </p>
+
+                </div>
+
+                <div class="text-center mt-8">
+                    <a href="#pricing" class="cta-btn inline-block text-white font-extrabold text-lg px-10 py-5 rounded-lg uppercase tracking-wide no-underline">
+                        Get Scale Plus Now &mdash; $497/Year
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <div class="bg-gray-900 py-8">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-xs m-0">
+                Scale Plus is a product of Groove Digital. All rights reserved.<br>
+                <a href="#" class="text-gray-500 hover:text-gray-400 no-underline">Privacy Policy</a> &bull;
+                <a href="#" class="text-gray-500 hover:text-gray-400 no-underline">Terms of Service</a> &bull;
+                <a href="#" class="text-gray-500 hover:text-gray-400 no-underline">Contact Us</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- STICKY MOBILE CTA                             -->
+    <!-- ============================================ -->
+    <div class="mobile-sticky-cta">
+        <a href="#pricing" class="cta-btn-green block text-white font-extrabold text-center py-3 rounded-lg uppercase tracking-wide no-underline text-base">
+            Get Scale Plus &mdash; $497/Year
+        </a>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SCRIPTS                                       -->
+    <!-- ============================================ -->
+    <script>
+        // Countdown Timer
+        function startCountdown() {
+            // Set launch close to 3 days 14 hours from page load
+            const endTime = new Date();
+            endTime.setDate(endTime.getDate() + 3);
+            endTime.setHours(endTime.getHours() + 14);
+
+            function updateTimer() {
+                const now = new Date();
+                const diff = endTime - now;
+
+                if (diff <= 0) {
+                    document.getElementById('cd-days').textContent = '00';
+                    document.getElementById('cd-hours').textContent = '00';
+                    document.getElementById('cd-mins').textContent = '00';
+                    document.getElementById('cd-secs').textContent = '00';
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+                document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+                document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
+        // FAQ Toggle
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const isOpen = answer.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+            document.querySelectorAll('.faq-toggle').forEach(t => t.classList.remove('open'));
+
+            // Open clicked if it was closed
+            if (!isOpen) {
+                answer.classList.add('open');
+                button.classList.add('open');
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            startCountdown();
+        });
+    </script>
+
+</body>
+</html>

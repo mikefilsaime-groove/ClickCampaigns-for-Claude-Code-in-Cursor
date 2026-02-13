@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale Plus - Video 3: The Ownership Experience</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .urgency-bar { background: #ECC94B; }
+        .cta-red { background: #E53E3E; }
+        .cta-red:hover { background: #C53030; }
+        .cta-green { background: #38A169; }
+        .cta-green:hover { background: #2F855A; }
+        .cta-orange { background: #ED8936; }
+        .cta-orange:hover { background: #DD6B20; }
+        .highlight { background: #ECC94B; padding: 2px 6px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container .placeholder { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .pulse-cta { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(229, 62, 62, 0.4); }
+            50% { box-shadow: 0 0 0 14px rgba(229, 62, 62, 0); }
+        }
+        .case-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+        .case-card { transition: all 0.25s ease; }
+        .countdown-digit {
+            background: #1A202C;
+            color: #ECC94B;
+            font-size: 2rem;
+            font-weight: 900;
+            padding: 12px 18px;
+            border-radius: 8px;
+            min-width: 70px;
+            display: inline-block;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .countdown-label { font-size: 0.7rem; color: #718096; text-transform: uppercase; letter-spacing: 0.1em; }
+        @keyframes urgencyPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .urgency-pulse { animation: urgencyPulse 1.5s infinite; }
+        .step-line { position: relative; }
+        .step-line::after { content: ''; position: absolute; left: 24px; top: 56px; bottom: -20px; width: 3px; background: #E2E8F0; }
+        .step-line:last-child::after { display: none; }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- URGENCY TOP BAR -->
+    <div class="urgency-bar text-center py-2 px-4">
+        <p class="text-sm md:text-base font-bold text-gray-900 uppercase tracking-wide urgency-pulse">
+            <i data-lucide="alert-circle" class="w-4 h-4 inline-block mr-1 align-text-bottom"></i>
+            Final Video &mdash; Video 3 of 3 &mdash; Cart Opens TOMORROW!
+        </p>
+    </div>
+
+    <!-- HEADER / PRE-HEADLINE -->
+    <section class="bg-gray-50 border-b-4 border-yellow-400 py-8 md:py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-red-600 font-bold text-sm md:text-base uppercase tracking-widest mb-4">
+                <i data-lucide="video" class="w-5 h-5 inline-block mr-1 align-text-bottom"></i>
+                Free Training &mdash; Video 3 of 3
+            </p>
+            <h1 class="text-3xl md:text-5xl font-black text-gray-900 leading-tight mb-4 uppercase">
+                From 25 Logins to <span class="highlight">ONE</span>: How These Entrepreneurs <span class="text-green-600">Transformed</span> Their Business
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+                Real stories from real Scale Plus members who made the switch &mdash; and never looked back
+            </p>
+        </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="bg-white py-8 md:py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="video-container rounded-lg overflow-hidden border-4 border-gray-900 shadow-2xl">
+                <div class="placeholder bg-gray-900 flex flex-col items-center justify-center">
+                    <div class="w-20 h-20 md:w-24 md:h-24 bg-red-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-700 transition-colors mb-4">
+                        <i data-lucide="play" class="w-10 h-10 md:w-12 md:h-12 text-white ml-1"></i>
+                    </div>
+                    <p class="text-white text-lg md:text-xl font-bold">Click to Play Video</p>
+                    <p class="text-gray-400 text-sm mt-1">Duration: 28 minutes</p>
+                </div>
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-3">
+                <i data-lucide="volume-2" class="w-4 h-4 inline-block mr-1 align-text-bottom"></i>
+                Make sure your sound is turned on
+            </p>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="bg-gray-50 py-12 md:py-16 px-4 border-t-4 border-b-4 border-yellow-400">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-10">
+                <p class="text-red-600 font-bold text-sm uppercase tracking-widest mb-2">Transformation Stories</p>
+                <h2 class="text-3xl md:text-4xl font-black text-gray-900 uppercase mb-3">
+                    They Made the Switch. Here's What Happened.
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+                <!-- Case Study 1 -->
+                <div class="case-card bg-white rounded-xl border-2 border-gray-200 overflow-hidden shadow-md">
+                    <div class="bg-red-50 px-6 py-4 border-b-2 border-red-200">
+                        <p class="text-xs font-bold text-red-600 uppercase tracking-widest mb-1">Before Scale Plus</p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.pexels.com/photos/14589344/pexels-photo-14589344.jpeg?auto=compress&cs=tinysrgb&h=130" alt="David M." class="w-14 h-14 rounded-full object-cover border-2 border-red-300">
+                            <div>
+                                <p class="font-bold text-gray-900">David M.</p>
+                                <p class="text-sm text-gray-600">Course Creator & Coach</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-start gap-3 mb-4">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"></i>
+                            <p class="text-gray-700 text-sm"><strong>BEFORE:</strong> 7 different tools, $523/month in subscriptions, 3 hours weekly just managing integrations that kept breaking.</p>
+                        </div>
+                        <div class="flex items-start gap-3 mb-4">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+                            <p class="text-gray-700 text-sm"><strong>AFTER:</strong> One platform, $42/month. Launched a new course in a single weekend using the AI tools. Revenue up 40% in 90 days.</p>
+                        </div>
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-3">
+                            <p class="text-green-800 font-bold text-sm">"I got my weekends back. Everything just works together now."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="case-card bg-white rounded-xl border-2 border-gray-200 overflow-hidden shadow-md">
+                    <div class="bg-red-50 px-6 py-4 border-b-2 border-red-200">
+                        <p class="text-xs font-bold text-red-600 uppercase tracking-widest mb-1">Before Scale Plus</p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.pexels.com/photos/6572210/pexels-photo-6572210.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Sarah L." class="w-14 h-14 rounded-full object-cover border-2 border-red-300">
+                            <div>
+                                <p class="font-bold text-gray-900">Sarah L.</p>
+                                <p class="text-sm text-gray-600">Marketing Agency Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-start gap-3 mb-4">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"></i>
+                            <p class="text-gray-700 text-sm"><strong>BEFORE:</strong> ClickFunnels + Go High Level + Kajabi + SamCart. $472/month. Team wasted 10+ hours/week switching between platforms.</p>
+                        </div>
+                        <div class="flex items-start gap-3 mb-4">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+                            <p class="text-gray-700 text-sm"><strong>AFTER:</strong> Consolidated everything into Scale Plus. Onboarded 5 new clients in the first month because the CRM and invoicing finally talked to each other.</p>
+                        </div>
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-3">
+                            <p class="text-green-800 font-bold text-sm">"My team can actually focus on client work now instead of tech headaches."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="case-card bg-white rounded-xl border-2 border-gray-200 overflow-hidden shadow-md">
+                    <div class="bg-red-50 px-6 py-4 border-b-2 border-red-200">
+                        <p class="text-xs font-bold text-red-600 uppercase tracking-widest mb-1">Before Scale Plus</p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.pexels.com/photos/29995739/pexels-photo-29995739.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Priya N." class="w-14 h-14 rounded-full object-cover border-2 border-red-300">
+                            <div>
+                                <p class="font-bold text-gray-900">Priya N.</p>
+                                <p class="text-sm text-gray-600">Health & Wellness Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-start gap-3 mb-4">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"></i>
+                            <p class="text-gray-700 text-sm"><strong>BEFORE:</strong> Struggled with tech for 2 years. Spent $15,000 on a developer to connect her booking system to her email tool. It still didn't work right.</p>
+                        </div>
+                        <div class="flex items-start gap-3 mb-4">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+                            <p class="text-gray-700 text-sm"><strong>AFTER:</strong> Set up her entire business in Scale Plus in one weekend. CalendarBug, email, funnels, and invoicing all connected out of the box. Zero tech headaches.</p>
+                        </div>
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-3">
+                            <p class="text-green-800 font-bold text-sm">"I wish I'd had this two years ago. I would have saved $15,000 and 6 months of frustration."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 4 -->
+                <div class="case-card bg-white rounded-xl border-2 border-gray-200 overflow-hidden shadow-md">
+                    <div class="bg-red-50 px-6 py-4 border-b-2 border-red-200">
+                        <p class="text-xs font-bold text-red-600 uppercase tracking-widest mb-1">Before Scale Plus</p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.pexels.com/photos/29995889/pexels-photo-29995889.jpeg?auto=compress&cs=tinysrgb&h=130" alt="Rachel T." class="w-14 h-14 rounded-full object-cover border-2 border-red-300">
+                            <div>
+                                <p class="font-bold text-gray-900">Rachel T.</p>
+                                <p class="text-sm text-gray-600">Affiliate Marketer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-start gap-3 mb-4">
+                            <i data-lucide="x-circle" class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"></i>
+                            <p class="text-gray-700 text-sm"><strong>BEFORE:</strong> Brand new to online business. Overwhelmed by all the tools she "needed." Spent $300 on subscriptions before making a single dollar.</p>
+                        </div>
+                        <div class="flex items-start gap-3 mb-4">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+                            <p class="text-gray-700 text-sm"><strong>AFTER:</strong> Used AffiliatePages.com and ClickCampaigns.ai to launch her first review site. Made her first $2,400 in commissions within 60 days.</p>
+                        </div>
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-3">
+                            <p class="text-green-800 font-bold text-sm">"As a beginner, having everything in one place was a game-changer. I didn't need to figure out 10 different tools."</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT HAPPENS WHEN YOU JOIN -->
+    <section class="bg-white py-12 md:py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-black text-gray-900 uppercase mb-3">
+                    What Happens When You Join Scale Plus
+                </h2>
+                <p class="text-lg text-gray-600">Your first 48 hours as a Scale Plus member</p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Step 1 -->
+                <div class="step-line flex items-start gap-5">
+                    <div class="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center shadow-md">
+                        <span class="font-black text-gray-900 text-xl">1</span>
+                    </div>
+                    <div class="bg-gray-50 border-2 border-gray-200 rounded-xl p-5 flex-1">
+                        <h3 class="font-bold text-lg text-gray-900 mb-1">Instant Access to Everything</h3>
+                        <p class="text-gray-700">The moment you join, you get access to all 25+ tools. No drip. No upsells to unlock features. Everything is yours from day one.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="step-line flex items-start gap-5">
+                    <div class="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center shadow-md">
+                        <span class="font-black text-gray-900 text-xl">2</span>
+                    </div>
+                    <div class="bg-gray-50 border-2 border-gray-200 rounded-xl p-5 flex-1">
+                        <h3 class="font-bold text-lg text-gray-900 mb-1">Start Canceling Other Subscriptions</h3>
+                        <p class="text-gray-700">Log into ClickFunnels, Go High Level, Kajabi, SamCart, Skool &mdash; and cancel them. You won't need them anymore. Watch your monthly costs drop by hundreds.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="step-line flex items-start gap-5">
+                    <div class="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center shadow-md">
+                        <span class="font-black text-gray-900 text-xl">3</span>
+                    </div>
+                    <div class="bg-gray-50 border-2 border-gray-200 rounded-xl p-5 flex-1">
+                        <h3 class="font-bold text-lg text-gray-900 mb-1">Launch Your First Campaign with AI</h3>
+                        <p class="text-gray-700">Use ClickCampaigns.ai to generate your complete marketing campaign &mdash; ads, emails, landing pages &mdash; in minutes, not weeks. The AI does the heavy lifting.</p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="step-line flex items-start gap-5">
+                    <div class="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center shadow-md">
+                        <span class="font-black text-gray-900 text-xl">4</span>
+                    </div>
+                    <div class="bg-gray-50 border-2 border-gray-200 rounded-xl p-5 flex-1">
+                        <h3 class="font-bold text-lg text-gray-900 mb-1">Join the Community & Get Support</h3>
+                        <p class="text-gray-700">Access live streams, tutorials, and a community of entrepreneurs who are all building together. You're never alone &mdash; our team and members are there to help.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- URGENCY / COUNTDOWN -->
+    <section class="bg-gray-900 py-12 md:py-16 px-4 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-block bg-red-600 text-white px-6 py-2 rounded-full font-bold text-sm uppercase tracking-widest mb-6 urgency-pulse">
+                <i data-lucide="alert-triangle" class="w-4 h-4 inline-block mr-1 align-text-bottom"></i>
+                Cart Opens TOMORROW at 9AM ET
+            </div>
+
+            <h2 class="text-3xl md:text-4xl font-black uppercase mb-3">
+                Doors Open In...
+            </h2>
+            <p class="text-gray-400 mb-8">Special launch pricing is available for a limited time only</p>
+
+            <!-- Countdown Timer -->
+            <div class="flex justify-center gap-3 md:gap-5 mb-8" id="countdown">
+                <div class="text-center">
+                    <div class="countdown-digit" id="hours">23</div>
+                    <p class="countdown-label mt-2">Hours</p>
+                </div>
+                <div class="text-yellow-400 text-3xl font-black self-start mt-3">:</div>
+                <div class="text-center">
+                    <div class="countdown-digit" id="minutes">59</div>
+                    <p class="countdown-label mt-2">Minutes</p>
+                </div>
+                <div class="text-yellow-400 text-3xl font-black self-start mt-3">:</div>
+                <div class="text-center">
+                    <div class="countdown-digit" id="seconds">59</div>
+                    <p class="countdown-label mt-2">Seconds</p>
+                </div>
+            </div>
+
+            <div class="bg-yellow-400 text-gray-900 rounded-xl p-6 max-w-2xl mx-auto mb-8">
+                <h3 class="font-black text-xl uppercase mb-2">
+                    <i data-lucide="gift" class="w-6 h-6 inline-block mr-2 align-text-bottom"></i>
+                    Launch-Only Pricing
+                </h3>
+                <p class="text-lg">
+                    Get Scale Plus for just <strong class="text-2xl">$497/year</strong> (that's only $42/month) &mdash; a fraction of what you're paying now for just ONE of the tools included.
+                </p>
+            </div>
+
+            <p class="text-gray-400 text-sm">
+                <i data-lucide="info" class="w-4 h-4 inline-block mr-1 align-text-bottom"></i>
+                This special launch pricing will NOT last. Once the launch period ends, the price goes up.
+            </p>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="bg-white py-12 md:py-16 px-4 border-t-4 border-yellow-400">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-black text-gray-900 uppercase mb-3">
+                Don't Miss the Launch
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+                Get notified the <strong>instant</strong> doors open so you can lock in the lowest price.
+            </p>
+
+            <div class="space-y-4">
+                <!-- Primary CTA -->
+                <a href="#" class="cta-red pulse-cta inline-block text-white font-black text-xl md:text-2xl uppercase px-10 py-5 rounded-lg shadow-xl hover:shadow-2xl transition-all tracking-wide w-full md:w-auto">
+                    <i data-lucide="bell-ring" class="w-6 h-6 inline-block mr-2 align-text-bottom"></i>
+                    Get Notified When Cart Opens
+                    <i data-lucide="arrow-right" class="w-6 h-6 inline-block ml-2 align-text-bottom"></i>
+                </a>
+                <p class="text-sm text-gray-500">Be first in line for launch pricing</p>
+
+                <!-- Secondary CTA -->
+                <div class="pt-4">
+                    <a href="#" class="cta-green inline-block text-white font-bold text-lg uppercase px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all tracking-wide">
+                        <i data-lucide="user-plus" class="w-5 h-5 inline-block mr-2 align-text-bottom"></i>
+                        Join the Waitlist
+                    </a>
+                    <p class="text-sm text-gray-500 mt-2">Over 3,200 entrepreneurs already on the list</p>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap justify-center gap-6 mt-10 text-gray-500">
+                <div class="flex items-center gap-2 text-sm">
+                    <i data-lucide="shield-check" class="w-5 h-5 text-green-600"></i>
+                    <span>30-Day Money Back</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm">
+                    <i data-lucide="lock" class="w-5 h-5 text-green-600"></i>
+                    <span>Secure Checkout</span>
+                </div>
+                <div class="flex items-center gap-2 text-sm">
+                    <i data-lucide="headphones" class="w-5 h-5 text-green-600"></i>
+                    <span>Priority Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT MIKE / CREDIBILITY -->
+    <section class="bg-gray-50 py-10 md:py-12 px-4 border-t-2 border-gray-200">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <img src="https://images.pexels.com/photos/7005750/pexels-photo-7005750.jpeg?auto=compress&cs=tinysrgb&h=350" alt="Mike Filsaime" class="w-32 h-32 rounded-full object-cover border-4 border-yellow-400 shadow-lg flex-shrink-0">
+                <div>
+                    <h3 class="font-black text-xl text-gray-900 mb-2">About Mike Filsaime</h3>
+                    <p class="text-gray-700">
+                        Mike has spent <strong>20+ years</strong> building platforms used by millions &mdash; including <strong>Groove.cm, Kartra, WebinarJam, EverWebinar,</strong> and <strong>Courses.gg</strong>. With over 100,000 customers and a reputation as one of the top digital marketing minds in the world, Scale Plus represents his ultimate vision: <strong>every tool you need, one login, one unbeatable price.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-8 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="font-bold text-white text-lg mb-2">Scale Plus</p>
+            <p class="text-sm mb-4">The All-in-One Platform for Entrepreneurs, Marketers & Agencies</p>
+            <div class="flex justify-center gap-4 text-xs">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <span>|</span>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <span>|</span>
+                <a href="#" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <p class="text-xs mt-4">&copy; 2026 Scale Plus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Countdown Timer Script -->
+    <script>
+        (function() {
+            // Set countdown to tomorrow 9AM ET
+            const now = new Date();
+            const tomorrow = new Date(now);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(9, 0, 0, 0);
+
+            function updateCountdown() {
+                const now = new Date();
+                const diff = tomorrow - now;
+                if (diff <= 0) {
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                    return;
+                }
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        })();
+    </script>
+
+</body>
+</html>

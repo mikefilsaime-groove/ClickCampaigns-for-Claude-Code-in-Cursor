@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video 1: Why 97% of Online Entrepreneurs Are Bleeding Money | Scale Plus</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .play-pulse { animation: playPulse 2s ease-in-out infinite; }
+        @keyframes playPulse {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+        .cta-glow {
+            box-shadow: 0 0 20px rgba(237, 137, 54, 0.5), 0 0 40px rgba(237, 137, 54, 0.3);
+        }
+        .cta-glow:hover {
+            box-shadow: 0 0 30px rgba(237, 137, 54, 0.7), 0 0 60px rgba(237, 137, 54, 0.4);
+        }
+        .progress-step {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white m-0 p-0">
+
+    <!-- Top Progress Bar -->
+    <div style="background-color: #1A202C;" class="py-3">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="flex items-center justify-center gap-2 md:gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold" style="background-color: #E53E3E;">1</div>
+                    <span class="text-white text-xs md:text-sm font-bold hidden sm:inline">The Opportunity</span>
+                </div>
+                <div class="w-8 md:w-16 h-0.5 bg-gray-600"></div>
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center text-gray-400 text-sm font-bold bg-gray-700">2</div>
+                    <span class="text-gray-400 text-xs md:text-sm hidden sm:inline">The Transformation</span>
+                </div>
+                <div class="w-8 md:w-16 h-0.5 bg-gray-600"></div>
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center text-gray-400 text-sm font-bold bg-gray-700">3</div>
+                    <span class="text-gray-400 text-xs md:text-sm hidden sm:inline">The Experience</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Urgency Bar -->
+    <div style="background-color: #ECC94B;" class="py-2.5 text-center">
+        <p class="text-sm font-bold text-gray-900 tracking-wide uppercase m-0">
+            <i data-lucide="video" class="w-4 h-4 inline-block align-middle mr-1"></i>
+            FREE TRAINING &mdash; VIDEO 1 OF 3
+        </p>
+    </div>
+
+    <!-- Headline Section -->
+    <div class="bg-white">
+        <div class="max-w-3xl mx-auto px-4 pt-10 pb-6 text-center">
+
+            <!-- Pre-headline -->
+            <p class="text-sm md:text-base font-bold tracking-widest uppercase mb-4" style="color: #E53E3E;">
+                FREE TRAINING &mdash; VIDEO 1 OF 3
+            </p>
+
+            <!-- Main Headline -->
+            <h1 class="text-2xl md:text-4xl lg:text-5xl font-black leading-tight mb-4" style="color: #1A202C;">
+                Why 97% of Online Entrepreneurs Are
+                <span class="inline-block" style="background-color: #ECC94B; padding: 2px 8px;">BLEEDING Money</span>
+                on Software They Don't Need
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+                And the simple shift that's saving businesses <strong style="color: #E53E3E;">$500+/month</strong> while actually getting <em>better</em> results
+            </p>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div style="background-color: #F7FAFC;">
+        <div class="max-w-4xl mx-auto px-4 py-8">
+            <!-- Video Player Placeholder -->
+            <div class="relative bg-black rounded-xl overflow-hidden shadow-2xl border-4 cursor-pointer" style="border-color: #E53E3E; aspect-ratio: 16/9;" onclick="this.querySelector('.play-overlay').style.display='none'">
+
+                <!-- Video Thumbnail/Background -->
+                <img
+                    src="https://images.pexels.com/photos/8278846/pexels-photo-8278846.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                    alt="Entrepreneur overwhelmed by multiple platforms"
+                    class="w-full h-full object-cover opacity-40 absolute inset-0"
+                >
+
+                <!-- Play Button Overlay -->
+                <div class="play-overlay absolute inset-0 flex flex-col items-center justify-center z-10">
+                    <div class="play-pulse w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center mb-4" style="background-color: #E53E3E;">
+                        <i data-lucide="play" class="w-10 h-10 md:w-12 md:h-12 text-white ml-1"></i>
+                    </div>
+                    <p class="text-white text-lg md:text-xl font-bold">CLICK TO PLAY VIDEO</p>
+                    <p class="text-gray-300 text-sm">Duration: 18 minutes</p>
+                </div>
+            </div>
+
+            <!-- Watch Reminder -->
+            <div class="mt-4 text-center">
+                <p class="text-sm text-gray-500 m-0">
+                    <i data-lucide="alert-triangle" class="w-4 h-4 inline-block align-middle mr-1" style="color: #ECC94B;"></i>
+                    <strong>IMPORTANT:</strong> Watch the entire video above before scrolling down. The key insight is revealed at the end.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Takeaways Section -->
+    <div class="bg-white">
+        <div class="max-w-3xl mx-auto px-4 py-10">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-3" style="color: #1A202C;">
+                KEY TAKEAWAYS FROM THIS VIDEO:
+            </h2>
+            <p class="text-center text-gray-500 mb-8 text-sm">Here's what you just discovered...</p>
+
+            <div class="space-y-5 max-w-2xl mx-auto">
+
+                <!-- Takeaway 1 -->
+                <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-md border-l-4" style="border-color: #E53E3E;">
+                    <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center font-black text-white" style="background-color: #E53E3E;">1</div>
+                    <div>
+                        <p class="font-bold text-gray-800 text-lg m-0 mb-1">The "Software Tax" Is Crushing Your Profits</p>
+                        <p class="text-gray-600 m-0">The average online entrepreneur spends $300-$1,500/month duct-taping together tools like ClickFunnels ($297/mo), GoHighLevel ($497/mo), email platforms, course platforms, webinar tools, CRM systems... and they STILL don't have everything they need.</p>
+                    </div>
+                </div>
+
+                <!-- Takeaway 2 -->
+                <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-md border-l-4" style="border-color: #E53E3E;">
+                    <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center font-black text-white" style="background-color: #E53E3E;">2</div>
+                    <div>
+                        <p class="font-bold text-gray-800 text-lg m-0 mb-1">Multiple Logins = Multiple Breakdowns</p>
+                        <p class="text-gray-600 m-0">Every time one platform updates, the integrations with your other platforms break. Your Zapier automations fail. Your data gets lost between systems. You spend hours troubleshooting instead of growing your business.</p>
+                    </div>
+                </div>
+
+                <!-- Takeaway 3 -->
+                <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-md border-l-4" style="border-color: #E53E3E;">
+                    <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center font-black text-white" style="background-color: #E53E3E;">3</div>
+                    <div>
+                        <p class="font-bold text-gray-800 text-lg m-0 mb-1">The "All-In-One" Lie You've Been Sold</p>
+                        <p class="text-gray-600 m-0">Most platforms that claim to be "all-in-one" are really 5-6 tools at best. They're missing CRM, invoicing, AI tools, quiz funnels, scheduling, lead generation, and dozens of other critical features. A TRUE all-in-one has 25+ integrated tools.</p>
+                    </div>
+                </div>
+
+                <!-- Takeaway 4 -->
+                <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-md border-l-4" style="border-color: #38A169;">
+                    <div class="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center font-black text-white" style="background-color: #38A169;">
+                        <i data-lucide="lightbulb" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg m-0 mb-1" style="color: #38A169;">There IS a Better Way (Revealed in Video 2)</p>
+                        <p class="text-gray-600 m-0">What if ONE platform &mdash; built by someone who created Kartra, WebinarJam, and Groove.cm over 20 years &mdash; could replace everything? And what if it cost less than $42/month? That's exactly what you'll see in the next video...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Proof Bar -->
+    <div style="background-color: #ECC94B;">
+        <div class="max-w-3xl mx-auto px-4 py-5 text-center">
+            <div class="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="users" class="w-6 h-6 text-gray-800"></i>
+                    <span class="font-bold text-gray-800 text-sm md:text-base">100,000+ Businesses Trust Our Ecosystem</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="award" class="w-6 h-6 text-gray-800"></i>
+                    <span class="font-bold text-gray-800 text-sm md:text-base">20+ Years of Proven Results</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div style="background-color: #F7FAFC;">
+        <div class="max-w-3xl mx-auto px-4 py-12 text-center">
+
+            <h2 class="text-2xl md:text-3xl font-extrabold mb-3" style="color: #1A202C;">
+                READY TO SEE THE SOLUTION?
+            </h2>
+            <p class="text-gray-600 text-lg mb-6 max-w-xl mx-auto">
+                In Video 2, you'll see the complete transformation &mdash; how real entrepreneurs ditched their "Frankenstein tech stack" and simplified everything.
+            </p>
+
+            <a href="03-plc-video-2-transformation.html" class="cta-glow inline-flex items-center justify-center text-white text-xl md:text-2xl font-black py-5 px-10 rounded-lg uppercase tracking-wide cursor-pointer border-0 transition-all duration-200 hover:brightness-110 no-underline" style="background-color: #ED8936;">
+                WATCH VIDEO 2 NOW
+                <i data-lucide="arrow-right" class="w-6 h-6 ml-3"></i>
+            </a>
+
+            <div class="mt-6 inline-flex items-center gap-2 bg-white px-5 py-3 rounded-full shadow-md border border-gray-200">
+                <i data-lucide="clock" class="w-5 h-5" style="color: #E53E3E;"></i>
+                <span class="font-bold text-gray-700 text-sm">Video 2 drops in 3 days &mdash; Or watch it now if it's already live!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comment Section -->
+    <div class="bg-white border-t border-gray-200">
+        <div class="max-w-3xl mx-auto px-4 py-10">
+            <h3 class="text-xl md:text-2xl font-extrabold mb-6" style="color: #1A202C;">
+                <i data-lucide="message-circle" class="w-6 h-6 inline-block align-middle mr-2" style="color: #E53E3E;"></i>
+                Leave A Comment Below:
+            </h3>
+            <p class="text-gray-500 mb-6">What's the #1 tool you wish you could cancel? Tell us in the comments!</p>
+
+            <!-- Comment Form -->
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 mb-8">
+                <textarea
+                    placeholder="Share your biggest takeaway from this video..."
+                    rows="4"
+                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-base focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200 resize-none"
+                ></textarea>
+                <div class="flex flex-col sm:flex-row gap-3 mt-3">
+                    <input
+                        type="text"
+                        placeholder="Your Name"
+                        class="flex-1 px-4 py-3 border-2 border-gray-300 rounded-lg text-base focus:outline-none focus:border-orange-400"
+                    >
+                    <button
+                        class="px-8 py-3 text-white font-bold rounded-lg cursor-pointer border-0 transition-all hover:brightness-110"
+                        style="background-color: #ED8936;"
+                    >
+                        POST COMMENT
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sample Comments -->
+            <div class="space-y-6">
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded-full bg-blue-500 flex-shrink-0 flex items-center justify-center">
+                        <span class="text-white text-sm font-bold">SR</span>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="font-bold text-gray-800">Sarah R.</span>
+                            <span class="text-xs text-gray-400">2 hours ago</span>
+                        </div>
+                        <p class="text-gray-600 m-0">I literally just added up my monthly software costs and it's over $800/month. ClickFunnels, ActiveCampaign, Calendly Pro, Teachable, Zoom Webinars... this hit close to home. Can't wait for Video 2!</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <button class="flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600 bg-transparent border-0 cursor-pointer">
+                                <i data-lucide="thumbs-up" class="w-3 h-3"></i> 47
+                            </button>
+                            <button class="flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600 bg-transparent border-0 cursor-pointer">
+                                <i data-lucide="message-circle" class="w-3 h-3"></i> Reply
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded-full bg-green-500 flex-shrink-0 flex items-center justify-center">
+                        <span class="text-white text-sm font-bold">MT</span>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="font-bold text-gray-800">Marcus T.</span>
+                            <span class="text-xs text-gray-400">5 hours ago</span>
+                        </div>
+                        <p class="text-gray-600 m-0">The "multiple logins" point is SO real. I have 14 different tools with 14 different logins. Last week my Zapier broke and I lost 3 days of leads. This is exactly the pain I'm feeling right now. 🔥</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <button class="flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600 bg-transparent border-0 cursor-pointer">
+                                <i data-lucide="thumbs-up" class="w-3 h-3"></i> 32
+                            </button>
+                            <button class="flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600 bg-transparent border-0 cursor-pointer">
+                                <i data-lucide="message-circle" class="w-3 h-3"></i> Reply
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 rounded-full bg-purple-500 flex-shrink-0 flex items-center justify-center">
+                        <span class="text-white text-sm font-bold">JL</span>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="font-bold text-gray-800">Jessica L.</span>
+                            <span class="text-xs text-gray-400">8 hours ago</span>
+                        </div>
+                        <p class="text-gray-600 m-0">I run a coaching business and I've been saying for years that someone needs to build ONE platform that does everything. Mike has the track record to actually pull this off. The fact that he built Kartra AND WebinarJam gives me so much confidence. Watching Video 2 the second it drops!</p>
+                        <div class="flex items-center gap-4 mt-2">
+                            <button class="flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600 bg-transparent border-0 cursor-pointer">
+                                <i data-lucide="thumbs-up" class="w-3 h-3"></i> 28
+                            </button>
+                            <button class="flex items-center gap-1 text-xs text-gray-400 hover:text-gray-600 bg-transparent border-0 cursor-pointer">
+                                <i data-lucide="message-circle" class="w-3 h-3"></i> Reply
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 text-center">
+                <button class="text-sm font-bold bg-transparent border-0 cursor-pointer hover:underline" style="color: #ED8936;">
+                    Load More Comments (127 total)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom CTA Bar -->
+    <div style="background-color: #1A202C;">
+        <div class="max-w-3xl mx-auto px-4 py-6 text-center">
+            <p class="text-gray-400 text-sm mb-3 m-0">Ready for the next video?</p>
+            <a href="03-plc-video-2-transformation.html" class="inline-flex items-center justify-center text-white text-lg font-bold py-3 px-8 rounded-lg uppercase tracking-wide cursor-pointer border-0 transition-all hover:brightness-110 no-underline" style="background-color: #ED8936;">
+                WATCH VIDEO 2 NOW
+                <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+            </a>
+            <p class="text-gray-500 text-xs mt-3 m-0">
+                <i data-lucide="clock" class="w-3 h-3 inline-block align-middle mr-1"></i>
+                Video 2: "The Transformation" drops in 3 days
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
