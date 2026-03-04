@@ -14,6 +14,7 @@ ClickCampaigns is a **prompt engineering framework** packaged as a portable proj
 - **26 funnel types** with complete implementation skill files
 - **25+ task categories** covering every marketing channel
 - **Production skills** for generating HTML, PowerPoint, PDF, and Word documents
+- **First-run setup wizard** — configures for solo marketers or agencies
 - **Client/campaign organization** with brand kit management
 - **Image integration** via Pexels (stock photos) and Google Gemini (AI-generated images)
 
@@ -44,9 +45,19 @@ cp .env.example .env
 - **Cursor**: Open the folder and add `CLAUDE.md` as a project rule
 - **Other AI agents**: Have the agent read `CLAUDE.md` at the start of each session
 
-### 4. Start Working
+### 4. First-Time Setup
 
-Alex will ask which client you're working with, then you can request any campaign asset:
+On first launch, Alex asks two questions:
+
+1. **How will you use ClickCampaigns?**
+   - **Business/Marketer (Solo mode)** — campaigns at the root, no client folders needed
+   - **Agency mode** — each client gets their own folder with brand files and campaigns
+
+2. **Do you use Obsidian for Markdown?** — enables YAML frontmatter and callout syntax if yes
+
+Alex configures the project automatically. This only happens once.
+
+### 5. Start Working
 
 ```
 "Create a campaign called 'Summer Launch'. I need a product launch funnel with
@@ -61,8 +72,8 @@ webinar registration, sales page, checkout, and a 12-email launch sequence."
 
 Alex (Campaign Manager) acts as the central coordinator. When you request work:
 
-1. **Client Selection** — Alex asks which client you're working with (new or existing)
-2. **Brand Context** — Alex loads brand knowledge base and style guide for the client
+1. **Setup/Selection** — On first run, Alex asks about your workflow (solo vs agency). Then each session: solo mode asks about campaigns, agency mode asks about clients
+2. **Brand Context** — Alex loads brand knowledge base and style guide
 3. **Specialist Assignment** — Alex delegates to the right specialist(s) based on the work type
 4. **Asset Creation** — Specialists follow their SKILL.md files to produce production-ready output
 5. **Quality Review** — Copy critique workflows ensure persuasion quality (Ryan reviews Cassidy's headlines, etc.)
@@ -82,97 +93,57 @@ Alex (Campaign Manager) acts as the central coordinator. When you request work:
 
 ## Project Structure
 
+The folder structure depends on which mode you choose during setup:
+
+### After Setup: Solo Mode
 ```
-ClickCampaigns-for-Claude-Code-in-Cursor/
-│
-├── CLAUDE.md                          # AI agent instructions (single source of truth)
-├── AGENTS.md                          # Pointer file for Codex/other tools → reads CLAUDE.md
-├── README.md                          # Human-facing documentation (this file)
-├── package.json                       # Node.js dependencies (image scripts)
-│
-├── agents/
-│   └── Agents-List.md                 # 22 specialist profiles with roles & expertise
-│
-├── funnels/
-│   └── Funnel-Pages-Checklist.md      # 26 funnel types with available pages
-│
-├── tasks/
-│   └── Task-Checklist.md              # 25+ task categories and subtasks
-│
-├── templates/
-│   ├── brand-knowledge-base-template.md   # Brand context template
-│   └── brand-style-guide-template.md      # Visual identity template
-│
-├── clients/                           # Per-client workspaces
+ClickCampaigns/
+├── .clickcampaigns.json              # Configuration (mode: solo)
+├── CLAUDE.md                         # AI agent instructions
+├── brand-kit/                        # Your brand files (shared across campaigns)
+│   ├── brand-knowledge-base/
+│   └── brand-style-guide/
+├── campaigns/                        # Your campaigns
+│   └── [campaign-name]/
+│       └── output-assets/
+│           ├── html/, documents/, emails/, ads/, presentations/, pdfs/, images/
+```
+
+### After Setup: Agency Mode
+```
+ClickCampaigns/
+├── .clickcampaigns.json              # Configuration (mode: agency)
+├── CLAUDE.md                         # AI agent instructions
+├── clients/                          # Client workspaces
 │   └── [client-name]/
-│       ├── brand-kit/                 # Shared brand files
+│       ├── brand-kit/                # Client brand files (shared across campaigns)
 │       │   ├── brand-knowledge-base/
 │       │   └── brand-style-guide/
 │       └── campaigns/
 │           └── [campaign-name]/
 │               └── output-assets/
-│                   ├── html/          # Landing pages, sales pages
-│                   ├── documents/     # VSL scripts, sales letters, copy
-│                   ├── emails/        # Email sequences
-│                   ├── ads/           # Ad copy (Meta, Google, TikTok, etc.)
-│                   ├── presentations/ # PPTX slide decks
-│                   ├── pdfs/          # Lead magnets, books, reports
-│                   └── images/        # Generated and stock images
+│                   ├── html/, documents/, emails/, ads/, presentations/, pdfs/, images/
+```
+
+### Shared Structure (both modes)
+```
+├── CLAUDE.md                         # AI agent instructions (configured for your mode)
+├── AGENTS.md                         # Pointer for Codex/other tools → reads CLAUDE.md
+├── README.md                         # This file
+├── package.json                      # Node.js dependencies (image scripts)
 │
-├── skills-and-instructions/
-│   └── skills/
-│       ├── funnels/                   # 26 funnel skill files
-│       │   ├── product-launch-plf/
-│       │   ├── vsl-hybrid/
-│       │   ├── live-webinar/
-│       │   ├── auto-webinar/
-│       │   ├── book-funnel/
-│       │   ├── high-ticket-app/
-│       │   ├── tripwire-slo/
-│       │   ├── challenge/
-│       │   ├── quiz-assessment/
-│       │   ├── membership/
-│       │   ├── ecom-one-page/
-│       │   ├── ecom-catalog/
-│       │   ├── waitlist-event-registration/
-│       │   ├── affiliate-referral/
-│       │   └── ... (12 more)
-│       │
-│       ├── tasks/                     # 25+ task skill files
-│       │   ├── vsl-script/            # John Benson + Caleb O'Dowd methodology
-│       │   ├── sales-letter/          # Direct response sales letters
-│       │   ├── email-sequences/       # Halbert, Kern, Filsaime frameworks
-│       │   ├── paid-ads/              # Meta, Google, TikTok, YouTube, LinkedIn
-│       │   ├── website/               # Multi-page brand websites
-│       │   ├── funnels/               # Landing pages, sales pages, opt-ins
-│       │   ├── lead-magnets/          # Guides, checklists, toolkits
-│       │   ├── book-writing/          # Full book ghostwriting
-│       │   ├── social/                # Social media content
-│       │   ├── content/               # Blog posts, long-form content
-│       │   ├── seo-local/             # SEO and local business
-│       │   ├── events/                # Webinars, presentations
-│       │   ├── design-branding/       # Logos, design systems
-│       │   ├── crm-automation/        # CRM setup, workflows
-│       │   ├── analytics-tracking/    # GTM, pixels, analytics
-│       │   ├── courses-education/     # Course launches, onboarding
-│       │   ├── ecommerce-extras/      # Loyalty, reviews, shopping feed
-│       │   ├── saas-dev-marketing/    # SaaS-specific strategies
-│       │   ├── influencer-creator/    # Influencer partnerships
-│       │   ├── authors-speakers/      # Author platforms, speaking
-│       │   ├── pro-services-local/    # Local services marketing
-│       │   └── custom/                # Custom work
-│       │
-│       └── production/                # Export & design skills
-│           ├── frontend-design/       # HTML/Tailwind design system
-│           ├── pptx/                  # PowerPoint generation
-│           ├── pdf/                   # PDF generation (Puppeteer)
-│           └── docx/                  # Word document generation
+├── setup/templates/                  # Setup wizard templates (don't modify)
+├── agents/                           # 22 specialist profiles
+├── funnels/                          # 26 funnel type reference
+├── tasks/                            # 25+ task category reference
+├── templates/                        # Brand kit templates
 │
-├── scripts/
-│   ├── pexels-search.js               # Stock photo search utility
-│   └── generate-image.js              # AI image generation utility
+├── skills-and-instructions/skills/
+│   ├── funnels/                      # 26 funnel skill files
+│   ├── tasks/                        # 25+ task skill files
+│   └── production/                   # HTML, PPTX, PDF, DOCX production skills
 │
-└── campaigns/                         # Legacy/test campaign workspace
+└── scripts/                          # Image generation utilities
 ```
 
 ---
@@ -290,7 +261,7 @@ Full details: [tasks/Task-Checklist.md](tasks/Task-Checklist.md)
 
 ## Brand Kit System
 
-Every client gets a brand kit that provides context for all generated assets.
+Your brand kit provides context for all generated assets.
 
 ### Brand Knowledge Base
 Captures your business identity — story, audience, offer, voice, differentiators, credibility, and competitive positioning. This drives the **copy** in every asset.
@@ -304,11 +275,13 @@ Start from the included templates:
 - [templates/brand-style-guide-template.md](templates/brand-style-guide-template.md)
 
 ### Brand File Locations
-Brand files can live at two levels:
-- **Client level** (`clients/[name]/brand-kit/`) — shared across all campaigns
-- **Campaign level** (`clients/[name]/campaigns/[campaign]/brand-kit/`) — campaign-specific overrides
 
-Alex checks both locations and uses campaign-specific files when present.
+| Level | Solo Mode | Agency Mode |
+|-------|-----------|-------------|
+| **Shared** | `brand-kit/` (project root) | `clients/[client]/brand-kit/` |
+| **Campaign override** | `campaigns/[campaign]/brand-kit/` | `clients/[client]/campaigns/[campaign]/brand-kit/` |
+
+Alex checks both levels and uses campaign-specific files when present.
 
 ---
 
@@ -420,7 +393,8 @@ Returns URLs you can use directly in HTML/CSS.
 
 **Generate AI image with Gemini:**
 ```bash
-node scripts/generate-image.js "Professional team in modern office" clients/[client]/campaigns/[campaign]/output-assets/images/hero.png
+# Path depends on your mode (solo or agency):
+node scripts/generate-image.js "Professional team in modern office" campaigns/[campaign]/output-assets/images/hero.png
 ```
 Saves image file to specified path.
 
@@ -534,58 +508,57 @@ Kendall (Book Ghostwriter) leads, Lena (Graphic Designer) designs:
 
 Quick commands you can use in conversation with Alex:
 
-| Command | What It Does |
-|---------|-------------|
-| `list clients` | Show all existing clients |
-| `new client [name]` | Create a new client folder |
-| `new campaign [name]` | Create a new campaign (requires active client) |
-| `list funnels` | Show all funnel types |
-| `list tasks` | Show all task types |
-| `list specialists` | Show the team |
-| `status` | Show current client, campaign, and progress |
+| Command | Solo Mode | Agency Mode |
+|---------|-----------|-------------|
+| `list campaigns` | Show all campaigns | Show campaigns for current client |
+| `new campaign [name]` | Create a campaign folder | Create campaign under current client |
+| `list clients` | — | Show all clients |
+| `new client [name]` | — | Create a new client folder |
+| `list funnels` | Show funnel types | Show funnel types |
+| `list tasks` | Show task types | Show task types |
+| `list specialists` | Show the team | Show the team |
+| `status` | Current campaign + progress | Current client, campaign + progress |
+| `reset setup` | Re-run setup wizard | Re-run setup wizard |
 
 ---
 
-## Example Session
+## Example Sessions
+
+### Solo Mode
+
+```
+Alex:   What are we working on today?
+
+User:   Create a campaign called "Q3 Launch". I need a VSL funnel
+        with sales page, checkout, upsell, and a 7-email launch sequence.
+
+Alex:   Created campaigns/q3-launch/ with output-assets folder.
+        Let me check your brand files... Got it.
+
+        For your VSL funnel, I'll build:
+        1. VSL Page  2. Checkout Page  3. Upsell Page  4. Thank You Page
+
+        For the sales page styling — do you want:
+        1. Direct response style (recommended)
+        2. Full brand style guide
+        3. DR with brand hints
+
+        Starting with the VSL script. Handing off to Ryan...
+```
+
+### Agency Mode
 
 ```
 Alex:   Which client are we working with today?
-        - Type the client name if it's an existing client
-        - Type 'new' if this is a new client
-
-User:   new
-
-Alex:   What's the client name?
 
 User:   Acme SaaS
 
-Alex:   Created clients/acme-saas/ folder structure.
+Alex:   Got it. What would you like to build for Acme SaaS?
 
 User:   Create a campaign called "Q3 Launch". I need a VSL funnel
         with sales page, checkout, upsell, and a 7-email launch sequence.
 
 Alex:   Created clients/acme-saas/campaigns/q3-launch/ with output-assets folder.
-
-        Before I start, I need your brand files:
-        - Brand Knowledge Base (business info, audience, offer)
-        - Style Guide (colors, fonts)
-
-        Upload to clients/acme-saas/brand-kit/ or describe your brand
-        and I'll create the docs.
-
-User:   [Uploads brand files]
-
-Alex:   Got it. For your VSL funnel, I'll build:
-        1. VSL Page (video + sales copy below)
-        2. Checkout Page (order form + offer stack)
-        3. Upsell Page (one-time offer)
-        4. Thank You Page
-
-        For the sales page styling — do you want:
-        1. Direct response style (recommended for conversions)
-        2. Full brand style guide
-        3. DR with brand hints
-
         Starting with the VSL script. Handing off to Ryan...
 ```
 
@@ -598,6 +571,9 @@ Install the "Live Server" extension by ritwickdey in VS Code/Cursor. Right-click
 
 **Option 2: Node.js Server**
 ```bash
+# Solo mode:
+npx serve campaigns/[campaign-name]/output-assets/html
+# Agency mode:
 npx serve clients/[client-name]/campaigns/[campaign-name]/output-assets/html
 ```
 
@@ -621,8 +597,10 @@ Double-click the HTML file in Finder — works fine since all files are self-con
 
 | File | Purpose | Who reads it |
 |------|---------|-------------|
-| **`CLAUDE.md`** | Single source of truth for all AI agent instructions | All tools (directly or via pointer) |
-| **`AGENTS.md`** | Pointer file — tells agents to read `CLAUDE.md` | Codex and tools that look for AGENTS.md |
+| **`CLAUDE.md`** | AI agent instructions — starts as setup wizard, then configured for your mode | All tools (directly or via pointer) |
+| **`AGENTS.md`** | Pointer file — tells agents to check setup and read `CLAUDE.md` | Codex and tools that look for AGENTS.md |
+| **`.clickcampaigns.json`** | Configuration file — stores mode (solo/agency) and preferences | Created during setup, read by agents |
+| **`setup/templates/`** | Mode-specific templates — used during setup and mode switching | Read by agents during setup only |
 | **`README.md`** | Human-facing documentation (this file) | Developers on GitHub |
 
 The system is AI-tool agnostic — the intelligence lives in the skill files and agent personas, not in any specific platform. `CLAUDE.md` is the canonical instruction set regardless of which tool you use.
@@ -644,7 +622,9 @@ Image generation is optional. All other functionality works without any API keys
 
 | What | Where |
 |------|-------|
-| AI agent instructions | `CLAUDE.md` (source of truth), `AGENTS.md` (pointer for Codex) |
+| AI agent instructions | `CLAUDE.md` (configured for your mode), `AGENTS.md` (pointer for Codex) |
+| Setup configuration | `.clickcampaigns.json` (created during first-time setup) |
+| Setup templates | `setup/templates/` (mode-specific CLAUDE.md/AGENTS.md templates) |
 | Specialist profiles | [agents/Agents-List.md](agents/Agents-List.md) |
 | Funnel reference | [funnels/Funnel-Pages-Checklist.md](funnels/Funnel-Pages-Checklist.md) |
 | Task reference | [tasks/Task-Checklist.md](tasks/Task-Checklist.md) |
@@ -653,7 +633,8 @@ Image generation is optional. All other functionality works without any API keys
 | Task skill files | `skills-and-instructions/skills/tasks/[type]/SKILL.md` |
 | Production skills | `skills-and-instructions/skills/production/[type]/SKILL.md` |
 | Image scripts | `scripts/pexels-search.js`, `scripts/generate-image.js` |
-| Client workspaces | `clients/[client-name]/` |
+| Campaign workspaces (solo) | `campaigns/[campaign-name]/` |
+| Client workspaces (agency) | `clients/[client-name]/` |
 
 ---
 

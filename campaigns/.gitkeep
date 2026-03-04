@@ -1,15 +1,5 @@
-# Campaigns Folder (Legacy)
+# Campaigns Folder
 
-**Note:** This folder structure has been refactored. Campaigns now live under client folders.
+This folder holds your campaign workspaces. Each campaign gets its own subfolder with output assets.
 
-**New structure:**
-```
-clients/
-└── [client-name]/
-    ├── brand-kit/              # Client-level brand files
-    └── campaigns/              # All campaigns for this client
-        └── [campaign-name]/
-            └── output-assets/
-```
-
-See `clients/.gitkeep` for the new structure documentation.
+Run ClickCampaigns in your AI coding tool to get started — Alex will guide you through setup.

@@ -1,35 +1,5 @@
 # Clients Folder
 
-Each client gets their own folder with all campaigns:
+This folder is used in agency mode. Each client gets their own subfolder with brand files and campaigns.
 
-```
-clients/
-└── [client-name]/
-    ├── brand-kit/              # Client-level brand files (shared across campaigns)
-    │   ├── brand-knowledge-base/
-    │   │   └── [client-brand-doc].md
-    │   └── brand-style-guide/
-    │       └── [client-style-guide].md
-    └── campaigns/              # All campaigns for this client
-        └── [campaign-name]/
-            ├── brand-kit/      # Optional: Campaign-specific brand files (overrides client-level)
-            └── output-assets/
-                ├── html/          # Landing pages, sales pages, checkout
-                ├── documents/     # VSL scripts, sales letters, outlines
-                ├── emails/        # Email sequences
-                ├── ads/           # Ad copy for Meta, Google, TikTok, etc.
-                ├── presentations/ # PowerPoint slide decks (.pptx)
-                ├── pdfs/          # Lead magnets, books, reports (.pdf)
-                └── images/        # Image briefs and specifications
-```
-
-**Workflow:**
-1. When you start, Alex will ask: "Which client are we working with today?"
-2. If new client: Provide client name, Alex creates the folder structure
-3. If existing client: Provide client name, Alex loads existing brand files
-4. Then tell Alex: "Create a campaign called '[your-campaign-name]'"
-
-**Brand Files:**
-- Client-level brand files (`clients/[client-name]/brand-kit/`) are used by default for all campaigns
-- Campaign-specific brand files (`clients/[client-name]/campaigns/[campaign-name]/brand-kit/`) override client-level files when present
-- Alex checks both locations when building assets
+Run ClickCampaigns in your AI coding tool to get started — Alex will guide you through setup.
