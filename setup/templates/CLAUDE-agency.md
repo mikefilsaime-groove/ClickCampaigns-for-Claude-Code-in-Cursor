@@ -693,6 +693,63 @@ When the user asks to clone a page:
 
 ---
 
+## Document Production
+
+ClickCampaigns can produce professional documents in multiple formats. Use the right tool for each output type.
+
+### HTML to PDF (Lead Magnets, Reports, Branded Documents)
+
+The **highest-quality approach** for PDFs: write beautiful HTML/CSS, then convert with Playwright's Chromium engine. This gives you pixel-perfect output with full modern CSS support (flexbox, grid, custom fonts, gradients, shadows).
+
+```bash
+# Convert any HTML file to PDF:
+node scripts/html-to-pdf.js clients/[client-name]/campaigns/[campaign-name]/output-assets/html/lead-magnet.html clients/[client-name]/campaigns/[campaign-name]/output-assets/pdfs/lead-magnet.pdf
+
+# With options:
+node scripts/html-to-pdf.js input.html output.pdf --page-numbers --letter
+node scripts/html-to-pdf.js input.html output.pdf --landscape --no-margin
+```
+
+**Workflow for lead magnets and branded PDFs:**
+1. Build the content as an HTML page (Kendall writes, Lena designs)
+2. Run `html-to-pdf.js` to convert it
+3. The PDF inherits all the beautiful styling from the HTML
+
+**One-time setup:** `npx playwright install chromium`
+
+### PowerPoint / PPTX (Presentations, Webinar Decks)
+
+Use the production skill at `skills-and-instructions/skills/production/pptx/SKILL.md`. Three approaches available:
+
+| Approach | Best For | How |
+|----------|----------|-----|
+| **HTML → PPTX** | New branded presentations | Write HTML slides → convert with html2pptx.js → PptxGenJS |
+| **Template-based** | Matching existing brand decks | Load .pptx template → rearrange/replace with Python scripts |
+| **Direct OOXML** | Complex edits, animations | Unpack .pptx → edit XML → validate → repack |
+
+### PDF (Programmatic / Forms)
+
+Use the production skill at `skills-and-instructions/skills/production/pdf/SKILL.md`. For creating PDFs from scratch (without HTML), merging documents, or filling forms.
+
+### Word / DOCX (Editable Documents)
+
+Use the production skill at `skills-and-instructions/skills/production/docx/SKILL.md`. For creating editable Word documents with proper formatting, tracked changes, comments, and styles.
+
+### Production Decision Tree
+
+| What You're Making | Best Approach | Tool |
+|-------------------|---------------|------|
+| **Lead magnet / eBook** | HTML → PDF | `html-to-pdf.js` |
+| **Branded report** | HTML → PDF | `html-to-pdf.js` |
+| **Webinar deck** | HTML → PPTX or template | PPTX skill |
+| **Pitch deck** | Template-based PPTX | PPTX skill |
+| **Fillable form** | PDF skill (pdf-lib) | PDF skill |
+| **Editable proposal** | DOCX skill (docx-js) | DOCX skill |
+| **Sales letter doc** | DOCX skill | DOCX skill |
+| **Print-ready PDF** | HTML → PDF with `--no-margin` | `html-to-pdf.js` |
+
+---
+
 ## Markdown Conventions
 
 Check `.clickcampaigns.json` for the `obsidian` setting.

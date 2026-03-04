@@ -18,6 +18,7 @@ ClickCampaigns is a **prompt engineering framework** packaged as a portable proj
 - **Client/campaign organization** with brand kit management
 - **Image integration** via Pexels (stock photos) and Google Gemini (AI-generated images)
 - **Clone Page** — scrape any webpage into a self-contained HTML file with Firecrawl
+- **HTML-to-PDF** — convert any HTML page to pixel-perfect PDF with Playwright's Chromium engine
 
 No SaaS subscription. No API beyond optional image generation and page cloning. Everything runs locally through your AI coding tool.
 
@@ -29,15 +30,18 @@ No SaaS subscription. No API beyond optional image generation and page cloning. 
 
 Place the `ClickCampaigns-for-Claude-Code-in-Cursor/` folder anywhere on your machine.
 
-### 2. Install Dependencies (Optional — for image generation only)
+### 2. Install Dependencies (Optional — for image generation, PDF, and page cloning)
 
 ```bash
-npm install
+npm run setup
 cp .env.example .env
 # Add your API keys to .env:
 #   GEMINI_API_KEY=your-key    (AI image generation)
 #   PEXELS_API_KEY=your-key    (stock photo search)
+#   FIRECRAWL_API_KEY=your-key (Clone Page feature)
 ```
+
+This installs npm packages and Playwright's Chromium browser (used for HTML-to-PDF conversion).
 
 ### 3. Open in Your AI Coding Tool
 
@@ -144,7 +148,7 @@ ClickCampaigns/
 │   ├── tasks/                        # 25+ task skill files
 │   └── production/                   # HTML, PPTX, PDF, DOCX production skills
 │
-└── scripts/                          # Image generation utilities
+└── scripts/                          # Image, clone page, and PDF utilities
 ```
 
 ---
@@ -436,6 +440,30 @@ node scripts/clone-page.js "https://example.com/sales-page" clients/[client]/cam
 
 ---
 
+## HTML to PDF
+
+Convert any HTML page into a professional PDF using Playwright's Chromium engine. This is the **highest-quality approach** for lead magnets, branded reports, eBooks, and any document where design matters — full CSS support including flexbox, grid, custom fonts, gradients, and shadows.
+
+```bash
+# Basic conversion:
+node scripts/html-to-pdf.js campaigns/[campaign]/output-assets/html/lead-magnet.html
+
+# Custom output path:
+node scripts/html-to-pdf.js input.html output.pdf
+
+# With options:
+node scripts/html-to-pdf.js input.html output.pdf --page-numbers --letter
+node scripts/html-to-pdf.js input.html output.pdf --landscape --no-margin --scale=0.8
+```
+
+**Options:** `--landscape`, `--letter` (US Letter vs A4), `--no-margin`, `--scale=N`, `--header="text"`, `--footer="text"`, `--page-numbers`, `--no-background`, `--wait=N`
+
+**One-time setup:** `npx playwright install chromium` (included in `npm run setup`)
+
+**Workflow:** Alex's team builds beautiful HTML/CSS first (Kendall writes, Lena designs), then converts to PDF — the PDF inherits all the styling.
+
+---
+
 ## Marketing Methodologies
 
 The skill files encode proven direct response and digital marketing frameworks:
@@ -661,6 +689,7 @@ All API keys are optional. Core functionality (copy, funnels, emails, ads) works
 | Production skills | `skills-and-instructions/skills/production/[type]/SKILL.md` |
 | Image scripts | `scripts/pexels-search.js`, `scripts/generate-image.js` |
 | Clone page script | `scripts/clone-page.js` |
+| HTML-to-PDF script | `scripts/html-to-pdf.js` |
 | Campaign workspaces (solo) | `campaigns/[campaign-name]/` |
 | Client workspaces (agency) | `clients/[client-name]/` |
 
