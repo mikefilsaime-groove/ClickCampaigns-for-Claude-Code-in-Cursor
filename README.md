@@ -17,8 +17,9 @@ ClickCampaigns is a **prompt engineering framework** packaged as a portable proj
 - **First-run setup wizard** — configures for solo marketers or agencies
 - **Client/campaign organization** with brand kit management
 - **Image integration** via Pexels (stock photos) and Google Gemini (AI-generated images)
+- **Clone Page** — scrape any webpage into a self-contained HTML file with Firecrawl
 
-No SaaS subscription. No API beyond optional image generation. Everything runs locally through your AI coding tool.
+No SaaS subscription. No API beyond optional image generation and page cloning. Everything runs locally through your AI coding tool.
 
 ---
 
@@ -410,6 +411,31 @@ Saves image file to specified path.
 
 ---
 
+## Clone Page
+
+Clone any existing webpage into a self-contained HTML file. Uses [Firecrawl](https://www.firecrawl.dev/) to scrape the page, embed all CSS inline, remove tracking scripts, and extract the site's branding.
+
+**Requires:** `FIRECRAWL_API_KEY` in `.env`
+
+```bash
+# Solo mode:
+node scripts/clone-page.js "https://example.com/sales-page" campaigns/[campaign]/output-assets/html/cloned-page.html
+
+# Agency mode:
+node scripts/clone-page.js "https://example.com/sales-page" clients/[client]/campaigns/[campaign]/output-assets/html/cloned-page.html
+```
+
+**What it produces:**
+- **`cloned-page.html`** — Self-contained HTML with all CSS embedded, images as absolute URLs, tracking scripts removed
+- **`cloned-page-branding.md`** — Extracted brand analysis (colors, fonts, typography, button styles)
+
+**Use cases:**
+- Clone a competitor's page as a starting point, then rewrite the copy with your brand voice
+- Study a page's design system via the branding report
+- Use a great layout as a structural template for your own funnel
+
+---
+
 ## Marketing Methodologies
 
 The skill files encode proven direct response and digital marketing frameworks:
@@ -613,8 +639,9 @@ The system is AI-tool agnostic — the intelligence lives in the skill files and
 |----------|----------|---------|
 | `GEMINI_API_KEY` | Optional | AI image generation via Google Gemini |
 | `PEXELS_API_KEY` | Optional | Stock photo search via Pexels API |
+| `FIRECRAWL_API_KEY` | Optional | Clone Page feature (scrape any webpage) |
 
-Image generation is optional. All other functionality works without any API keys.
+All API keys are optional. Core functionality (copy, funnels, emails, ads) works without any keys.
 
 ---
 
@@ -633,6 +660,7 @@ Image generation is optional. All other functionality works without any API keys
 | Task skill files | `skills-and-instructions/skills/tasks/[type]/SKILL.md` |
 | Production skills | `skills-and-instructions/skills/production/[type]/SKILL.md` |
 | Image scripts | `scripts/pexels-search.js`, `scripts/generate-image.js` |
+| Clone page script | `scripts/clone-page.js` |
 | Campaign workspaces (solo) | `campaigns/[campaign-name]/` |
 | Client workspaces (agency) | `clients/[client-name]/` |
 

@@ -6,11 +6,13 @@
   "scripts": {
     "setup": "npm install",
     "pexels": "node scripts/pexels-search.js",
-    "generate-image": "node scripts/generate-image.js"
+    "generate-image": "node scripts/generate-image.js",
+    "clone-page": "node scripts/clone-page.js"
   },
   "dependencies": {
     "pexels": "^1.4.0",
     "@google/genai": "^0.3.1",
+    "@mendable/firecrawl-js": "^4.10.0",
     "dotenv": "^16.4.0"
   }
 }

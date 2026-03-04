@@ -656,6 +656,43 @@ Saves image file to specified path.
 
 ---
 
+## Clone Page
+
+Clone any existing webpage as a starting point for your funnel pages. This uses Firecrawl to scrape the page, embed all CSS inline, and extract the site's branding (colors, fonts, typography).
+
+**Requires:** `FIRECRAWL_API_KEY` in `.env` (get one at https://www.firecrawl.dev/)
+
+### How to Clone
+
+```bash
+node scripts/clone-page.js "https://example.com/sales-page" clients/[client-name]/campaigns/[campaign-name]/output-assets/html/cloned-page.html
+```
+
+This produces two files:
+- **`cloned-page.html`** — Self-contained HTML with all CSS embedded, tracking scripts removed, images as absolute URLs
+- **`cloned-page-branding.md`** — Extracted brand analysis (colors, fonts, typography, button styles)
+
+### When to Use
+
+- **"Clone this competitor's page"** — Scrape it, then rewrite the copy with the client's brand voice
+- **"I like the layout of this page"** — Clone it as a structural starting point, replace all content
+- **"Use this page as inspiration"** — Clone it, extract the branding, apply to a new page
+
+### Clone Workflow
+
+When the user asks to clone a page:
+
+1. Run the clone script with the URL → save to the campaign's `output-assets/html/` folder
+2. Read the `-branding.md` file to understand the source site's design system
+3. Ask the user what they want to do:
+   - **Keep the layout, rewrite the copy** — Use the client's brand knowledge base to replace all text
+   - **Keep everything, just customize** — Minor edits to make it theirs
+   - **Use as inspiration only** — Study the branding report, build something new
+4. Apply the client's brand style guide if they want a rebrand
+5. Use Pexels or Gemini to replace any images if needed
+
+---
+
 ## Markdown Conventions
 
 Check `.clickcampaigns.json` for the `obsidian` setting.
