@@ -39,8 +39,9 @@ cp .env.example .env
 
 ### 3. Open in Your AI Coding Tool
 
-- **Claude Code**: Open the folder — `CLAUDE.md` is loaded automatically as project context
-- **Cursor**: Open the folder — Cursor reads `CLAUDE.md` as project rules
+- **Claude Code**: Open the folder — `CLAUDE.md` loads automatically
+- **Codex**: Open the folder — `AGENTS.md` loads automatically and points to `CLAUDE.md`
+- **Cursor**: Open the folder and add `CLAUDE.md` as a project rule
 - **Other AI agents**: Have the agent read `CLAUDE.md` at the start of each session
 
 ### 4. Start Working
@@ -84,8 +85,9 @@ Alex (Campaign Manager) acts as the central coordinator. When you request work:
 ```
 ClickCampaigns-for-Claude-Code-in-Cursor/
 │
-├── CLAUDE.md                          # AI agent instructions (loaded automatically)
-├── README.md                          # This file
+├── CLAUDE.md                          # AI agent instructions (single source of truth)
+├── AGENTS.md                          # Pointer file for Codex/other tools → reads CLAUDE.md
+├── README.md                          # Human-facing documentation (this file)
 ├── package.json                       # Node.js dependencies (image scripts)
 │
 ├── agents/
@@ -606,15 +608,24 @@ Double-click the HTML file in Finder — works fine since all files are self-con
 
 ## Compatibility
 
-| AI Coding Tool | How to Use |
-|----------------|-----------|
-| **Claude Code** | Open folder — `CLAUDE.md` loads automatically as project context |
-| **Cursor** | Open folder — reads `CLAUDE.md` as project rules |
-| **Windsurf** | Open folder — reads `CLAUDE.md` for context |
-| **Gemini CLI** | Have agent read `CLAUDE.md` at session start |
-| **Any AI agent** | Point the agent to read `CLAUDE.md` first, then request work |
+| AI Coding Tool | Auto-Reads | Setup |
+|----------------|-----------|-------|
+| **Claude Code** | `CLAUDE.md` | Just open the folder — works immediately |
+| **Cursor** | `.cursorrules` | Add `CLAUDE.md` as a project rule, or read it at session start |
+| **Codex (OpenAI)** | `AGENTS.md` | `AGENTS.md` loads automatically and points to `CLAUDE.md` |
+| **Gemini CLI** | `GEMINI.md` | Have agent read `CLAUDE.md` at session start |
+| **Windsurf** | `.windsurfrules` | Have agent read `CLAUDE.md` at session start |
+| **Any AI agent** | Varies | Point the agent to read `CLAUDE.md` first |
 
-The system is AI-tool agnostic — the intelligence lives in the skill files and agent personas, not in any specific platform.
+### How the Instruction Files Work
+
+| File | Purpose | Who reads it |
+|------|---------|-------------|
+| **`CLAUDE.md`** | Single source of truth for all AI agent instructions | All tools (directly or via pointer) |
+| **`AGENTS.md`** | Pointer file — tells agents to read `CLAUDE.md` | Codex and tools that look for AGENTS.md |
+| **`README.md`** | Human-facing documentation (this file) | Developers on GitHub |
+
+The system is AI-tool agnostic — the intelligence lives in the skill files and agent personas, not in any specific platform. `CLAUDE.md` is the canonical instruction set regardless of which tool you use.
 
 ---
 
@@ -633,7 +644,7 @@ Image generation is optional. All other functionality works without any API keys
 
 | What | Where |
 |------|-------|
-| AI agent instructions | `CLAUDE.md` |
+| AI agent instructions | `CLAUDE.md` (source of truth), `AGENTS.md` (pointer for Codex) |
 | Specialist profiles | [agents/Agents-List.md](agents/Agents-List.md) |
 | Funnel reference | [funnels/Funnel-Pages-Checklist.md](funnels/Funnel-Pages-Checklist.md) |
 | Task reference | [tasks/Task-Checklist.md](tasks/Task-Checklist.md) |
