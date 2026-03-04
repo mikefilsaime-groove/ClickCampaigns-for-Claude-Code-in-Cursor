@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale Plus — Everything You Need to Run Your Business. One Platform. One Price.</title>
+    <meta name="description" content="Scale Plus is the all-in-one platform for digital marketers, coaches, consultants, and agencies. 25+ tools, AI-powered, starting at $42/month. Replace ClickFunnels, GoHighLevel, Kartra, and more.">
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        @theme {
+            --color-brand-primary: #8b5cf6;
+            --color-brand-secondary: #7c3aed;
+            --color-brand-accent: #06b6d4;
+            --color-brand-bg: #ffffff;
+            --color-brand-text: #1e293b;
+            --color-brand-muted: #faf5ff;
+            --color-brand-border: #e9d5ff;
+            --color-brand-dark: #0f0a1e;
+            --color-brand-deep: #1a1035;
+            --color-brand-glow: rgba(139, 92, 246, 0.4);
+            --color-brand-cyan-glow: rgba(6, 182, 212, 0.3);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--color-brand-text);
+            background: var(--color-brand-bg);
+            overflow-x: hidden;
+        }
+
+        .font-display { font-family: 'Sora', sans-serif; }
+
+        /* Animated gradient orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            animation: orbFloat 20s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .orb-1 {
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, #8b5cf6 0%, transparent 70%);
+            top: -200px; left: -100px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, #06b6d4 0%, transparent 70%);
+            top: 100px; right: -150px;
+            animation-delay: -7s;
+        }
+
+        .orb-3 {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, #7c3aed 0%, transparent 70%);
+            bottom: -100px; left: 30%;
+            animation-delay: -13s;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -40px) scale(1.05); }
+            50% { transform: translate(-20px, 20px) scale(0.95); }
+            75% { transform: translate(40px, 30px) scale(1.03); }
+        }
+
+        /* Hero section with dark gradient */
+        .hero-section {
+            background: linear-gradient(135deg, #0f0a1e 0%, #1a1035 30%, #0f172a 60%, #0c1222 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 30%, rgba(139,92,246,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 50% at 80% 60%, rgba(6,182,212,0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        /* Grid pattern overlay */
+        .grid-pattern {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(139,92,246,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139,92,246,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+
+        /* Noise texture */
+        .noise-overlay {
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 256px 256px;
+            pointer-events: none;
+        }
+
+        /* Glowing line effect */
+        .glow-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #8b5cf6, #06b6d4, transparent);
+            opacity: 0.5;
+        }
+
+        /* Gradient text */
+        .text-gradient {
+            background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 50%, #8b5cf6 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 6s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Blinking cursor for typewriter */
+        .cursor-blink {
+            display: inline-block;
+            width: 4px;
+            height: 1em;
+            margin-left: 4px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+            animation: blink 1s infinite;
+            vertical-align: middle;
+            border-radius: 2px;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Animated border cards */
+        .card-glow {
+            position: relative;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(139,92,246,0.15);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card-glow:hover {
+            border-color: rgba(139,92,246,0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 0 40px rgba(139,92,246,0.12), 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        /* Product cards on white sections */
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #e9d5ff;
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover {
+            border-color: #8b5cf6;
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(139,92,246,0.12);
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+        }
+
+        /* CTA button */
+        .btn-primary {
+            background: #000000;
+            color: white;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            animation: slowShake 3s ease-in-out infinite;
+        }
+
+        .btn-primary span { position: relative; z-index: 1; }
+
+        @keyframes slowShake {
+            0%, 100% { transform: translateX(0) rotate(0deg); }
+            10% { transform: translateX(-2px) rotate(-0.5deg); }
+            20% { transform: translateX(2px) rotate(0.5deg); }
+            30% { transform: translateX(-2px) rotate(-0.5deg); }
+            40% { transform: translateX(2px) rotate(0.5deg); }
+            50% { transform: translateX(-1px) rotate(-0.3deg); }
+            60% { transform: translateX(1px) rotate(0.3deg); }
+            70% { transform: translateX(-1px) rotate(-0.3deg); }
+            80% { transform: translateX(1px) rotate(0.3deg); }
+            90% { transform: translateX(-1px) rotate(-0.2deg); }
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #8b5cf6;
+            font-weight: 600;
+            padding: 16px 40px;
+            border-radius: 12px;
+            border: 2px solid #e9d5ff;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .btn-secondary:hover {
+            border-color: #8b5cf6;
+            background: #faf5ff;
+            transform: translateY(-2px);
+        }
+
+        /* Accent bar CTA */
+        .btn-accent {
+            background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            color: white;
+            font-weight: 700;
+            padding: 18px 48px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .btn-accent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(6,182,212,0.4);
+        }
+
+        /* Light CTA on dark */
+        .btn-light {
+            background: white;
+            color: #7c3aed;
+            font-weight: 700;
+            padding: 18px 48px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.15rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .btn-light:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(255,255,255,0.2);
+        }
+
+        /* Scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+
+        /* Stat counter animation */
+        .stat-number {
+            font-family: 'Sora', sans-serif;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        /* Logo marquee */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-track {
+            display: inline-flex;
+            animation: marquee 40s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 40px;
+            font-family: 'Sora', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.3);
+            white-space: nowrap;
+        }
+
+        /* Pricing section */
+        .price-tag {
+            font-family: 'Sora', sans-serif;
+            font-weight: 800;
+        }
+
+        /* Feature icon containers */
+        .icon-wrap {
+            width: 56px; height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* Comparison strikethrough */
+        .strikethrough {
+            text-decoration: line-through;
+            opacity: 0.4;
+        }
+
+        /* Navigation */
+        .nav-glass {
+            background: rgba(15,10,30,0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(139,92,246,0.1);
+        }
+
+        .nav-link {
+            color: rgba(255,255,255,0.6);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover { color: #8b5cf6; }
+
+        /* Section divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e9d5ff, transparent);
+        }
+
+        /* Floating badge */
+        .badge-glow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(139,92,246,0.1);
+            border: 1px solid rgba(139,92,246,0.2);
+            border-radius: 100px;
+            padding: 8px 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #a78bfa;
+            letter-spacing: 0.05em;
+        }
+
+        /* Testimonial */
+        .testimonial-card {
+            background: #faf5ff;
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid #e9d5ff;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 10px 40px rgba(139,92,246,0.08);
+        }
+
+        /* Mobile nav */
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: rgba(15,10,30,0.98);
+            backdrop-filter: blur(20px);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-menu.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .mobile-menu a {
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Sora', sans-serif;
+        }
+
+        /* Audience cards */
+        .audience-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #e9d5ff;
+            transition: all 0.4s ease;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(139,92,246,0.12);
+        }
+
+        .audience-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        /* Animated counting */
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(139,92,246,0.2); }
+            50% { box-shadow: 0 0 40px rgba(139,92,246,0.4); }
+        }
+
+        .pulse-ring {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        /* Diagonal section */
+        .diagonal-section {
+            clip-path: polygon(0 40px, 100% 0, 100% calc(100% - 40px), 0 100%);
+        }
+
+        @media (max-width: 768px) {
+            .diagonal-section {
+                clip-path: polygon(0 20px, 100% 0, 100% calc(100% - 20px), 0 100%);
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f0a1e; }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #8b5cf6, #7c3aed);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ===================== NAVIGATION ===================== -->
+<nav class="nav-glass fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 text-white no-underline">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#8b5cf6] to-[#06b6d4] flex items-center justify-center">
+                <i data-lucide="zap" class="w-5 h-5 text-white"></i>
+            </div>
+            <span class="font-display font-bold text-xl tracking-tight">Scale<span class="text-[#8b5cf6]">+</span></span>
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden md:flex items-center gap-8">
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#products" class="nav-link">Products</a>
+            <a href="#audience" class="nav-link">Who It's For</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
+            <a href="#proof" class="nav-link">About</a>
+        </div>
+
+        <!-- CTA -->
+        <div class="hidden md:flex items-center gap-4">
+            <a href="#pricing" class="btn-primary" style="padding: 10px 24px; font-size: 0.95rem;">
+                <span>Get Started</span>
+                <i data-lucide="arrow-right" class="w-4 h-4" style="position: relative; z-index: 1;"></i>
+            </a>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button id="mobileToggle" class="md:hidden text-white" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="mobile-menu">
+    <button onclick="this.parentElement.classList.remove('open')" class="absolute top-6 right-6 text-white">
+        <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+    <a href="#features" onclick="this.parentElement.classList.remove('open')">Features</a>
+    <a href="#products" onclick="this.parentElement.classList.remove('open')">Products</a>
+    <a href="#audience" onclick="this.parentElement.classList.remove('open')">Who It's For</a>
+    <a href="#pricing" onclick="this.parentElement.classList.remove('open')">Pricing</a>
+    <a href="#proof" onclick="this.parentElement.classList.remove('open')">About</a>
+    <a href="#pricing" class="btn-primary mt-4" style="padding: 14px 36px;" onclick="this.parentElement.classList.remove('open')">
+        <span>Get Started</span>
+    </a>
+</div>
+
+
+<!-- ===================== HERO SECTION ===================== -->
+<section class="hero-section min-h-screen flex items-center pt-24 pb-20 relative">
+    <div class="grid-pattern"></div>
+    <div class="noise-overlay"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+        <div class="text-center max-w-4xl mx-auto">
+            <!-- Badge -->
+            <div class="reveal mb-8">
+                <span class="badge-glow">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    AI-Powered All-in-One Platform
+                </span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-800 text-white leading-[1.08] mb-7 reveal reveal-delay-1">
+                Now you can finally<br>
+                <span id="typewriter-text" class="text-gradient"></span><span class="cursor-blink"></span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-lg sm:text-xl text-white/50 max-w-2xl mx-auto mb-10 leading-relaxed reveal reveal-delay-2" style="font-weight: 300;">
+                Scale Plus replaces your funnels, CRM, email, courses, invoicing, scheduling, and 20+ other tools — powered by AI, at a price that makes your current stack look absurd.
+            </p>
+
+            <!-- CTA Row -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 reveal reveal-delay-3">
+                <a href="#pricing" class="btn-primary" style="padding: 18px 44px; font-size: 1.1rem;">
+                    <span>Start for $42/month</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5" style="position: relative; z-index: 1;"></i>
+                </a>
+                <a href="#features" class="btn-secondary" style="border-color: rgba(139,92,246,0.3); color: rgba(255,255,255,0.7);">
+                    <span>See All Features</span>
+                    <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                </a>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 reveal reveal-delay-4">
+                <div class="text-center">
+                    <div class="stat-number text-3xl sm:text-4xl text-white mb-1" data-target="25">25+</div>
+                    <div class="text-white/40 text-sm font-medium">Integrated Apps</div>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number text-3xl sm:text-4xl text-white mb-1" data-target="100000">100K+</div>
+                    <div class="text-white/40 text-sm font-medium">Customers Served</div>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number text-3xl sm:text-4xl text-white mb-1" data-target="20">20+</div>
+                    <div class="text-white/40 text-sm font-medium">Years in Industry</div>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number text-3xl sm:text-4xl text-[#06b6d4] mb-1">10x</div>
+                    <div class="text-white/40 text-sm font-medium">Cheaper Than Competitors</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom glow line -->
+    <div class="glow-line absolute bottom-0 left-0 right-0"></div>
+</section>
+
+
+<!-- ===================== "REPLACES" MARQUEE ===================== -->
+<section class="bg-[#0f0a1e] py-6 relative overflow-hidden">
+    <div class="marquee-container">
+        <div class="marquee-track">
+            <span class="marquee-item">Replaces ClickFunnels</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces GoHighLevel</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Kartra</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Kajabi</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces SamCart</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Skool</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Mailchimp</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces WordPress</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Calendly</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Typeform</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Teachable</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces ClickFunnels</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces GoHighLevel</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Kartra</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Kajabi</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces SamCart</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Skool</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Mailchimp</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces WordPress</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Calendly</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Typeform</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Replaces Teachable</span>
+            <span class="marquee-item">•</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== PROBLEM / AGITATION ===================== -->
+<section class="py-24 sm:py-32 bg-white relative">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <span class="text-[#8b5cf6] font-semibold text-sm tracking-widest uppercase mb-4 block">The Problem</span>
+                <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-800 text-[#1e293b] leading-tight mb-6">
+                    You're Paying <span class="text-[#8b5cf6]">$500+/month</span> for Tools That Don't Talk to Each Other
+                </h2>
+                <p class="text-lg text-slate-500 leading-relaxed mb-8">
+                    Multiple logins. Broken integrations. Things break when one platform updates and the others don't know. Your tech stack is a house of cards — expensive, fragile, and frustrating.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div class="icon-wrap bg-red-50 mt-0.5">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-red-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-[#1e293b] mb-1">$297/mo for funnels + $97/mo for email + $99/mo for courses...</h4>
+                            <p class="text-slate-400 text-sm">It adds up fast. And none of them were built to work together.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="icon-wrap bg-red-50 mt-0.5">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-red-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-[#1e293b] mb-1">Zapier glue, broken webhooks, midnight panic</h4>
+                            <p class="text-slate-400 text-sm">You shouldn't need a full-time developer just to keep your marketing running.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="icon-wrap bg-red-50 mt-0.5">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-red-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-[#1e293b] mb-1">No single view of your customer</h4>
+                            <p class="text-slate-400 text-sm">Data lives in 8 different dashboards. You're flying blind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal reveal-delay-2 relative">
+                <div class="absolute -inset-4 bg-gradient-to-br from-[#8b5cf6]/5 to-[#06b6d4]/5 rounded-3xl -z-10"></div>
+                <img
+                    src="https://images.pexels.com/photos/7873568/pexels-photo-7873568.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                    alt="Multiple analytics dashboards showing fragmented data"
+                    class="rounded-2xl shadow-2xl w-full"
+                    loading="lazy"
+                >
+                <!-- Floating price tags -->
+                <div class="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg p-3 border border-red-100">
+                    <div class="text-red-500 font-bold text-sm">$297/mo</div>
+                    <div class="text-slate-400 text-xs">Funnel Builder</div>
+                </div>
+                <div class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-3 border border-red-100">
+                    <div class="text-red-500 font-bold text-sm">$99/mo</div>
+                    <div class="text-slate-400 text-xs">Email Platform</div>
+                </div>
+                <div class="absolute top-1/2 -right-6 bg-white rounded-xl shadow-lg p-3 border border-red-100">
+                    <div class="text-red-500 font-bold text-sm">$149/mo</div>
+                    <div class="text-slate-400 text-xs">CRM System</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== FEATURES SECTION ===================== -->
+<section id="features" class="hero-section py-24 sm:py-32 relative">
+    <div class="grid-pattern"></div>
+    <div class="noise-overlay"></div>
+    <div class="orb orb-3" style="top: 10%; left: 60%; width: 400px; height: 400px;"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16 reveal">
+            <span class="badge-glow mb-6 inline-flex">
+                <i data-lucide="layers" class="w-4 h-4"></i>
+                The Platform
+            </span>
+            <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-800 text-white leading-tight mb-6">
+                One Platform.<br>
+                <span class="text-gradient">Everything Built In.</span>
+            </h2>
+            <p class="text-lg text-white/40 max-w-2xl mx-auto">
+                25+ integrated applications that actually work together — from first click to final sale, and everything in between.
+            </p>
+        </div>
+
+        <!-- Feature grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Feature 1 -->
+            <div class="card-glow p-8 reveal">
+                <div class="icon-wrap bg-[#8b5cf6]/10 mb-5">
+                    <i data-lucide="layout-template" class="w-6 h-6 text-[#8b5cf6]"></i>
+                </div>
+                <h3 class="text-white font-semibold text-lg mb-2">Funnels & Pages</h3>
+                <p class="text-white/40 text-sm leading-relaxed">Drag-and-drop builder with templates that convert. Landing pages, sales pages, checkout — all connected.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="card-glow p-8 reveal reveal-delay-1">
+                <div class="icon-wrap bg-[#06b6d4]/10 mb-5">
+                    <i data-lucide="mail" class="w-6 h-6 text-[#06b6d4]"></i>
+                </div>
+                <h3 class="text-white font-semibold text-lg mb-2">Email & Automation</h3>
+                <p class="text-white/40 text-sm leading-relaxed">Advanced tagging, segmentation, behavioral triggers. Plus exclusive TinyEmail partnership — 200K emails/mo for $14.97.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="card-glow p-8 reveal reveal-delay-2">
+                <div class="icon-wrap bg-purple-500/10 mb-5">
+                    <i data-lucide="graduation-cap" class="w-6 h-6 text-purple-400"></i>
+                </div>
+                <h3 class="text-white font-semibold text-lg mb-2">Courses & Communities</h3>
+                <p class="text-white/40 text-sm leading-relaxed">Launch unlimited courses with video, quizzes, certificates, and private communities. Zero platform fees with Scale Plus.</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="card-glow p-8 reveal reveal-delay-1">
+                <div class="icon-wrap bg-cyan-500/10 mb-5">
+                    <i data-lucide="users" class="w-6 h-6 text-cyan-400"></i>
+                </div>
+                <h3 class="text-white font-semibold text-lg mb-2">CRM & Lead Finder</h3>
+                <p class="text-white/40 text-sm leading-relaxed">Full pipeline management plus AI-powered prospecting. Find, qualify, and close leads from a single dashboard.</p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="card-glow p-8 reveal reveal-delay-2">
+                <div class="icon-wrap bg-violet-500/10 mb-5">
+                    <i data-lucide="bot" class="w-6 h-6 text-violet-400"></i>
+                </div>
+                <h3 class="text-white font-semibold text-lg mb-2">AI Campaign Builder</h3>
+                <p class="text-white/40 text-sm leading-relaxed">ClickCampaigns.ai generates ad headlines, emails, landing pages, and social posts — optimized for your audience in minutes.</p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="card-glow p-8 reveal reveal-delay-3">
+                <div class="icon-wrap bg-emerald-500/10 mb-5">
+                    <i data-lucide="receipt" class="w-6 h-6 text-emerald-400"></i>
+                </div>
+                <h3 class="text-white font-semibold text-lg mb-2">Invoicing & Payments</h3>
+                <p class="text-white/40 text-sm leading-relaxed">Professional invoicing, recurring billing, automated reminders. Accept payments and track cash flow — no more chasing clients.</p>
+            </div>
+
+            <!-- Feature 7 -->
+            <div class="card-glow p-8 reveal reveal-delay-2">
+                <div class="icon-wrap bg-pink-500/10 mb-5">
+                    <i data-lucide="calendar" class="w-6 h-6 text-pink-400"></i>
+                </div>
+                <h3 class="text-white font-semibold text-lg mb-2">Scheduling & Booking</h3>
+                <p class="text-white/40 text-sm leading-relaxed">Clients book directly from your calendar link. Custom branding, buffer times, and automated reminders reduce no-shows.</p>
+            </div>
+
+            <!-- Feature 8 -->
+            <div class="card-glow p-8 reveal reveal-delay-3">
+                <div class="icon-wrap bg-amber-500/10 mb-5">
+                    <i data-lucide="shopping-cart" class="w-6 h-6 text-amber-400"></i>
+                </div>
+                <h3 class="text-white font-semibold text-lg mb-2">E-Commerce & Checkout</h3>
+                <p class="text-white/40 text-sm leading-relaxed">Sell physical or digital products. Upsells, downsells, order bumps, abandoned cart recovery — zero transaction fees.</p>
+            </div>
+
+            <!-- Feature 9 -->
+            <div class="card-glow p-8 reveal reveal-delay-4">
+                <div class="icon-wrap bg-teal-500/10 mb-5">
+                    <i data-lucide="message-square" class="w-6 h-6 text-teal-400"></i>
+                </div>
+                <h3 class="text-white font-semibold text-lg mb-2">AI Chatbots</h3>
+                <p class="text-white/40 text-sm leading-relaxed">ChatBaser.ai trains on your content to handle support, lead capture, and scheduling 24/7. Sounds like your brand, knows your products.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="glow-line absolute bottom-0 left-0 right-0"></div>
+</section>
+
+
+<!-- ===================== PRODUCTS SECTION ===================== -->
+<section id="products" class="py-24 sm:py-32 bg-white relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#faf5ff] to-transparent rounded-full -z-0"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16 reveal">
+            <span class="inline-flex items-center gap-2 text-[#8b5cf6] font-semibold text-sm tracking-widest uppercase mb-4">
+                <i data-lucide="package" class="w-4 h-4"></i>
+                The Suite
+            </span>
+            <h2 class="font-display text-4xl sm:text-5xl font-800 text-[#1e293b] leading-tight mb-6">
+                25+ Products. <span class="text-[#8b5cf6]">One Subscription.</span>
+            </h2>
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+                Every tool you need, built to work together natively. No integrations, no Zapier, no broken connections.
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="product-card p-6 reveal">
+                <div class="icon-wrap bg-[#faf5ff] mb-4">
+                    <i data-lucide="rocket" class="w-6 h-6 text-[#8b5cf6]"></i>
+                </div>
+                <h4 class="font-semibold text-[#1e293b] mb-2">GrooveFunnels</h4>
+                <p class="text-slate-400 text-sm">Build & launch complete sales funnels from one hub.</p>
+            </div>
+            <div class="product-card p-6 reveal reveal-delay-1">
+                <div class="icon-wrap bg-cyan-50 mb-4">
+                    <i data-lucide="layout" class="w-6 h-6 text-[#06b6d4]"></i>
+                </div>
+                <h4 class="font-semibold text-[#1e293b] mb-2">GroovePages</h4>
+                <p class="text-slate-400 text-sm">Drag-and-drop websites & landing pages in minutes.</p>
+            </div>
+            <div class="product-card p-6 reveal reveal-delay-2">
+                <div class="icon-wrap bg-emerald-50 mb-4">
+                    <i data-lucide="credit-card" class="w-6 h-6 text-emerald-500"></i>
+                </div>
+                <h4 class="font-semibold text-[#1e293b] mb-2">GrooveSell</h4>
+                <p class="text-slate-400 text-sm">Checkout engine with upsells, bumps & zero fees.</p>
+            </div>
+            <div class="product-card p-6 reveal reveal-delay-3">
+                <div class="icon-wrap bg-purple-50 mb-4">
+                    <i data-lucide="mail-check" class="w-6 h-6 text-purple-500"></i>
+                </div>
+                <h4 class="font-semibold text-[#1e293b] mb-2">GrooveMail</h4>
+                <p class="text-slate-400 text-sm">Automated email marketing with smart segmentation.</p>
+            </div>
+            <div class="product-card p-6 reveal">
+                <div class="icon-wrap bg-pink-50 mb-4">
+                    <i data-lucide="graduation-cap" class="w-6 h-6 text-pink-500"></i>
+                </div>
+                <h4 class="font-semibold text-[#1e293b] mb-2">Courses.gg</h4>
+                <p class="text-slate-400 text-sm">Unlimited courses & communities. No platform fees.</p>
+            </div>
+            <div class="product-card p-6 reveal reveal-delay-1">
+                <div class="icon-wrap bg-orange-50 mb-4">
+                    <i data-lucide="sparkles" class="w-6 h-6 text-orange-500"></i>
+                </div>
+                <h4 class="font-semibold text-[#1e293b] mb-2">ClickCampaigns.ai</h4>
+                <p class="text-slate-400 text-sm">AI builds complete ad & email campaigns for you.</p>
+            </div>
+            <div class="product-card p-6 reveal reveal-delay-2">
+                <div class="icon-wrap bg-sky-50 mb-4">
+                    <i data-lucide="search" class="w-6 h-6 text-sky-500"></i>
+                </div>
+                <h4 class="font-semibold text-[#1e293b] mb-2">PipeLeads.ai</h4>
+                <p class="text-slate-400 text-sm">CRM + AI lead finder in one powerful platform.</p>
+            </div>
+            <div class="product-card p-6 reveal reveal-delay-3">
+                <div class="icon-wrap bg-violet-50 mb-4">
+                    <i data-lucide="message-circle" class="w-6 h-6 text-violet-500"></i>
+                </div>
+                <h4 class="font-semibold text-[#1e293b] mb-2">ChatBaser.ai</h4>
+                <p class="text-slate-400 text-sm">AI chatbot trained on your business content.</p>
+            </div>
+            <div class="product-card p-6 reveal">
+                <div class="icon-wrap bg-teal-50 mb-4">
+                    <i data-lucide="file-text" class="w-6 h-6 text-teal-500"></i>
+                </div>
+                <h4 class="font-semibold text-[#1e293b] mb-2">Invoicer</h4>
+                <p class="text-slate-400 text-sm">Professional invoicing & automated billing.</p>
+            </div>
+            <div class="product-card p-6 reveal reveal-delay-1">
+                <div class="icon-wrap bg-rose-50 mb-4">
+                    <i data-lucide="calendar-check" class="w-6 h-6 text-rose-500"></i>
+                </div>
+                <h4 class="font-semibold text-[#1e293b] mb-2">CalendarBug</h4>
+                <p class="text-slate-400 text-sm">Smart scheduling with branded booking pages.</p>
+            </div>
+            <div class="product-card p-6 reveal reveal-delay-2">
+                <div class="icon-wrap bg-amber-50 mb-4">
+                    <i data-lucide="git-branch" class="w-6 h-6 text-amber-600"></i>
+                </div>
+                <h4 class="font-semibold text-[#1e293b] mb-2">FunnelMapper.io</h4>
+                <p class="text-slate-400 text-sm">Visual funnel planning & optimization canvas.</p>
+            </div>
+            <div class="product-card p-6 reveal reveal-delay-3">
+                <div class="icon-wrap bg-lime-50 mb-4">
+                    <i data-lucide="help-circle" class="w-6 h-6 text-lime-600"></i>
+                </div>
+                <h4 class="font-semibold text-[#1e293b] mb-2">QuizFunnels</h4>
+                <p class="text-slate-400 text-sm">Interactive quiz-based lead gen & qualification.</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-10 reveal">
+            <p class="text-slate-400 text-sm">Plus: GrooveAffiliate, GrooveMember, GrooveVideo, GrooveBlog, GrooveWebinar, GrooveKart, GrooveProof, GrooveForms, GroovePop-Ups, GrooveAutomations, AffiliatePages, BrandBaser, HighTicketGPT, ScaleGPT, and more.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== WHO IT'S FOR ===================== -->
+<section id="audience" class="py-24 sm:py-32 bg-[#faf5ff] relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+            <span class="inline-flex items-center gap-2 text-[#8b5cf6] font-semibold text-sm tracking-widest uppercase mb-4">
+                <i data-lucide="target" class="w-4 h-4"></i>
+                Built For You
+            </span>
+            <h2 class="font-display text-4xl sm:text-5xl font-800 text-[#1e293b] leading-tight mb-6">
+                Whether You Have <span class="text-[#8b5cf6]">Customers</span> or <span class="text-[#06b6d4]">Clients</span>
+            </h2>
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+                Scale Plus serves three distinct audiences — and gives each one exactly what they need.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Audience 1 -->
+            <div class="audience-card reveal">
+                <img
+                    src="https://images.pexels.com/photos/4959940/pexels-photo-4959940.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                    alt="Digital marketer working on laptop"
+                    loading="lazy"
+                >
+                <div class="p-7">
+                    <div class="inline-flex items-center gap-2 bg-[#faf5ff] text-[#8b5cf6] text-xs font-bold px-3 py-1 rounded-full mb-4">
+                        <i data-lucide="rocket" class="w-3 h-3"></i>
+                        DIGITAL MARKETERS
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-[#1e293b] mb-3">Course Creators & Funnel Builders</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        You sell courses, memberships, and digital products through automated funnels. Your customers self-checkout. You need pages, email, and payment — all talking to each other.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-500">
+                            <i data-lucide="check" class="w-4 h-4 text-[#8b5cf6]"></i>
+                            Funnels, email, checkout — connected
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-500">
+                            <i data-lucide="check" class="w-4 h-4 text-[#8b5cf6]"></i>
+                            Courses & communities included
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-500">
+                            <i data-lucide="check" class="w-4 h-4 text-[#8b5cf6]"></i>
+                            Built-in affiliate program
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Audience 2 -->
+            <div class="audience-card reveal reveal-delay-2">
+                <img
+                    src="https://images.pexels.com/photos/7222093/pexels-photo-7222093.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                    alt="Coach meeting with client"
+                    loading="lazy"
+                >
+                <div class="p-7">
+                    <div class="inline-flex items-center gap-2 bg-cyan-50 text-[#06b6d4] text-xs font-bold px-3 py-1 rounded-full mb-4">
+                        <i data-lucide="briefcase" class="w-3 h-3"></i>
+                        AGENCIES & PROFESSIONALS
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-[#1e293b] mb-3">Coaches, Consultants & Service Providers</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        You don't have customers — you have clients. You book calls, create proposals, send invoices, and manage relationships. Your tools need to reflect that.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-500">
+                            <i data-lucide="check" class="w-4 h-4 text-[#06b6d4]"></i>
+                            CRM with real email integration
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-500">
+                            <i data-lucide="check" class="w-4 h-4 text-[#06b6d4]"></i>
+                            Invoicing & scheduling built in
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-500">
+                            <i data-lucide="check" class="w-4 h-4 text-[#06b6d4]"></i>
+                            AI lead finder for prospecting
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Audience 3 -->
+            <div class="audience-card reveal reveal-delay-4">
+                <img
+                    src="https://images.pexels.com/photos/3785263/pexels-photo-3785263.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                    alt="Person celebrating business success"
+                    loading="lazy"
+                >
+                <div class="p-7">
+                    <div class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-600 text-xs font-bold px-3 py-1 rounded-full mb-4">
+                        <i data-lucide="trending-up" class="w-3 h-3"></i>
+                        BEGINNERS
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-[#1e293b] mb-3">New Entrepreneurs & Affiliates</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        You're just getting started. You want to learn, build, and earn — without drowning in tech or spending a fortune before making your first dollar.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-500">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Training & tutorials included
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-500">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Affiliate tools to earn while learning
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-slate-500">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                            Start for just $42/month
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== PRICING ===================== -->
+<section id="pricing" class="hero-section py-24 sm:py-32 relative">
+    <div class="grid-pattern"></div>
+    <div class="noise-overlay"></div>
+    <div class="orb" style="width: 500px; height: 500px; background: radial-gradient(circle, #06b6d4 0%, transparent 70%); top: 20%; left: -10%; animation-delay: -5s;"></div>
+    <div class="orb" style="width: 400px; height: 400px; background: radial-gradient(circle, #8b5cf6 0%, transparent 70%); bottom: 10%; right: -5%; animation-delay: -12s;"></div>
+
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-12 reveal">
+            <span class="badge-glow mb-6 inline-flex">
+                <i data-lucide="tag" class="w-4 h-4"></i>
+                Simple Pricing
+            </span>
+            <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-800 text-white leading-tight mb-6">
+                One Price. <span class="text-gradient">Everything Included.</span>
+            </h2>
+            <p class="text-lg text-white/40 max-w-xl mx-auto">
+                No tiers. No feature gating. No surprise fees. Every single product, tool, and feature from day one.
+            </p>
+        </div>
+
+        <!-- Pricing card -->
+        <div class="reveal reveal-delay-1">
+            <div class="relative rounded-3xl border border-[#8b5cf6]/30 overflow-hidden pulse-ring" style="background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(6,182,212,0.05));">
+                <div class="absolute inset-0 backdrop-blur-xl"></div>
+
+                <div class="relative z-10 p-8 sm:p-12">
+                    <!-- Toggle -->
+                    <div class="flex items-center justify-center gap-4 mb-10">
+                        <span id="monthlyLabel" class="text-white/40 text-sm font-medium cursor-pointer">Monthly</span>
+                        <button id="pricingToggle" onclick="togglePricing()" class="w-16 h-8 rounded-full bg-[#8b5cf6]/30 border border-[#8b5cf6]/30 relative cursor-pointer transition-all">
+                            <div id="toggleDot" class="w-6 h-6 rounded-full bg-[#8b5cf6] absolute top-1 left-1 transition-all shadow-lg"></div>
+                        </button>
+                        <span id="annualLabel" class="text-white text-sm font-semibold cursor-pointer">Annual <span class="text-[#06b6d4] text-xs ml-1">Save 58%</span></span>
+                    </div>
+
+                    <div class="text-center">
+                        <!-- Price display -->
+                        <div class="mb-2">
+                            <span class="text-white/30 text-lg line-through mr-3" id="comparePrice">$2,500+/mo elsewhere</span>
+                        </div>
+                        <div class="flex items-baseline justify-center gap-2 mb-2">
+                            <span class="text-white/60 text-2xl font-medium">$</span>
+                            <span id="priceNumber" class="price-tag text-7xl sm:text-8xl text-white">42</span>
+                            <span id="pricePeriod" class="text-white/40 text-xl">/mo</span>
+                        </div>
+                        <p id="pricingNote" class="text-white/30 text-sm mb-8">Billed annually at $497/year</p>
+
+                        <!-- CTA -->
+                        <a href="#" class="btn-light inline-flex mb-8" style="font-size: 1.25rem; padding: 20px 56px;">
+                            <span>Get Scale Plus Now</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+
+                        <!-- Feature list -->
+                        <div class="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-left max-w-2xl mx-auto">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-[#06b6d4] shrink-0"></i>
+                                <span class="text-white/60 text-sm">25+ integrated applications</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-[#06b6d4] shrink-0"></i>
+                                <span class="text-white/60 text-sm">Unlimited funnels & pages</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-[#06b6d4] shrink-0"></i>
+                                <span class="text-white/60 text-sm">Unlimited products & courses</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-[#06b6d4] shrink-0"></i>
+                                <span class="text-white/60 text-sm">AI campaign builder</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-[#06b6d4] shrink-0"></i>
+                                <span class="text-white/60 text-sm">CRM + lead finder</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-[#06b6d4] shrink-0"></i>
+                                <span class="text-white/60 text-sm">Email marketing included</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-[#06b6d4] shrink-0"></i>
+                                <span class="text-white/60 text-sm">Scheduling & invoicing</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-[#06b6d4] shrink-0"></i>
+                                <span class="text-white/60 text-sm">40% affiliate commissions</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-[#06b6d4] shrink-0"></i>
+                                <span class="text-white/60 text-sm">AI chatbot builder</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-[#06b6d4] shrink-0"></i>
+                                <span class="text-white/60 text-sm">Training & live streams</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison callout -->
+        <div class="text-center mt-12 reveal reveal-delay-3">
+            <p class="text-white/30 text-sm">
+                <span class="strikethrough">ClickFunnels $297/mo</span> &nbsp;+&nbsp;
+                <span class="strikethrough">GoHighLevel $497/mo</span> &nbsp;+&nbsp;
+                <span class="strikethrough">Kajabi $199/mo</span> &nbsp;+&nbsp;
+                <span class="strikethrough">Calendly $16/mo</span> &nbsp;+&nbsp;
+                <span class="strikethrough">Mailchimp $80/mo</span>
+            </p>
+            <p class="text-white/50 text-lg font-semibold mt-3">= $1,089+/mo &nbsp; vs &nbsp; <span class="text-[#06b6d4]">$42/mo with Scale Plus</span></p>
+        </div>
+    </div>
+
+    <div class="glow-line absolute bottom-0 left-0 right-0"></div>
+</section>
+
+
+<!-- ===================== CREDIBILITY / ABOUT ===================== -->
+<section id="proof" class="py-24 sm:py-32 bg-white relative">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <img
+                    src="https://images.pexels.com/photos/3153207/pexels-photo-3153207.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                    alt="Team collaborating in modern workspace"
+                    class="rounded-2xl shadow-2xl w-full"
+                    loading="lazy"
+                >
+            </div>
+            <div class="reveal reveal-delay-2">
+                <span class="text-[#8b5cf6] font-semibold text-sm tracking-widest uppercase mb-4 block">The Team Behind Scale Plus</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-800 text-[#1e293b] leading-tight mb-6">
+                    Built by People Who've Done This <span class="text-[#8b5cf6]">for 20+ Years</span>
+                </h2>
+                <p class="text-lg text-slate-500 leading-relaxed mb-6">
+                    Mike Filsaime and Matt Zeralta aren't Silicon Valley outsiders guessing at what marketers need. They've built the platforms millions have used — Kartra, WebinarJam, EverWebinar, Groove.cm, Groove.ai — and have served over 100,000 customers.
+                </p>
+                <p class="text-lg text-slate-500 leading-relaxed mb-8">
+                    Now, powered by AI development, they're building faster and better than ever. Scale Plus isn't a pivot — it's the culmination of two decades of experience, compressed into the most complete platform the industry has ever seen.
+                </p>
+
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-[#faf5ff] rounded-xl p-5 border border-[#e9d5ff]">
+                        <div class="font-display font-800 text-3xl text-[#8b5cf6] mb-1">100K+</div>
+                        <div class="text-slate-500 text-sm">Customers served across all platforms</div>
+                    </div>
+                    <div class="bg-[#faf5ff] rounded-xl p-5 border border-[#e9d5ff]">
+                        <div class="font-display font-800 text-3xl text-[#8b5cf6] mb-1">20+</div>
+                        <div class="text-slate-500 text-sm">Years building marketing software</div>
+                    </div>
+                    <div class="bg-[#faf5ff] rounded-xl p-5 border border-[#e9d5ff]">
+                        <div class="font-display font-800 text-3xl text-[#06b6d4] mb-1">6+</div>
+                        <div class="text-slate-500 text-sm">Major platforms built & launched</div>
+                    </div>
+                    <div class="bg-[#faf5ff] rounded-xl p-5 border border-[#e9d5ff]">
+                        <div class="font-display font-800 text-3xl text-[#06b6d4] mb-1">25+</div>
+                        <div class="text-slate-500 text-sm">Integrated tools in Scale Plus</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="diagonal-section hero-section py-32 sm:py-40 relative">
+    <div class="grid-pattern"></div>
+    <div class="noise-overlay"></div>
+    <div class="orb" style="width: 600px; height: 600px; background: radial-gradient(circle, #8b5cf6 0%, transparent 70%); top: -20%; left: 30%; opacity: 0.3;"></div>
+
+    <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+        <div class="reveal">
+            <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-800 text-white leading-tight mb-6">
+                Ready to Replace Your<br>
+                <span class="text-gradient">Entire Tech Stack?</span>
+            </h2>
+            <p class="text-lg text-white/40 max-w-2xl mx-auto mb-10">
+                Join 100,000+ entrepreneurs who are already building, selling, and scaling with one platform. Cancel 30+ subscriptions. Start with Scale Plus today.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#" class="btn-light" style="font-size: 1.2rem; padding: 20px 52px;">
+                    <span>Get Scale Plus — $42/mo</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+            <p class="text-white/25 text-sm mt-6">$497/year (save 58%) or $99/month. Cancel anytime.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-[#0f0a1e] pt-16 pb-8 relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-10 mb-12">
+            <div>
+                <a href="#" class="flex items-center gap-3 text-white no-underline mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#8b5cf6] to-[#06b6d4] flex items-center justify-center">
+                        <i data-lucide="zap" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="font-display font-bold text-xl">Scale<span class="text-[#8b5cf6]">+</span></span>
+                </a>
+                <p class="text-white/30 text-sm leading-relaxed">
+                    The all-in-one platform for digital marketers, coaches, consultants, and agencies. 25+ tools. One price.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-4 text-sm">Platform</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">GrooveFunnels</a></li>
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">GroovePages</a></li>
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">GrooveSell</a></li>
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">GrooveMail</a></li>
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">All Products</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-4 text-sm">AI Tools</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">ClickCampaigns.ai</a></li>
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">ChatBaser.ai</a></li>
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">PipeLeads.ai</a></li>
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">ScaleGPT</a></li>
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">HighTicketGPT</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-4 text-sm">Company</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">About Us</a></li>
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">Affiliate Program (40%)</a></li>
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">Support</a></li>
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">Privacy Policy</a></li>
+                    <li><a href="#" class="text-white/30 text-sm hover:text-[#8b5cf6] transition-colors no-underline">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="glow-line mb-8"></div>
+
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-white/20 text-sm">&copy; 2026 Scale Plus. All rights reserved.</p>
+            <p class="text-white/20 text-sm">Built by the creators of Kartra, WebinarJam, EverWebinar & Groove.cm</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+    // Initialize Lucide icons
+    document.addEventListener('DOMContentLoaded', () => {
+        lucide.createIcons();
+
+        // Scroll reveal
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Typewriter effect
+        const typewriterText = document.getElementById('typewriter-text');
+        
+        if (typewriterText) {
+            const benefits = [
+                'run everything from ONE platform',
+                'cancel all your software subscriptions',
+                'stop juggling multiple dashboards',
+                'save thousands per year on tools',
+                'focus on growing your business'
+            ];
+
+            let currentBenefitIndex = 0;
+            let currentCharIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 50; // milliseconds per character
+
+            function typeWriter() {
+                const currentBenefit = benefits[currentBenefitIndex];
+                
+                if (!isDeleting && currentCharIndex < currentBenefit.length) {
+                    // Typing forward
+                    typewriterText.textContent = currentBenefit.substring(0, currentCharIndex + 1);
+                    currentCharIndex++;
+                    setTimeout(typeWriter, typingSpeed);
+                } else if (!isDeleting && currentCharIndex === currentBenefit.length) {
+                    // Finished typing, pause for 0.5 seconds
+                    setTimeout(() => {
+                        isDeleting = true;
+                        typeWriter();
+                    }, 500);
+                } else if (isDeleting && currentCharIndex > 0) {
+                    // Deleting backward
+                    typewriterText.textContent = currentBenefit.substring(0, currentCharIndex - 1);
+                    currentCharIndex--;
+                    setTimeout(typeWriter, typingSpeed / 2); // Delete faster than typing
+                } else if (isDeleting && currentCharIndex === 0) {
+                    // Finished deleting, move to next benefit
+                    isDeleting = false;
+                    currentBenefitIndex = (currentBenefitIndex + 1) % benefits.length;
+                    setTimeout(typeWriter, 100); // Small pause before next benefit
+                }
+            }
+
+            // Start typewriter effect after a small delay to ensure page is ready
+            setTimeout(() => {
+                typeWriter();
+            }, 500);
+        }
+    });
+
+    // Pricing toggle
+    let isAnnual = true;
+
+    function togglePricing() {
+        isAnnual = !isAnnual;
+
+        const dot = document.getElementById('toggleDot');
+        const price = document.getElementById('priceNumber');
+        const period = document.getElementById('pricePeriod');
+        const note = document.getElementById('pricingNote');
+        const monthlyLabel = document.getElementById('monthlyLabel');
+        const annualLabel = document.getElementById('annualLabel');
+
+        if (isAnnual) {
+            dot.style.left = '1px';
+            price.textContent = '42';
+            period.textContent = '/mo';
+            note.textContent = 'Billed annually at $497/year';
+            monthlyLabel.style.color = 'rgba(255,255,255,0.4)';
+            monthlyLabel.style.fontWeight = '500';
+            annualLabel.style.color = 'white';
+            annualLabel.style.fontWeight = '600';
+        } else {
+            dot.style.left = 'calc(100% - 25px)';
+            price.textContent = '99';
+            period.textContent = '/mo';
+            note.textContent = 'Billed monthly. Switch to annual and save 58%.';
+            monthlyLabel.style.color = 'white';
+            monthlyLabel.style.fontWeight = '600';
+            annualLabel.style.color = 'rgba(255,255,255,0.4)';
+            annualLabel.style.fontWeight = '500';
+        }
+    }
+
+    // Navbar background on scroll
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.style.background = 'rgba(15,10,30,0.95)';
+        } else {
+            nav.style.background = 'rgba(15,10,30,0.8)';
+        }
+    });
+</script>
+
+</body>
+</html>

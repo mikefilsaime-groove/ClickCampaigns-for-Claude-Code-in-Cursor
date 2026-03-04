@@ -1,21 +1,15 @@
-# Campaigns Folder
+# Campaigns Folder (Legacy)
 
-Each campaign gets its own folder with this structure:
+**Note:** This folder structure has been refactored. Campaigns now live under client folders.
 
+**New structure:**
 ```
-campaigns/
-└── [campaign-name]/
-    ├── brand-kit/
-    │   ├── brand-knowledge-base/
-    │   └── brand-style-guide/
-    └── output-assets/
-        ├── html/
-        ├── documents/
-        ├── emails/
-        ├── ads/
-        ├── presentations/
-        ├── pdfs/
-        └── images/
+clients/
+└── [client-name]/
+    ├── brand-kit/              # Client-level brand files
+    └── campaigns/              # All campaigns for this client
+        └── [campaign-name]/
+            └── output-assets/
 ```
 
-Tell Claude: "Create a campaign called '[your-campaign-name]'"
+See `clients/.gitkeep` for the new structure documentation.
