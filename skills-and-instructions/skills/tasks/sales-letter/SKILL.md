@@ -440,3 +440,10 @@ If your sales letter is under 8 pages, you're likely missing:
 ---
 
 Write every word as if millions of dollars depend on its ability to convert readers into buyers—because they do.
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

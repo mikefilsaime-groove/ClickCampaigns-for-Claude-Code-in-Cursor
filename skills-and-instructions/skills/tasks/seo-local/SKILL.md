@@ -342,3 +342,10 @@ We proudly serve homeowners throughout the Austin metro area, including:
 
 ### Reference Files
 - **`references/seo-checklist.md`** - Complete SEO optimization checklist
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

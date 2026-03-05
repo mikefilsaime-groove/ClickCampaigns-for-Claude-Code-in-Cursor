@@ -82,3 +82,10 @@ For every opt-in landing page, ask:
 - [ ] Does the headline clearly communicate the transformation?
 - [ ] Is social proof visible near the form?
 - [ ] Would you personally opt in from this page?
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

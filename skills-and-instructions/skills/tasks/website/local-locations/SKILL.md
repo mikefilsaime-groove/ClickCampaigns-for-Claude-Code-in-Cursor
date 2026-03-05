@@ -82,3 +82,10 @@ For every location page, ask:
 - [ ] Is there neighborhood-specific content (not generic)?
 - [ ] Is the Google Business Profile map/reviews embedded?
 - [ ] Would a local searcher find this page helpful and trustworthy?
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

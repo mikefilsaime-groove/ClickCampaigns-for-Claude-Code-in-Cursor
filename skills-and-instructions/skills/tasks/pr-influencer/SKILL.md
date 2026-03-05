@@ -156,3 +156,10 @@ Create strategic PR and influencer outreach campaigns that build brand awareness
 
 ### Reference Files
 - **`references/pr-templates.md`** - Press release and pitch templates
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

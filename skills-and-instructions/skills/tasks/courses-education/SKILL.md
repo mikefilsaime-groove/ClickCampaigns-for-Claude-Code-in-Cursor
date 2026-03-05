@@ -178,3 +178,10 @@ Create comprehensive course and education content that delivers genuine value, t
 
 ### Reference Files
 - **`references/course-templates.md`** - Curriculum and lesson templates
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

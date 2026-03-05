@@ -127,3 +127,10 @@ For every podcast tour plan, ask:
 - [ ] Do topic ideas provide clear value to the podcast audience?
 - [ ] Is there a clear follow-up sequence?
 - [ ] Will this campaign secure high-value podcast appearances?
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

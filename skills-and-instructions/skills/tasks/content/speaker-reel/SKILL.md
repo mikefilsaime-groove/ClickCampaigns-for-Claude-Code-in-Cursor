@@ -98,3 +98,10 @@ For every speaker reel, ask:
 - [ ] Is the production quality professional and polished?
 - [ ] Is the length optimal (60-90 seconds)?
 - [ ] Would an event organizer want to book this speaker?
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

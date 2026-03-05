@@ -271,3 +271,10 @@ When generating book content, output in **Markdown format** with clear structure
 
 ### Reference Files
 - **`references/book-frameworks.md`** - MVB, Short, and Full book structures
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

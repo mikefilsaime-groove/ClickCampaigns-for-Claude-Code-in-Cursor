@@ -63,3 +63,10 @@ For every GBP post, ask:
 - [ ] Is there a clear, high-intent Call to Action (CTA)?
 - [ ] Is the most important info in the first 80 characters (the "snippet")?
 - [ ] Does it accurately reflect the business's current services and offers?
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

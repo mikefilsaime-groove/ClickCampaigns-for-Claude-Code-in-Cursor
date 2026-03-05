@@ -80,19 +80,24 @@ Alex (Campaign Manager) acts as the central coordinator. When you request work:
 1. **Setup/Selection** — On first run, Alex asks about your workflow (solo vs agency). Then each session: solo mode asks about campaigns, agency mode asks about clients
 2. **Brand Context** — Alex loads brand knowledge base and style guide
 3. **Specialist Assignment** — Alex delegates to the right specialist(s) based on the work type
-4. **Asset Creation** — Specialists follow their SKILL.md files to produce production-ready output
-5. **Quality Review** — Copy critique workflows ensure persuasion quality (Ryan reviews Cassidy's headlines, etc.)
-6. **File Output** — Everything saves to the organized `output-assets/` folder structure
+4. **Asset Creation** — Specialists follow their SKILL.md files with Ryan's direct response copy principles always active
+5. **Copy Review** — Single-pass copy critique applied as diffs to the same file (no draft/final split), with design lock for HTML pages
+6. **Consistency Check** — Cross-asset pass standardizes guarantees, pricing, dates, and offer names across all campaign assets
+7. **File Output** — Everything saves to the organized `output-assets/` folder structure
+
+### The Ryan Layer
+
+Ryan's direct response copywriting principles are permanently loaded into every specialist who touches copy — not as a separate handoff, but as a permanent lens. After each asset is created, a single-pass copy review runs and changes are applied as diffs to the same file.
 
 ### Five Core Workflows
 
 | Workflow | Who Leads | What It Produces |
 |----------|-----------|-----------------|
-| **A: Non-HTML Direct Response** | Ryan (Copywriter) | Email sequences, ad copy, VSL scripts as Markdown |
-| **B: Short HTML Pages** | Cassidy (Designer) → Ryan critiques | Landing pages, opt-ins, thank-you pages |
-| **C: Long-Form HTML Pages** | Ryan (Copywriter) → Cassidy designs | Sales pages, VSL pages, checkout pages |
-| **D: Webinar Slides** | Tyler (Webinar) → Ryan critiques → Cassidy designs | Scripts + PPTX/HTML slide decks |
-| **E: Lead Magnets & Books** | Kendall (Ghostwriter) → Lena designs | PDFs, DOCX, guides, books |
+| **A: Non-HTML Direct Response** | Ryan (Copywriter) + copy review | Email sequences, ad copy, VSL scripts as Markdown |
+| **B: Short HTML Pages** | Cassidy (Designer) with Ryan's lens + copy review + design lock | Landing pages, opt-ins, thank-you pages |
+| **C: Long-Form HTML Pages** | Ryan (Copywriter) → Cassidy designs with Ryan's lens + copy review + design lock | Sales pages, VSL pages, checkout pages |
+| **D: Webinar Slides** | Tyler (Webinar) with Ryan's lens + copy review → Cassidy designs | Scripts + PPTX/HTML slide decks |
+| **E: Lead Magnets & Books** | Kendall (Ghostwriter) with Ryan's lens + copy review → Lena designs | PDFs, DOCX, guides, books |
 
 ---
 
@@ -329,6 +334,7 @@ Production skills ensure high-quality final output. Available as both skill file
 | Asset Type | Skill File | Claude Code Command |
 |------------|-----------|---------------------|
 | **HTML pages** | `skills/production/frontend-design/SKILL.md` | `/frontend-design` |
+| **Copy critique** | `skills/production/copy-critique/SKILL.md` | — |
 | **PowerPoint decks** | `skills/production/pptx/SKILL.md` | `/pptx` |
 | **PDF documents** | `skills/production/pdf/SKILL.md` | `/pdf` |
 | **Word documents** | `skills/production/docx/SKILL.md` | `/docx` |
@@ -337,6 +343,7 @@ Production skills ensure high-quality final output. Available as both skill file
 
 - **Marketing skills** (`skills/funnels/`, `skills/tasks/`) = **WHAT** to write (frameworks, structure, persuasion)
 - **Production skills** (`skills/production/`) = **HOW** to output it (design, formatting, file generation)
+- **Copy critique** (`skills/production/copy-critique/`) = **QUALITY** — single-pass direct response review applied to every asset
 
 ### Example: Building a Sales Page
 
@@ -486,25 +493,26 @@ The skill files encode proven direct response and digital marketing frameworks:
 
 **Emails, ad copy, VSL scripts, sales letters (as documents)**
 
-Ryan (Direct Response Copywriter) creates the asset:
+Ryan (Direct Response Copywriter) creates the asset with his principles baked in:
 1. Ryan writes the copy → Markdown document
-2. Save to appropriate folder (`emails/`, `ads/`, `documents/`)
+2. Single-pass copy review → apply improvements as diffs to the same file
+3. Save to appropriate folder (`emails/`, `ads/`, `documents/`)
 
 **Examples:** Email sequences, Meta ads, YouTube ad scripts, VSL scripts, affiliate swipe copy
 
-### Workflow B: Short HTML Pages (Design-First + Copy Critique)
+### Workflow B: Short HTML Pages (Design-First + Copy Review)
 
 **Pages with headlines, bullets, and CTAs — not long-form copy**
 
-Cassidy (Website Designer) leads, Ryan (Copywriter) critiques:
+Cassidy (Website Designer) creates the page with Ryan's copy principles loaded:
 1. For funnel pages, ask about styling first
-2. Cassidy creates HTML with her best copy for headlines, subheadlines, bullets, CTAs
-3. Ryan reviews and creates a copy critique document with specific changes and rationale
-4. Cassidy updates copy only — design stays pixel-perfect identical
+2. Cassidy creates HTML with strong copy from the start (Ryan's principles baked in)
+3. Single-pass copy review — apply improvements as diffs to the same file
+4. Design lock — verify copy changes haven't broken layout or responsive behavior
 
 **Output files:**
-- `html/[page-name].html` — The final page
-- `documents/[page-name]-copy-critique.md` — Ryan's critique (for reference)
+- `html/[page-name].html` — The finished page (copy already refined)
+- `documents/[page-name]-copy-critique.md` — What was changed and why (user reference)
 
 **Pages using this workflow:** Opt-in pages, webinar registration, thank you pages, simple checkout, about pages, contact pages
 
@@ -512,14 +520,16 @@ Cassidy (Website Designer) leads, Ryan (Copywriter) critiques:
 
 **Sales pages, VSL pages, and any page with substantial persuasion copy**
 
-Ryan (Copywriter) leads, Cassidy (Designer) implements:
+Ryan (Copywriter) leads, Cassidy (Designer) implements with Ryan's principles loaded:
 1. Ryan writes complete copy first → Markdown document (4,000-10,000+ words)
-2. Cassidy designs HTML around the copy — copy dictates page structure
-3. Ryan does final copy review (optional tweaks)
+2. Cassidy designs HTML around the copy with Ryan's principles still active
+3. Single-pass copy review → apply final improvements as diffs
+4. Design lock — verify copy changes haven't broken layout
 
 **Output files:**
 - `documents/[page-name]-copy.md` — Ryan's full copy document
-- `html/[page-name].html` — Cassidy's designed page
+- `html/[page-name].html` — The finished designed page (copy already refined)
+- `documents/[page-name]-copy-critique.md` — What was changed and why (user reference)
 
 **Pages using this workflow:** Long-form sales pages, VSL pages with sales copy below, checkout pages with full offer copy, upsell/downsell pages
 
@@ -527,16 +537,14 @@ Ryan (Copywriter) leads, Cassidy (Designer) implements:
 
 **Webinar presentations with script**
 
-Tyler (Webinar Specialist) leads, Ryan critiques, Cassidy designs:
-1. Tyler writes the complete webinar script (50+ slides with speaker notes)
-2. Ryan critiques the copy (persuasion, hooks, transitions, closes)
-3. Tyler incorporates feedback and finalizes
-4. Alex asks about format (PPTX, HTML, or both) and styling
-5. Cassidy designs the slide deck (5 words max per slide rule)
+Tyler (Webinar Specialist) leads with Ryan's principles loaded, Cassidy designs:
+1. Tyler writes the complete webinar script (50+ slides with speaker notes, Ryan's persuasion baked in)
+2. Single-pass copy review → apply improvements as diffs to the script
+3. Alex asks about format (PPTX, HTML, or both) and styling
+4. Cassidy designs the slide deck (5 words max per slide rule)
 
 **Output files:**
-- `documents/webinar-script.md` — Full script with speaker notes
-- `documents/webinar-copy-critique.md` — Ryan's critique
+- `documents/webinar-script.md` — Full script with speaker notes (copy already refined)
 - `presentations/webinar-slides.pptx` — PowerPoint (if chosen)
 - `html/webinar-slides.html` — HTML Reveal.js slides (if chosen)
 
@@ -544,15 +552,16 @@ Tyler (Webinar Specialist) leads, Ryan critiques, Cassidy designs:
 
 **PDFs, guides, checklists, workbooks, reports, and books**
 
-Kendall (Book Ghostwriter) leads, Lena (Graphic Designer) designs:
-1. Kendall writes the complete content (chapters, sections, callout boxes, key takeaways)
-2. Alex asks: "Do you want PDF, DOCX (editable), or both?"
-3. Lena designs the formatted document using full Brand Style Guide
+Kendall (Book Ghostwriter) leads with Ryan's principles loaded, Lena (Graphic Designer) designs:
+1. Kendall writes the complete content (Ryan's persuasion for headlines, CTAs, key takeaways)
+2. Single-pass copy review → apply improvements as diffs
+3. Alex asks: "Do you want PDF, DOCX (editable), or both?"
+4. Lena designs the formatted document using full Brand Style Guide
 
 **Asset types:** Freemium PDF guides, checklists and workbooks, research reports, MVB (30-50 pages), short books (50-100 pages), full books (100-200+ pages)
 
 **Output files:**
-- `documents/[asset-name]-content.md` — Full content
+- `documents/[asset-name]-content.md` — Full content (copy already refined)
 - `pdfs/[asset-name].pdf` — Designed PDF (if chosen)
 - `documents/[asset-name].docx` — Editable Word doc (if chosen)
 

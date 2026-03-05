@@ -370,3 +370,10 @@ Rule: Higher price = longer VSL = more proof needed
 ---
 
 Write every word like it's the last chance you'll have to speak directly to the person whose life this will change.
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

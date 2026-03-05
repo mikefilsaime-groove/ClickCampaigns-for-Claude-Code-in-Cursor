@@ -71,3 +71,10 @@ For every merch plan, ask:
 - [ ] Are product images high-quality and lifestyle-focused?
 - [ ] Is there a clear strategy for driving traffic (Social, Email, Ads)?
 - [ ] Is the shipping and return policy clear to avoid customer friction?
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

@@ -127,3 +127,10 @@ Build paid book funnels that position books as premium products or course compan
 
 ### Reference Files
 - **`references/book-positioning.md`** - Premium book positioning strategies
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

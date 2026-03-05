@@ -383,3 +383,10 @@ Write high-converting landing pages for funnels, including lead capture pages, s
 
 ### Reference Files
 - **`references/page-frameworks.md`** - Funnel page templates
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

@@ -105,3 +105,10 @@ For every loyalty/referral program, ask:
 - [ ] Is the program easy to understand and use?
 - [ ] Is there a clear communication strategy?
 - [ ] Will this program increase retention and drive referrals?
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.

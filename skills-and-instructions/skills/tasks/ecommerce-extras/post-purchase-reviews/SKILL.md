@@ -116,3 +116,10 @@ For every review collection plan, ask:
 - [ ] Is it easy to leave a review (one-click link)?
 - [ ] Is the incentive strategy compliant with platform policies?
 - [ ] Will this system maximize review volume and quality?
+
+
+---
+
+## Copy Review (Required)
+
+After completing this asset, perform a single-pass copy review following `production/copy-critique/SKILL.md`. Apply changes as diffs to the same file. For HTML pages, save the critique to `documents/[asset-name]-copy-critique.md`.
