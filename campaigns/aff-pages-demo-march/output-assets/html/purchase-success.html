@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to AffiliatePages.com! — Your Order is Confirmed</title>
+  <meta name="description" content="Your AffiliatePages.com Independence Day order is confirmed. Access your dashboard and start building AI-powered affiliate review sites." />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    /* ── Tailwind v4 theme ── */
+    @theme {
+      --color-royal: #6B3FA0;
+      --color-royal-dark: #5A3488;
+      --color-royal-light: #8B63BF;
+      --color-lavender: #E8D9F0;
+      --color-lavender-light: #F3ECF8;
+      --color-crimson: #E63946;
+      --color-crimson-dark: #C41E3A;
+      --color-dark-purple: #3D1F5C;
+      --color-dark-purple-light: #5C3A7A;
+      --font-family-sans: 'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    /* ── Entrance animations ── */
+    @keyframes fade-down {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scale-in {
+      from { opacity: 0; transform: scale(0.5); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes check-draw {
+      from { stroke-dashoffset: 60; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes ring-expand {
+      0% { transform: scale(0.6); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes pulse-green {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+      50% { box-shadow: 0 0 0 16px rgba(34, 197, 94, 0); }
+    }
+
+    .anim-fade-down { animation: fade-down 0.7s ease-out both; }
+    .anim-fade-up { animation: fade-up 0.7s ease-out both; }
+    .anim-scale-in { animation: scale-in 0.5s ease-out both; }
+    .anim-delay-1 { animation-delay: 0.15s; }
+    .anim-delay-2 { animation-delay: 0.3s; }
+    .anim-delay-3 { animation-delay: 0.45s; }
+    .anim-delay-4 { animation-delay: 0.6s; }
+    .anim-delay-5 { animation-delay: 0.75s; }
+    .anim-delay-6 { animation-delay: 0.9s; }
+    .anim-delay-7 { animation-delay: 1.05s; }
+    .anim-delay-8 { animation-delay: 1.2s; }
+
+    /* ── Checkmark animation ── */
+    .check-circle { animation: ring-expand 0.6s ease-out both; }
+    .check-mark {
+      stroke-dasharray: 60;
+      stroke-dashoffset: 60;
+      animation: check-draw 0.5s ease-out 0.5s both;
+    }
+    .check-pulse { animation: pulse-green 2s ease-in-out infinite 1s; }
+
+    /* ── Card hover ── */
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(107, 63, 160, 0.15);
+    }
+
+    /* ── CTA pulse ── */
+    @keyframes cta-pulse {
+      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+      70% { box-shadow: 0 0 0 14px rgba(34, 197, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+    .cta-pulse { animation: cta-pulse 2.5s infinite; }
+
+    /* ── Hero gradient ── */
+    .hero-gradient {
+      background: linear-gradient(135deg, #3D1F5C 0%, #6B3FA0 50%, #5A3488 100%);
+    }
+
+    /* ── Step number style ── */
+    .step-number {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .step-row:hover .step-number {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(107, 63, 160, 0.3);
+    }
+
+    /* ════════════════════════════════════════
+       CONFETTI ANIMATION (CSS + minimal JS)
+       ════════════════════════════════════════ */
+    .confetti-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      overflow: hidden;
+    }
+    .confetti-piece {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: -20px;
+      opacity: 0;
+      animation: confetti-fall linear forwards;
+    }
+    @keyframes confetti-fall {
+      0% {
+        opacity: 1;
+        transform: translateY(0) rotateZ(0deg) rotateX(0deg);
+      }
+      25% { opacity: 1; }
+      100% {
+        opacity: 0;
+        transform: translateY(110vh) rotateZ(720deg) rotateX(360deg);
+      }
+    }
+    @keyframes confetti-fall-alt {
+      0% {
+        opacity: 1;
+        transform: translateY(0) rotateZ(0deg) rotateY(0deg);
+      }
+      30% { opacity: 1; }
+      100% {
+        opacity: 0;
+        transform: translateY(105vh) rotateZ(-540deg) rotateY(360deg);
+      }
+    }
+
+    /* ── Video placeholder ── */
+    .video-placeholder {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      transition: transform 0.3s ease;
+    }
+    .video-placeholder:hover {
+      transform: scale(1.02);
+    }
+    .play-btn {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .video-placeholder:hover .play-btn {
+      transform: scale(1.15);
+      box-shadow: 0 0 40px rgba(230, 57, 70, 0.4);
+    }
+  </style>
+</head>
+
+<body class="bg-white font-sans text-dark-purple antialiased">
+
+  <!-- ── Confetti container (populated by JS) ── -->
+  <div class="confetti-container" id="confetti"></div>
+
+  <!-- ════════════════════════════════════════════════════
+       HEADER BAR
+       ════════════════════════════════════════════════════ -->
+  <header class="bg-dark-purple text-white py-3">
+    <div class="max-w-4xl mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="link" class="w-5 h-5 text-crimson"></i>
+        <span class="font-bold text-lg tracking-tight">AffiliatePages<span class="text-crimson">.com</span></span>
+      </div>
+      <div class="text-sm text-lavender opacity-80">Independence Day Special</div>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 1: CELEBRATION HEADER
+       ════════════════════════════════════════════════════ -->
+  <section class="hero-gradient relative overflow-hidden py-16 md:py-24">
+    <!-- Subtle dot pattern -->
+    <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 20px 20px;"></div>
+
+    <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+      <!-- Animated checkmark -->
+      <div class="mx-auto mb-6 check-pulse inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-500/20">
+        <svg class="w-16 h-16 check-circle" viewBox="0 0 52 52">
+          <circle cx="26" cy="26" r="24" fill="none" stroke="#22c55e" stroke-width="3" opacity="0.3"/>
+          <circle cx="26" cy="26" r="24" fill="none" stroke="#22c55e" stroke-width="3"/>
+          <path class="check-mark" fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M14 27l8 8 16-16"/>
+        </svg>
+      </div>
+
+      <h1 class="anim-fade-down anim-delay-2 text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
+        Welcome to AffiliatePages.com!
+      </h1>
+      <p class="anim-fade-up anim-delay-3 text-lg md:text-xl text-lavender/90 max-w-xl mx-auto">
+        Your Independence Day order is confirmed. You just made the smartest investment in your affiliate marketing future.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 2: ORDER CONFIRMATION
+       ════════════════════════════════════════════════════ -->
+  <section class="relative -mt-8 z-20 px-6">
+    <div class="max-w-2xl mx-auto anim-fade-up anim-delay-4">
+      <div class="bg-white rounded-2xl shadow-xl border border-lavender/60 overflow-hidden">
+        <!-- Card header -->
+        <div class="bg-green-50 px-6 py-4 border-b border-green-200/60">
+          <div class="flex items-center gap-2 text-green-700 font-bold text-sm uppercase tracking-wider">
+            <i data-lucide="receipt" class="w-4 h-4"></i>
+            Order Confirmation
+          </div>
+        </div>
+
+        <!-- Card body -->
+        <div class="px-6 py-6">
+          <!-- Order summary table -->
+          <div class="border border-lavender/40 rounded-xl overflow-hidden mb-5">
+            <div class="bg-lavender-light/50 px-5 py-3 border-b border-lavender/30">
+              <p class="text-sm font-bold text-dark-purple uppercase tracking-wider">Order Summary</p>
+            </div>
+            <div class="px-5 py-4">
+              <div class="flex items-center justify-between mb-3">
+                <div>
+                  <p class="font-bold text-dark-purple">AffiliatePages.com Annual</p>
+                  <p class="text-sm text-dark-purple/50">Independence Day Special - 70% Off First Year</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm text-dark-purple/40 line-through">$1,788/yr</p>
+                  <p class="text-xl font-extrabold text-green-600">$497</p>
+                </div>
+              </div>
+              <div class="border-t border-dashed border-lavender/50 pt-3 mt-3 flex items-center justify-between">
+                <p class="font-bold text-dark-purple">Total Charged Today</p>
+                <p class="text-xl font-extrabold text-dark-purple">$497.00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Savings callout -->
+          <div class="bg-green-50 border border-green-200 rounded-xl px-5 py-4 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="piggy-bank" class="w-5 h-5 text-green-600"></i>
+            </div>
+            <div>
+              <p class="font-bold text-green-800 text-sm">You saved over $1,200!</p>
+              <p class="text-green-700/70 text-xs">Independence Day 70% discount applied successfully.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 3: NEXT STEPS
+       ════════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 px-6">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="anim-fade-up anim-delay-5 text-sm font-bold uppercase tracking-widest text-crimson mb-3">Get Started Now</p>
+        <h2 class="anim-fade-up anim-delay-5 text-2xl md:text-3xl font-extrabold text-dark-purple">
+          Your Next Steps
+        </h2>
+      </div>
+
+      <div class="space-y-5">
+        <!-- Step 1 -->
+        <div class="step-row anim-fade-up anim-delay-5 flex items-start gap-5 bg-white rounded-2xl border border-lavender/50 p-6 hover-lift">
+          <div class="step-number flex-shrink-0 w-12 h-12 rounded-xl bg-royal text-white font-extrabold text-lg flex items-center justify-center">
+            1
+          </div>
+          <div>
+            <h4 class="font-bold text-dark-purple text-lg mb-1">Check Your Email for Login Credentials</h4>
+            <p class="text-dark-purple/60 text-sm leading-relaxed">
+              We just sent your login details to the email address you used at checkout. Check your inbox (and spam folder) for an email from AffiliatePages.com. While you wait (it takes about 60 seconds), watch the Quick Start video below.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-row anim-fade-up anim-delay-6 flex items-start gap-5 bg-white rounded-2xl border border-lavender/50 p-6 hover-lift">
+          <div class="step-number flex-shrink-0 w-12 h-12 rounded-xl bg-royal text-white font-extrabold text-lg flex items-center justify-center">
+            2
+          </div>
+          <div>
+            <h4 class="font-bold text-dark-purple text-lg mb-1">Log In to Your Dashboard</h4>
+            <p class="text-dark-purple/60 text-sm leading-relaxed">
+              Use the credentials from your email to log in at <strong class="text-royal">app.affiliatepages.com</strong>. Your account is fully activated and ready to go.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-row anim-fade-up anim-delay-7 flex items-start gap-5 bg-white rounded-2xl border border-lavender/50 p-6 hover-lift">
+          <div class="step-number flex-shrink-0 w-12 h-12 rounded-xl bg-royal text-white font-extrabold text-lg flex items-center justify-center">
+            3
+          </div>
+          <div>
+            <h4 class="font-bold text-dark-purple text-lg mb-1">Build Your First &ldquo;Virtual Vending Machine&rdquo; in 10 Minutes</h4>
+            <p class="text-dark-purple/60 text-sm leading-relaxed">
+              Pick a product (like GoHighLevel, ClickFunnels, or any SaaS tool), paste its URL, add competitor review URLs and YouTube review links, and watch our AI build your complete review page in under 10 minutes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-row anim-fade-up anim-delay-8 flex items-start gap-5 bg-white rounded-2xl border border-lavender/50 p-6 hover-lift">
+          <div class="step-number flex-shrink-0 w-12 h-12 rounded-xl bg-royal text-white font-extrabold text-lg flex items-center justify-center">
+            4
+          </div>
+          <div>
+            <h4 class="font-bold text-dark-purple text-lg mb-1">Publish to WordPress</h4>
+            <p class="text-dark-purple/60 text-sm leading-relaxed">
+              One click publishes your review site to WordPress &mdash; and your first affiliate review page is LIVE on the internet, being indexed by Google, and ready to earn commissions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 4: QUICK START VIDEO
+       ════════════════════════════════════════════════════ -->
+  <section class="py-12 md:py-16 px-6 bg-lavender-light">
+    <div class="max-w-2xl mx-auto text-center">
+      <h3 class="text-xl md:text-2xl font-bold text-dark-purple mb-2">Watch This 5-Minute Video and Build Your First Review Site Before Dinner Tonight</h3>
+      <p class="text-dark-purple/60 mb-8">Get up and running fast. This short walkthrough covers everything you need to build your first review site.</p>
+
+      <!-- Video placeholder -->
+      <div class="video-placeholder rounded-2xl aspect-video flex flex-col items-center justify-center cursor-pointer relative overflow-hidden shadow-lg">
+        <!-- Play button -->
+        <div class="play-btn w-20 h-20 rounded-full bg-crimson flex items-center justify-center shadow-xl mb-4">
+          <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+        <p class="text-white/70 text-sm font-medium">Click to play</p>
+
+        <!-- Decorative corner labels -->
+        <div class="absolute top-4 left-4 px-3 py-1 bg-white/10 rounded-full text-white/50 text-xs font-medium">
+          Quick Start
+        </div>
+        <div class="absolute top-4 right-4 px-3 py-1 bg-white/10 rounded-full text-white/50 text-xs font-medium">
+          5:00
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 5: SUPPORT INFO
+       ════════════════════════════════════════════════════ -->
+  <section class="py-12 md:py-16 px-6">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-white rounded-2xl border border-lavender/50 p-8 flex flex-col md:flex-row items-center gap-6">
+        <div class="w-16 h-16 rounded-2xl bg-royal/10 flex items-center justify-center flex-shrink-0">
+          <i data-lucide="headphones" class="w-8 h-8 text-royal"></i>
+        </div>
+        <div class="text-center md:text-left">
+          <h4 class="font-bold text-dark-purple text-lg mb-1">Need Help Getting Started?</h4>
+          <p class="text-dark-purple/60 text-sm leading-relaxed">
+            Our support team is here for you. Whether you have questions about setup, features, or anything else, we're just an email away.
+          </p>
+          <a href="mailto:support@affiliatepages.com" class="inline-flex items-center gap-2 mt-3 text-royal font-semibold text-sm hover:text-royal-dark transition-colors">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            support@affiliatepages.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 6: DASHBOARD CTA
+       ════════════════════════════════════════════════════ -->
+  <section class="py-12 md:py-16 px-6">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-royal rounded-2xl p-8 md:p-10 text-center text-white relative overflow-hidden">
+        <!-- Subtle pattern -->
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+
+        <div class="relative z-10">
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white/15 mb-5">
+            <i data-lucide="layout-dashboard" class="w-7 h-7 text-white"></i>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-extrabold mb-3">Ready to Build Your First Site?</h3>
+          <p class="text-white/80 text-lg mb-8 max-w-md mx-auto">
+            Your account is active. Log in now and create your first AI-powered affiliate review site in minutes.
+          </p>
+          <a href="#" class="cta-pulse inline-flex items-center gap-3 px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold text-lg rounded-xl transition-colors shadow-lg">
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            Log In and Build Your First Site Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════ -->
+  <footer class="bg-dark-purple text-white/50 py-8 text-center text-sm">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="mb-1">&copy; 2026 AffiliatePages.com. All rights reserved.</p>
+      <p>Questions? Contact <a href="mailto:support@affiliatepages.com" class="text-lavender/70 hover:text-white transition-colors underline">support@affiliatepages.com</a></p>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════
+       CONFETTI JS (minimal, fires once on page load)
+       ════════════════════════════════════════════════════ -->
+  <script>
+    (function() {
+      const container = document.getElementById('confetti');
+      const colors = ['#E63946', '#6B3FA0', '#22c55e', '#3D1F5C', '#E8D9F0', '#FFD700', '#FF6B6B', '#4ECDC4', '#C41E3A', '#8B63BF'];
+      const shapes = ['square', 'rectangle', 'circle'];
+      const totalPieces = 80;
+
+      for (let i = 0; i < totalPieces; i++) {
+        const piece = document.createElement('div');
+        piece.classList.add('confetti-piece');
+
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const shape = shapes[Math.floor(Math.random() * shapes.length)];
+        const left = Math.random() * 100;
+        const size = Math.random() * 8 + 6;
+        const duration = Math.random() * 2.5 + 3;
+        const delay = Math.random() * 2.5;
+        const useAlt = Math.random() > 0.5;
+
+        piece.style.left = left + '%';
+        piece.style.width = shape === 'rectangle' ? size * 0.5 + 'px' : size + 'px';
+        piece.style.height = size + 'px';
+        piece.style.backgroundColor = color;
+        piece.style.borderRadius = shape === 'circle' ? '50%' : '2px';
+        piece.style.animationName = useAlt ? 'confetti-fall-alt' : 'confetti-fall';
+        piece.style.animationDuration = duration + 's';
+        piece.style.animationDelay = delay + 's';
+
+        container.appendChild(piece);
+      }
+
+      // Remove confetti container after animations complete
+      setTimeout(() => {
+        container.style.display = 'none';
+      }, 7000);
+    })();
+  </script>
+
+</body>
+</html>

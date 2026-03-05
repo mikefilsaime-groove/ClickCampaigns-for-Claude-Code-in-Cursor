@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | AffiliatePages.com — Get In Touch</title>
+    <meta name="description" content="Have questions about AffiliatePages.com? Get in touch with our team. We're here to help you build profitable affiliate review sites.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #6B3FA0, #E63946);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #6B3FA0, #8B5FC0);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5A2F8F, #7B4FB0);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(107, 63, 160, 0.35);
+        }
+        .btn-accent {
+            background: linear-gradient(135deg, #E63946, #C41E3A);
+            transition: all 0.3s ease;
+        }
+        .btn-accent:hover {
+            background: linear-gradient(135deg, #D62839, #B01830);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(230, 57, 70, 0.35);
+        }
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(107, 63, 160, 0.12);
+        }
+        .form-input:focus {
+            border-color: #6B3FA0;
+            box-shadow: 0 0 0 3px rgba(107, 63, 160, 0.15);
+        }
+        .faq-mini:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(107, 63, 160, 0.1);
+        }
+        .faq-mini {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-[#E8D9F0] text-[#3D1F5C]">
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#6B3FA0] to-[#E63946] flex items-center justify-center">
+                        <i data-lucide="layout-grid" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+                    </div>
+                    <span class="text-lg sm:text-xl font-extrabold text-[#3D1F5C]">AffiliatePages<span class="text-[#E63946]">.com</span></span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-[#3D1F5C]/70 hover:text-[#6B3FA0] font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-[#3D1F5C]/70 hover:text-[#6B3FA0] font-medium transition-colors">About</a>
+                    <a href="services.html" class="text-[#3D1F5C]/70 hover:text-[#6B3FA0] font-medium transition-colors">Services</a>
+                    <a href="contact.html" class="text-[#6B3FA0] font-semibold border-b-2 border-[#6B3FA0] pb-1">Contact</a>
+                    <a href="services.html#pricing" class="btn-accent text-white px-6 py-2.5 rounded-full font-semibold text-sm">See Pricing</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-[#E8D9F0] transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6 text-[#3D1F5C]"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Nav -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col gap-3">
+                    <a href="index.html" class="text-[#3D1F5C]/70 hover:text-[#6B3FA0] font-medium py-2 px-3 rounded-lg hover:bg-[#E8D9F0] transition-colors">Home</a>
+                    <a href="about.html" class="text-[#3D1F5C]/70 hover:text-[#6B3FA0] font-medium py-2 px-3 rounded-lg hover:bg-[#E8D9F0] transition-colors">About</a>
+                    <a href="services.html" class="text-[#3D1F5C]/70 hover:text-[#6B3FA0] font-medium py-2 px-3 rounded-lg hover:bg-[#E8D9F0] transition-colors">Services</a>
+                    <a href="contact.html" class="text-[#6B3FA0] font-semibold py-2 px-3 rounded-lg bg-[#6B3FA0]/10">Contact</a>
+                    <a href="services.html#pricing" class="btn-accent text-white px-6 py-2.5 rounded-full font-semibold text-sm text-center mt-2">See Pricing</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#6B3FA0] via-[#5A2F8F] to-[#3D1F5C]"></div>
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 right-20 w-72 h-72 bg-[#E63946] rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-10 left-10 w-60 h-60 bg-[#E8D9F0] rounded-full blur-[80px]"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur px-4 py-2 rounded-full text-sm text-white/90 font-medium mb-6">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                Real Humans. Real Answers. Real Fast.
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">Questions Before You Start? We Have Answers.</h1>
+            <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+                Whether you have a question about our platform, need help getting started, or want to explore a partnership, our team is ready to help.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form + Info Section -->
+    <section class="py-20 sm:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-5 gap-12 lg:gap-16">
+
+                <!-- Contact Form (3 cols) -->
+                <div class="lg:col-span-3">
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-[#3D1F5C] mb-2">Send Us a Message</h2>
+                    <p class="text-[#3D1F5C]/60 mb-8">Fill out the form below and our team will get back to you within 24 hours. AffiliatePages.com is built by Mike Filsaime and Jitendra &mdash; the same team behind Groove.cm, Kartra, WebinarJam, and a $700K/year affiliate review business.</p>
+
+                    <form id="contact-form" class="space-y-6" onsubmit="handleSubmit(event)">
+                        <!-- Name + Email Row -->
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold text-[#3D1F5C] mb-2">Full Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                    placeholder="John Doe"
+                                    class="form-input w-full px-4 py-3.5 rounded-xl border-2 border-[#6B3FA0]/15 bg-[#E8D9F0]/20 text-[#3D1F5C] placeholder-[#3D1F5C]/30 outline-none transition-all"
+                                >
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-[#3D1F5C] mb-2">Email Address</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    placeholder="john@example.com"
+                                    class="form-input w-full px-4 py-3.5 rounded-xl border-2 border-[#6B3FA0]/15 bg-[#E8D9F0]/20 text-[#3D1F5C] placeholder-[#3D1F5C]/30 outline-none transition-all"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Subject Dropdown -->
+                        <div>
+                            <label for="subject" class="block text-sm font-semibold text-[#3D1F5C] mb-2">Subject</label>
+                            <select
+                                id="subject"
+                                name="subject"
+                                required
+                                class="form-input w-full px-4 py-3.5 rounded-xl border-2 border-[#6B3FA0]/15 bg-[#E8D9F0]/20 text-[#3D1F5C] outline-none transition-all appearance-none cursor-pointer"
+                            >
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Support</option>
+                                <option value="partnership">Partnership / Affiliate</option>
+                                <option value="press">Press</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-[#3D1F5C] mb-2">Message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                required
+                                rows="6"
+                                placeholder="Tell us what's on your mind..."
+                                class="form-input w-full px-4 py-3.5 rounded-xl border-2 border-[#6B3FA0]/15 bg-[#E8D9F0]/20 text-[#3D1F5C] placeholder-[#3D1F5C]/30 outline-none transition-all resize-none"
+                            ></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button
+                            type="submit"
+                            id="submit-btn"
+                            class="btn-primary text-white px-10 py-4 rounded-full font-bold text-lg flex items-center gap-3 w-full sm:w-auto justify-center"
+                        >
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                            Send Message
+                        </button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="success-message" class="hidden mt-6 bg-green-50 border-2 border-green-200 rounded-2xl p-6 text-center">
+                        <div class="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="check-circle" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-green-800 mb-2">Message Sent!</h3>
+                        <p class="text-green-700">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info Sidebar (2 cols) -->
+                <div class="lg:col-span-2 space-y-6">
+                    <!-- Email Card -->
+                    <div class="contact-card bg-[#E8D9F0]/40 rounded-2xl p-7 border border-[#6B3FA0]/10">
+                        <div class="w-14 h-14 rounded-xl bg-[#6B3FA0]/10 flex items-center justify-center mb-5">
+                            <i data-lucide="mail" class="w-7 h-7 text-[#6B3FA0]"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#3D1F5C] mb-2">Email Us</h3>
+                        <p class="text-[#3D1F5C]/60 text-sm mb-3">For general inquiries and support</p>
+                        <a href="mailto:support@affiliatepages.com" class="text-[#6B3FA0] font-semibold hover:text-[#5A2F8F] transition-colors inline-flex items-center gap-2">
+                            support@affiliatepages.com
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Response Time Card -->
+                    <div class="contact-card bg-[#E8D9F0]/40 rounded-2xl p-7 border border-[#6B3FA0]/10">
+                        <div class="w-14 h-14 rounded-xl bg-[#E63946]/10 flex items-center justify-center mb-5">
+                            <i data-lucide="clock" class="w-7 h-7 text-[#E63946]"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#3D1F5C] mb-2">Response Time</h3>
+                        <p class="text-[#3D1F5C]/60 text-sm mb-3">We aim to respond within</p>
+                        <span class="text-[#E63946] font-bold text-2xl">24 Hours</span>
+                    </div>
+
+                    <!-- Social Media Card -->
+                    <div class="contact-card bg-[#E8D9F0]/40 rounded-2xl p-7 border border-[#6B3FA0]/10">
+                        <div class="w-14 h-14 rounded-xl bg-[#6B3FA0]/10 flex items-center justify-center mb-5">
+                            <i data-lucide="share-2" class="w-7 h-7 text-[#6B3FA0]"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-[#3D1F5C] mb-2">Follow Us</h3>
+                        <p class="text-[#3D1F5C]/60 text-sm mb-4">Stay updated with the latest news and tips</p>
+                        <div class="flex gap-3">
+                            <a href="#" class="w-11 h-11 rounded-full bg-[#6B3FA0]/10 flex items-center justify-center hover:bg-[#6B3FA0] hover:text-white transition-all group">
+                                <i data-lucide="twitter" class="w-5 h-5 text-[#6B3FA0] group-hover:text-white"></i>
+                            </a>
+                            <a href="#" class="w-11 h-11 rounded-full bg-[#6B3FA0]/10 flex items-center justify-center hover:bg-[#6B3FA0] hover:text-white transition-all group">
+                                <i data-lucide="facebook" class="w-5 h-5 text-[#6B3FA0] group-hover:text-white"></i>
+                            </a>
+                            <a href="#" class="w-11 h-11 rounded-full bg-[#6B3FA0]/10 flex items-center justify-center hover:bg-[#6B3FA0] hover:text-white transition-all group">
+                                <i data-lucide="youtube" class="w-5 h-5 text-[#6B3FA0] group-hover:text-white"></i>
+                            </a>
+                            <a href="#" class="w-11 h-11 rounded-full bg-[#6B3FA0]/10 flex items-center justify-center hover:bg-[#6B3FA0] hover:text-white transition-all group">
+                                <i data-lucide="linkedin" class="w-5 h-5 text-[#6B3FA0] group-hover:text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Preview Section -->
+    <section class="py-20 sm:py-28 bg-[#E8D9F0]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <p class="text-[#E63946] font-semibold text-sm tracking-widest uppercase mb-3">Quick Answers</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#3D1F5C] mb-4">Common Questions</h2>
+                <p class="text-lg text-[#3D1F5C]/60 max-w-xl mx-auto">Find quick answers before reaching out. For more, check our full <a href="services.html#faq" class="text-[#6B3FA0] font-semibold underline hover:text-[#5A2F8F]">FAQ page</a>.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+                <!-- FAQ 1 -->
+                <div class="faq-mini bg-white rounded-2xl p-7 shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-[#6B3FA0]/10 flex items-center justify-center mb-5">
+                        <i data-lucide="help-circle" class="w-6 h-6 text-[#6B3FA0]"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#3D1F5C] mb-3">How do I get started?</h3>
+                    <p class="text-[#3D1F5C]/60 text-sm leading-relaxed mb-4">Choose your plan, create your account, and follow Jitendra's step-by-step training. He will show you how to find hot products, build SEO-optimized review sites, and start generating mailbox money &mdash; the same way he earns $700K a year.</p>
+                    <a href="services.html#pricing" class="text-[#6B3FA0] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#5A2F8F] transition-colors">
+                        View Plans
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-mini bg-white rounded-2xl p-7 shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-[#E63946]/10 flex items-center justify-center mb-5">
+                        <i data-lucide="credit-card" class="w-6 h-6 text-[#E63946]"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#3D1F5C] mb-3">What are the pricing options?</h3>
+                    <p class="text-[#3D1F5C]/60 text-sm leading-relaxed mb-4">We offer an Annual plan at $497/year (best value at ~$41/month) or a Monthly plan at $149/month with full feature access on both.</p>
+                    <a href="services.html#pricing" class="text-[#6B3FA0] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#5A2F8F] transition-colors">
+                        Compare Plans
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-mini bg-white rounded-2xl p-7 shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-[#6B3FA0]/10 flex items-center justify-center mb-5">
+                        <i data-lucide="handshake" class="w-6 h-6 text-[#6B3FA0]"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#3D1F5C] mb-3">Do you have an affiliate program?</h3>
+                    <p class="text-[#3D1F5C]/60 text-sm leading-relaxed mb-4">Yes! We offer a generous 40% commission on every customer you refer. Use the contact form above and select "Partnership / Affiliate" to learn more.</p>
+                    <a href="#" onclick="document.getElementById('subject').value='partnership'; document.getElementById('name').focus(); window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="text-[#6B3FA0] font-semibold text-sm inline-flex items-center gap-1 hover:text-[#5A2F8F] transition-colors">
+                        Apply Now
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 sm:py-28 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#6B3FA0] via-[#5A2F8F] to-[#3D1F5C]"></div>
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-20 w-80 h-80 bg-[#E63946] rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-10 right-20 w-60 h-60 bg-[#E8D9F0] rounded-full blur-[80px]"></div>
+        </div>
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur px-4 py-2 rounded-full text-sm text-white/90 font-medium mb-6">
+                <i data-lucide="rocket" class="w-4 h-4"></i>
+                Ready to Start?
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">Ready to Build? Your First Review Site Is Minutes Away.</h2>
+            <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+                If you already know you want in, skip the form and go straight to building. Paste a URL, let the AI write your review, and publish to WordPress today.
+            </p>
+            <a href="services.html#pricing" class="btn-accent text-white px-10 py-4 rounded-full font-bold text-lg inline-flex items-center gap-3">
+                Go Build Your First Review Site
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#3D1F5C] text-white/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Brand -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#6B3FA0] to-[#E63946] flex items-center justify-center">
+                            <i data-lucide="layout-grid" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="text-lg font-extrabold text-white">AffiliatePages<span class="text-[#E63946]">.com</span></span>
+                    </div>
+                    <p class="text-white/50 text-sm leading-relaxed">AI-powered affiliate review site builder. Create SEO-optimized review pages and publish directly to WordPress.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Platform -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html#features" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="services.html#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Affiliate Program</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Training</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 shrink-0"></i>
+                            <a href="mailto:support@affiliatepages.com" class="hover:text-white transition-colors">support@affiliatepages.com</a>
+                        </li>
+                    </ul>
+                    <div class="flex gap-3 mt-4">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i data-lucide="twitter" class="w-4 h-4 text-white"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i data-lucide="facebook" class="w-4 h-4 text-white"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i data-lucide="youtube" class="w-4 h-4 text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-sm text-white/40">
+                <p>&copy; 2026 AffiliatePages.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const successMessage = document.getElementById('success-message');
+
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<svg class="animate-spin w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Sending...';
+
+            // Simulate send (replace with actual form handler)
+            setTimeout(() => {
+                form.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+                lucide.createIcons();
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

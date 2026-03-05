@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — AffiliatePages.com Independence Sale | $497/Year</title>
+  <meta name="description" content="Complete your order and lock in the 4th of July Independence Sale price. Get AffiliatePages.com full annual access for just $497 — save $1,291 off regular pricing." />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=DM+Serif+Display&display=swap');
+
+    @theme {
+      --color-green-cta: #22C55E;
+      --color-green-cta-hover: #16A34A;
+      --color-green-cta-dark: #15803D;
+      --color-urgency-red: #DC2626;
+      --color-urgency-red-dark: #991B1B;
+      --color-savings-gold: #F59E0B;
+      --color-slate-950: #020617;
+      --color-slate-800: #1E293B;
+      --color-slate-700: #334155;
+      --color-slate-600: #475569;
+      --color-slate-500: #64748B;
+      --color-slate-400: #94A3B8;
+      --color-slate-300: #CBD5E1;
+      --color-slate-200: #E2E8F0;
+      --color-slate-100: #F1F5F9;
+      --color-slate-50: #F8FAFC;
+      --color-trust-blue: #2563EB;
+      --font-family-sans: 'DM Sans', system-ui, sans-serif;
+      --font-family-serif: 'DM Serif Display', Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    /* ── Urgency bar pulse ── */
+    @keyframes urgency-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.85; }
+    }
+    .urgency-bar {
+      animation: urgency-pulse 2s ease-in-out infinite;
+    }
+
+    /* ── Timer digit flip effect ── */
+    .timer-digit {
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      min-width: 2.5rem;
+      transition: transform 0.3s ease;
+    }
+    .timer-digit:hover {
+      transform: scale(1.05);
+    }
+
+    /* ── CTA button shine sweep ── */
+    @keyframes btn-shine {
+      0% { left: -75%; }
+      100% { left: 125%; }
+    }
+    .cta-btn {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.25s ease;
+    }
+    .cta-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      animation: btn-shine 3s ease-in-out infinite;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(34, 197, 94, 0.4);
+    }
+
+    /* ── Form field focus ── */
+    .form-field {
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .form-field:focus {
+      border-color: #22C55E;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+      outline: none;
+    }
+
+    /* ── Savings badge bounce ── */
+    @keyframes savings-bounce {
+      0%, 100% { transform: rotate(-2deg) scale(1); }
+      50% { transform: rotate(-2deg) scale(1.03); }
+    }
+    .savings-badge {
+      animation: savings-bounce 2s ease-in-out infinite;
+    }
+
+    /* ── Guarantee seal rotate on hover ── */
+    .guarantee-seal {
+      transition: transform 0.4s ease;
+    }
+    .guarantee-seal:hover {
+      transform: rotate(5deg) scale(1.05);
+    }
+
+    /* ── FAQ accordion ── */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .faq-answer.open {
+      max-height: 500px;
+    }
+    .faq-chevron {
+      transition: transform 0.3s ease;
+    }
+    .faq-chevron.rotated {
+      transform: rotate(180deg);
+    }
+
+    /* ── Scroll fade-in ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Secure checkout stripe pattern ── */
+    .secure-stripe {
+      background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(34, 197, 94, 0.03) 10px,
+        rgba(34, 197, 94, 0.03) 20px
+      );
+    }
+
+    /* ── Order summary sticky on desktop ── */
+    @media (min-width: 1024px) {
+      .order-summary-sticky {
+        position: sticky;
+        top: 5rem;
+      }
+    }
+
+    /* ── Price crossed out ── */
+    .price-strike {
+      text-decoration: line-through;
+      text-decoration-color: #DC2626;
+      text-decoration-thickness: 2px;
+    }
+
+    /* ── Trust icon subtle float ── */
+    @keyframes trust-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+    .trust-icon {
+      animation: trust-float 3s ease-in-out infinite;
+    }
+    .trust-icon:nth-child(2) { animation-delay: 0.3s; }
+    .trust-icon:nth-child(3) { animation-delay: 0.6s; }
+    .trust-icon:nth-child(4) { animation-delay: 0.9s; }
+    .trust-icon:nth-child(5) { animation-delay: 1.2s; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+  <!-- ════════════════════════════════════════════════════════════
+       URGENCY BAR — Countdown Timer
+       ════════════════════════════════════════════════════════════ -->
+  <div class="urgency-bar bg-gradient-to-r from-urgency-red-dark via-urgency-red to-urgency-red-dark text-white">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
+      <div class="flex items-center gap-2">
+        <i data-lucide="flame" class="w-5 h-5 shrink-0"></i>
+        <span class="font-bold text-sm sm:text-base tracking-wide uppercase">4th of July Independence Sale — This Deal Expires In:</span>
+      </div>
+      <div id="countdown" class="flex items-center gap-1.5">
+        <div class="timer-digit rounded-md px-2 py-1 text-center">
+          <span id="days" class="text-lg sm:text-xl font-extrabold tabular-nums">2</span>
+          <span class="block text-[10px] uppercase tracking-widest opacity-70">Days</span>
+        </div>
+        <span class="text-xl font-bold opacity-50">:</span>
+        <div class="timer-digit rounded-md px-2 py-1 text-center">
+          <span id="hours" class="text-lg sm:text-xl font-extrabold tabular-nums">18</span>
+          <span class="block text-[10px] uppercase tracking-widest opacity-70">Hrs</span>
+        </div>
+        <span class="text-xl font-bold opacity-50">:</span>
+        <div class="timer-digit rounded-md px-2 py-1 text-center">
+          <span id="minutes" class="text-lg sm:text-xl font-extrabold tabular-nums">45</span>
+          <span class="block text-[10px] uppercase tracking-widest opacity-70">Min</span>
+        </div>
+        <span class="text-xl font-bold opacity-50">:</span>
+        <div class="timer-digit rounded-md px-2 py-1 text-center">
+          <span id="seconds" class="text-lg sm:text-xl font-extrabold tabular-nums">30</span>
+          <span class="block text-[10px] uppercase tracking-widest opacity-70">Sec</span>
+        </div>
+      </div>
+    </div>
+    <div class="text-center pb-2">
+      <span class="text-xs opacity-80">When this timer hits zero, the price goes back to $149/month. No exceptions.</span>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════
+       PAGE HEADLINE
+       ════════════════════════════════════════════════════════════ -->
+  <section class="secure-stripe">
+    <div class="max-w-5xl mx-auto px-4 pt-10 pb-6 text-center">
+      <div class="flex items-center justify-center gap-2 mb-4">
+        <i data-lucide="lock" class="w-5 h-5 text-green-cta"></i>
+        <span class="text-sm font-semibold text-green-cta-dark tracking-wide uppercase">Secure Checkout</span>
+      </div>
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-slate-950 leading-tight mb-3">
+        You're One Step Away From Building<br class="hidden sm:block" />
+        Passive <span class="text-green-cta-dark">"Mailbox Money"</span> Review Sites
+      </h1>
+      <p class="text-slate-600 text-lg max-w-2xl mx-auto">
+        Complete your order below to lock in your Independence Sale pricing before the timer runs out.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       TWO-COLUMN LAYOUT: Order Form + Order Summary
+       ════════════════════════════════════════════════════════════ -->
+  <section class="max-w-5xl mx-auto px-4 pb-16">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+
+      <!-- ── LEFT COLUMN: Order Form (3/5 width) ── -->
+      <div class="lg:col-span-3 fade-up">
+        <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+          <!-- Form header -->
+          <div class="bg-slate-950 text-white px-6 py-4 flex items-center gap-3">
+            <i data-lucide="credit-card" class="w-5 h-5 text-green-cta"></i>
+            <h2 class="font-bold text-lg">Payment Information</h2>
+            <div class="ml-auto flex items-center gap-1.5 text-xs text-slate-400">
+              <i data-lucide="shield-check" class="w-4 h-4 text-green-cta"></i>
+              256-bit SSL
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-8 space-y-5">
+            <!-- Full Name -->
+            <div>
+              <label for="fullname" class="block text-sm font-semibold text-slate-700 mb-1.5">Full Name</label>
+              <input
+                type="text"
+                id="fullname"
+                placeholder="John Smith"
+                class="form-field w-full px-4 py-3 rounded-lg border-2 border-slate-200 bg-slate-50 text-slate-800 placeholder-slate-400 text-base"
+              />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="email" class="block text-sm font-semibold text-slate-700 mb-1.5">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="john@example.com"
+                class="form-field w-full px-4 py-3 rounded-lg border-2 border-slate-200 bg-slate-50 text-slate-800 placeholder-slate-400 text-base"
+              />
+            </div>
+
+            <!-- Card Number -->
+            <div>
+              <label for="cardnumber" class="block text-sm font-semibold text-slate-700 mb-1.5">Card Number</label>
+              <div class="relative">
+                <input
+                  type="text"
+                  id="cardnumber"
+                  placeholder="1234 5678 9012 3456"
+                  maxlength="19"
+                  class="form-field w-full px-4 py-3 pr-28 rounded-lg border-2 border-slate-200 bg-slate-50 text-slate-800 placeholder-slate-400 text-base tabular-nums"
+                />
+                <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1.5 text-slate-400">
+                  <span class="text-xs font-bold bg-blue-600 text-white px-1.5 py-0.5 rounded">VISA</span>
+                  <span class="text-xs font-bold bg-red-500 text-white px-1.5 py-0.5 rounded">MC</span>
+                  <span class="text-xs font-bold bg-blue-500 text-white px-1.5 py-0.5 rounded">AMEX</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Expiry + CVC row -->
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="expiry" class="block text-sm font-semibold text-slate-700 mb-1.5">Expiry Date</label>
+                <input
+                  type="text"
+                  id="expiry"
+                  placeholder="MM / YY"
+                  maxlength="7"
+                  class="form-field w-full px-4 py-3 rounded-lg border-2 border-slate-200 bg-slate-50 text-slate-800 placeholder-slate-400 text-base tabular-nums"
+                />
+              </div>
+              <div>
+                <label for="cvc" class="block text-sm font-semibold text-slate-700 mb-1.5">CVC</label>
+                <div class="relative">
+                  <input
+                    type="text"
+                    id="cvc"
+                    placeholder="123"
+                    maxlength="4"
+                    class="form-field w-full px-4 py-3 rounded-lg border-2 border-slate-200 bg-slate-50 text-slate-800 placeholder-slate-400 text-base tabular-nums"
+                  />
+                  <i data-lucide="help-circle" class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Or pay with PayPal -->
+            <div class="flex items-center gap-3 text-sm text-slate-500">
+              <div class="flex-1 h-px bg-slate-200"></div>
+              <span>or pay with</span>
+              <div class="flex-1 h-px bg-slate-200"></div>
+            </div>
+            <button class="w-full py-3 rounded-lg border-2 border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold text-base flex items-center justify-center gap-2 transition-colors cursor-pointer">
+              <span class="text-blue-600 font-extrabold tracking-tight text-lg">Pay</span><span class="text-blue-400 font-extrabold tracking-tight text-lg">Pal</span>
+            </button>
+
+            <!-- Divider -->
+            <div class="border-t border-slate-200 pt-5 mt-2">
+              <!-- Mini testimonials -->
+              <div class="space-y-4 mb-6">
+                <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+                  <div class="flex gap-1 mb-2">
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                  </div>
+                  <p class="text-sm text-slate-700 italic leading-relaxed">"I built my first review site in under 2 hours. Within 30 days, it was ranking on the first page of Google."</p>
+                  <p class="text-xs font-semibold text-slate-500 mt-2">-- Sarah K., AffiliatePages Member</p>
+                </div>
+                <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+                  <div class="flex gap-1 mb-2">
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+                  </div>
+                  <p class="text-sm text-slate-700 italic leading-relaxed">"I've tried building affiliate sites before and always quit because the content took forever. AffiliatePages changed everything. The AI writer is scary good."</p>
+                  <p class="text-xs font-semibold text-slate-500 mt-2">-- David R., AffiliatePages Member</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA BUTTON -->
+            <button class="cta-btn w-full py-4 sm:py-5 rounded-xl bg-green-cta hover:bg-green-cta-hover text-white font-extrabold text-lg sm:text-xl tracking-tight shadow-lg cursor-pointer">
+              <span class="flex items-center justify-center gap-2">
+                <i data-lucide="lock" class="w-5 h-5"></i>
+                Lock In My $497 Independence Sale Price Now
+              </span>
+            </button>
+
+            <!-- Sub-text below button -->
+            <p class="text-center text-sm text-slate-500 mt-3">
+              <i data-lucide="shield-check" class="inline w-4 h-4 text-green-cta mr-1 -mt-0.5"></i>
+              You're protected by our <strong>365-day money-back guarantee</strong>. Instant access after purchase.
+            </p>
+
+            <!-- Trust strip -->
+            <div class="flex flex-wrap items-center justify-center gap-4 mt-6 pt-5 border-t border-slate-200">
+              <div class="trust-icon flex items-center gap-1.5 text-xs text-slate-500">
+                <i data-lucide="lock" class="w-4 h-4 text-green-cta-dark"></i>
+                <span>SSL Encrypted</span>
+              </div>
+              <div class="trust-icon flex items-center gap-1.5 text-xs text-slate-500">
+                <i data-lucide="shield" class="w-4 h-4 text-green-cta-dark"></i>
+                <span>256-bit Security</span>
+              </div>
+              <div class="trust-icon flex items-center gap-1.5 text-xs text-slate-500">
+                <span class="text-[10px] font-bold bg-blue-600 text-white px-1 py-0.5 rounded">VISA</span>
+              </div>
+              <div class="trust-icon flex items-center gap-1.5 text-xs text-slate-500">
+                <span class="text-[10px] font-bold bg-red-500 text-white px-1 py-0.5 rounded">MC</span>
+              </div>
+              <div class="trust-icon flex items-center gap-1.5 text-xs text-slate-500">
+                <span class="text-[10px] font-bold bg-blue-500 text-white px-1 py-0.5 rounded">AMEX</span>
+              </div>
+              <div class="trust-icon flex items-center gap-1.5 text-xs text-slate-500">
+                <span class="text-[10px] font-bold bg-blue-600 text-white px-1 py-0.5 rounded">PayPal</span>
+              </div>
+              <div class="trust-icon flex items-center gap-1.5 text-xs text-slate-500">
+                <i data-lucide="zap" class="w-4 h-4 text-amber-500"></i>
+                <span>Instant Access</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── RIGHT COLUMN: Order Summary (2/5 width) ── -->
+      <div class="lg:col-span-2 order-summary-sticky fade-up" style="transition-delay: 0.15s;">
+        <!-- Order Summary Card -->
+        <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden mb-6">
+          <div class="bg-slate-950 text-white px-6 py-4 flex items-center gap-3">
+            <i data-lucide="shopping-cart" class="w-5 h-5 text-green-cta"></i>
+            <h2 class="font-bold text-lg">Your Order Summary</h2>
+          </div>
+
+          <div class="p-6 space-y-4">
+            <!-- Product -->
+            <div class="flex items-start gap-3 pb-4 border-b border-slate-100">
+              <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="layout-dashboard" class="w-5 h-5 text-green-cta-dark"></i>
+              </div>
+              <div>
+                <p class="font-bold text-slate-900 text-sm">AffiliatePages.com</p>
+                <p class="text-xs text-slate-500">Full Annual Access -- All Features Included</p>
+              </div>
+            </div>
+
+            <!-- Price breakdown -->
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between text-slate-500">
+                <span>Regular Price</span>
+                <span class="price-strike">$1,788/year</span>
+              </div>
+              <div class="flex justify-between text-slate-500">
+                <span>Regular Monthly</span>
+                <span class="price-strike">$149/month</span>
+              </div>
+              <div class="border-t border-dashed border-slate-200 pt-2 mt-2"></div>
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-slate-900 text-base">Independence Sale Price</span>
+                <span class="font-extrabold text-2xl text-green-cta-dark">$497</span>
+              </div>
+              <p class="text-xs text-slate-400 text-right">for the first year</p>
+            </div>
+
+            <!-- Savings callout -->
+            <div class="savings-badge bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-4 text-center -rotate-1">
+              <p class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-1">You Save</p>
+              <p class="text-3xl font-extrabold text-amber-600">$1,291</p>
+              <p class="text-sm font-bold text-amber-700 mt-0.5">70% Off Regular Price</p>
+            </div>
+
+            <!-- Billing note -->
+            <div class="flex items-center gap-2 text-xs text-slate-500 bg-slate-50 rounded-lg p-3">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-green-cta shrink-0"></i>
+              <span>Billed once. Full year of access. No monthly billing surprises.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guarantee Badge -->
+        <div class="guarantee-seal bg-white rounded-2xl shadow-lg border border-slate-200 p-6 text-center mb-6">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-100 to-emerald-100 border-4 border-green-200 flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-10 h-10 text-green-cta-dark"></i>
+          </div>
+          <h3 class="font-serif text-lg text-slate-900 mb-2">365-Day Money-Back Guarantee</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Try it risk-free. If you decide AffiliatePages isn't for you within 365 days -- for any reason -- email our support team and we'll refund every penny. <strong>No questions asked.</strong>
+          </p>
+        </div>
+
+        <!-- Security & Trust -->
+        <div class="bg-white rounded-2xl shadow border border-slate-200 p-5">
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                <i data-lucide="lock" class="w-4 h-4 text-green-cta-dark"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-800 text-xs">SSL Encrypted Checkout</p>
+                <p class="text-xs text-slate-500">256-bit SSL encryption protects your data</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
+                <i data-lucide="credit-card" class="w-4 h-4 text-trust-blue"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-800 text-xs">Trusted Processing</p>
+                <p class="text-xs text-slate-500">Secure via Stripe, PayPal & major cards</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center shrink-0">
+                <i data-lucide="zap" class="w-4 h-4 text-amber-600"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-800 text-xs">Instant Access</p>
+                <p class="text-xs text-slate-500">Account activated immediately after purchase</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
+                <i data-lucide="x-circle" class="w-4 h-4 text-slate-500"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-800 text-xs">Cancel Anytime</p>
+                <p class="text-xs text-slate-500">No long-term contracts or hidden commitments</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-xs text-slate-400">
+            <i data-lucide="lock" class="w-3.5 h-3.5"></i>
+            <span>Your information is safe. We never share or sell your data.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       WHAT YOU'RE GETTING — Full Feature Breakdown
+       ════════════════════════════════════════════════════════════ -->
+  <section class="bg-white border-t border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 py-16">
+      <div class="text-center mb-10 fade-up">
+        <h2 class="font-serif text-2xl sm:text-3xl text-slate-950 mb-2">Here's Everything Included in Your Membership</h2>
+        <p class="text-slate-500">All of this is yours the moment you complete your order.</p>
+      </div>
+
+      <div class="space-y-4 fade-up" style="transition-delay: 0.1s;">
+        <!-- Feature 1 -->
+        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-green-50/50 transition-colors">
+          <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+            <i data-lucide="check" class="w-5 h-5 text-green-cta-dark"></i>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900">Full AffiliatePages.com Platform Access</p>
+            <p class="text-sm text-slate-600 mt-0.5">Build unlimited AI-powered affiliate review sites that rank on Google and generate passive commissions</p>
+            <p class="text-xs font-semibold text-amber-600 mt-1">$1,788/yr value</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-green-50/50 transition-colors">
+          <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+            <i data-lucide="check" class="w-5 h-5 text-green-cta-dark"></i>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900">AI Review Writer</p>
+            <p class="text-sm text-slate-600 mt-0.5">Generate detailed, SEO-optimized product reviews in minutes instead of hours. The AI writes like a human reviewer, not a robot</p>
+            <p class="text-xs font-semibold text-amber-600 mt-1">$997 value</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-green-50/50 transition-colors">
+          <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+            <i data-lucide="check" class="w-5 h-5 text-green-cta-dark"></i>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900">Built-In SEO Optimization Engine</p>
+            <p class="text-sm text-slate-600 mt-0.5">Every page is automatically structured for search engine rankings. No SEO expertise needed. No plugins to configure</p>
+            <p class="text-xs font-semibold text-amber-600 mt-1">$497 value</p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-green-50/50 transition-colors">
+          <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+            <i data-lucide="check" class="w-5 h-5 text-green-cta-dark"></i>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900">One-Click WordPress Publishing</p>
+            <p class="text-sm text-slate-600 mt-0.5">Push your review sites live to WordPress with a single click. No coding, no FTP, no tech headaches</p>
+            <p class="text-xs font-semibold text-amber-600 mt-1">$297 value</p>
+          </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-green-50/50 transition-colors">
+          <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+            <i data-lucide="check" class="w-5 h-5 text-green-cta-dark"></i>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900">Step-by-Step Training from Jitendra</p>
+            <p class="text-sm text-slate-600 mt-0.5">Learn the exact system a marketer used to build a $700K/year affiliate review business. Follow the blueprint session by session</p>
+            <p class="text-xs font-semibold text-amber-600 mt-1">$997 value</p>
+          </div>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-green-50/50 transition-colors">
+          <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+            <i data-lucide="check" class="w-5 h-5 text-green-cta-dark"></i>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900">Knowledge Base System</p>
+            <p class="text-sm text-slate-600 mt-0.5">Store product research, talking points, and review templates in one organized hub so your AI writes smarter every time</p>
+            <p class="text-xs font-semibold text-amber-600 mt-1">$297 value</p>
+          </div>
+        </div>
+
+        <!-- Feature 7 -->
+        <div class="flex items-start gap-4 p-4 rounded-xl hover:bg-green-50/50 transition-colors">
+          <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+            <i data-lucide="check" class="w-5 h-5 text-green-cta-dark"></i>
+          </div>
+          <div>
+            <p class="font-bold text-slate-900">All Future Updates & New Features</p>
+            <p class="text-sm text-slate-600 mt-0.5">As the platform grows, so does your account. Every improvement is included at no extra charge</p>
+            <p class="text-xs font-semibold text-amber-600 mt-1">Priceless</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total value callout -->
+      <div class="mt-10 text-center fade-up" style="transition-delay: 0.2s;">
+        <div class="inline-block bg-slate-950 text-white rounded-2xl px-8 py-5">
+          <p class="text-sm text-slate-400 uppercase tracking-wider font-semibold mb-1">Total Value</p>
+          <p class="text-2xl font-extrabold"><span class="price-strike text-slate-400">$4,873+</span></p>
+          <div class="w-12 h-0.5 bg-green-cta mx-auto my-2"></div>
+          <p class="text-sm text-green-400 uppercase tracking-wider font-semibold mb-1">Your Price Today</p>
+          <p class="text-4xl font-extrabold text-green-cta">$497</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       FAQ ACCORDION — Objection Handling
+       ════════════════════════════════════════════════════════════ -->
+  <section class="bg-slate-50">
+    <div class="max-w-3xl mx-auto px-4 py-16">
+      <div class="text-center mb-10 fade-up">
+        <h2 class="font-serif text-2xl sm:text-3xl text-slate-950 mb-2">Still Thinking It Over?</h2>
+        <p class="text-slate-500">Here are the most common questions answered.</p>
+      </div>
+
+      <div class="space-y-3 fade-up" style="transition-delay: 0.1s;" id="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+          <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left cursor-pointer" onclick="toggleFaq(this)">
+            <span class="font-bold text-slate-900 text-sm sm:text-base pr-4">"I'm not sure I can build a review site."</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-slate-400 shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-sm text-slate-600 leading-relaxed pb-4">You don't have to. The AI builds it for you. Choose a niche, click a few buttons, and AffiliatePages writes, optimizes, and publishes your site. If Jitendra's students can do it -- and they have -- you can too.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+          <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left cursor-pointer" onclick="toggleFaq(this)">
+            <span class="font-bold text-slate-900 text-sm sm:text-base pr-4">"I don't know anything about SEO."</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-slate-400 shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-sm text-slate-600 leading-relaxed pb-4">Perfect. Neither do most of our members. AffiliatePages handles the SEO structure automatically. You focus on picking products. The platform handles the rankings.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+          <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left cursor-pointer" onclick="toggleFaq(this)">
+            <span class="font-bold text-slate-900 text-sm sm:text-base pr-4">"What if it doesn't work for my niche?"</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-slate-400 shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-sm text-slate-600 leading-relaxed pb-4">Affiliate review sites work in virtually every niche where people search for product comparisons. Health supplements. Software tools. Kitchen gadgets. Pet products. If people Google "[product name] review," there's money to be made.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+          <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left cursor-pointer" onclick="toggleFaq(this)">
+            <span class="font-bold text-slate-900 text-sm sm:text-base pr-4">"$497 is a lot of money."</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-slate-400 shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-sm text-slate-600 leading-relaxed pb-4">Consider this: you are currently paying $149 every month. That is $1,788 this year whether you switch to annual or not. This deal saves you $1,291 — money that stays in your pocket. At $1.36 per day, one single affiliate commission from a review site would pay for the entire year. This is not a new expense. It is a dramatically cheaper version of what you are already paying for.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+          <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left cursor-pointer" onclick="toggleFaq(this)">
+            <span class="font-bold text-slate-900 text-sm sm:text-base pr-4">"Can't I just try it later?"</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-slate-400 shrink-0"></i>
+          </button>
+          <div class="faq-answer px-6 pb-0">
+            <p class="text-sm text-slate-600 leading-relaxed pb-4">Not at this price. When the 4th of July countdown hits zero, this page disappears and the price goes back to $149/month. That's $1,788 per year instead of $497. This is the lowest price we've ever offered.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       FINAL URGENCY — Bottom CTA
+       ════════════════════════════════════════════════════════════ -->
+  <section class="bg-gradient-to-b from-slate-950 to-slate-900 text-white">
+    <div class="max-w-3xl mx-auto px-4 py-16 text-center">
+      <div class="fade-up">
+        <div class="inline-flex items-center gap-2 bg-urgency-red/20 border border-urgency-red/40 rounded-full px-4 py-1.5 mb-6">
+          <i data-lucide="alert-triangle" class="w-4 h-4 text-urgency-red"></i>
+          <span class="text-sm font-bold text-urgency-red">Price Increase Warning</span>
+        </div>
+
+        <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl mb-4 leading-tight">
+          This Independence Sale Pricing Ends<br />When the Timer Hits Zero
+        </h2>
+
+        <p class="text-slate-400 text-lg mb-2">
+          After that, AffiliatePages goes back to <span class="text-white font-bold">$149/month</span> -- that's <span class="text-white font-bold">$1,788/year</span>.
+        </p>
+        <p class="text-slate-300 text-lg mb-8">
+          Right now, you can get an entire year for just <span class="text-green-cta font-extrabold text-2xl">$497</span>.<br />
+          That's less than <span class="font-bold">$1.36/day</span> for a platform that builds passive income review sites using AI.
+        </p>
+
+        <!-- Bottom countdown timer -->
+        <div id="countdown-bottom" class="flex items-center justify-center gap-2 mb-8">
+          <div class="bg-white/10 backdrop-blur border border-white/10 rounded-lg px-3 py-2 text-center min-w-[3.5rem]">
+            <span id="days-b" class="text-2xl font-extrabold tabular-nums">2</span>
+            <span class="block text-[10px] uppercase tracking-widest opacity-60">Days</span>
+          </div>
+          <span class="text-2xl font-bold opacity-30">:</span>
+          <div class="bg-white/10 backdrop-blur border border-white/10 rounded-lg px-3 py-2 text-center min-w-[3.5rem]">
+            <span id="hours-b" class="text-2xl font-extrabold tabular-nums">18</span>
+            <span class="block text-[10px] uppercase tracking-widest opacity-60">Hrs</span>
+          </div>
+          <span class="text-2xl font-bold opacity-30">:</span>
+          <div class="bg-white/10 backdrop-blur border border-white/10 rounded-lg px-3 py-2 text-center min-w-[3.5rem]">
+            <span id="minutes-b" class="text-2xl font-extrabold tabular-nums">45</span>
+            <span class="block text-[10px] uppercase tracking-widest opacity-60">Min</span>
+          </div>
+          <span class="text-2xl font-bold opacity-30">:</span>
+          <div class="bg-white/10 backdrop-blur border border-white/10 rounded-lg px-3 py-2 text-center min-w-[3.5rem]">
+            <span id="seconds-b" class="text-2xl font-extrabold tabular-nums">30</span>
+            <span class="block text-[10px] uppercase tracking-widest opacity-60">Sec</span>
+          </div>
+        </div>
+
+        <p class="text-slate-400 italic mb-8">Every hour you wait is another hour your competitors are building review sites while you're still thinking about it.</p>
+
+        <!-- Bottom CTA -->
+        <button class="cta-btn inline-flex items-center gap-2 px-10 py-5 rounded-xl bg-green-cta hover:bg-green-cta-hover text-white font-extrabold text-lg sm:text-xl tracking-tight shadow-lg shadow-green-cta/25 cursor-pointer">
+          <i data-lucide="lock" class="w-5 h-5"></i>
+          Lock In My $497 Independence Sale Price Now
+        </button>
+
+        <p class="text-sm text-slate-500 mt-4">
+          <i data-lucide="shield-check" class="inline w-4 h-4 text-green-cta mr-1 -mt-0.5"></i>
+          365-day money-back guarantee &middot; Instant access &middot; Cancel anytime
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════════════ -->
+  <footer class="bg-slate-950 border-t border-slate-800 text-slate-500 text-xs text-center py-6 px-4">
+    <p>&copy; 2026 AffiliatePages.com. All rights reserved.</p>
+    <p class="mt-1">
+      <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a> &middot;
+      <a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a> &middot;
+      <a href="#" class="hover:text-slate-300 transition-colors">Contact Support</a>
+    </p>
+  </footer>
+
+  <!-- ════════════════════════════════════════════════════════════
+       JAVASCRIPT
+       ════════════════════════════════════════════════════════════ -->
+  <script>
+    // ── Countdown Timer ──
+    // Set deadline to 3 days from now
+    (function() {
+      const STORAGE_KEY = 'affiliatePages_countdown_deadline';
+      let deadline;
+
+      // Check localStorage for an existing deadline
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        deadline = new Date(parseInt(stored, 10));
+        // If stored deadline has already passed, create a new one
+        if (deadline <= new Date()) {
+          deadline = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000);
+          localStorage.setItem(STORAGE_KEY, deadline.getTime().toString());
+        }
+      } else {
+        deadline = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000);
+        localStorage.setItem(STORAGE_KEY, deadline.getTime().toString());
+      }
+
+      function updateTimer() {
+        const now = new Date();
+        const diff = deadline - now;
+
+        if (diff <= 0) {
+          // Timer expired
+          document.getElementById('days').textContent = '0';
+          document.getElementById('hours').textContent = '0';
+          document.getElementById('minutes').textContent = '0';
+          document.getElementById('seconds').textContent = '0';
+          document.getElementById('days-b').textContent = '0';
+          document.getElementById('hours-b').textContent = '0';
+          document.getElementById('minutes-b').textContent = '0';
+          document.getElementById('seconds-b').textContent = '0';
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        // Top timer
+        document.getElementById('days').textContent = days;
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+        // Bottom timer
+        document.getElementById('days-b').textContent = days;
+        document.getElementById('hours-b').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes-b').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds-b').textContent = String(seconds).padStart(2, '0');
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    })();
+
+    // ── FAQ Accordion ──
+    function toggleFaq(button) {
+      const item = button.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const chevron = item.querySelector('.faq-chevron');
+      const isOpen = answer.classList.contains('open');
+
+      // Close all others
+      document.querySelectorAll('.faq-answer.open').forEach(a => {
+        a.classList.remove('open');
+        a.style.paddingBottom = '0';
+        a.closest('.faq-item').querySelector('.faq-chevron').classList.remove('rotated');
+      });
+
+      // Toggle current
+      if (!isOpen) {
+        answer.classList.add('open');
+        answer.style.paddingBottom = '0';
+        chevron.classList.add('rotated');
+      }
+    }
+
+    // ── Scroll-triggered fade-in animations ──
+    (function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    })();
+  </script>
+</body>
+</html>

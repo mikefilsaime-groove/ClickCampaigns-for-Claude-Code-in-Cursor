@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're Registered! — AffiliatePages.com Independence Day Webinar</title>
+  <meta name="description" content="You're confirmed for the AffiliatePages.com Independence Day webinar with Mike Filsaime & Jitendra. Check your email for details." />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    /* ── Tailwind v4 theme ── */
+    @theme {
+      --color-royal: #6B3FA0;
+      --color-royal-dark: #5A3488;
+      --color-royal-light: #8B63BF;
+      --color-lavender: #E8D9F0;
+      --color-lavender-light: #F3ECF8;
+      --color-crimson: #E63946;
+      --color-crimson-dark: #C41E3A;
+      --color-dark-purple: #3D1F5C;
+      --color-dark-purple-light: #5C3A7A;
+      --font-family-sans: 'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    /* ── Entrance animations ── */
+    @keyframes fade-down {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scale-in {
+      from { opacity: 0; transform: scale(0.5); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes check-draw {
+      from { stroke-dashoffset: 60; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes ring-expand {
+      0% { transform: scale(0.6); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes pulse-soft {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+      50% { box-shadow: 0 0 0 16px rgba(34, 197, 94, 0); }
+    }
+
+    .anim-fade-down { animation: fade-down 0.7s ease-out both; }
+    .anim-fade-up { animation: fade-up 0.7s ease-out both; }
+    .anim-scale-in { animation: scale-in 0.5s ease-out both; }
+    .anim-delay-1 { animation-delay: 0.15s; }
+    .anim-delay-2 { animation-delay: 0.3s; }
+    .anim-delay-3 { animation-delay: 0.45s; }
+    .anim-delay-4 { animation-delay: 0.6s; }
+    .anim-delay-5 { animation-delay: 0.75s; }
+    .anim-delay-6 { animation-delay: 0.9s; }
+    .anim-delay-7 { animation-delay: 1.05s; }
+    .anim-delay-8 { animation-delay: 1.2s; }
+
+    /* ── Checkmark animation ── */
+    .check-circle {
+      animation: ring-expand 0.6s ease-out both;
+    }
+    .check-mark {
+      stroke-dasharray: 60;
+      stroke-dashoffset: 60;
+      animation: check-draw 0.5s ease-out 0.5s both;
+    }
+    .check-pulse {
+      animation: pulse-soft 2s ease-in-out infinite 1s;
+    }
+
+    /* ── Card hover ── */
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(107, 63, 160, 0.15);
+    }
+
+    /* ── Benefit teaser icon glow ── */
+    .benefit-icon {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .benefit-icon:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 24px rgba(107, 63, 160, 0.25);
+    }
+
+    /* ── Share button hover ── */
+    .share-btn {
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+    .share-btn:hover {
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    /* ── Hero gradient ── */
+    .hero-gradient {
+      background: linear-gradient(135deg, #3D1F5C 0%, #6B3FA0 50%, #5A3488 100%);
+    }
+
+    /* ── Stars decoration ── */
+    .star-field {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .star-field span {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body class="bg-white font-sans text-dark-purple antialiased">
+
+  <!-- ════════════════════════════════════════════════════
+       HEADER BAR
+       ════════════════════════════════════════════════════ -->
+  <header class="bg-dark-purple text-white py-3">
+    <div class="max-w-4xl mx-auto px-6 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="link" class="w-5 h-5 text-crimson"></i>
+        <span class="font-bold text-lg tracking-tight">AffiliatePages<span class="text-crimson">.com</span></span>
+      </div>
+      <div class="text-sm text-lavender opacity-80">Independence Day Special</div>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 1: CONFIRMATION HEADER
+       ════════════════════════════════════════════════════ -->
+  <section class="hero-gradient relative overflow-hidden py-16 md:py-24">
+    <!-- Subtle star decoration -->
+    <div class="star-field">
+      <span style="top:12%;left:8%;"></span>
+      <span style="top:25%;left:22%;width:2px;height:2px;"></span>
+      <span style="top:8%;left:45%;"></span>
+      <span style="top:30%;left:65%;width:2px;height:2px;"></span>
+      <span style="top:15%;left:80%;"></span>
+      <span style="top:45%;left:92%;width:2px;height:2px;"></span>
+      <span style="top:60%;left:5%;"></span>
+      <span style="top:70%;left:35%;width:2px;height:2px;"></span>
+      <span style="top:55%;left:72%;"></span>
+      <span style="top:80%;left:88%;width:2px;height:2px;"></span>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+      <!-- Animated checkmark -->
+      <div class="mx-auto mb-6 check-pulse inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-500/20">
+        <svg class="w-16 h-16 check-circle" viewBox="0 0 52 52">
+          <circle cx="26" cy="26" r="24" fill="none" stroke="#22c55e" stroke-width="3" opacity="0.3"/>
+          <circle cx="26" cy="26" r="24" fill="none" stroke="#22c55e" stroke-width="3"/>
+          <path class="check-mark" fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M14 27l8 8 16-16"/>
+        </svg>
+      </div>
+
+      <h1 class="anim-fade-down anim-delay-2 text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4">
+        You're Registered!
+      </h1>
+      <p class="anim-fade-up anim-delay-3 text-lg md:text-xl text-lavender/90 max-w-xl mx-auto">
+        You&rsquo;re in. Your seat is locked for July 4th. We&rsquo;re preparing something special for attendees &mdash; including a live demo where you&rsquo;ll watch us build a complete affiliate review site from scratch in under 15 minutes.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 2: WEBINAR DETAILS CARD
+       ════════════════════════════════════════════════════ -->
+  <section class="relative -mt-8 z-20 px-6">
+    <div class="max-w-2xl mx-auto anim-fade-up anim-delay-4">
+      <div class="bg-white rounded-2xl shadow-xl border border-lavender/60 overflow-hidden">
+        <!-- Card header -->
+        <div class="bg-lavender-light px-6 py-4 border-b border-lavender/40">
+          <div class="flex items-center gap-2 text-royal font-bold text-sm uppercase tracking-wider">
+            <i data-lucide="calendar-check" class="w-4 h-4"></i>
+            Webinar Details
+          </div>
+        </div>
+
+        <!-- Card body -->
+        <div class="px-6 py-6 space-y-5">
+          <!-- Date & Time -->
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-royal/10 flex items-center justify-center">
+              <i data-lucide="calendar" class="w-6 h-6 text-royal"></i>
+            </div>
+            <div>
+              <p class="font-bold text-dark-purple text-lg">Saturday, July 4th, 2026</p>
+              <p class="text-dark-purple/70">2:00 PM Eastern / 11:00 AM Pacific</p>
+            </div>
+          </div>
+
+          <!-- Duration -->
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-royal/10 flex items-center justify-center">
+              <i data-lucide="clock" class="w-6 h-6 text-royal"></i>
+            </div>
+            <div>
+              <p class="font-bold text-dark-purple text-lg">60 Minutes Live</p>
+              <p class="text-dark-purple/70">With live Q&A at the end</p>
+            </div>
+          </div>
+
+          <!-- Email notice -->
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center">
+              <i data-lucide="mail-check" class="w-6 h-6 text-green-600"></i>
+            </div>
+            <div>
+              <p class="font-bold text-dark-purple text-lg">Check Your Email</p>
+              <p class="text-dark-purple/70">We just sent your confirmation with the webinar link. Check your inbox (and spam folder, just in case).</p>
+            </div>
+          </div>
+
+          <!-- Add to calendar -->
+          <div class="pt-2">
+            <a href="#" class="inline-flex items-center gap-2 px-5 py-3 bg-royal text-white font-semibold rounded-lg hover:bg-royal-dark transition-colors text-sm">
+              <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+              Add to Calendar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 3: WHILE YOU WAIT / BENEFIT TEASERS
+       ════════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="anim-fade-up anim-delay-5 text-sm font-bold uppercase tracking-widest text-crimson mb-3">While You Wait...</p>
+      <h2 class="anim-fade-up anim-delay-5 text-2xl md:text-3xl font-extrabold text-dark-purple mb-3">
+        Here's a Sneak Peek at What We'll Cover on July 4th
+      </h2>
+      <p class="anim-fade-up anim-delay-6 text-dark-purple/60 mb-12 max-w-xl mx-auto">
+        This isn't your typical webinar. We're pulling back the curtain on the exact system that generates $700,000/year in affiliate commissions.
+      </p>
+
+      <!-- 3 Benefit teasers -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Benefit 1 -->
+        <div class="anim-fade-up anim-delay-5 hover-lift bg-white rounded-2xl border border-lavender/50 p-8 text-center">
+          <div class="benefit-icon mx-auto w-16 h-16 rounded-2xl bg-royal/10 flex items-center justify-center mb-5">
+            <i data-lucide="bot" class="w-8 h-8 text-royal"></i>
+          </div>
+          <h3 class="font-bold text-dark-purple text-lg mb-2">The AI Review Engine</h3>
+          <p class="text-dark-purple/60 text-sm leading-relaxed">
+            How our AI analyzes competitor reviews, product pages, and YouTube videos to write SEO-optimized reviews in minutes, not days.
+          </p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="anim-fade-up anim-delay-6 hover-lift bg-white rounded-2xl border border-lavender/50 p-8 text-center">
+          <div class="benefit-icon mx-auto w-16 h-16 rounded-2xl bg-crimson/10 flex items-center justify-center mb-5">
+            <i data-lucide="trending-up" class="w-8 h-8 text-crimson"></i>
+          </div>
+          <h3 class="font-bold text-dark-purple text-lg mb-2">The $700K/Year Blueprint</h3>
+          <p class="text-dark-purple/60 text-sm leading-relaxed">
+            Jitendra's exact playbook for building review sites that rank on Google and generate commissions on autopilot, month after month.
+          </p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="anim-fade-up anim-delay-7 hover-lift bg-white rounded-2xl border border-lavender/50 p-8 text-center">
+          <div class="benefit-icon mx-auto w-16 h-16 rounded-2xl bg-green-500/10 flex items-center justify-center mb-5">
+            <i data-lucide="rocket" class="w-8 h-8 text-green-600"></i>
+          </div>
+          <h3 class="font-bold text-dark-purple text-lg mb-2">An Exclusive Offer (Live Attendees Only)</h3>
+          <p class="text-dark-purple/60 text-sm leading-relaxed">
+            We&rsquo;re holding back a special deal that will ONLY be available to people who attend live on July 4th. This won&rsquo;t be in the replay. This won&rsquo;t be in a follow-up email. You have to be there.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 4: SHARE SECTION
+       ════════════════════════════════════════════════════ -->
+  <section class="py-12 px-6 bg-lavender-light">
+    <div class="max-w-2xl mx-auto text-center">
+      <h3 class="text-xl md:text-2xl font-bold text-dark-purple mb-2">Know Someone Who Needs This?</h3>
+      <p class="text-dark-purple/60 mb-8">Share this webinar with a friend who wants to build passive affiliate income.</p>
+
+      <div class="flex items-center justify-center gap-4 flex-wrap">
+        <!-- Twitter / X -->
+        <a href="#" class="share-btn inline-flex items-center gap-2 px-6 py-3 rounded-full bg-dark-purple text-white font-semibold text-sm hover:bg-dark-purple-light">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Share on X
+        </a>
+
+        <!-- Facebook -->
+        <a href="#" class="share-btn inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1877F2] text-white font-semibold text-sm hover:bg-[#1664d9]">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Share on Facebook
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="#" class="share-btn inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0A66C2] text-white font-semibold text-sm hover:bg-[#094d94]">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Share on LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 5: HOST PREVIEW
+       ════════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h3 class="text-center text-xl md:text-2xl font-bold text-dark-purple mb-10">Meet Your Hosts</h3>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Mike -->
+        <div class="hover-lift bg-white rounded-2xl border border-lavender/50 p-8">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 rounded-full bg-royal/15 flex items-center justify-center flex-shrink-0">
+              <span class="text-royal font-bold text-xl">MF</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-dark-purple text-lg">Mike Filsaime</h4>
+              <p class="text-royal text-sm font-medium">Co-Founder, AffiliatePages.com</p>
+            </div>
+          </div>
+          <p class="text-dark-purple/60 text-sm leading-relaxed">
+            20+ year digital marketing veteran. Creator of Groove.cm, Kartra, WebinarJam, and EverWebinar. From paycheck-to-paycheck car sales to building software used by millions. Mike knows what it takes to build real income online.
+          </p>
+        </div>
+
+        <!-- Jitendra -->
+        <div class="hover-lift bg-white rounded-2xl border border-lavender/50 p-8">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 rounded-full bg-crimson/15 flex items-center justify-center flex-shrink-0">
+              <span class="text-crimson font-bold text-xl">JV</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-dark-purple text-lg">Jitendra Vaswani</h4>
+              <p class="text-crimson text-sm font-medium">Co-Founder, AffiliatePages.com</p>
+            </div>
+          </div>
+          <p class="text-dark-purple/60 text-sm leading-relaxed">
+            SEO expert and affiliate marketing strategist earning $700,000+/year from review sites built by hand. Now he's automated his entire process into AffiliatePages.com so anyone can replicate his results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 6: CALENDAR REMINDER
+       ════════════════════════════════════════════════════ -->
+  <section class="py-12 md:py-16 px-6">
+    <div class="max-w-2xl mx-auto">
+      <div class="bg-royal rounded-2xl p-8 md:p-10 text-center text-white relative overflow-hidden">
+        <!-- Subtle pattern overlay -->
+        <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+
+        <div class="relative z-10">
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white/15 mb-5">
+            <i data-lucide="bell-ring" class="w-7 h-7 text-white"></i>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-extrabold mb-3">Mark Your Calendar</h3>
+          <p class="text-white/80 text-lg mb-6 max-w-md mx-auto">
+            Saturday, July 4th at 2:00 PM ET. Set a reminder right now so you don&rsquo;t miss a single minute of this exclusive training.
+          </p>
+          <p class="text-white/60 text-sm italic">
+            "I've been in this industry for 20+ years. I've never seen a technology shift this big. The people who show up on July 4th are going to leave with a complete system they can deploy that same weekend." &mdash; Mike Filsaime
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════ -->
+  <footer class="bg-dark-purple text-white/50 py-8 text-center text-sm">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="mb-1">&copy; 2026 AffiliatePages.com. All rights reserved.</p>
+      <p>Questions? Contact <a href="mailto:support@affiliatepages.com" class="text-lavender/70 hover:text-white transition-colors underline">support@affiliatepages.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

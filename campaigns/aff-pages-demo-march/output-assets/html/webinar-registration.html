@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FREE Live Training: The AI System Behind $700K/Year in Affiliate Commissions</title>
+  <meta name="description" content="Join Mike Filsaime & Jitendra Vaswani LIVE — discover the AI system behind $700K/year in affiliate commissions and how you can copy it. Limited seats available." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cta: '#E63946',
+            'cta-hover': '#C62B38',
+            dark: '#1A1A2E',
+            accent: '#E63946',
+            muted: '#6B7280',
+            light: '#F9FAFB',
+            'card-bg': '#FFFFFF',
+            'section-alt': '#FFF8F0',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', system-ui, sans-serif; }
+
+    /* Pulsing CTA animation */
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.5); }
+      70% { box-shadow: 0 0 0 14px rgba(230, 57, 70, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(230, 57, 70, 0); }
+    }
+    .cta-pulse { animation: pulse-ring 2s ease-out infinite; }
+
+    /* Urgency bar animation */
+    @keyframes slide-in-down {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .animate-slide-down { animation: slide-in-down 0.6s ease-out; }
+
+    /* Fade-in-up for sections */
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Countdown digit flip */
+    @keyframes digit-pop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.12); }
+      100% { transform: scale(1); }
+    }
+    .digit-pop { animation: digit-pop 0.35s ease; }
+
+    /* Seats counter pulse */
+    @keyframes seats-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+    .seats-pulse { animation: seats-pulse 1.8s ease-in-out infinite; }
+
+    /* Subtle grain overlay */
+    .grain::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Form focus ring */
+    input:focus { outline: none; box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.25); border-color: #E63946; }
+  </style>
+</head>
+
+<body class="bg-white text-dark antialiased">
+
+  <!-- ======================== URGENCY TOP BAR ======================== -->
+  <div class="bg-cta text-white text-center py-2.5 px-4 animate-slide-down relative z-50">
+    <div class="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3 text-sm sm:text-base font-medium tracking-wide">
+      <span class="flex items-center gap-1.5">
+        <i data-lucide="radio" class="w-4 h-4 seats-pulse"></i>
+        FREE Live Training &mdash; Limited Seats
+      </span>
+      <span class="hidden sm:inline text-white/60">|</span>
+      <span>July 4, 2026 &bull; 2:00 PM ET</span>
+    </div>
+  </div>
+
+  <!-- ======================== HERO SECTION ======================== -->
+  <section class="relative overflow-hidden grain">
+    <div class="absolute inset-0 bg-gradient-to-b from-[#FFF1F2] via-white to-white"></div>
+
+    <!-- Decorative accent shapes -->
+    <div class="absolute top-12 left-0 w-72 h-72 bg-cta/5 rounded-full blur-3xl -translate-x-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-orange-100/40 rounded-full blur-3xl translate-x-1/3"></div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-5 pt-14 pb-10 text-center">
+      <!-- Eyebrow -->
+      <div class="inline-flex items-center gap-2 bg-cta/10 text-cta font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+        <i data-lucide="video" class="w-3.5 h-3.5"></i>
+        Free Live Webinar
+      </div>
+
+      <!-- Headline -->
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl leading-tight text-dark mb-5">
+        The AI System Behind <span class="text-cta">$700K/Year</span> in Affiliate Commissions &mdash; And How You Can Copy It <br class="hidden md:block"/>(Without Writing a Single Review)
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-8 leading-relaxed">
+        Join <strong class="text-dark">Mike Filsaime</strong> &amp; <strong class="text-dark">Jitendra Vaswani</strong> LIVE as Jitendra pulls back the curtain on the exact AI-powered system that earns him <span class="text-cta font-bold">$700K/year</span> in affiliate commissions &mdash; and shows you how to replicate it.
+      </p>
+
+      <!-- Quick CTA -->
+      <a href="#register" class="inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg shadow-cta/25 transition-all duration-200 cta-pulse">
+        <i data-lucide="arrow-down" class="w-5 h-5"></i>
+        Save My Free Seat &mdash; Show Me the System
+      </a>
+
+      <!-- Social proof nudge -->
+      <p class="mt-4 text-sm text-muted flex items-center justify-center gap-1.5">
+        <i data-lucide="users" class="w-4 h-4 text-cta"></i>
+        <span id="registrant-count" class="font-bold text-dark">1,247</span> people registered in the last 72 hours
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================== COUNTDOWN TIMER ======================== -->
+  <section class="bg-dark text-white py-8 reveal">
+    <div class="max-w-2xl mx-auto px-5 text-center">
+      <p class="text-sm uppercase tracking-widest text-white/50 mb-4 font-medium">Training starts in</p>
+      <div class="flex items-center justify-center gap-3 sm:gap-5" id="countdown">
+        <!-- Days -->
+        <div class="flex flex-col items-center">
+          <span id="cd-days" class="font-display text-4xl sm:text-5xl tabular-nums">00</span>
+          <span class="text-[11px] uppercase tracking-wider text-white/40 mt-1">Days</span>
+        </div>
+        <span class="text-2xl text-white/20 -mt-4">:</span>
+        <!-- Hours -->
+        <div class="flex flex-col items-center">
+          <span id="cd-hours" class="font-display text-4xl sm:text-5xl tabular-nums">00</span>
+          <span class="text-[11px] uppercase tracking-wider text-white/40 mt-1">Hours</span>
+        </div>
+        <span class="text-2xl text-white/20 -mt-4">:</span>
+        <!-- Minutes -->
+        <div class="flex flex-col items-center">
+          <span id="cd-mins" class="font-display text-4xl sm:text-5xl tabular-nums">00</span>
+          <span class="text-[11px] uppercase tracking-wider text-white/40 mt-1">Minutes</span>
+        </div>
+        <span class="text-2xl text-white/20 -mt-4">:</span>
+        <!-- Seconds -->
+        <div class="flex flex-col items-center">
+          <span id="cd-secs" class="font-display text-4xl sm:text-5xl tabular-nums">00</span>
+          <span class="text-[11px] uppercase tracking-wider text-white/40 mt-1">Seconds</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== 3 SECRETS SECTION ======================== -->
+  <section class="py-16 sm:py-20 bg-white reveal">
+    <div class="max-w-2xl mx-auto px-5">
+      <p class="text-center text-sm uppercase tracking-widest text-cta font-bold mb-3">What you&rsquo;ll discover</p>
+      <h2 class="font-display text-2xl sm:text-3xl text-center text-dark mb-10">
+        In This Free Training, You&rsquo;ll Discover&hellip;
+      </h2>
+
+      <div class="space-y-6">
+        <!-- Secret 1 -->
+        <div class="flex gap-4 items-start bg-light border border-gray-100 rounded-xl p-5 sm:p-6 shadow-sm">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-cta/10 flex items-center justify-center">
+            <span class="text-cta font-display text-lg font-bold">1</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-dark text-base sm:text-lg mb-1">The &ldquo;SEO on Autopilot&rdquo; Method</h3>
+            <p class="text-muted leading-relaxed text-sm sm:text-base">The exact method that gets affiliate sites ranking on <strong class="text-dark">page 1 of Google</strong> &mdash; without you ever touching a keyword tool or writing meta tags by hand.</p>
+          </div>
+        </div>
+
+        <!-- Secret 2 -->
+        <div class="flex gap-4 items-start bg-light border border-gray-100 rounded-xl p-5 sm:p-6 shadow-sm">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-cta/10 flex items-center justify-center">
+            <span class="text-cta font-display text-lg font-bold">2</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-dark text-base sm:text-lg mb-1">The &ldquo;Knowledge Base Hack&rdquo; That Makes AI Reviews Impossible to Ignore</h3>
+            <p class="text-muted leading-relaxed text-sm sm:text-base">Why feeding AI competitor reviews, product pages, and YouTube breakdowns creates review content so thorough that Google ranks it above hand-written articles &mdash; and how you can set this up <strong class="text-dark">in under 10 minutes</strong>.</p>
+          </div>
+        </div>
+
+        <!-- Secret 3 -->
+        <div class="flex gap-4 items-start bg-light border border-gray-100 rounded-xl p-5 sm:p-6 shadow-sm">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-cta/10 flex items-center justify-center">
+            <span class="text-cta font-display text-lg font-bold">3</span>
+          </div>
+          <div>
+            <h3 class="font-bold text-dark text-base sm:text-lg mb-1">3 Review Sites a Day: The &ldquo;Virtual Vending Machine&rdquo; Blueprint</h3>
+            <p class="text-muted leading-relaxed text-sm sm:text-base">How Jitendra went from hand-building affiliate sites over several days to deploying <strong class="text-dark">3 complete, SEO-optimized review sites per day</strong> &mdash; and the exact workflow you&rsquo;ll copy on this call.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== HOST BIOS ======================== -->
+  <section class="py-16 sm:py-20 bg-section-alt reveal">
+    <div class="max-w-3xl mx-auto px-5">
+      <p class="text-center text-sm uppercase tracking-widest text-cta font-bold mb-3">Meet your hosts</p>
+      <h2 class="font-display text-2xl sm:text-3xl text-center text-dark mb-10">
+        Learn From Two Industry Leaders
+      </h2>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <!-- Mike Filsaime -->
+        <div class="bg-card-bg rounded-2xl shadow-md border border-gray-100 overflow-hidden text-center">
+          <div class="h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+            <img
+              src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+              alt="Mike Filsaime — Host"
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl text-dark mb-1">Mike Filsaime</h3>
+            <p class="text-cta text-sm font-bold uppercase tracking-wide mb-3">Your Host</p>
+            <p class="text-muted text-sm leading-relaxed">
+              20+ year digital marketing veteran. Built <strong class="text-dark">Kartra, Groove, WebinarJam</strong> &amp; EverWebinar. Over 100,000 customers worldwide. Creator of AffiliatePages.com.
+            </p>
+          </div>
+        </div>
+
+        <!-- Jitendra Vaswani -->
+        <div class="bg-card-bg rounded-2xl shadow-md border border-gray-100 overflow-hidden text-center">
+          <div class="h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+            <img
+              src="https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+              alt="Jitendra Vaswani — Co-Host"
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl text-dark mb-1">Jitendra Vaswani</h3>
+            <p class="text-cta text-sm font-bold uppercase tracking-wide mb-3">Co-Host</p>
+            <p class="text-muted text-sm leading-relaxed">
+              SEO expert &amp; affiliate marketing agency owner earning <strong class="text-dark">$700K/year</strong> from affiliate review sites. He&rsquo;ll share his exact playbook &mdash; live.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== REGISTRATION FORM ======================== -->
+  <section id="register" class="py-16 sm:py-20 bg-white reveal">
+    <div class="max-w-xl mx-auto px-5">
+      <div class="bg-white border-2 border-cta/20 rounded-2xl shadow-xl p-7 sm:p-10 relative overflow-hidden">
+        <!-- Decorative corner accent -->
+        <div class="absolute top-0 right-0 w-28 h-28 bg-cta/5 rounded-bl-full"></div>
+
+        <div class="relative z-10 text-center mb-8">
+          <div class="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
+            100% Free &mdash; No Credit Card Required
+          </div>
+          <h2 class="font-display text-2xl sm:text-3xl text-dark mb-2">
+            Claim Your Spot &mdash; Free, Live, One-Time-Only Training
+          </h2>
+          <p class="text-muted text-sm">
+            July 4, 2026 &bull; 2:00 PM Eastern &bull; Online via Zoom
+          </p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); document.getElementById('form-success').classList.remove('hidden'); this.classList.add('hidden');" class="space-y-4">
+          <!-- First Name -->
+          <div>
+            <label for="first-name" class="block text-sm font-medium text-dark mb-1.5">First Name</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                <i data-lucide="user" class="w-4 h-4"></i>
+              </span>
+              <input
+                type="text"
+                id="first-name"
+                name="first_name"
+                placeholder="Enter your first name"
+                required
+                class="w-full pl-10 pr-4 py-3.5 border border-gray-200 rounded-lg text-dark placeholder:text-gray-400 transition-all duration-200 text-base"
+              />
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-medium text-dark mb-1.5">Email Address</label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </span>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your best email"
+                required
+                class="w-full pl-10 pr-4 py-3.5 border border-gray-200 rounded-lg text-dark placeholder:text-gray-400 transition-all duration-200 text-base"
+              />
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            class="w-full bg-cta hover:bg-cta-hover text-white font-bold text-lg py-4 rounded-lg shadow-lg shadow-cta/25 transition-all duration-200 cta-pulse flex items-center justify-center gap-2 mt-2"
+          >
+            <i data-lucide="calendar-check" class="w-5 h-5"></i>
+            Save My Free Seat &mdash; Show Me the System
+          </button>
+
+          <!-- Micro-copy -->
+          <p class="text-center text-xs text-muted pt-1">
+            <i data-lucide="lock" class="w-3 h-3 inline -mt-0.5 mr-0.5"></i>
+            We hate spam as much as you do. Unsubscribe anytime with one click.
+          </p>
+        </form>
+
+        <!-- Success State (hidden by default) -->
+        <div id="form-success" class="hidden text-center py-6">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
+            <i data-lucide="check" class="w-8 h-8 text-green-600"></i>
+          </div>
+          <h3 class="font-display text-2xl text-dark mb-2">You&rsquo;re Registered!</h3>
+          <p class="text-muted">Check your inbox for confirmation details. See you on July 4th!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== WHO THIS IS FOR ======================== -->
+  <section class="py-16 sm:py-20 bg-section-alt reveal">
+    <div class="max-w-2xl mx-auto px-5">
+      <p class="text-center text-sm uppercase tracking-widest text-cta font-bold mb-3">Is this for you?</p>
+      <h2 class="font-display text-2xl sm:text-3xl text-center text-dark mb-10">
+        This Training Is Perfect For You If&hellip;
+      </h2>
+
+      <div class="space-y-4">
+        <div class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-5 h-5 text-cta flex-shrink-0 mt-0.5"></i>
+          <p class="text-dark leading-relaxed">You want to build <strong>passive income</strong> without creating your own product, doing customer support, or being the face of a brand</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-5 h-5 text-cta flex-shrink-0 mt-0.5"></i>
+          <p class="text-dark leading-relaxed">You&rsquo;re curious about affiliate marketing but find writing reviews and learning SEO <strong>too complicated</strong></p>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-5 h-5 text-cta flex-shrink-0 mt-0.5"></i>
+          <p class="text-dark leading-relaxed">You want to leverage AI to do the heavy lifting &mdash; <strong>no writing skills required</strong></p>
+        </div>
+        <div class="flex items-start gap-3">
+          <i data-lucide="check-circle" class="w-5 h-5 text-cta flex-shrink-0 mt-0.5"></i>
+          <p class="text-dark leading-relaxed">You&rsquo;re tired of trading time for money and want to create <strong>&ldquo;virtual vending machines&rdquo;</strong> that earn on autopilot</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SCARCITY + TRUST ======================== -->
+  <section class="py-14 bg-white reveal">
+    <div class="max-w-2xl mx-auto px-5">
+      <!-- Scarcity -->
+      <div class="bg-cta/5 border border-cta/15 rounded-xl p-6 text-center mb-10">
+        <div class="flex items-center justify-center gap-2 mb-2">
+          <i data-lucide="alert-triangle" class="w-5 h-5 text-cta seats-pulse"></i>
+          <span class="font-display text-xl text-dark">Only <span class="text-cta">500 Seats</span> Available</span>
+        </div>
+        <p class="text-muted text-sm">This is a live Zoom training with interactive Q&amp;A &mdash; we cap attendance to keep it personal. Once we hit capacity, registration closes.</p>
+      </div>
+
+      <!-- Trust Elements -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+        <div class="flex flex-col items-center gap-2 p-4">
+          <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+            <i data-lucide="badge-check" class="w-5 h-5 text-green-600"></i>
+          </div>
+          <p class="font-bold text-dark text-sm">100% Free</p>
+          <p class="text-muted text-xs">No credit card needed. No strings attached.</p>
+        </div>
+        <div class="flex flex-col items-center gap-2 p-4">
+          <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+            <i data-lucide="zap" class="w-5 h-5 text-blue-600"></i>
+          </div>
+          <p class="font-bold text-dark text-sm">Instant Confirmation</p>
+          <p class="text-muted text-xs">Get your Zoom link immediately via email.</p>
+        </div>
+        <div class="flex flex-col items-center gap-2 p-4">
+          <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center">
+            <i data-lucide="film" class="w-5 h-5 text-amber-600"></i>
+          </div>
+          <p class="font-bold text-dark text-sm">Replay for 48 Hours</p>
+          <p class="text-muted text-xs">Can&rsquo;t make it live? We&rsquo;ll send the replay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FINAL CTA ======================== -->
+  <section class="py-16 sm:py-20 bg-dark text-white text-center relative overflow-hidden reveal">
+    <div class="absolute inset-0 bg-gradient-to-br from-dark via-[#16213E] to-dark"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cta/5 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-xl mx-auto px-5">
+      <h2 class="font-display text-2xl sm:text-3xl mb-4">
+        This Is the Only Time We&rsquo;re Teaching This System Live. 500 Seats. One Shot.
+      </h2>
+      <p class="text-white/60 mb-8 leading-relaxed">
+        Your competitors are already using AI. The question is whether you&rsquo;ll catch up on July 4th &mdash; or keep falling behind.
+      </p>
+      <a href="#register" class="inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-white font-bold text-lg px-10 py-4 rounded-lg shadow-lg shadow-cta/30 transition-all duration-200 cta-pulse">
+        <i data-lucide="calendar-check" class="w-5 h-5"></i>
+        Save My Free Seat &mdash; Show Me the System
+      </a>
+      <p class="mt-4 text-sm text-white/40">July 4, 2026 &bull; 2:00 PM ET &bull; Via Zoom</p>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="py-8 bg-[#0F0F1A] text-white/30 text-center text-xs">
+    <div class="max-w-2xl mx-auto px-5 space-y-2">
+      <p>&copy; 2026 AffiliatePages.com &mdash; All rights reserved.</p>
+      <p>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is not endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+    </div>
+  </footer>
+
+  <!-- ======================== SCRIPTS ======================== -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // ---- COUNTDOWN TIMER ----
+    (function() {
+      // Webinar date: July 4, 2026 at 2:00 PM ET (Eastern = UTC-4 in summer)
+      const webinarDate = new Date('2026-07-04T18:00:00Z'); // 2 PM ET = 6 PM UTC
+
+      const daysEl = document.getElementById('cd-days');
+      const hoursEl = document.getElementById('cd-hours');
+      const minsEl = document.getElementById('cd-mins');
+      const secsEl = document.getElementById('cd-secs');
+
+      function pad(n) { return String(n).padStart(2, '0'); }
+
+      function animateDigit(el, newVal) {
+        const formatted = pad(newVal);
+        if (el.textContent !== formatted) {
+          el.textContent = formatted;
+          el.classList.remove('digit-pop');
+          void el.offsetWidth; // trigger reflow
+          el.classList.add('digit-pop');
+        }
+      }
+
+      function tick() {
+        const now = new Date();
+        let diff = webinarDate - now;
+
+        if (diff <= 0) {
+          daysEl.textContent = '00';
+          hoursEl.textContent = '00';
+          minsEl.textContent = '00';
+          secsEl.textContent = '00';
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        diff -= days * (1000 * 60 * 60 * 24);
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        diff -= hours * (1000 * 60 * 60);
+        const mins = Math.floor(diff / (1000 * 60));
+        diff -= mins * (1000 * 60);
+        const secs = Math.floor(diff / 1000);
+
+        animateDigit(daysEl, days);
+        animateDigit(hoursEl, hours);
+        animateDigit(minsEl, mins);
+        animateDigit(secsEl, secs);
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    // ---- SCROLL REVEAL ----
+    (function() {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      reveals.forEach(function(el) { observer.observe(el); });
+    })();
+  </script>
+
+</body>
+</html>

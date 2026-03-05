@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | AffiliatePages.com — AI-Powered Affiliate Review Site Builder</title>
+    <meta name="description" content="Build profitable affiliate review sites with AI. SEO-optimized pages, WordPress publishing, training included. $497/year or $149/month.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #6B3FA0, #E63946);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(107, 63, 160, 0.15);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 48px rgba(107, 63, 160, 0.2);
+        }
+        .pricing-popular {
+            border: 3px solid #E63946;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #6B3FA0, #8B5FC0);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5A2F8F, #7B4FB0);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(107, 63, 160, 0.35);
+        }
+        .btn-accent {
+            background: linear-gradient(135deg, #E63946, #C41E3A);
+            transition: all 0.3s ease;
+        }
+        .btn-accent:hover {
+            background: linear-gradient(135deg, #D62839, #B01830);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(230, 57, 70, 0.35);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        .faq-answer.open {
+            max-height: 200px;
+            padding-top: 12px;
+            padding-bottom: 4px;
+        }
+        .faq-toggle .chevron {
+            transition: transform 0.3s ease;
+        }
+        .faq-toggle.open .chevron {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-[#E8D9F0] text-[#3D1F5C]">
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#6B3FA0] to-[#E63946] flex items-center justify-center">
+                        <i data-lucide="layout-grid" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+                    </div>
+                    <span class="text-lg sm:text-xl font-extrabold text-[#3D1F5C]">AffiliatePages<span class="text-[#E63946]">.com</span></span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-[#3D1F5C]/70 hover:text-[#6B3FA0] font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-[#3D1F5C]/70 hover:text-[#6B3FA0] font-medium transition-colors">About</a>
+                    <a href="services.html" class="text-[#6B3FA0] font-semibold border-b-2 border-[#6B3FA0] pb-1">Services</a>
+                    <a href="contact.html" class="text-[#3D1F5C]/70 hover:text-[#6B3FA0] font-medium transition-colors">Contact</a>
+                    <a href="#pricing" class="btn-accent text-white px-6 py-2.5 rounded-full font-semibold text-sm">See Pricing</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-[#E8D9F0] transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6 text-[#3D1F5C]"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Nav -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col gap-3">
+                    <a href="index.html" class="text-[#3D1F5C]/70 hover:text-[#6B3FA0] font-medium py-2 px-3 rounded-lg hover:bg-[#E8D9F0] transition-colors">Home</a>
+                    <a href="about.html" class="text-[#3D1F5C]/70 hover:text-[#6B3FA0] font-medium py-2 px-3 rounded-lg hover:bg-[#E8D9F0] transition-colors">About</a>
+                    <a href="services.html" class="text-[#6B3FA0] font-semibold py-2 px-3 rounded-lg bg-[#6B3FA0]/10">Services</a>
+                    <a href="contact.html" class="text-[#3D1F5C]/70 hover:text-[#6B3FA0] font-medium py-2 px-3 rounded-lg hover:bg-[#E8D9F0] transition-colors">Contact</a>
+                    <a href="#pricing" class="btn-accent text-white px-6 py-2.5 rounded-full font-semibold text-sm text-center mt-2">See Pricing</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#6B3FA0] via-[#5A2F8F] to-[#3D1F5C]"></div>
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-[#E63946] rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-[#E8D9F0] rounded-full blur-[120px]"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur px-4 py-2 rounded-full text-sm text-white/90 font-medium mb-6">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                AI-Powered Affiliate Marketing Platform
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 max-w-4xl mx-auto">
+                Publish SEO-Optimized Affiliate Review Sites to WordPress &mdash; <span class="text-[#E8D9F0]">Without Writing a Single Word</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+                AffiliatePages.com uses AI to create SEO-optimized product review pages and publishes them directly to WordPress. This is how you start earning mailbox money on autopilot.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#pricing" class="btn-accent text-white px-8 py-4 rounded-full font-bold text-lg w-full sm:w-auto">
+                    Start Earning Mailbox Money
+                </a>
+                <a href="#features" class="bg-white/15 backdrop-blur text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/25 transition-all w-full sm:w-auto">
+                    See How It Works
+                </a>
+            </div>
+            <div class="flex items-center justify-center gap-6 sm:gap-10 mt-12 text-white/70 text-sm">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                    <span>No writing needed</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                    <span>SEO built in</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                    <span>WordPress ready</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 sm:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-[#E63946] font-semibold text-sm tracking-widest uppercase mb-3">How It Works</p>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3D1F5C] mb-4">Three Steps to Affiliate Revenue</h2>
+                <p class="text-lg text-[#3D1F5C]/60 max-w-2xl mx-auto">From product URL to published review in minutes, not days.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#6B3FA0] to-[#8B5FC0] flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#6B3FA0]/20">
+                        <i data-lucide="link" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <div class="text-[#E63946] font-bold text-sm mb-2">Step 1</div>
+                    <h3 class="text-xl font-bold text-[#3D1F5C] mb-3">Input Product URLs</h3>
+                    <p class="text-[#3D1F5C]/60 leading-relaxed">Paste the product URL along with competitor reviews and YouTube links. The AI absorbs everything about the product.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#6B3FA0] to-[#8B5FC0] flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#6B3FA0]/20">
+                        <i data-lucide="brain" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <div class="text-[#E63946] font-bold text-sm mb-2">Step 2</div>
+                    <h3 class="text-xl font-bold text-[#3D1F5C] mb-3">AI Writes the Review</h3>
+                    <p class="text-[#3D1F5C]/60 leading-relaxed">Our AI crafts a comprehensive, SEO-optimized review with proper keyword density, structure, and conversion elements.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#6B3FA0] to-[#8B5FC0] flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#6B3FA0]/20">
+                        <i data-lucide="rocket" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <div class="text-[#E63946] font-bold text-sm mb-2">Step 3</div>
+                    <h3 class="text-xl font-bold text-[#3D1F5C] mb-3">Publish to WordPress</h3>
+                    <p class="text-[#3D1F5C]/60 leading-relaxed">One click publishes your review page directly to WordPress — the platform search engines love and rank fastest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 sm:py-28 bg-[#E8D9F0]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-[#E63946] font-semibold text-sm tracking-widest uppercase mb-3">Platform Features</p>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3D1F5C] mb-4">Everything You Need to Dominate Affiliate Marketing</h2>
+                <p class="text-lg text-[#3D1F5C]/60 max-w-2xl mx-auto">Powerful tools that handle the hard work so you can focus on growing your income.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white rounded-2xl p-7 shadow-sm cursor-default">
+                    <div class="w-14 h-14 rounded-xl bg-[#6B3FA0]/10 flex items-center justify-center mb-5">
+                        <i data-lucide="pen-tool" class="w-7 h-7 text-[#6B3FA0]"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#3D1F5C] mb-2">AI-Powered Review Writing</h3>
+                    <p class="text-[#3D1F5C]/60 text-sm leading-relaxed">Input product URLs and competitor reviews. The AI creates comprehensive, conversion-focused review content automatically.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white rounded-2xl p-7 shadow-sm cursor-default">
+                    <div class="w-14 h-14 rounded-xl bg-[#E63946]/10 flex items-center justify-center mb-5">
+                        <i data-lucide="search" class="w-7 h-7 text-[#E63946]"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#3D1F5C] mb-2">SEO Optimization Built In</h3>
+                    <p class="text-[#3D1F5C]/60 text-sm leading-relaxed">Every page is written with proper keyword density and SEO best practices baked in. No SEO expertise required on your part.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white rounded-2xl p-7 shadow-sm cursor-default">
+                    <div class="w-14 h-14 rounded-xl bg-[#6B3FA0]/10 flex items-center justify-center mb-5">
+                        <i data-lucide="globe" class="w-7 h-7 text-[#6B3FA0]"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#3D1F5C] mb-2">WordPress Integration</h3>
+                    <p class="text-[#3D1F5C]/60 text-sm leading-relaxed">One-click publish directly to WordPress — the CMS that search engines love and rank the fastest.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white rounded-2xl p-7 shadow-sm cursor-default">
+                    <div class="w-14 h-14 rounded-xl bg-[#E63946]/10 flex items-center justify-center mb-5">
+                        <i data-lucide="database" class="w-7 h-7 text-[#E63946]"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#3D1F5C] mb-2">Knowledge Base System</h3>
+                    <p class="text-[#3D1F5C]/60 text-sm leading-relaxed">Feed the AI with product data, competitor reviews, and YouTube reviews to create deeply informed, authoritative content.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white rounded-2xl p-7 shadow-sm cursor-default">
+                    <div class="w-14 h-14 rounded-xl bg-[#6B3FA0]/10 flex items-center justify-center mb-5">
+                        <i data-lucide="git-compare" class="w-7 h-7 text-[#6B3FA0]"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#3D1F5C] mb-2">Multiple Review Types</h3>
+                    <p class="text-[#3D1F5C]/60 text-sm leading-relaxed">Create single product reviews or VS comparisons (e.g., GoHighLevel vs ClickFunnels vs Kajabi) for maximum traffic.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white rounded-2xl p-7 shadow-sm cursor-default">
+                    <div class="w-14 h-14 rounded-xl bg-[#E63946]/10 flex items-center justify-center mb-5">
+                        <i data-lucide="sliders" class="w-7 h-7 text-[#E63946]"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#3D1F5C] mb-2">Review Quality Control</h3>
+                    <p class="text-[#3D1F5C]/60 text-sm leading-relaxed">Choose poor, fair, good, or excellent rating and the AI adjusts tone, language, and recommendation strength accordingly.</p>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="feature-card bg-white rounded-2xl p-7 shadow-sm cursor-default">
+                    <div class="w-14 h-14 rounded-xl bg-[#6B3FA0]/10 flex items-center justify-center mb-5">
+                        <i data-lucide="zap" class="w-7 h-7 text-[#6B3FA0]"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#3D1F5C] mb-2">3 Sites Per Day</h3>
+                    <p class="text-[#3D1F5C]/60 text-sm leading-relaxed">Create 3 different review products daily with minimal effort. Scale your affiliate portfolio fast.</p>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="feature-card bg-white rounded-2xl p-7 shadow-sm cursor-default">
+                    <div class="w-14 h-14 rounded-xl bg-[#E63946]/10 flex items-center justify-center mb-5">
+                        <i data-lucide="graduation-cap" class="w-7 h-7 text-[#E63946]"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-[#3D1F5C] mb-2">Training Program</h3>
+                    <p class="text-[#3D1F5C]/60 text-sm leading-relaxed">Jitendra's complete training on finding hot products, targeting profitable niches, and building sites that earn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Banner -->
+    <section class="py-12 bg-white border-y border-[#6B3FA0]/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-[#6B3FA0]">$700K</div>
+                    <p class="text-[#3D1F5C]/60 text-sm mt-1">Jitendra's Proven Results/Year</p>
+                </div>
+                <div>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-[#6B3FA0]">100%</div>
+                    <p class="text-[#3D1F5C]/60 text-sm mt-1">AI Written &mdash; Zero Writing Required</p>
+                </div>
+                <div>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-[#E63946]">40%</div>
+                    <p class="text-[#3D1F5C]/60 text-sm mt-1">Recurring Commission for Partners</p>
+                </div>
+                <div>
+                    <div class="text-3xl sm:text-4xl font-extrabold text-[#6B3FA0]">SEO</div>
+                    <p class="text-[#3D1F5C]/60 text-sm mt-1">Built-In SEO That Ranks on Google</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 sm:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-[#E63946] font-semibold text-sm tracking-widest uppercase mb-3">Pricing</p>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#3D1F5C] mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-lg text-[#3D1F5C]/60 max-w-2xl mx-auto">Choose the plan that works best for you. Both include full access to every feature.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Annual Plan -->
+                <div class="pricing-card pricing-popular bg-white rounded-3xl p-8 sm:p-10 shadow-lg relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#E63946] text-white px-6 py-1.5 rounded-full text-sm font-bold">Best Value</div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-[#3D1F5C] mb-2">Annual Plan</h3>
+                        <p class="text-[#3D1F5C]/50 text-sm mb-6">Save $1,291/year vs monthly</p>
+                        <div class="mb-6">
+                            <span class="text-5xl sm:text-6xl font-extrabold text-[#3D1F5C]">$497</span>
+                            <span class="text-[#3D1F5C]/50 text-lg">/year</span>
+                        </div>
+                        <p class="text-[#6B3FA0] font-semibold text-sm mb-8">That is $1.36 per day &mdash; less than a cup of coffee to run your affiliate business</p>
+                        <ul class="text-left space-y-4 mb-10">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">AI-powered review writing engine</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">Built-in SEO optimization</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">One-click WordPress publishing</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">Knowledge base system</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">Single &amp; comparison reviews</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">3 review sites per day</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">Complete training program</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn-accent text-white block w-full py-4 rounded-full font-bold text-lg text-center">Start Earning Mailbox Money &mdash; $497/year</a>
+                    </div>
+                </div>
+
+                <!-- Monthly Plan -->
+                <div class="pricing-card bg-white rounded-3xl p-8 sm:p-10 shadow-md border border-[#6B3FA0]/10">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-[#3D1F5C] mb-2">Monthly Plan</h3>
+                        <p class="text-[#3D1F5C]/50 text-sm mb-6">Flexible month-to-month</p>
+                        <div class="mb-6">
+                            <span class="text-5xl sm:text-6xl font-extrabold text-[#3D1F5C]">$149</span>
+                            <span class="text-[#3D1F5C]/50 text-lg">/month</span>
+                        </div>
+                        <p class="text-[#3D1F5C]/50 font-medium text-sm mb-8">Cancel anytime</p>
+                        <ul class="text-left space-y-4 mb-10">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">AI-powered review writing engine</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">Built-in SEO optimization</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">One-click WordPress publishing</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">Knowledge base system</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">Single &amp; comparison reviews</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">3 review sites per day</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 mt-0.5 shrink-0"></i>
+                                <span class="text-[#3D1F5C]/80">Complete training program</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn-primary text-white block w-full py-4 rounded-full font-bold text-lg text-center">Build Your First Review Site &mdash; $149/mo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proof Statement -->
+            <div class="mt-12 max-w-3xl mx-auto text-center">
+                <p class="text-[#3D1F5C]/70 text-lg leading-relaxed">Our co-founder Jitendra earns $700,000 per year from affiliate review sites he built by hand. AffiliatePages automates his exact system. For $497 a year, you are getting access to a proven $700K methodology &mdash; powered by AI. So easy a caveman can do it.</p>
+            </div>
+
+            <!-- Affiliate Commission Note -->
+            <div class="mt-8 max-w-2xl mx-auto text-center bg-[#E8D9F0] rounded-2xl p-8">
+                <div class="flex items-center justify-center gap-3 mb-3">
+                    <i data-lucide="hand-coins" class="w-6 h-6 text-[#E63946]"></i>
+                    <h3 class="text-xl font-bold text-[#3D1F5C]">Affiliate Program Available</h3>
+                </div>
+                <p class="text-[#3D1F5C]/70">Earn <strong class="text-[#E63946]">40% commission</strong> on every customer you refer. Share your affiliate link and earn recurring revenue while your referrals build their own affiliate empires.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 sm:py-28 bg-[#E8D9F0]">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-[#E63946] font-semibold text-sm tracking-widest uppercase mb-3">FAQ</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#3D1F5C] mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-[#3D1F5C]/60">Everything you need to know before getting started.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-[#3D1F5C] pr-4">Do I need to know SEO?</span>
+                        <i data-lucide="chevron-down" class="chevron w-5 h-5 text-[#6B3FA0] shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#3D1F5C]/70 leading-relaxed pb-6">No, not at all. The AI handles all SEO optimization for you — keyword density, meta tags, heading structure, internal linking, and more. You simply input the product details and the platform takes care of the rest.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-[#3D1F5C] pr-4">Do I need a WordPress site?</span>
+                        <i data-lucide="chevron-down" class="chevron w-5 h-5 text-[#6B3FA0] shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#3D1F5C]/70 leading-relaxed pb-6">Yes, you'll need a WordPress site. The platform publishes your AI-generated reviews directly to WordPress. WordPress is the world's most popular CMS and search engines love it, which means your content gets indexed and ranked faster.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-[#3D1F5C] pr-4">How fast can I see results?</span>
+                        <i data-lucide="chevron-down" class="chevron w-5 h-5 text-[#6B3FA0] shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#3D1F5C]/70 leading-relaxed pb-6">Jitendra's affiliate review sites start generating commissions within days of being indexed by Google. With AffiliatePages, you can publish 3 sites per day &mdash; giving Google more pages to index and rank, which means your revenue potential grows every single day you use the platform.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-[#3D1F5C] pr-4">What if I can't write?</span>
+                        <i data-lucide="chevron-down" class="chevron w-5 h-5 text-[#6B3FA0] shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#3D1F5C]/70 leading-relaxed pb-6">That's the beauty of AffiliatePages.com — the AI writes everything for you. You don't need to be a copywriter, a blogger, or even a decent typist. Just provide the product information and our AI creates comprehensive, professional review content.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+                        <span class="text-lg font-semibold text-[#3D1F5C] pr-4">Is there training included?</span>
+                        <i data-lucide="chevron-down" class="chevron w-5 h-5 text-[#6B3FA0] shrink-0"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="text-[#3D1F5C]/70 leading-relaxed pb-6">Yes! Jitendra provides comprehensive training that covers how to find hot products in profitable niches, how to use the platform effectively, and how to build affiliate review sites that generate consistent revenue. The training is included with both the annual and monthly plans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 sm:py-28 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#6B3FA0] via-[#5A2F8F] to-[#3D1F5C]"></div>
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 right-20 w-80 h-80 bg-[#E63946] rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-10 left-20 w-60 h-60 bg-[#E8D9F0] rounded-full blur-[80px]"></div>
+        </div>
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">Every Day You Wait Is Another Day Someone Else Ranks for Your Keywords</h2>
+            <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Jitendra builds 3 review sites per day with this tool. Each one is a virtual vending machine that earns mailbox money on autopilot. The only question is how many you will build this week.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#pricing" class="btn-accent text-white px-10 py-4 rounded-full font-bold text-lg w-full sm:w-auto">
+                    Build Your First Review Site Now
+                </a>
+                <a href="contact.html" class="bg-white/15 backdrop-blur text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white/25 transition-all w-full sm:w-auto">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#3D1F5C] text-white/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Brand -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#6B3FA0] to-[#E63946] flex items-center justify-center">
+                            <i data-lucide="layout-grid" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="text-lg font-extrabold text-white">AffiliatePages<span class="text-[#E63946]">.com</span></span>
+                    </div>
+                    <p class="text-white/50 text-sm leading-relaxed">AI-powered affiliate review site builder. Create SEO-optimized review pages and publish directly to WordPress.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Platform -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Affiliate Program</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Training</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 shrink-0"></i>
+                            <a href="mailto:support@affiliatepages.com" class="hover:text-white transition-colors">support@affiliatepages.com</a>
+                        </li>
+                    </ul>
+                    <div class="flex gap-3 mt-4">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i data-lucide="twitter" class="w-4 h-4 text-white"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i data-lucide="facebook" class="w-4 h-4 text-white"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <i data-lucide="youtube" class="w-4 h-4 text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-sm text-white/40">
+                <p>&copy; 2026 AffiliatePages.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ accordion
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const isOpen = answer.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+            document.querySelectorAll('.faq-toggle').forEach(t => t.classList.remove('open'));
+
+            // Open clicked if it was closed
+            if (!isOpen) {
+                answer.classList.add('open');
+                button.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>

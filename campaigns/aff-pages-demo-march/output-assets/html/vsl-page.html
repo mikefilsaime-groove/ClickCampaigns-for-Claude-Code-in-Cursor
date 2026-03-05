@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Independence Day Sale — 70% Off AffiliatePages.com | Limited Time</title>
+  <meta name="description" content="Lock in AffiliatePages.com for $497/year — save over $1,291. Build AI-powered affiliate review sites that generate passive income on autopilot. 72-hour sale." />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=DM+Serif+Display&display=swap');
+
+    @theme {
+      --color-dr-red: #E63946;
+      --color-dr-red-dark: #C41E3A;
+      --color-dr-red-light: #FEF2F2;
+      --color-dr-dark: #1A1A1A;
+      --color-dr-text: #2D2D2D;
+      --color-dr-muted: #6B7280;
+      --color-dr-border: #E5E7EB;
+      --color-dr-bg: #FFFFFF;
+      --color-dr-bg-alt: #F9FAFB;
+      --color-dr-yellow: #F59E0B;
+      --color-dr-green: #10B981;
+      --font-family-sans: 'DM Sans', system-ui, sans-serif;
+      --font-family-serif: 'DM Serif Display', Georgia, serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-family-sans);
+      color: var(--color-dr-text);
+      background: var(--color-dr-bg);
+    }
+
+    /* ── Countdown timer digits ── */
+    .countdown-digit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 60px;
+      height: 64px;
+      background: var(--color-dr-red);
+      color: #FFFFFF;
+      font-size: 28px;
+      font-weight: 800;
+      border-radius: 8px;
+      letter-spacing: -0.02em;
+      box-shadow: 0 4px 12px rgba(230, 57, 70, 0.35);
+      font-variant-numeric: tabular-nums;
+    }
+    .countdown-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-dr-muted);
+      margin-top: 6px;
+      font-weight: 600;
+    }
+    .countdown-sep {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--color-dr-red);
+      padding: 0 4px;
+      line-height: 64px;
+    }
+
+    /* ── Video placeholder ── */
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      background: #0D0D0D;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    }
+    .video-container .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      background: rgba(230, 57, 70, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+      box-shadow: 0 8px 30px rgba(230, 57, 70, 0.4);
+    }
+    .video-container .play-btn:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: rgba(230, 57, 70, 1);
+    }
+
+    /* ── CTA button pulse ── */
+    @keyframes cta-pulse {
+      0%, 100% { box-shadow: 0 4px 20px rgba(230, 57, 70, 0.4); }
+      50% { box-shadow: 0 4px 40px rgba(230, 57, 70, 0.7); }
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--color-dr-red);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 18px;
+      padding: 18px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.2s ease, transform 0.2s ease;
+      animation: cta-pulse 2.5s ease-in-out infinite;
+      cursor: pointer;
+      border: none;
+      line-height: 1.3;
+    }
+    .cta-btn:hover {
+      background: var(--color-dr-red-dark);
+      transform: translateY(-2px);
+    }
+    .cta-btn:active {
+      transform: translateY(0);
+    }
+
+    /* ── Fade-in for delayed CTA ── */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .cta-reveal {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .cta-reveal.visible {
+      animation: fadeInUp 0.8s ease-out forwards;
+      pointer-events: auto;
+    }
+
+    /* ── Scroll-triggered fade ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Checkmark bullets ── */
+    .check-item::before {
+      content: '';
+      display: inline-flex;
+      width: 22px;
+      height: 22px;
+      min-width: 22px;
+      background: var(--color-dr-green);
+      border-radius: 50%;
+      margin-right: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 12px;
+    }
+
+    /* ── Guarantee badge ── */
+    .guarantee-badge {
+      border: 3px dashed var(--color-dr-yellow);
+      border-radius: 12px;
+      padding: 24px;
+      background: #FFFBEB;
+    }
+
+    /* ── Testimonial card ── */
+    .testimonial-card {
+      background: var(--color-dr-bg);
+      border: 1px solid var(--color-dr-border);
+      border-radius: 12px;
+      padding: 28px;
+      transition: box-shadow 0.3s ease;
+    }
+    .testimonial-card:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    /* ── Stars ── */
+    .stars {
+      color: var(--color-dr-yellow);
+      letter-spacing: 2px;
+    }
+
+    /* ── Urgency bar ── */
+    .urgency-bar {
+      background: var(--color-dr-red);
+      color: #FFFFFF;
+    }
+
+    /* ── Price strikethrough ── */
+    .price-strike {
+      text-decoration: line-through;
+      color: var(--color-dr-muted);
+    }
+
+    /* ── Responsive countdown ── */
+    @media (max-width: 480px) {
+      .countdown-digit {
+        min-width: 48px;
+        height: 52px;
+        font-size: 22px;
+      }
+      .countdown-sep {
+        font-size: 22px;
+        line-height: 52px;
+      }
+      .cta-btn {
+        font-size: 16px;
+        padding: 16px 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       URGENCY TOP BAR
+       ════════════════════════════════════════════════════════════════ -->
+  <div class="urgency-bar py-3 text-center text-sm font-semibold tracking-wide">
+    <i data-lucide="alarm-clock" class="inline w-4 h-4 mr-1 -mt-0.5"></i>
+    Independence Day Sale: 70% Off ends when this timer hits zero. Price goes back to $149/month.
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       MAIN CONTENT WRAPPER
+       ════════════════════════════════════════════════════════════════ -->
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+
+    <!-- ── PRE-HEADLINE + COUNTDOWN ── -->
+    <section class="text-center mb-10">
+      <p class="text-dr-red font-bold text-sm sm:text-base uppercase tracking-widest mb-3">
+        Independence Day Sale — 70% Off Ends In:
+      </p>
+
+      <div class="flex items-start justify-center gap-1 sm:gap-2 mb-8" id="countdown-wrapper">
+        <div class="text-center">
+          <div class="countdown-digit" id="cd-days">03</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="text-center">
+          <div class="countdown-digit" id="cd-hours">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="text-center">
+          <div class="countdown-digit" id="cd-mins">00</div>
+          <div class="countdown-label">Mins</div>
+        </div>
+        <span class="countdown-sep">:</span>
+        <div class="text-center">
+          <div class="countdown-digit" id="cd-secs">00</div>
+          <div class="countdown-label">Secs</div>
+        </div>
+      </div>
+
+      <!-- ── HEADLINE ── -->
+      <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-dr-dark mb-5">
+        What If You Could Earn "Mailbox Money" From Simple<br class="hidden sm:block" /> Review Sites — Without Writing a Word?
+      </h1>
+
+      <p class="text-lg sm:text-xl text-dr-muted max-w-xl mx-auto leading-relaxed">
+        Discover how AffiliatePages lets you build <strong class="text-dr-dark">3 complete, SEO-optimized affiliate review sites per day</strong> — without writing a single word or learning SEO.
+      </p>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         VIDEO PLAYER AREA
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="mb-10">
+      <div class="video-container" id="video-player">
+        <!--
+          ┌────────────────────────────────────────────────────┐
+          │  REPLACE THIS SECTION WITH YOUR VIDEO EMBED CODE   │
+          │                                                    │
+          │  YouTube example:                                  │
+          │  <iframe                                           │
+          │    src="https://www.youtube.com/embed/VIDEO_ID"    │
+          │    class="absolute inset-0 w-full h-full"          │
+          │    frameborder="0"                                  │
+          │    allow="accelerometer; autoplay; clipboard-write; │
+          │           encrypted-media; gyroscope;               │
+          │           picture-in-picture"                       │
+          │    allowfullscreen                                  │
+          │  ></iframe>                                        │
+          │                                                    │
+          │  Vimeo example:                                    │
+          │  <iframe                                           │
+          │    src="https://player.vimeo.com/video/VIDEO_ID"   │
+          │    class="absolute inset-0 w-full h-full"          │
+          │    frameborder="0"                                  │
+          │    allow="autoplay; fullscreen; picture-in-picture" │
+          │    allowfullscreen                                  │
+          │  ></iframe>                                        │
+          │                                                    │
+          │  When you paste the embed, REMOVE the play button  │
+          │  div below.                                         │
+          └────────────────────────────────────────────────────┘
+        -->
+        <div class="play-btn" aria-label="Play video">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="white" stroke="none">
+            <polygon points="6,3 20,12 6,21" />
+          </svg>
+        </div>
+      </div>
+
+      <p class="text-center text-dr-muted text-sm mt-4">
+        <i data-lucide="volume-2" class="inline w-4 h-4 mr-1 -mt-0.5"></i>
+        Make sure your sound is turned on. Watch this important message from Mike Filsaime.
+      </p>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         FIRST CTA SECTION — Hidden, revealed after 5 minutes (300s)
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="cta-reveal mb-16" id="cta-section-1">
+
+      <!-- Key Bullet Points -->
+      <div class="bg-dr-bg-alt border border-dr-border rounded-xl p-6 sm:p-8 mb-8">
+        <h2 class="font-serif text-2xl sm:text-3xl text-dr-dark mb-6 text-center">
+          Here's What You're Getting:
+        </h2>
+        <ul class="space-y-4 text-base sm:text-lg">
+          <li class="flex items-start check-item">
+            <span><strong>AffiliatePages SaaS Platform</strong> — full AI-powered review builder <span class="price-strike">($1,788/year value)</span></span>
+          </li>
+          <li class="flex items-start check-item">
+            <span><strong>Direct WordPress Publishing</strong> — one click, fully formatted, no copy-paste</span>
+          </li>
+          <li class="flex items-start check-item">
+            <span><strong>Unlimited AI Reviews</strong> — single product AND head-to-head "versus" comparisons</span>
+          </li>
+          <li class="flex items-start check-item">
+            <span><strong>Jitendra's SEO Training</strong> — from a guy earning $700K/year doing exactly this</span>
+          </li>
+          <li class="flex items-start check-item">
+            <span><strong>AI-Powered SEO Optimization</strong> — keyword density, meta tags, header structure, all handled</span>
+          </li>
+          <li class="flex items-start check-item">
+            <span><strong>Build Up to 3 Sites Per Day</strong> — create a portfolio of "virtual vending machines" fast</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Pricing + CTA Button -->
+      <div class="text-center mb-8">
+        <p class="text-dr-muted text-base mb-2">
+          Normally <span class="price-strike font-semibold">$149/month ($1,788/year)</span>
+        </p>
+        <p class="text-4xl sm:text-5xl font-extrabold text-dr-dark mb-1">
+          $497<span class="text-xl sm:text-2xl font-bold text-dr-muted">/year</span>
+        </p>
+        <p class="text-dr-red font-bold text-lg mb-6">
+          Save $1,291 — That's 70% Off
+        </p>
+        <a href="#" class="cta-btn text-lg sm:text-xl block sm:inline-block">
+          Yes! Start Building My "Mailbox Money" Sites for Just $497/Year
+          <span class="block text-sm font-medium mt-1 opacity-80">That's less than $1.37/day. Full year. Instant access. Start in 5 minutes.</span>
+        </a>
+        <p class="text-dr-muted text-sm mt-4">
+          <i data-lucide="lock" class="inline w-4 h-4 mr-1 -mt-0.5"></i>
+          Secure checkout. Instant access after purchase.
+        </p>
+      </div>
+
+      <!-- Guarantee -->
+      <div class="guarantee-badge flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+        <div class="flex-shrink-0">
+          <i data-lucide="shield-check" class="w-12 h-12 text-dr-yellow"></i>
+        </div>
+        <div>
+          <p class="font-bold text-dr-dark text-lg mb-1">365-Day Money-Back Guarantee</p>
+          <p class="text-dr-muted text-sm leading-relaxed">
+            Try AffiliatePages for a full 365 days. Build your first review sites. Follow Jitendra's training. If you don't agree this is the easiest path to earning affiliate commissions you've ever seen, email support@affiliatepages.com and we'll refund every penny. No questions. No hoops. Jitendra makes $700K/year doing exactly this — we wouldn't offer this guarantee if we weren't confident you'd see results.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         CREDIBILITY / TRUST STRIP — always visible
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="mb-16 fade-up">
+      <div class="border-t border-b border-dr-border py-6 flex flex-wrap justify-center gap-x-8 gap-y-3 text-dr-muted text-sm font-medium">
+        <span class="flex items-center gap-2">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          100,000+ Customers Served
+        </span>
+        <span class="flex items-center gap-2">
+          <i data-lucide="award" class="w-4 h-4"></i>
+          20+ Years in Digital Marketing
+        </span>
+        <span class="flex items-center gap-2">
+          <i data-lucide="building-2" class="w-4 h-4"></i>
+          Creator of WebinarJam, Kartra, Groove
+        </span>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         TESTIMONIALS
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="mb-16 fade-up">
+      <h2 class="font-serif text-2xl sm:text-3xl text-dr-dark text-center mb-8">
+        What Our Members Are Saying
+      </h2>
+
+      <div class="space-y-6">
+
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="stars text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-dr-text leading-relaxed mb-4">
+            "I published my first review site the same day I signed up. I'm not tech-savvy at all, and AffiliatePages made it almost embarrassingly simple. I've got nine sites up now and I'm already seeing organic traffic coming in from Google. <strong>This is the first time something actually worked the way they said it would.</strong>"
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-dr-red-light flex items-center justify-center text-dr-red font-bold text-sm">SM</div>
+            <div>
+              <p class="font-bold text-dr-dark text-sm">Sarah M.</p>
+              <p class="text-dr-muted text-xs">Austin, TX</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="stars text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-dr-text leading-relaxed mb-4">
+            "I've been in affiliate marketing for three years and I used to spend an entire weekend writing one review article. With AffiliatePages, I did three on Monday before lunch. <strong>The AI writes better copy than I do, honestly.</strong> And the versus comparison pages — those are absolute traffic magnets."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-dr-red-light flex items-center justify-center text-dr-red font-bold text-sm">DR</div>
+            <div>
+              <p class="font-bold text-dr-dark text-sm">David R.</p>
+              <p class="text-dr-muted text-xs">Toronto, Canada</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="stars text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-dr-text leading-relaxed mb-4">
+            "I was skeptical because I'd bought tools before that collected dust. But Jitendra's training gave me a clear roadmap, and the AI does the heavy lifting. I'm building what Mike calls 'virtual vending machines,' and for the first time, <strong>I actually believe I can make this a real income stream.</strong>"
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-dr-red-light flex items-center justify-center text-dr-red font-bold text-sm">LK</div>
+            <div>
+              <p class="font-bold text-dr-dark text-sm">Lisa K.</p>
+              <p class="text-dr-muted text-xs">London, UK</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         HOW IT WORKS — 4 Steps
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="mb-16 fade-up">
+      <h2 class="font-serif text-2xl sm:text-3xl text-dr-dark text-center mb-2">
+        How AffiliatePages Works
+      </h2>
+      <p class="text-dr-muted text-center mb-8 text-base">It's so simple, a caveman could do it.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div class="bg-dr-bg-alt border border-dr-border rounded-xl p-6">
+          <div class="w-10 h-10 rounded-full bg-dr-red text-white font-bold text-lg flex items-center justify-center mb-3">1</div>
+          <p class="font-bold text-dr-dark mb-1">Paste a Product URL</p>
+          <p class="text-dr-muted text-sm leading-relaxed">Drop in any product URL and competitor reviews. That's your starting point.</p>
+        </div>
+        <div class="bg-dr-bg-alt border border-dr-border rounded-xl p-6">
+          <div class="w-10 h-10 rounded-full bg-dr-red text-white font-bold text-lg flex items-center justify-center mb-3">2</div>
+          <p class="font-bold text-dr-dark mb-1">AI Builds Your Knowledge Base</p>
+          <p class="text-dr-muted text-sm leading-relaxed">The AI researches and compiles everything about the product automatically.</p>
+        </div>
+        <div class="bg-dr-bg-alt border border-dr-border rounded-xl p-6">
+          <div class="w-10 h-10 rounded-full bg-dr-red text-white font-bold text-lg flex items-center justify-center mb-3">3</div>
+          <p class="font-bold text-dr-dark mb-1">Choose Your Rating</p>
+          <p class="text-dr-muted text-sm leading-relaxed">Pick poor, fair, good, or excellent — the AI adjusts the tone of the entire review.</p>
+        </div>
+        <div class="bg-dr-bg-alt border border-dr-border rounded-xl p-6">
+          <div class="w-10 h-10 rounded-full bg-dr-red text-white font-bold text-lg flex items-center justify-center mb-3">4</div>
+          <p class="font-bold text-dr-dark mb-1">One-Click WordPress Publish</p>
+          <p class="text-dr-muted text-sm leading-relaxed">Fully formatted, SEO-optimized, published to WordPress instantly. Done.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         OBJECTION HANDLING
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="mb-16 fade-up">
+      <h2 class="font-serif text-2xl sm:text-3xl text-dr-dark text-center mb-8">
+        You Might Be Thinking&hellip;
+      </h2>
+
+      <div class="space-y-5">
+        <div class="border border-dr-border rounded-xl p-6">
+          <p class="font-bold text-dr-dark mb-2 flex items-start gap-2">
+            <i data-lucide="help-circle" class="w-5 h-5 text-dr-red flex-shrink-0 mt-0.5"></i>
+            "I already own it and haven't used it yet. Why pay more?"
+          </p>
+          <p class="text-dr-muted text-sm leading-relaxed pl-7">
+            Fair question. Month-to-month feels like "I'll get to it later." When you commit to a full year at this price, you've got skin in the game. And at $497, one single affiliate commission could pay for the entire year.
+          </p>
+        </div>
+        <div class="border border-dr-border rounded-xl p-6">
+          <p class="font-bold text-dr-dark mb-2 flex items-start gap-2">
+            <i data-lucide="help-circle" class="w-5 h-5 text-dr-red flex-shrink-0 mt-0.5"></i>
+            "Do I need to know SEO?"
+          </p>
+          <p class="text-dr-muted text-sm leading-relaxed pl-7">
+            No. The AI handles keyword density, meta tags, header structure — all of it. Jitendra's training shows you strategy, not technical jargon.
+          </p>
+        </div>
+        <div class="border border-dr-border rounded-xl p-6">
+          <p class="font-bold text-dr-dark mb-2 flex items-start gap-2">
+            <i data-lucide="help-circle" class="w-5 h-5 text-dr-red flex-shrink-0 mt-0.5"></i>
+            "What if I'm not a good writer?"
+          </p>
+          <p class="text-dr-muted text-sm leading-relaxed pl-7">
+            You don't write anything. The AI writes every word. You choose the product, choose the rating, click publish. That's it.
+          </p>
+        </div>
+        <div class="border border-dr-border rounded-xl p-6">
+          <p class="font-bold text-dr-dark mb-2 flex items-start gap-2">
+            <i data-lucide="help-circle" class="w-5 h-5 text-dr-red flex-shrink-0 mt-0.5"></i>
+            "Can I really make money with affiliate review sites?"
+          </p>
+          <p class="text-dr-muted text-sm leading-relaxed pl-7">
+            Jitendra makes $700,000 a year doing exactly this. Mike has earned tens of millions in affiliate commissions. The model works. AffiliatePages just removes the hardest parts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         FUTURE PACING
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="mb-16 fade-up">
+      <div class="bg-dr-bg-alt border border-dr-border rounded-xl p-6 sm:p-10 text-center">
+        <h2 class="font-serif text-2xl sm:text-3xl text-dr-dark mb-5">
+          Imagine This Time Next Year&hellip;
+        </h2>
+        <p class="text-dr-text text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-4">
+          You've got 30, 40, maybe 50 review sites live. They're ranking on Google. Every day, people search for product reviews, land on your pages, click your affiliate links, and you earn commissions.
+        </p>
+        <p class="text-dr-text text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-4">
+          You didn't create those products. You didn't write those reviews by hand. You didn't spend months learning SEO.
+        </p>
+        <p class="text-dr-dark text-lg sm:text-xl font-bold leading-relaxed max-w-xl mx-auto">
+          You used AffiliatePages. You built virtual vending machines. And now you're getting mailbox money — income that shows up whether you worked that day or not.
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         FINAL CTA SECTION
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="text-center mb-10 fade-up" id="final-cta">
+      <div class="border-2 border-dr-red rounded-2xl p-6 sm:p-10 bg-dr-red-light">
+        <p class="text-dr-red font-bold text-sm uppercase tracking-widest mb-3">
+          <i data-lucide="clock" class="inline w-4 h-4 mr-1 -mt-0.5"></i>
+          Independence Day Sale — Limited Time
+        </p>
+        <h2 class="font-serif text-2xl sm:text-3xl md:text-4xl text-dr-dark mb-3">
+          Declare Your Financial Independence
+        </h2>
+        <p class="text-dr-muted text-base sm:text-lg max-w-lg mx-auto mb-6 leading-relaxed">
+          Lock in your full year at 70% off. One payment. Twelve months of building, publishing, and earning on autopilot.
+        </p>
+
+        <p class="text-dr-muted text-base mb-1">
+          <span class="price-strike font-semibold">$1,788/year</span>
+        </p>
+        <p class="text-4xl sm:text-5xl font-extrabold text-dr-dark mb-1">
+          $497<span class="text-xl sm:text-2xl font-bold text-dr-muted">/year</span>
+        </p>
+        <p class="text-dr-red font-bold text-base mb-6">
+          You save $1,291 — less than $1.37/day
+        </p>
+
+        <a href="#" class="cta-btn text-lg sm:text-xl block sm:inline-block mb-4">
+          Yes! Give Me AffiliatePages at 70% Off Before This Ends
+          <span class="block text-sm font-medium mt-1 opacity-80">Lock in $497/year — this price disappears when the timer hits zero</span>
+        </a>
+
+        <p class="text-dr-muted text-sm">
+          <i data-lucide="lock" class="inline w-4 h-4 mr-1 -mt-0.5"></i>
+          Secure checkout &bull; Instant access &bull; Existing customer exclusive
+        </p>
+      </div>
+
+      <p class="text-dr-muted text-sm mt-8 leading-relaxed max-w-md mx-auto">
+        This 4th of July deal is for existing customers only. It's not on the main website. It's not coming back. When the timer hits zero, this price is gone.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════════════════ -->
+  <footer class="border-t border-dr-border py-8 text-center text-dr-muted text-xs leading-relaxed px-4">
+    <p class="mb-2">&copy; 2026 AffiliatePages.com &mdash; All rights reserved.</p>
+    <p>This site is not a part of the Facebook website or Facebook Inc. This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+    <p class="mt-2">Results vary. Testimonials are from real users but individual results depend on effort, market conditions, and other factors.</p>
+  </footer>
+
+
+  <!-- ════════════════════════════════════════════════════════════════
+       JAVASCRIPT — Countdown Timer + Delayed CTA Reveal
+       ════════════════════════════════════════════════════════════════ -->
+  <script>
+    (function() {
+      'use strict';
+
+      // ──────────────────────────────────────────────
+      // 3-DAY COUNTDOWN TIMER
+      // Uses localStorage so the countdown persists across page loads.
+      // On first visit, sets an end date 3 days from now.
+      // ──────────────────────────────────────────────
+      const STORAGE_KEY = 'ap_vsl_countdown_end';
+
+      function getEndTime() {
+        let stored = localStorage.getItem(STORAGE_KEY);
+        if (stored) {
+          const end = parseInt(stored, 10);
+          // If the stored time is in the future, use it
+          if (end > Date.now()) return end;
+        }
+        // Set new end time: 3 days from now
+        const end = Date.now() + (3 * 24 * 60 * 60 * 1000);
+        localStorage.setItem(STORAGE_KEY, end.toString());
+        return end;
+      }
+
+      const endTime = getEndTime();
+
+      function updateCountdown() {
+        const now = Date.now();
+        let diff = Math.max(0, endTime - now);
+
+        const days   = Math.floor(diff / (1000 * 60 * 60 * 24));
+        diff -= days * (1000 * 60 * 60 * 24);
+        const hours  = Math.floor(diff / (1000 * 60 * 60));
+        diff -= hours * (1000 * 60 * 60);
+        const mins   = Math.floor(diff / (1000 * 60));
+        diff -= mins * (1000 * 60);
+        const secs   = Math.floor(diff / 1000);
+
+        document.getElementById('cd-days').textContent  = String(days).padStart(2, '0');
+        document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('cd-mins').textContent  = String(mins).padStart(2, '0');
+        document.getElementById('cd-secs').textContent  = String(secs).padStart(2, '0');
+
+        if (endTime - Date.now() <= 0) {
+          // Timer expired
+          document.getElementById('cd-days').textContent  = '00';
+          document.getElementById('cd-hours').textContent = '00';
+          document.getElementById('cd-mins').textContent  = '00';
+          document.getElementById('cd-secs').textContent  = '00';
+        }
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+
+      // ──────────────────────────────────────────────
+      // TIME-DELAYED CTA REVEAL
+      // The CTA section is hidden for 5 minutes (300 seconds).
+      // After the timer, it fades in smoothly.
+      // ──────────────────────────────────────────────
+      const CTA_DELAY_SECONDS = 300; // 5 minutes
+      const ctaSection = document.getElementById('cta-section-1');
+
+      // Check if user has already watched past the delay (persisted)
+      const CTA_REVEALED_KEY = 'ap_vsl_cta_revealed';
+      const alreadyRevealed = sessionStorage.getItem(CTA_REVEALED_KEY);
+
+      if (alreadyRevealed === 'true') {
+        // Show immediately if already revealed in this session
+        ctaSection.classList.add('visible');
+      } else {
+        // Start the 5-minute timer
+        setTimeout(function() {
+          ctaSection.classList.add('visible');
+          sessionStorage.setItem(CTA_REVEALED_KEY, 'true');
+        }, CTA_DELAY_SECONDS * 1000);
+      }
+
+
+      // ──────────────────────────────────────────────
+      // SCROLL-TRIGGERED FADE-IN ANIMATIONS
+      // ──────────────────────────────────────────────
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.fade-up').forEach(function(el) {
+        observer.observe(el);
+      });
+
+    })();
+  </script>
+
+</body>
+</html>
