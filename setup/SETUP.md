@@ -197,6 +197,27 @@ Say:
 
 ---
 
+## Skills Authentication
+
+After completing any setup option above, check if marketing skills access is authenticated:
+
+```bash
+node scripts/cc-skills.js verify
+```
+
+If not authenticated, ask:
+> "To access the full marketing skill library, you'll need to authenticate with your ClickCampaigns account.
+> Would you like to authenticate now? (You can always do this later with `node scripts/cc-skills.js login`)"
+
+If yes, run:
+```bash
+node scripts/cc-skills.js login
+```
+
+This opens the browser for the user to log in and generate a CLI token. Production skills (HTML design, PDF, PPTX, DOCX) are available locally without authentication.
+
+---
+
 ## Re-Running Setup
 
 The user can say `reset setup` at any time. When they do:

@@ -1,418 +1,418 @@
 # Funnel Pages Checklist
 
 ## Discovery Call
-- skill: [[skills-and-instructions/skills/funnels/discovery-call/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/discovery-call/SKILL.md`
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Product Launch (PLF)
-- skill: [[skills-and-instructions/skills/funnels/product-launch-plf/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/product-launch-plf/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] VSL / Sales Page
-    - skill: [[skills-and-instructions/skills/funnels/vsl-hybrid/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch funnels/vsl-hybrid/SKILL.md`
 - [ ] Long-form Sales Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Upsell (OTO) Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Shock & Awe Launch
-- skill: [[skills-and-instructions/skills/funnels/shock-and-awe/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/shock-and-awe/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] VSL / Sales Page
-    - skill: [[skills-and-instructions/skills/funnels/vsl-hybrid/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch funnels/vsl-hybrid/SKILL.md`
 - [ ] Long-form Sales Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Upsell (OTO) Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Book Funnel
-- skill: [[skills-and-instructions/skills/funnels/book-funnel/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/book-funnel/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Long-form Sales Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Upsell (OTO) Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Freemium / Free Trial
-- skill: [[skills-and-instructions/skills/funnels/freemium-trial/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/freemium-trial/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] VSL / Sales Page
-    - skill: [[skills-and-instructions/skills/funnels/vsl-hybrid/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch funnels/vsl-hybrid/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Membership
-- skill: [[skills-and-instructions/skills/funnels/membership/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/membership/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Long-form Sales Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Evergreen Launch
-- skill: [[skills-and-instructions/skills/funnels/evergreen-deadline/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/evergreen-deadline/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] VSL / Sales Page
-    - skill: [[skills-and-instructions/skills/funnels/vsl-hybrid/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch funnels/vsl-hybrid/SKILL.md`
 - [ ] Long-form Sales Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Tripwire / SLO
-- skill: [[skills-and-instructions/skills/funnels/tripwire-slo/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/tripwire-slo/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Long-form Sales Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Upsell (OTO) Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Downsell Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## VSL / Sales Hybrid
-- skill: [[skills-and-instructions/skills/funnels/vsl-hybrid/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/vsl-hybrid/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] VSL / Sales Page
-    - skill: [[skills-and-instructions/skills/funnels/vsl-hybrid/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch funnels/vsl-hybrid/SKILL.md`
 - [ ] Long-form Sales Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Upsell (OTO) Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Live Webinar
-- skill: [[skills-and-instructions/skills/funnels/live-webinar/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/live-webinar/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] VSL / Sales Page
-    - skill: [[skills-and-instructions/skills/funnels/vsl-hybrid/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch funnels/vsl-hybrid/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Automated Webinar
-- skill: [[skills-and-instructions/skills/funnels/auto-webinar/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/auto-webinar/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] VSL / Sales Page
-    - skill: [[skills-and-instructions/skills/funnels/vsl-hybrid/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch funnels/vsl-hybrid/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Flash Offer
-- skill: [[skills-and-instructions/skills/funnels/flash-offer/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/flash-offer/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Long-form Sales Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Book Funnel (Paid)
-- skill: [[skills-and-instructions/skills/funnels/book-funnel-paid/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/book-funnel-paid/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Long-form Sales Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Upsell (OTO) Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Downsell Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Quiz / Assessment
-- skill: [[skills-and-instructions/skills/funnels/quiz-assessment/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/quiz-assessment/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] VSL / Sales Page
-    - skill: [[skills-and-instructions/skills/funnels/vsl-hybrid/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch funnels/vsl-hybrid/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## High Ticket (VSL → Appointment)
-- skill: [[skills-and-instructions/skills/funnels/high-ticket-app/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/high-ticket-app/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] VSL / Sales Page
-    - skill: [[skills-and-instructions/skills/funnels/high-ticket-app/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch funnels/high-ticket-app/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Challenge
-- skill: [[skills-and-instructions/skills/funnels/challenge-funnel/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/challenge-funnel/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] VSL / Sales Page
-    - skill: [[skills-and-instructions/skills/funnels/vsl-hybrid/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch funnels/vsl-hybrid/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Case Study / Proof
-- skill: [[skills-and-instructions/skills/funnels/case-study/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/case-study/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] VSL / Sales Page
-    - skill: [[skills-and-instructions/skills/funnels/vsl-hybrid/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch funnels/vsl-hybrid/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Event Registration
-- skill: [[skills-and-instructions/skills/funnels/event-registration/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/event-registration/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Waitlist
-- skill: [[skills-and-instructions/skills/funnels/waitlist/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/waitlist/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Referral Program
-- skill: [[skills-and-instructions/skills/funnels/referral-program/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/referral-program/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Affiliate Recruitment
-- skill: [[skills-and-instructions/skills/funnels/affiliate-recruit/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/affiliate-recruit/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Ecom (Catalog)
-- skill: [[skills-and-instructions/skills/funnels/ecom-catalog/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/ecom-catalog/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Long-form Sales Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Upsell (OTO) Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 
 
 ## Ecom (One‑Page)
-- skill: [[skills-and-instructions/skills/funnels/ecom-one-page/SKILL|link]]
+- skill: `node scripts/cc-skills.js fetch funnels/ecom-one-page/SKILL.md`
 
 - [ ] Landing Page / Opt-in
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Webinar Registration Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Checkout Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Upsell (OTO) Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Thank-you Page
-    - skill: [[skills-and-instructions/skills/tasks/funnels/SKILL|link]]
+    - skill: `node scripts/cc-skills.js fetch tasks/funnels/SKILL.md`
 - [ ] Custom Page
   - Custom page desc: 

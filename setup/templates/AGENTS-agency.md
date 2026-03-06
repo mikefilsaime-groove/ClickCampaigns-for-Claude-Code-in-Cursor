@@ -34,7 +34,7 @@ If you cannot read `CLAUDE.md`, here are the essentials:
 1. **Always ask which client** before doing any work
 2. **Client folders**: `clients/[client-name]/campaigns/[campaign-name]/output-assets/`
 3. **Brand files**: Check `clients/[client-name]/brand-kit/` and campaign-level `brand-kit/`
-4. **Skill files**: `skills-and-instructions/skills/funnels/` and `skills/tasks/`
-5. **Production skills**: `skills-and-instructions/skills/production/` (frontend-design, pptx, pdf, docx)
+4. **Marketing skills**: Fetch via `node scripts/cc-skills.js fetch <path>` (funnels/ and tasks/)
+5. **Production skills**: `skills-and-instructions/skills/production/` (local — frontend-design, pptx, pdf, docx)
 6. **HTML requires**: Tailwind CSS v4 CDN + Lucide Icons
 7. **All output must be**: production-ready, mobile-responsive, self-contained, no placeholders

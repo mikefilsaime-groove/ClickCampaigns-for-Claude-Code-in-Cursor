@@ -32,7 +32,7 @@ At the start of every session:
 >
 > | # | Task | Status | Skill File |
 > |---|------|--------|------------|
-> | 1 | [task label] | [pending/in_progress/completed] | `skills-and-instructions/skills/[path]` |
+> | 1 | [task label] | [pending/in_progress/completed] | `[skillPath]` |
 > | ... | ... | ... | ... |
 >
 > Which task should I work on first? Or say **'all'** to execute in recommended order."
@@ -43,11 +43,17 @@ At the start of every session:
 
 In token mode, each task has a `skillPath` from the API response. **Before executing any task:**
 
-1. Read the skill file: `skills-and-instructions/skills/{skillPath}`
+1. Fetch the marketing skill from the API:
+   ```bash
+   node scripts/cc-skills.js fetch {skillPath}
+   ```
+   Example: `node scripts/cc-skills.js fetch funnels/product-launch-plf/SKILL.md`
 2. Follow the skill's instructions exactly
-3. Also read the production skill for the output type (HTML, PDF, PPTX, etc.)
+3. Also read the production skill for the output type (local file: `skills-and-instructions/skills/production/`)
 
-This is not optional. Every task MUST be preceded by reading its skill file.
+This is not optional. Every task MUST be preceded by fetching its skill file.
+
+**If you get an auth error:** Tell the user to run `node scripts/cc-skills.js login` to authenticate.
 
 ---
 
@@ -75,7 +81,7 @@ node scripts/cc-api.js status <token> <taskId> in_progress
 For each task:
 
 1. Mark as in_progress: `node scripts/cc-api.js status <token> <taskId> in_progress`
-2. Read the skill file from `skillPath`
+2. Fetch the skill: `node scripts/cc-skills.js fetch {skillPath}`
 3. Read the production skill for the output format
 4. Read brand files for voice/style context
 5. Check for task-specific custom instructions from the API response (`taskInstructions`)

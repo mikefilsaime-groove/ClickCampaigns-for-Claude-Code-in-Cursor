@@ -37,7 +37,8 @@
 | **Funnel Pages** | [funnels/Funnel-Pages-Checklist.md](funnels/Funnel-Pages-Checklist.md) |
 | **Tasks** | [tasks/Task-Checklist.md](tasks/Task-Checklist.md) |
 | **Specialists** | [agents/Agents-List.md](agents/Agents-List.md) |
-| **Skills** | `skills-and-instructions/skills/` |
+| **Marketing Skills** | Fetched via `node scripts/cc-skills.js fetch <path>` (requires auth) |
+| **Production Skills** | `skills-and-instructions/skills/production/` (local) |
 
 ---
 
@@ -527,19 +528,26 @@ When building large campaigns with multiple independent assets, you may spawn su
 
 ## MANDATORY: Skill File Requirements
 
-**STOP. No deliverable may be created without FIRST reading the matching skill file(s).**
+**STOP. No deliverable may be created without FIRST loading the matching skill file(s).**
 
 Every asset requires TWO skill lookups before you write a single line:
 
-1. **Marketing skill** (from `skills-and-instructions/skills/funnels/` or `skills/tasks/`) — defines WHAT to write (structure, frameworks, persuasion elements)
-2. **Production skill** (from `skills-and-instructions/skills/production/`) — defines HOW to output it (design quality, formatting, technical standards)
+1. **Marketing skill** (fetched from API) — defines WHAT to write (structure, frameworks, persuasion elements)
+   ```bash
+   node scripts/cc-skills.js fetch funnels/[type]/SKILL.md
+   # or
+   node scripts/cc-skills.js fetch tasks/[type]/SKILL.md
+   ```
+2. **Production skill** (local file at `skills-and-instructions/skills/production/`) — defines HOW to output it (design quality, formatting, technical standards)
+
+**If you get an auth error:** Tell the user to run `node scripts/cc-skills.js login` to authenticate with their ClickCampaigns account.
 
 ### Pre-Creation Checklist
 
 Before creating ANY deliverable, confirm:
 
-- [ ] Identified and READ the matching marketing skill file (e.g., `funnels/vsl-hybrid/SKILL.md` for a VSL page)
-- [ ] Identified and READ the matching production skill file (e.g., `production/frontend-design/SKILL.md` for HTML)
+- [ ] Identified and FETCHED the matching marketing skill (e.g., `node scripts/cc-skills.js fetch funnels/vsl-hybrid/SKILL.md`)
+- [ ] Identified and READ the matching production skill file (e.g., `production/frontend-design/SKILL.md` for HTML — local file)
 - [ ] For HTML pages: Tailwind CDN is v3 (`cdn.tailwindcss.com`), NOT v4
 - [ ] For HTML pages with custom colors: `tailwind.config` defines ALL custom class names used on the page
 
@@ -554,6 +562,13 @@ After creating any HTML page, verify:
 - [ ] Full-page screenshot confirms all sections render with correct colors and content
 
 **If you cannot find a matching skill file, ASK the user before proceeding. Do not guess or improvise the structure.**
+
+### Available Skills
+
+To see all available marketing skills:
+```bash
+node scripts/cc-skills.js list
+```
 
 ---
 
@@ -687,13 +702,13 @@ Read: skills-and-instructions/skills/production/docx/SKILL.md
 ```
 
 ### How Skills Work Together
-- **Marketing skills** (`skills/funnels/`, `skills/tasks/`) = WHAT to write (VSL structure, email sequences, persuasion frameworks)
-- **Production skills** (`skills/production/`) = HOW to output it (well-designed HTML, properly formatted files)
+- **Marketing skills** (fetched via `cc-skills.js fetch funnels/...` or `tasks/...`) = WHAT to write (VSL structure, email sequences, persuasion frameworks)
+- **Production skills** (local at `skills/production/`) = HOW to output it (well-designed HTML, properly formatted files)
 
 ### Example Workflow for a Sales Page
-1. Read the marketing skill: `skills/funnels/vsl-hybrid/SKILL.md`
+1. Fetch the marketing skill: `node scripts/cc-skills.js fetch funnels/vsl-hybrid/SKILL.md`
 2. Write the copy following direct response principles
-3. Read the production skill: `skills/production/frontend-design/SKILL.md`
+3. Read the production skill: `skills-and-instructions/skills/production/frontend-design/SKILL.md` (local file)
 4. Create production-quality HTML following the design guidelines
 
 Always reference the appropriate production skill when creating final deliverables.
@@ -938,8 +953,9 @@ Which pages do you need? Or say "all" for the complete funnel.
 
 | What | Where |
 |------|-------|
-| Funnel skill files | `skills-and-instructions/skills/funnels/[type]/SKILL.md` |
-| Task skill files | `skills-and-instructions/skills/tasks/[type]/SKILL.md` |
+| Funnel skill files | `node scripts/cc-skills.js fetch funnels/[type]/SKILL.md` (API) |
+| Task skill files | `node scripts/cc-skills.js fetch tasks/[type]/SKILL.md` (API) |
+| Production skill files | `skills-and-instructions/skills/production/[type]/SKILL.md` (local) |
 | Client brand files | `clients/[client-name]/brand-kit/` |
 | Campaign output | `clients/[client-name]/campaigns/[campaign-name]/output-assets/` |
 | Campaign brand files | `clients/[client-name]/campaigns/[campaign-name]/brand-kit/` |

@@ -22,6 +22,10 @@ Thumbs.db
 *.tmp
 *.temp
 
+# Protected marketing skills (fetched from API at runtime)
+skills-and-instructions/skills/funnels/
+skills-and-instructions/skills/tasks/
+
 # Playwright MCP logs
 .playwright-mcp/
 
