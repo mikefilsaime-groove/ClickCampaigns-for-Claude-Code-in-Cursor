@@ -591,7 +591,7 @@ All deliverables are:
 <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
 ```
 
-> **NEVER use `@tailwindcss/browser@4`** — The v4 browser CDN does not reliably support `@theme` in `<style>` blocks for single-file HTML. Use `cdn.tailwindcss.com` (v3) with `tailwind.config` JS objects for custom colors. See `docs/tailwind-failure-postmortem.md` for details.
+> **NEVER use `@tailwindcss/browser@4`** — The v4 browser CDN does not reliably support `@theme` in `<style>` blocks for single-file HTML. Use `cdn.tailwindcss.com` (v3) with `tailwind.config` JS objects for custom colors.
 
 > **Note:** Tailwind's CDN is officially "for development" but works well for marketing pages where portability matters more than micro-optimization. For high-traffic pages, consider a build step.
 
@@ -604,7 +604,7 @@ All deliverables are:
 
 ### CSS Safety Rules
 
-These rules prevent catastrophic styling failures (see `docs/tailwind-failure-postmortem.md`):
+These rules prevent catastrophic styling failures:
 
 - **`//` is NOT valid CSS.** Only use `/* */` for CSS comments. Double-slash is JavaScript syntax — inside a `<style>` tag it breaks CSS parsing.
 - **Every `/*` MUST have a matching `*/`.** One unclosed comment can eat an entire stylesheet.
