@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AffiliatePages.com — The 3 Secrets to Building Passive Income Review Sites</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --purple: #6B3FA0;
+  --crimson: #E63946;
+  --lavender: #E8D9F0;
+  --dark-purple: #3D1F5C;
+  --deep-red: #C41E3A;
+  --white: #FFFFFF;
+  --off-white: #F8F4FB;
+  --gold: #F4C542;
+  --green: #2ECC71;
+  --dark-bg: #1A0E2E;
+  --charcoal: #2C1847;
+}
+
+.reveal {
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  font-weight: 400;
+  color: var(--dark-purple);
+}
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.reveal h1 { font-size: 3.2em; }
+.reveal h2 { font-size: 2.4em; }
+.reveal h3 { font-size: 1.6em; }
+.reveal p, .reveal li { font-size: 1.1em; line-height: 1.55; }
+.reveal ul { list-style: none; padding-left: 0; }
+.reveal ul li { padding: 0.3em 0; padding-left: 1.6em; position: relative; }
+.reveal ul li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.55em;
+  width: 10px; height: 10px;
+  background: var(--crimson);
+  border-radius: 50%;
+}
+.reveal .progress { color: var(--crimson); height: 4px; }
+.reveal .slide-number { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--purple); background: rgba(232,217,240,0.8); padding: 4px 10px; border-radius: 4px; }
+
+/* ---- Slide type classes ---- */
+
+/* Light educational */
+.slide-light {
+  background: linear-gradient(145deg, var(--off-white) 0%, var(--lavender) 100%);
+  color: var(--dark-purple);
+}
+.slide-light h2, .slide-light h3 { color: var(--purple); }
+
+/* Dark emphasis / reveal */
+.slide-dark {
+  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--charcoal) 50%, #2A1245 100%);
+  color: var(--white);
+}
+.slide-dark h2, .slide-dark h1 { color: var(--white); }
+.slide-dark ul li::before { background: var(--crimson); }
+
+/* Brand gradient — title/hero */
+.slide-brand {
+  background: linear-gradient(135deg, var(--purple) 0%, var(--dark-purple) 100%);
+  color: var(--white);
+}
+.slide-brand h1, .slide-brand h2 { color: var(--white); }
+
+/* CTA slides */
+.slide-cta {
+  background: linear-gradient(135deg, var(--dark-bg) 0%, #1E0936 60%, var(--dark-purple) 100%);
+  color: var(--white);
+}
+.slide-cta h2 { color: var(--gold); }
+
+/* Stat slides */
+.slide-stat {
+  background: var(--off-white);
+}
+
+/* Secret reveal slides */
+.slide-secret {
+  background: radial-gradient(ellipse at center, #2A1245 0%, var(--dark-bg) 70%);
+  color: var(--white);
+}
+
+/* Comparison slides */
+.slide-compare { background: var(--off-white); }
+
+/* ---- Reusable components ---- */
+.big-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 4em;
+  font-weight: 900;
+  color: var(--crimson);
+  line-height: 1;
+  margin: 0.1em 0;
+}
+.big-number.green { color: var(--green); }
+.big-number.gold { color: var(--gold); }
+.big-number.purple { color: var(--purple); }
+.subtitle {
+  font-size: 1.0em;
+  opacity: 0.8;
+  font-weight: 300;
+  margin-top: 0.3em;
+}
+.tag {
+  display: inline-block;
+  background: var(--crimson);
+  color: white;
+  padding: 0.15em 0.6em;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+.tag.purple { background: var(--purple); }
+.tag.green { background: var(--green); }
+.tag.gold { background: var(--gold); color: var(--dark-purple); }
+.cta-button {
+  display: inline-block;
+  background: var(--crimson);
+  color: white;
+  padding: 0.5em 1.8em;
+  border-radius: 8px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.0em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 0 6px 24px rgba(230,57,70,0.35);
+  margin-top: 0.5em;
+}
+.cta-button.green { background: var(--green); box-shadow: 0 6px 24px rgba(46,204,113,0.35); }
+.guarantee-badge {
+  display: inline-block;
+  border: 3px solid var(--green);
+  border-radius: 50%;
+  width: 140px; height: 140px;
+  line-height: 1.2;
+  text-align: center;
+  padding: 28px 10px;
+  font-weight: 700;
+  font-size: 0.85em;
+  color: var(--green);
+}
+.strikethrough { text-decoration: line-through; opacity: 0.5; }
+.value-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--dark-purple);
+  padding: 0.15em 0.6em;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.95em;
+}
+.two-col { display: flex; gap: 2em; align-items: flex-start; text-align: left; }
+.two-col > div { flex: 1; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 0.9em; margin: 0.5em 0; }
+.compare-table th, .compare-table td { padding: 0.5em 0.8em; text-align: left; border-bottom: 1px solid rgba(61,31,92,0.15); }
+.compare-table th { background: var(--purple); color: white; font-weight: 600; }
+.compare-table .old { color: #999; }
+.compare-table .new { color: var(--green); font-weight: 600; }
+.stack-item { background: rgba(107,63,160,0.06); border-left: 4px solid var(--purple); padding: 0.4em 0.8em; margin: 0.3em 0; font-size: 0.9em; display: flex; justify-content: space-between; align-items: center; border-radius: 0 6px 6px 0; }
+.stack-item .item-name { font-weight: 600; color: var(--dark-purple); }
+.stack-item .item-value { font-weight: 700; color: var(--crimson); }
+.icon-row { display: flex; justify-content: center; gap: 2em; margin: 1em 0; flex-wrap: wrap; }
+.icon-card { text-align: center; width: 140px; }
+.icon-card .ic { font-size: 2em; margin-bottom: 0.2em; }
+.icon-card p { font-size: 0.85em; font-weight: 600; color: var(--dark-purple); line-height: 1.3; }
+.progress-track { display: flex; gap: 0.5em; align-items: center; justify-content: center; margin: 1em 0; }
+.progress-dot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--purple); display: flex; align-items: center; justify-content: center; font-size: 10px; }
+.progress-dot.done { background: var(--green); border-color: var(--green); color: white; }
+.progress-dot.active { background: var(--gold); border-color: var(--gold); color: var(--dark-purple); }
+.progress-line { width: 40px; height: 2px; background: var(--purple); opacity: 0.3; }
+.faq-item { text-align: left; margin: 0.4em 0; font-size: 0.9em; }
+.faq-item .q { font-weight: 700; color: var(--purple); }
+.faq-item .a { color: var(--dark-purple); margin-left: 0.5em; font-weight: 400; }
+.checklist li::before { content: '\2713'; background: none; color: var(--green); font-weight: 900; font-size: 1.1em; top: 0.35em; }
+.checklist li.fail::before { content: '\2717'; color: var(--crimson); }
+.secret-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin-bottom: 0.2em;
+}
+.slide-dark .secret-label, .slide-secret .secret-label { color: var(--crimson); }
+.math-row { display: flex; align-items: center; justify-content: center; gap: 0.5em; margin: 0.3em 0; font-size: 1.0em; }
+.math-row .pages { font-weight: 700; color: var(--purple); min-width: 80px; text-align: right; }
+.math-row .equals { color: var(--dark-purple); }
+.math-row .income { font-weight: 700; color: var(--green); min-width: 200px; }
+.step-flow { display: flex; align-items: flex-start; justify-content: center; gap: 0.3em; margin: 0.8em 0; flex-wrap: wrap; }
+.step-card { background: rgba(107,63,160,0.08); border-radius: 8px; padding: 0.5em; width: 130px; text-align: center; }
+.step-card .step-num { font-family: 'JetBrains Mono', monospace; font-size: 0.8em; color: var(--crimson); font-weight: 700; }
+.step-card .step-icon { font-size: 1.5em; margin: 0.1em 0; }
+.step-card p { font-size: 0.75em; font-weight: 600; color: var(--dark-purple); line-height: 1.3; }
+.step-arrow { font-size: 1.2em; color: var(--purple); align-self: center; margin-top: 0.5em; }
+.timeline-row { display: flex; gap: 1em; justify-content: center; margin: 0.5em 0; }
+.timeline-phase { background: rgba(107,63,160,0.07); border-radius: 8px; padding: 0.6em; flex: 1; max-width: 220px; text-align: center; border-top: 3px solid var(--purple); }
+.timeline-phase h4 { font-family: 'Source Sans 3', sans-serif; font-size: 0.85em; color: var(--purple); margin: 0 0 0.3em; font-weight: 700; }
+.timeline-phase p { font-size: 0.75em; color: var(--dark-purple); margin: 0; line-height: 1.4; }
+.niche-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4em; margin: 0.5em 0; }
+.niche-card { background: rgba(107,63,160,0.06); border-radius: 6px; padding: 0.4em 0.6em; text-align: left; font-size: 0.85em; display: flex; align-items: center; gap: 0.4em; }
+.niche-card .ni { font-size: 1.3em; }
+.niche-card .niche-info strong { color: var(--dark-purple); }
+.niche-card .niche-info span { color: var(--green); font-weight: 600; font-size: 0.9em; display: block; }
+.objection-q { font-family: 'Playfair Display', serif; font-size: 1.1em; color: var(--crimson); font-style: italic; margin-bottom: 0.6em; }
+.slide-dark .objection-q { color: var(--gold); }
+.bonus-item { display: flex; align-items: center; gap: 0.8em; margin: 0.4em 0; text-align: left; font-size: 0.9em; background: rgba(244,197,66,0.08); border-radius: 8px; padding: 0.5em 0.8em; border-left: 3px solid var(--gold); }
+.bonus-item .b-num { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--gold); font-size: 1.1em; }
+.bonus-item .b-info strong { color: var(--dark-purple); }
+.bonus-item .b-info span { color: var(--green); font-weight: 600; }
+
+/* Noise texture overlay for dark slides */
+.slide-dark::after, .slide-secret::after, .slide-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+.slide-dark > *, .slide-secret > *, .slide-cta > * { position: relative; z-index: 1; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ============================================================ -->
+<!-- SLIDE 1 — Welcome Slide -->
+<!-- ============================================================ -->
+<section class="slide-dark" data-background-color="#1A0E2E">
+  <div style="margin-bottom:1em;">
+    <div style="font-family:'Playfair Display',serif;font-size:1.6em;font-weight:800;color:var(--white);letter-spacing:-0.02em;">Affiliate<span style="color:var(--crimson);">Pages</span><span style="font-size:0.8em;vertical-align:super;color:var(--lavender);opacity:0.7">.com</span></div>
+  </div>
+  <p style="font-size:0.8em;color:var(--lavender);font-weight:300;">Starting in just a moment...</p>
+  <p style="font-size:0.9em;color:var(--gold);margin-top:1.5em;font-weight:600;">Type in the chat: Where are you joining from?</p>
+  <p style="font-size:0.85em;color:rgba(255,255,255,0.5);margin-top:2em;">Presented by Mike Filsaime</p>
+  <aside class="notes">Hey everybody! Welcome, welcome, welcome. I am so glad you're here tonight. While we wait for a few more people to hop on, do me a favor — drop in the chat where you're joining from. I want to see how far and wide we've got people tuning in. I see New York... Dallas... oh wow, someone from London — love it. We've got people all over. This is going to be a great session. Give me about sixty seconds and we'll dive right in.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 2 — Title Slide / Big Promise -->
+<!-- ============================================================ -->
+<section class="slide-brand">
+  <h1 style="font-size:1.9em;line-height:1.2;">The 3 Secrets to Building<br><span style="color:var(--gold);">Passive Income</span> Review Sites<br>That Rank on Google and<br>Pay You for Years</h1>
+  <p style="font-size:0.95em;margin-top:1em;opacity:0.85;font-weight:300;">Presented by <strong>Mike Filsaime</strong> &nbsp;|&nbsp; AffiliatePages.com</p>
+  <aside class="notes">Alright, let's go. Tonight, I'm going to share with you The 3 Secrets to Building Passive Income Review Sites That Rank on Google and Pay You for Years. And I mean that literally. I'm going to show you a model where you create a piece of content one time — one time — and it sits on the internet generating traffic and generating commissions for months, even years, while you're sleeping, while you're on vacation, while you're at your kid's soccer game. This isn't theory. I'm going to show you real people doing this right now, including my partner who made over seven hundred thousand dollars last year from sites like these. So buckle up. This is going to be good.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 3 — About Mike (Credibility) -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <span class="tag purple">YOUR PRESENTER</span>
+  <h2>Who Is Mike Filsaime?</h2>
+  <ul style="margin-top:0.5em;">
+    <li>20+ years in digital marketing</li>
+    <li>Creator of <strong>Groove.cm, Kartra, WebinarJam, EverWebinar, Courses.gg</strong></li>
+    <li>Former car dealership sales manager — 65-hour weeks, paycheck to paycheck</li>
+    <li>Discovered affiliate marketing — first commission check within 30 days</li>
+    <li>Now: entrepreneur, investor, world traveler</li>
+  </ul>
+  <aside class="notes">Real quick — if we haven't met, my name is Mike Filsaime. I've been in digital marketing for over twenty years now. I've built platforms some of you have probably used — Kartra, WebinarJam, EverWebinar, Groove.cm, and most recently Courses.gg. But here's the thing — I don't tell you that to brag. I tell you that because I want you to know I wasn't born into this. Twenty-something years ago, I was a car dealership sales manager. Working sixty-five hours a week. Making what felt like decent money until I realized I was living paycheck to paycheck. I had no freedom. No time with my family. No control over my own life. Then I stumbled onto affiliate marketing — and within thirty days, I got my first commission check. It wasn't huge, but it was the most important money I ever made. Because I didn't trade hours for it. I made it while I was sleeping. And that moment changed everything for me. That's what I want to share with you tonight — not my story, but the path that can change YOUR story.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 4 — What You'll Learn -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Tonight's 3 Secrets</h2>
+  <div class="icon-row" style="margin-top:1em;">
+    <div class="icon-card" style="width:200px;">
+      <div class="ic">&#128269;</div>
+      <p><span style="color:var(--crimson);font-weight:700;">Secret #1</span><br>The SEO Review Site Model<br><span style="font-weight:400;opacity:0.7;">(the "what")</span></p>
+    </div>
+    <div class="icon-card" style="width:200px;">
+      <div class="ic">&#129302;</div>
+      <p><span style="color:var(--crimson);font-weight:700;">Secret #2</span><br>The AI Revolution in Content<br><span style="font-weight:400;opacity:0.7;">(the "how")</span></p>
+    </div>
+    <div class="icon-card" style="width:200px;">
+      <div class="ic">&#127974;</div>
+      <p><span style="color:var(--crimson);font-weight:700;">Secret #3</span><br>The "Virtual Vending Machine" System<br><span style="font-weight:400;opacity:0.7;">(the "scale")</span></p>
+    </div>
+  </div>
+  <aside class="notes">So here's what we're going to cover tonight. I'm going to share three secrets with you. Secret Number One is the SEO Review Site Model. This is the 'what' — what this business model is, why it works, and why people are quietly building six- and seven-figure incomes with it while most people have no idea it even exists. Secret Number Two is the AI Revolution in Content. This is the 'how' — how artificial intelligence has completely changed the game, making it possible for one person to do what used to take an entire team. And Secret Number Three is the Virtual Vending Machine System. This is the 'scale' — how to turn this into a real business that compounds over time and pays you like clockwork. Now, I do want to mention — at the end of this presentation, I'm going to share a special offer with you. A tool that my team and I built specifically for this model. But honestly, even if you never buy anything from me, the three secrets I'm about to share will give you a legitimate blueprint you could use on your own. Fair enough? Let's go.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 5 — Housekeeping -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Before We Dive In...</h2>
+  <ul style="margin-top:0.5em;">
+    <li>&#127775; <strong>Stay until the end</strong> — special offer + bonuses</li>
+    <li>&#128221; <strong>Take notes</strong> — this is real education</li>
+    <li>&#10067; <strong>Questions?</strong> Save them for Q&amp;A at the end</li>
+    <li>&#128274; <strong>Turn off distractions</strong> — give me 60 focused minutes</li>
+  </ul>
+  <aside class="notes">Quick housekeeping before we dive in. Number one — please stay until the end. I'm going to share a very special offer at the end of this webinar that is only available to people on this live session. If you leave early, you'll miss it. Number two — take notes. I'm serious. What I'm about to teach you is real, actionable education. This isn't fluff. Number three — if you have questions, hold onto them. We'll do Q&A at the end and I'll stick around to answer as many as I can. And number four — I'm asking you for sixty minutes of your undivided attention. Close the other tabs. Put your phone on do-not-disturb. This could genuinely be the hour that changes your financial future. Alright — Secret Number One.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 6 — Secret #1 Intro -->
+<!-- ============================================================ -->
+<section class="slide-secret">
+  <div class="secret-label">SECRET #1</div>
+  <h1 style="font-size:2.2em;">The SEO Review<br>Site Model</h1>
+  <p class="subtitle" style="color:var(--lavender);">The hidden business model that pays you while you sleep</p>
+  <aside class="notes">Secret Number One — The SEO Review Site Model. Now, I'm going to paint a picture for you here. Because there's a business model hiding in plain sight that most people walk right past every single day. And once you see it, you can't unsee it. It's everywhere. And the people running these businesses? Some of them are making life-changing money. Let me show you what I mean.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 7 — The Review Search Behavior -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>How People Buy Online</h2>
+  <div class="big-number" style="font-size:3.2em;">93%</div>
+  <p style="font-size:0.75em;font-weight:600;color:var(--purple);">of consumers read online reviews before purchasing</p>
+  <ul style="margin-top:0.6em;">
+    <li>"Best [product] review" is searched <strong>millions</strong> of times daily</li>
+    <li>Google is the #1 place people go before buying anything</li>
+  </ul>
+  <div style="margin-top:0.8em;background:white;border-radius:24px;padding:0.4em 1em;display:inline-block;box-shadow:0 2px 12px rgba(0,0,0,0.08);font-size:0.9em;color:#555;">
+    &#128269;&nbsp; <span style="color:var(--dark-purple);font-weight:500;">best CRM software 2026 review</span>
+  </div>
+  <aside class="notes">Let me ask you something. When was the last time you bought something online — a piece of software, a course, a gadget, anything — without Googling it first? Think about it. What do you do? You go to Google and you type something like 'best CRM software review' or 'ClickFunnels vs Kajabi' or 'is Bluehost worth it.' Ninety-three percent of consumers read reviews before making a purchase. Ninety-three percent. That means almost everyone who is about to spend money goes to Google first. And what shows up? Review sites. Comparison articles. 'Best of' lists. Those aren't random. Those are built by people — people who get paid every time someone clicks through their review and buys. That's the model.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 8 — What Are Affiliate Review Sites? -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Affiliate Review Sites Explained</h2>
+  <div class="step-flow" style="margin-top:0.6em;">
+    <div class="step-card">
+      <div class="step-icon">&#128100;</div>
+      <p>Visitor searches Google</p>
+    </div>
+    <div class="step-arrow">&#8594;</div>
+    <div class="step-card">
+      <div class="step-icon">&#128196;</div>
+      <p>Finds your review site</p>
+    </div>
+    <div class="step-arrow">&#8594;</div>
+    <div class="step-card">
+      <div class="step-icon">&#128279;</div>
+      <p>Clicks affiliate link</p>
+    </div>
+    <div class="step-arrow">&#8594;</div>
+    <div class="step-card">
+      <div class="step-icon">&#128176;</div>
+      <p>You earn a commission</p>
+    </div>
+  </div>
+  <ul style="margin-top:0.5em;">
+    <li>No inventory, no customer support, no product creation</li>
+    <li>You're the <strong>"matchmaker"</strong> between buyer and product</li>
+  </ul>
+  <aside class="notes">So what exactly is an affiliate review site? It's a website — usually built on WordPress — that publishes reviews of products and services. Software tools. Online courses. Physical products. Anything with an affiliate program. And inside each review, you include affiliate links. These are special trackable links the product company gives you. When someone reads your review, clicks your link, and buys the product — you get paid a commission. You don't hold inventory. You don't handle customer support. You don't create the product. You're simply the matchmaker. You connect the person searching for a solution with the product that solves their problem. And you get paid for making that introduction. Over and over and over again.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 9 — Why This Model Works -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Why It Works So Well</h2>
+  <ul style="margin-top:0.5em;">
+    <li>The buyer is <strong>already searching</strong> — intent-based traffic</li>
+    <li>You don't need to "sell" — just <strong>educate and recommend</strong></li>
+    <li>SEO traffic is <strong style="color:var(--green);">FREE</strong> — no ad spend</li>
+    <li>Content works <strong>24/7/365</strong> — even while you sleep</li>
+    <li>Recurring commissions from SaaS products = <strong style="color:var(--green);">monthly income</strong></li>
+  </ul>
+  <aside class="notes">Now here's why this model is so powerful — and it comes down to one word: intent. The people finding your reviews aren't random visitors. They're not scrolling social media and accidentally stumbling on your site. They went to Google. They typed in a search. They're actively looking for a solution. They already have their credit card mentally ready. They just need someone to tell them, 'Hey, I've looked at all the options and here's the best one for you.' That's it. You're not cold calling. You're not running expensive ads. You're not writing persuasion emails to a cold audience. You're simply showing up where buyers already are — Google — and helping them make a decision. And the best part? The traffic is free. SEO traffic doesn't cost you a dime. Once your article ranks, it stays there generating visitors and commissions twenty-four hours a day, seven days a week, three hundred sixty-five days a year. And if you're reviewing SaaS products — software products with monthly subscriptions — many of them pay recurring commissions. So you earn every single month that customer stays subscribed. One article. Recurring revenue. That's the game.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 10 — Jitendra Introduction -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <span class="tag purple">CASE STUDY</span>
+  <h2>Meet Jitendra Vaswani</h2>
+  <div class="two-col" style="margin-top:0.5em;">
+    <div style="text-align:center;">
+      <div style="width:180px;height:180px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--dark-purple));margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:3em;color:white;">JV</div>
+      <p style="font-size:0.85em;margin-top:0.5em;color:var(--purple);font-weight:600;">BloggersIdeas.com</p>
+    </div>
+    <div>
+      <ul>
+        <li>Mike's partner in AffiliatePages</li>
+        <li>Runs a <strong>network of review sites</strong></li>
+        <li style="font-size:0.8em;"><strong style="color:var(--green);font-size:1.3em;">$700,000+</strong> per year from affiliate review sites</li>
+        <li>Started from scratch — no special tech skills</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">Now, I could talk about this model all night in theory. But let me introduce you to someone who's living proof. This is Jitendra Vaswani. Jitendra is my partner, and he runs a network of affiliate review sites under BloggersIdeas.com. Last year, Jitendra made over seven hundred thousand dollars from this exact model. Seven hundred thousand. From review sites. And here's the thing about Jitendra that I love — he's not some Silicon Valley tech genius. He started from scratch. He learned SEO. He learned how to write reviews that rank. He built his portfolio one site at a time. And now he's one of the top affiliate marketers in the world. When we were building AffiliatePages, Jitendra was the first person I went to. I said, 'I want to take everything you've learned and put it into a tool that anyone can use.' And that's exactly what we did. But we'll get to that later. First, let me show you the problem.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 11 — The Problem (Old Way) -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2 style="color:var(--crimson);">The Problem: It Takes Forever</h2>
+  <table class="compare-table" style="margin-top:0.5em;">
+    <tr><th style="background:var(--crimson);">Task</th><th style="background:var(--crimson);text-align:right;">Hours</th></tr>
+    <tr><td>Research the product</td><td class="old" style="text-align:right;">2-4 hours</td></tr>
+    <tr><td>Research competitor reviews</td><td class="old" style="text-align:right;">2-3 hours</td></tr>
+    <tr><td>Write the review (3,000+ words)</td><td class="old" style="text-align:right;">4-8 hours</td></tr>
+    <tr><td>Optimize for SEO</td><td class="old" style="text-align:right;">1-2 hours</td></tr>
+    <tr><td>Format and publish on WordPress</td><td class="old" style="text-align:right;">1-2 hours</td></tr>
+    <tr style="background:rgba(230,57,70,0.08);"><td><strong>TOTAL per review</strong></td><td style="text-align:right;"><strong style="color:var(--crimson);font-size:1.2em;">10-19 hours</strong></td></tr>
+  </table>
+  <p style="font-size:0.95em;color:var(--crimson);font-weight:600;margin-top:0.4em;">At that rate: one review per week MAX</p>
+  <aside class="notes">Here's the problem with this model — and it's the reason most people never succeed with it even though the model itself is incredible. It takes forever. Let me break down what it actually takes to create one quality review that has a chance of ranking on Google. First, you have to research the product. You need to actually understand what it does, what the features are, what the pros and cons are. That's two to four hours. Then you need to research what's already ranking — your competitor reviews. What are they covering? What are they missing? Another two to three hours. Then you have to write the actual review. And we're not talking about a three-hundred-word blog post. To rank on Google in 2026, you need deep, comprehensive content. Three thousand words minimum. That's four to eight hours if you're a decent writer. More if you're not. Then SEO optimization — headers, meta descriptions, keywords, internal linking. Another hour or two. Then formatting everything, adding images, and publishing to WordPress. Another hour or two. Add it all up and you're looking at ten to nineteen hours for a single review. One review. At that pace, you're maybe publishing one per week. And you need dozens — maybe hundreds — of reviews to build a real income from this. You can see the problem, right? The model works. But the execution is brutal.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 12 — Example Review Site -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <span class="tag green">REAL EXAMPLE</span>
+  <h2>A Real Review Site</h2>
+  <div style="background:white;border-radius:12px;padding:1em;box-shadow:0 4px 24px rgba(0,0,0,0.08);margin:0.5em auto;max-width:600px;text-align:left;">
+    <div style="font-size:0.85em;color:var(--purple);font-weight:700;">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8/5 — Expert Review</div>
+    <div style="font-family:'Playfair Display',serif;font-size:0.75em;font-weight:700;color:var(--dark-purple);margin:0.3em 0;">GoHighLevel Review 2026: The Complete Breakdown</div>
+    <div style="font-size:0.75em;color:#888;margin-bottom:0.4em;">Features | Pricing | Pros & Cons | Verdict</div>
+    <div style="display:flex;gap:0.5em;">
+      <div style="flex:1;background:var(--lavender);border-radius:6px;padding:0.4em;font-size:0.7em;text-align:center;">&#9989; Pros<br>Easy to use<br>All-in-one</div>
+      <div style="flex:1;background:#FEE;border-radius:6px;padding:0.4em;font-size:0.7em;text-align:center;">&#10060; Cons<br>Learning curve<br>Price tier jumps</div>
+    </div>
+    <div style="background:var(--crimson);color:white;text-align:center;padding:0.3em;border-radius:6px;margin-top:0.4em;font-size:0.8em;font-weight:700;">Try GoHighLevel Free for 14 Days &#8594;</div>
+  </div>
+  <div class="value-badge" style="margin-top:0.3em;">This page generates $2,000+/month</div>
+  <aside class="notes">But let me show you what the end result looks like when it's done right. This is a real review site. Look at this page — it's a review of a popular SaaS product. Clean layout. Strong headline. Star rating. Detailed pros and cons. Comparison tables. And those orange buttons? Those are affiliate links. Every time someone clicks one of those and purchases, the site owner earns a commission. This single page generates over two thousand dollars a month. One page. Two thousand dollars a month. It was written once. It ranks on the first page of Google. And it just keeps paying. Month after month after month. Now imagine you had ten pages like this. Twenty. Fifty. That's where the math starts getting really exciting.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 13 — The Math of the Model -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>The Simple Math</h2>
+  <div style="margin:0.6em 0;">
+    <div class="math-row"><span class="pages">1 page</span><span class="equals">=</span><span class="income">$100 – $500/month</span></div>
+    <div class="math-row"><span class="pages">10 pages</span><span class="equals">=</span><span class="income">$1,000 – $5,000/month</span></div>
+    <div class="math-row"><span class="pages">50 pages</span><span class="equals">=</span><span class="income">$5,000 – $25,000/month</span></div>
+    <div class="math-row" style="font-size:0.85em;"><span class="pages" style="font-size:1.1em;">100 pages</span><span class="equals">=</span><span class="income" style="font-size:1.1em;">$10,000 – $50,000/month</span></div>
+  </div>
+  <p style="font-size:0.95em;font-weight:600;color:var(--purple);margin-top:0.5em;">This is how Jitendra built a <span style="color:var(--green);">$700K/year</span> business</p>
+  <aside class="notes">Let's do some simple math here. A single well-written, well-optimized review page — on average — can earn somewhere between a hundred and five hundred dollars per month in affiliate commissions. Some earn less. Some earn a lot more. But let's use conservative numbers. If you have ten pages earning an average of two hundred and fifty dollars a month, that's twenty-five hundred dollars a month. Fifty pages? Twelve thousand five hundred a month. A hundred pages? Twenty-five thousand dollars a month. Three hundred thousand a year. And these are conservative numbers. Jitendra has hundreds of review pages across his sites. That's how he got to seven hundred thousand. It's not magic. It's math. It's volume. And the beauty is — every page you create is an asset. It doesn't go away. It compounds. Your fiftieth page doesn't erase your first page. They all keep working together. The question isn't whether the model works. The question is: how fast can you create quality review pages?</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 14 — The Opportunity -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Billions of Products, Zero Competition</h2>
+  <div class="big-number" style="font-size:2.8em;">350M+</div>
+  <p style="font-size:0.7em;font-weight:600;color:var(--purple);">products on Amazon alone</p>
+  <ul style="margin-top:0.5em;">
+    <li>Thousands of SaaS companies launch every year</li>
+    <li>Most products have <strong style="color:var(--crimson);">NO quality reviews</strong></li>
+    <li>First-mover advantage is real</li>
+  </ul>
+  <p style="font-size:0.7em;font-weight:700;color:var(--purple);margin-top:0.5em;">"The internet needs reviewers"</p>
+  <aside class="notes">Now here's what makes this even more exciting. The opportunity is enormous — and it's barely been touched. Amazon alone has over three hundred and fifty million products. Thousands of new software companies launch every single year. And here's the crazy part — most of these products have no quality reviews. None. Go Google some mid-tier SaaS tool right now. You'll find a handful of thin, surface-level articles and maybe a Reddit thread. That's it. The internet is starving for quality review content. And when you're the first person to write a genuinely helpful, comprehensive review of a product? Google rewards you. You get first-mover advantage. You rank. You stay ranked. And you earn. This isn't a saturated market. This is a blue ocean. The question isn't whether there's room for you. The question is how much of this opportunity are you going to claim?</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 15 — Types of Review Content -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>3 Types of Review Content</h2>
+  <div class="icon-row" style="margin-top:0.7em;">
+    <div class="icon-card" style="width:200px;background:rgba(107,63,160,0.06);border-radius:10px;padding:0.8em;">
+      <div class="ic">&#128196;</div>
+      <p><strong style="color:var(--purple);">Single Review</strong><br>"ClickFunnels Review 2026"<br><span style="font-weight:400;opacity:0.7;font-size:0.85em;">Buyer knows the product</span></p>
+    </div>
+    <div class="icon-card" style="width:200px;background:rgba(107,63,160,0.06);border-radius:10px;padding:0.8em;">
+      <div class="ic">&#9878;&#65039;</div>
+      <p><strong style="color:var(--purple);">Head-to-Head</strong><br>"GoHighLevel vs ClickFunnels"<br><span style="font-weight:400;opacity:0.7;font-size:0.85em;">Buyer choosing between options</span></p>
+    </div>
+    <div class="icon-card" style="width:200px;background:rgba(107,63,160,0.06);border-radius:10px;padding:0.8em;">
+      <div class="ic">&#127942;</div>
+      <p><strong style="color:var(--purple);">Roundup</strong><br>"Best Funnel Builders 2026"<br><span style="font-weight:400;opacity:0.7;font-size:0.85em;">Buyer exploring the category</span></p>
+    </div>
+  </div>
+  <p style="font-size:0.95em;font-weight:600;color:var(--dark-purple);margin-top:0.5em;">All three = maximum search coverage</p>
+  <aside class="notes">And there's not just one type of review you can create. There are three main types, and each one targets a different kind of buyer. First, there's the Single Product Review. This is your classic 'ClickFunnels Review 2026' article. Someone already knows about the product and wants a detailed breakdown before buying. Second, there's the Head-to-Head Comparison. 'GoHighLevel vs ClickFunnels.' This is for the person who's narrowed it down to two or three options and needs help choosing. These are incredibly high-converting because the person is right at the decision point. And third, there's the Roundup or Best-of list. 'Best Funnel Builders in 2026.' This captures people earlier in their research — they haven't even decided which product yet. They're looking at the whole category. When you create all three types for a product category, you dominate the search results. You capture buyers at every stage of their journey. And every article funnels them through your affiliate links.</aside>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SLIDE 16 — Recurring Commissions Deep Dive -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Recurring = Real Wealth</h2>
+  <div style="background:white;border-radius:10px;padding:0.8em;box-shadow:0 2px 12px rgba(0,0,0,0.06);margin:0.5em auto;max-width:550px;text-align:left;font-size:0.9em;">
+    <p style="font-weight:700;color:var(--purple);margin-bottom:0.3em;">Example: SaaS Product Commissions</p>
+    <p>$97/mo product &times; 30% commission = <strong style="color:var(--green);">$29.10/month</strong> per referral</p>
+    <p>100 active referrals = <strong style="color:var(--green);font-size:1.2em;">$2,910/month recurring</strong></p>
+  </div>
+  <ul style="margin-top:0.4em;">
+    <li><strong>"Mailbox money"</strong> — checks arrive like clockwork</li>
+    <li>Old referrals keep paying while new ones stack on top</li>
+    <li>The growth is <strong style="color:var(--green);">exponential</strong></li>
+  </ul>
+  <aside class="notes">I want to spend a minute on recurring commissions because this is where the real wealth gets built. A lot of SaaS products — software tools with monthly subscriptions — offer what's called recurring affiliate commissions. That means you don't just get paid once. You get paid every single month that your referred customer stays subscribed. Let me give you a real example. Say you're reviewing a software tool that costs ninety-seven dollars a month and they pay a thirty-percent recurring commission. That's twenty-nine dollars and ten cents per month for every customer you refer. Refer a hundred customers over the course of a year? That's two thousand nine hundred and ten dollars per month — every month — and you didn't do anything new to earn it. This is what I call mailbox money. I discovered this twenty years ago and it changed my life. I'd go to my mailbox and there'd be commission checks sitting there. I didn't make a new sale that day. I didn't do anything that day. The sale happened weeks or months ago, and it just kept paying me. Now stack that on top of new referrals coming in every month from your review pages that are ranking on Google. Old referrals keep paying. New referrals stack on top. The growth is exponential.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 17 — The Gap (Problem Recap) -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Great Model, One Problem</h2>
+  <ul class="checklist" style="margin-top:0.5em;max-width:500px;margin-left:auto;margin-right:auto;">
+    <li>The model works</li>
+    <li>The math works</li>
+    <li>The opportunity is massive</li>
+    <li class="fail">But... it takes <strong>10-19 hours</strong> per review</li>
+  </ul>
+  <div style="margin-top:1em;background:var(--purple);color:white;padding:0.5em 1.2em;border-radius:8px;display:inline-block;font-size:0.75em;font-weight:700;">
+    What if 10+ hours became <span style="color:var(--gold);">under an hour</span>?
+  </div>
+  <aside class="notes">So let's recap where we are. The model works — check. The math works — check. The opportunity is massive — check. But there's still that one problem. It takes ten to nineteen hours to create a single quality review. And that's the bottleneck. That's the wall that stops ninety-five percent of people from ever making real money with this model. They know it works. They try it. They write one or two reviews. It takes them all weekend. They get discouraged. And they quit. So here's the million-dollar question — what if you could cut that time from ten-plus hours... to under an hour? What if the bottleneck just... disappeared? That's exactly what Secret Number Two is about.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 18 — Transition to Secret #2 -->
+<!-- ============================================================ -->
+<section class="slide-dark">
+  <div class="progress-track">
+    <div class="progress-dot done">&#10003;</div>
+    <div class="progress-line"></div>
+    <div class="progress-dot active">2</div>
+    <div class="progress-line"></div>
+    <div class="progress-dot">3</div>
+  </div>
+  <h2 style="margin-top:0.5em;">Secret #1: The Model <span style="color:var(--green);">&#10003;</span></h2>
+  <p style="font-size:0.75em;color:var(--lavender);margin-top:0.5em;">Next: Secret #2 will show you how <span style="color:var(--gold);font-weight:700;">AI changes everything</span></p>
+  <aside class="notes">That's Secret Number One. You now understand the model. You understand why people search for reviews. You understand how affiliate sites make money. You've seen the math. You've met Jitendra who's doing seven hundred thousand a year with it. And you understand the one thing that's been holding people back — the time it takes. Now let's unlock Secret Number Two — and I promise you, this is where it gets really exciting.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 19 — Secret #2 Intro -->
+<!-- ============================================================ -->
+<section class="slide-secret">
+  <div class="secret-label">SECRET #2</div>
+  <h1 style="font-size:2.2em;">The AI Revolution<br>in Content</h1>
+  <p class="subtitle" style="color:var(--lavender);">How artificial intelligence eliminated the bottleneck</p>
+  <aside class="notes">Secret Number Two — The AI Revolution in Content. I've been in this industry for over twenty years, and I can tell you honestly — what's happening right now with artificial intelligence is the single biggest shift I've ever seen. Bigger than social media. Bigger than mobile. Bigger than any platform launch. And the reason it matters so much for this model is because AI eliminates the exact bottleneck we just talked about. Let me show you how.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 20 — The Old Way vs. The New Way -->
+<!-- ============================================================ -->
+<section class="slide-compare">
+  <h2>Old Way vs. New Way</h2>
+  <table class="compare-table" style="margin-top:0.5em;">
+    <tr><th style="background:var(--crimson);">Old Way</th><th style="background:var(--green);">New Way (AI)</th></tr>
+    <tr><td class="old">Research product: 3 hrs</td><td class="new">AI researches in seconds</td></tr>
+    <tr><td class="old">Study competitors: 3 hrs</td><td class="new">AI analyzes top results instantly</td></tr>
+    <tr><td class="old">Write 3,000 words: 6 hrs</td><td class="new">AI drafts in minutes</td></tr>
+    <tr><td class="old">SEO optimization: 2 hrs</td><td class="new">AI handles SEO automatically</td></tr>
+    <tr><td class="old">Publish to WordPress: 2 hrs</td><td class="new">One-click publishing</td></tr>
+    <tr style="background:rgba(0,0,0,0.04);"><td><strong style="color:var(--crimson);font-size:1.2em;">~16 hours</strong></td><td><strong style="color:var(--green);font-size:1.2em;">2&ndash;3 hours</strong></td></tr>
+  </table>
+  <p style="font-size:0.95em;font-weight:700;color:var(--purple);margin-top:0.4em;">Days become hours. Hours become income.</p>
+  <aside class="notes">Let me put this side by side so you can really see the difference. The old way — the way most people have been doing this: research the product, three hours. Study competitor reviews, three hours. Write a three-thousand-word review, six hours. Optimize for SEO, two hours. Format and publish to WordPress, two hours. Total: about sixteen hours. One review. The new way — with AI: AI researches the product in seconds. AI analyzes what's already ranking so you know exactly what to cover. AI drafts the entire review — three thousand words, structured, comprehensive — in minutes. SEO? Handled automatically. Publishing? One click to WordPress. Total time: two to three hours, including choosing your product, reviewing the output, adding your personal touch, and publishing. We went from sixteen hours to two to three hours. Days become hours. And those hours become income. That changes everything about the math we talked about in Secret Number One.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 21 — Why AI + SEO + WordPress -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>The Winning Trifecta</h2>
+  <div class="icon-row" style="margin-top:0.8em;">
+    <div class="icon-card" style="width:180px;background:rgba(107,63,160,0.08);border-radius:50%;padding:1.2em 0.5em;">
+      <div class="ic">&#129302;</div>
+      <p><strong style="color:var(--purple);">AI</strong><br><span style="font-weight:400;font-size:0.85em;">The Writer</span></p>
+    </div>
+    <div class="icon-card" style="width:180px;background:rgba(107,63,160,0.08);border-radius:50%;padding:1.2em 0.5em;">
+      <div class="ic">&#128269;</div>
+      <p><strong style="color:var(--purple);">SEO</strong><br><span style="font-weight:400;font-size:0.85em;">The Strategy</span></p>
+    </div>
+    <div class="icon-card" style="width:180px;background:rgba(107,63,160,0.08);border-radius:50%;padding:1.2em 0.5em;">
+      <div class="ic">&#127760;</div>
+      <p><strong style="color:var(--purple);">WordPress</strong><br><span style="font-weight:400;font-size:0.85em;">The Platform (43% of web)</span></p>
+    </div>
+  </div>
+  <p style="font-size:0.75em;font-weight:700;color:var(--dark-purple);margin-top:0.8em;">Together = an <span style="color:var(--crimson);">unstoppable</span> content machine</p>
+  <aside class="notes">Now here's what makes this combination so powerful. It's not just AI by itself. It's AI plus SEO plus WordPress. Think of it as a trifecta. AI is your writer. It's fast. It's tireless. It can produce comprehensive, well-structured content at a pace no human can match. But AI without strategy is just noise. That's where SEO comes in. SEO is your strategy. It tells the AI what to write about, how to structure it, and what keywords to target so that your content actually ranks on Google where buyers are searching. And then WordPress — WordPress powers forty-three percent of the entire internet. It's the most trusted, most flexible platform for publishing content. Google loves WordPress sites. And there are thousands of plugins and themes specifically designed for review content. When you combine all three — AI writing, SEO strategy, and WordPress publishing — you've got a machine. A content machine that produces high-quality, search-optimized review pages at scale.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 22 — The Knowledge Base Concept -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>The Knowledge Base Secret</h2>
+  <div class="step-flow" style="margin-top:0.5em;">
+    <div class="step-card" style="border:2px solid var(--purple);">
+      <div class="step-icon">&#128279;</div>
+      <p>Product URLs &amp; feature data</p>
+    </div>
+    <div class="step-arrow">&#8594;</div>
+    <div class="step-card" style="border:2px solid var(--crimson);background:rgba(230,57,70,0.05);">
+      <div class="step-icon">&#129504;</div>
+      <p>AI Knowledge Base</p>
+    </div>
+    <div class="step-arrow">&#8594;</div>
+    <div class="step-card" style="border:2px solid var(--green);">
+      <div class="step-icon">&#11088;</div>
+      <p>Rankable, detailed review</p>
+    </div>
+  </div>
+  <ul style="margin-top:0.5em;">
+    <li>Raw AI = generic, surface-level content</li>
+    <li>Knowledge Base AI = <strong>accurate, deep, competitive</strong></li>
+  </ul>
+  <p style="font-size:0.7em;font-weight:700;color:var(--purple);margin-top:0.4em;">"Garbage in, garbage out — <span style="color:var(--green);">Gold in, gold out</span>"</p>
+  <aside class="notes">But here's the thing — and this is something most people miss. You can't just open ChatGPT and say 'write me a review of GoHighLevel' and expect it to rank on Google. Why? Because the output will be generic. Surface-level. It won't have specific details, current pricing, real feature comparisons, or the kind of depth that Google rewards. That's why we developed what we call the Knowledge Base concept. Before the AI writes a single word, you feed it real data. You give it the product's actual website URL so it can pull current features and pricing. You feed it competitor reviews — the articles that are already ranking on page one of Google — so the AI knows what it needs to match and exceed. You give it gold, you get gold back. Garbage in, garbage out. But gold in? Gold out. The Knowledge Base is what separates a mediocre AI-generated article from a review that actually ranks and converts. This is one of the key breakthroughs we built into AffiliatePages.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 23 — Demo Concept (The Process) -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>See It In Action</h2>
+  <div class="step-flow" style="margin-top:0.5em;">
+    <div class="step-card"><div class="step-num">STEP 1</div><div class="step-icon">&#128279;</div><p>Enter a product URL</p></div>
+    <div class="step-arrow">&#8594;</div>
+    <div class="step-card"><div class="step-num">STEP 2</div><div class="step-icon">&#129504;</div><p>AI builds Knowledge Base</p></div>
+    <div class="step-arrow">&#8594;</div>
+    <div class="step-card"><div class="step-num">STEP 3</div><div class="step-icon">&#128203;</div><p>Choose review type</p></div>
+    <div class="step-arrow">&#8594;</div>
+    <div class="step-card"><div class="step-num">STEP 4</div><div class="step-icon">&#9999;&#65039;</div><p>AI writes the review</p></div>
+    <div class="step-arrow">&#8594;</div>
+    <div class="step-card"><div class="step-num">STEP 5</div><div class="step-icon">&#127793;</div><p>One-click publish</p></div>
+  </div>
+  <div style="margin-top:0.8em;">
+    <span class="tag green" style="font-size:0.9em;padding:0.3em 1em;">URL &#8594; Published Review in Minutes, Not Days</span>
+  </div>
+  <aside class="notes">Let me walk you through what this actually looks like in practice. Step one: you enter a product URL. That's it. You just paste the link to the product you want to review. Step two: the AI builds your Knowledge Base. It crawls the product site, pulls in features, pricing, pros, cons. It analyzes what's already ranking on Google for that product. Step three: you choose what type of review you want. Single product review? Head-to-head comparison? Best-of roundup? You pick. Step four: the AI writes the complete review. Three thousand-plus words. SEO-optimized. Structured with headers, tables, ratings — everything. Step five: one click and it publishes directly to your WordPress site. Formatted. With images. Ready to go. From URL to published review in a couple of hours — including your review and personal touch. That's the process. And it's repeatable. You can do this multiple times a day. That's how you build a real portfolio of income-producing review pages.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 24 — Quality of AI Content -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Not Your Grandma's AI Content</h2>
+  <ul style="margin-top:0.5em;">
+    <li>Deep, comprehensive reviews — <strong>3,000+ words</strong></li>
+    <li>Proper structure: intro, features, pros/cons, pricing, verdict</li>
+    <li>SEO-optimized headers and meta descriptions</li>
+    <li>Comparison tables and rating systems</li>
+    <li>Written in a <strong>natural, human-sounding voice</strong></li>
+  </ul>
+  <p style="font-size:0.7em;font-weight:700;color:var(--purple);margin-top:0.6em;">"Google can't tell. Readers <span style="color:var(--green);">love it</span>."</p>
+  <aside class="notes">Now, some of you might be thinking — 'Mike, AI content? Doesn't Google penalize AI content? Isn't it going to sound robotic?' Great questions. Let me address both. First — Google's official position is that they don't care whether content is written by a human or AI. They care about quality. Helpful, comprehensive, accurate content ranks. Period. The AI content we're producing isn't thin, spammy garbage. These are deep, three-thousand-word reviews with proper structure. Introduction. Feature breakdowns. Pros and cons. Pricing analysis. Final verdict. Comparison tables. Rating systems. It reads like a professional writer spent hours on it — because the AI did spend the equivalent of hours processing data and structuring the output. Second — the voice. Modern AI doesn't sound robotic anymore. Especially when it's trained on the Knowledge Base we talked about. It writes naturally. Conversationally. Like a real person who actually used the product. Google can't tell the difference. And more importantly, readers love it because they're getting the thorough, helpful information they came looking for.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 25 — The SEO Advantage -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>AI Writes, SEO Ranks</h2>
+  <ul style="margin-top:0.5em;">
+    <li>Keyword research baked into every review</li>
+    <li>Proper header hierarchy (H1, H2, H3)</li>
+    <li>Meta descriptions and title tags optimized</li>
+    <li>Internal and external linking structure</li>
+    <li>Schema markup for <strong>rich snippets</strong> in Google</li>
+  </ul>
+  <div style="margin-top:0.6em;background:white;border-radius:8px;padding:0.5em 0.8em;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:inline-block;text-align:left;font-size:0.8em;">
+    <div style="color:var(--purple);font-weight:600;">GoHighLevel Review 2026 — Expert Analysis</div>
+    <div style="color:var(--green);font-size:0.9em;">affiliatepages.com/gohighlevel-review</div>
+    <div style="color:var(--gold);">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8 — 127 reviews — Updated March 2026</div>
+  </div>
+  <p style="font-size:0.9em;color:var(--dark-purple);margin-top:0.3em;">^ Rich snippet = more clicks = more commissions</p>
+  <aside class="notes">Here's another thing that separates what we've built from just using ChatGPT. SEO is baked into every single review from the very beginning. The AI doesn't just write — it writes to rank. Every review includes keyword research targeting the exact phrases people are actually searching. The header hierarchy is structured for Google's crawlers. Meta descriptions and title tags are optimized for click-through rates. Internal and external links are structured properly. And we even include schema markup — that's the code that tells Google to show star ratings and review snippets right there in the search results. You know those results on Google that show stars and ratings? That's schema markup. And it massively increases your click-through rate. We didn't just build a content writer. We built a ranking machine.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 26 — WordPress Integration -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>WordPress: Your Cash Machine</h2>
+  <div class="big-number purple" style="font-size:3em;">43%</div>
+  <p style="font-size:0.95em;font-weight:600;color:var(--purple);">of all websites run on WordPress</p>
+  <ul style="margin-top:0.4em;">
+    <li>Google <strong>trusts</strong> WordPress</li>
+    <li>Thousands of affiliate-friendly themes</li>
+    <li><strong>One-click publishing</strong> from AffiliatePages</li>
+    <li>You <strong>own</strong> your site — not renting from a platform</li>
+  </ul>
+  <p style="font-size:0.95em;font-weight:700;color:var(--dark-purple);margin-top:0.4em;">Your Site. Your Asset. Your Future.</p>
+  <aside class="notes">And why WordPress? Why not Medium or Wix or some other platform? Because WordPress is the gold standard. Forty-three percent of all websites on the entire internet run on WordPress. Google trusts WordPress sites. There are thousands of themes specifically designed for review and affiliate content. And most importantly — you own it. This is your site. Your domain. Your asset. You're not building on rented land. You're not at the mercy of some platform that could change its algorithm or shut you down tomorrow. Your WordPress site is yours. And AffiliatePages publishes directly to WordPress with one click. Your review goes from our AI engine to your live website in seconds. Formatted. Styled. Ready to rank.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 27 — "So Easy a Caveman Can Do It" -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Ridiculously Simple</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5em;margin:0.6em auto;max-width:500px;">
+    <div style="background:rgba(230,57,70,0.06);border-radius:8px;padding:0.5em;text-align:center;font-size:0.9em;">
+      <span style="font-size:1.5em;">&#10060;</span><br><strong>No coding</strong> required
+    </div>
+    <div style="background:rgba(230,57,70,0.06);border-radius:8px;padding:0.5em;text-align:center;font-size:0.9em;">
+      <span style="font-size:1.5em;">&#10060;</span><br><strong>No SEO expertise</strong> required
+    </div>
+    <div style="background:rgba(230,57,70,0.06);border-radius:8px;padding:0.5em;text-align:center;font-size:0.9em;">
+      <span style="font-size:1.5em;">&#10060;</span><br><strong>No writing skills</strong> required
+    </div>
+    <div style="background:rgba(230,57,70,0.06);border-radius:8px;padding:0.5em;text-align:center;font-size:0.9em;">
+      <span style="font-size:1.5em;">&#10060;</span><br><strong>No WordPress exp.</strong> required
+    </div>
+  </div>
+  <p style="font-size:0.75em;font-weight:700;color:var(--purple);margin-top:0.6em;">"If you can copy and paste a URL,<br>you can do this."</p>
+  <aside class="notes">And here's what I really want you to understand — you don't need to be a tech person to do this. You don't need to know how to code. You don't need to be an SEO expert. You don't need to be a good writer. You don't even need to have WordPress experience. If you can copy and paste a URL into a text box and click a button, you can create a professional, SEO-optimized review page that has the potential to rank on Google and earn you commissions for years. I'm not exaggerating. We designed this for regular people. People who've never built a website. People who think SEO is a type of CEO. People who couldn't write a five-hundred-word essay if their life depended on it. The AI handles everything. You just guide it — tell it what product to review, pick your review type, and click publish. That's it. I once said about one of my earlier products, 'It's so easy a caveman can do it.' This is even simpler.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 28 — Speed Creates Opportunity -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Speed = Competitive Advantage</h2>
+  <ul style="margin-top:0.5em;">
+    <li>New products launch <strong>every day</strong></li>
+    <li>First review to rank = <strong style="color:var(--green);">first-mover advantage</strong></li>
+    <li>AI speed: review products on <strong>launch day</strong></li>
+    <li>While others spend weeks on 1 review, <strong>you've published 20</strong></li>
+  </ul>
+  <div style="margin-top:0.8em;padding:0.5em 1em;background:rgba(107,63,160,0.08);border-radius:8px;display:inline-block;">
+    <p style="font-size:0.95em;font-weight:600;color:var(--dark-purple);font-style:italic;">"In a gold rush, sell shovels.<br>In an AI rush, <span style="color:var(--crimson);">use them</span>."</p>
+  </div>
+  <aside class="notes">And here's something else that most people miss. Speed isn't just convenient — speed is a competitive advantage. New products launch every single day. New software tools. New courses. New services. And here's the thing about Google — the first quality review that gets indexed for a new product tends to stay on page one. First-mover advantage is real in SEO. So while your competitors are spending weeks writing one review the traditional way, you've already published twenty. You've claimed twenty keywords. Twenty product reviews. Twenty income-producing assets. By the time they publish their one review, you're already ranking for it. In a gold rush, the smart move is to sell shovels. In an AI rush? The smart move is to use them — before everyone else catches on.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 29 — Results Preview -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <span class="tag green">PROVEN RESULTS</span>
+  <h2>Real Results, Real People</h2>
+  <div style="display:flex;gap:1em;justify-content:center;margin:0.6em 0;flex-wrap:wrap;">
+    <div style="background:white;border-radius:10px;padding:0.8em;box-shadow:0 2px 12px rgba(0,0,0,0.06);width:220px;text-align:center;">
+      <div style="font-family:'Playfair Display',serif;font-size:1.8em;font-weight:900;color:var(--green);">$700K+</div>
+      <p style="font-size:0.8em;color:var(--dark-purple);font-weight:600;">Jitendra Vaswani — per year</p>
+    </div>
+    <div style="background:white;border-radius:10px;padding:0.8em;box-shadow:0 2px 12px rgba(0,0,0,0.06);width:220px;text-align:center;">
+      <div style="font-family:'Playfair Display',serif;font-size:1.5em;font-weight:900;color:var(--purple);">&lt; 2 weeks</div>
+      <p style="font-size:0.8em;color:var(--dark-purple);font-weight:600;">Students: zero to first commission</p>
+    </div>
+  </div>
+  <p style="font-size:0.95em;color:var(--dark-purple);font-weight:600;margin-top:0.5em;">"This isn't a promise. It's a <span style="color:var(--green);">proven model</span>."</p>
+  <p style="font-size:0.7em;color:#999;margin-top:0.3em;">Results vary based on effort, niche, and consistency. Individual outcomes not guaranteed.</p>
+  <aside class="notes">Now I want to be careful here because I never want to promise anyone a specific income result. I can't. Your results depend on your effort, your niche selection, your consistency. But what I can tell you is this — the model is proven. Jitendra makes over seven hundred thousand a year. Students who've gone through his training program have generated their first commission checks in under two weeks. Real people. Real results. And with the AI tools we now have, the barrier to entry has never been lower. You don't need six months to see if this works. You can start publishing reviews today and see traffic within weeks. This isn't a promise of riches. It's a proven model that works when you work it.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 30 — Transition to Secret #3 -->
+<!-- ============================================================ -->
+<section class="slide-dark">
+  <div class="progress-track">
+    <div class="progress-dot done">&#10003;</div>
+    <div class="progress-line" style="background:var(--green);opacity:1;"></div>
+    <div class="progress-dot done">&#10003;</div>
+    <div class="progress-line"></div>
+    <div class="progress-dot active">3</div>
+  </div>
+  <h2 style="margin-top:0.5em;">Secret #1: The Model <span style="color:var(--green);">&#10003;</span></h2>
+  <h2>Secret #2: The AI Tool <span style="color:var(--green);">&#10003;</span></h2>
+  <p style="font-size:0.75em;color:var(--lavender);margin-top:0.5em;">Next: Secret #3 — the system that makes it <span style="color:var(--gold);font-weight:700;">scale</span></p>
+  <aside class="notes">So that's Secret Number Two. You now know that AI has completely eliminated the bottleneck. What used to take days now takes hours. The AI researches, writes, optimizes, and publishes — all you have to do is guide it. Secret Number One gave you the model. Secret Number Two gave you the tool. Now Secret Number Three is going to give you the system — the system that turns this from a side hustle into a real, scalable business. This is where it all comes together.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 31 — Secret #3 Intro -->
+<!-- ============================================================ -->
+<section class="slide-secret">
+  <div class="secret-label">SECRET #3</div>
+  <h1 style="font-size:2em;">The "Virtual<br>Vending Machine"<br>System</h1>
+  <p class="subtitle" style="color:var(--lavender);">How to turn review sites into a scalable, compounding income machine</p>
+  <aside class="notes">Secret Number Three — The Virtual Vending Machine System. Now, I love this analogy and I want you to really let it sink in. Because once you see your review pages this way, everything changes about how you approach this business.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 32 — The Vending Machine Analogy -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Each Review = A Vending Machine</h2>
+  <div class="two-col" style="margin-top:0.6em;">
+    <div style="text-align:center;background:rgba(107,63,160,0.05);border-radius:10px;padding:1em;">
+      <div style="font-size:3em;">&#127974;</div>
+      <p style="font-size:0.85em;font-weight:600;color:var(--purple);">Physical<br>Vending Machine</p>
+      <p style="font-size:0.75em;color:var(--dark-purple);">Set up once, earns on autopilot</p>
+    </div>
+    <div style="text-align:center;background:rgba(46,204,113,0.05);border-radius:10px;padding:1em;">
+      <div style="font-size:3em;">&#128196;</div>
+      <p style="font-size:0.85em;font-weight:600;color:var(--green);">Your Review Page<br>(Virtual Vending Machine)</p>
+      <p style="font-size:0.75em;color:var(--dark-purple);">Publish once, earns on autopilot</p>
+    </div>
+  </div>
+  <p style="font-size:0.7em;font-weight:700;color:var(--dark-purple);margin-top:0.6em;">How many vending machines do <span style="color:var(--crimson);">you</span> want?</p>
+  <aside class="notes">Think about a physical vending machine. You find a location. You stock it. You set it up. And then what? It earns money on autopilot. People walk by. They put in their money. They get their product. You collect the profits. You didn't have to stand there all day. You didn't have to sell anything. The machine did the work. Now imagine each review page you publish is a virtual vending machine. You set it up — you create the review, optimize it, publish it. And then it sits there on Google. People search for the product. They find your review. They read it. They click your affiliate link. They buy. You earn a commission. You didn't do anything that day. The review page — your virtual vending machine — did the work. One page equals one vending machine. Now here's the question that should be forming in your mind: how many vending machines do you want?</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 33 — The 3-Per-Day System -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>3 Machines Per Day</h2>
+  <div style="margin:0.5em 0;">
+    <div class="math-row"><span class="pages">15 min &times; 3</span><span class="equals">=</span><span class="income">45 minutes of work/day</span></div>
+    <div class="math-row"><span class="pages">3/day &times; 30</span><span class="equals">=</span><span class="income" style="color:var(--purple);">90 review pages/month</span></div>
+    <div class="math-row" style="font-size:0.85em;"><span class="pages" style="font-size:1.1em;">90 &times; 12</span><span class="equals">=</span><span class="income" style="font-size:1.1em;">1,080 pages in year one</span></div>
+  </div>
+  <p style="font-size:0.75em;font-weight:700;color:var(--dark-purple);margin-top:0.6em;">"You're not building a blog.<br>You're building an <span style="color:var(--crimson);">empire</span>."</p>
+  <aside class="notes">Here's where the system becomes incredibly powerful. With AI, you can realistically create three quality review pages per day. Three. Each one takes about fifteen minutes. That's forty-five minutes of work per day. Now let's do the math. Three pages a day, thirty days a month — that's ninety new review pages per month. Ninety virtual vending machines set up in thirty days. In a year? Over a thousand review pages. A thousand virtual vending machines, all working for you, all ranking on Google, all earning commissions. You're not building a blog. You're not writing articles. You're building an empire. An empire of digital assets that earn while you sleep, while you travel, while you spend time with your family. And it all starts with forty-five minutes a day.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 34 — The Compound Effect -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Compounding Income Over Time</h2>
+  <div class="timeline-row" style="margin-top:0.5em;">
+    <div class="timeline-phase">
+      <h4>Month 1</h4>
+      <p>90 pages published<br>Some start ranking</p>
+    </div>
+    <div class="timeline-phase" style="border-top-color:var(--crimson);">
+      <h4 style="color:var(--crimson);">Month 3</h4>
+      <p>270 pages live<br>Traffic growing<br>First commissions</p>
+    </div>
+    <div class="timeline-phase" style="border-top-color:var(--green);">
+      <h4 style="color:var(--green);">Month 6</h4>
+      <p>540 pages<br>Real income flowing</p>
+    </div>
+    <div class="timeline-phase" style="border-top-color:var(--gold);">
+      <h4 style="color:var(--gold);">Month 12</h4>
+      <p>1,080 pages<br><strong>Significant monthly income</strong></p>
+    </div>
+  </div>
+  <p style="font-size:0.95em;color:var(--dark-purple);margin-top:0.5em;">Not get-rich-quick. Get-rich-<strong style="color:var(--green);">smart</strong>.</p>
+  <aside class="notes">And here's the beautiful part — it compounds. SEO doesn't work overnight. But it absolutely works over time. In month one, you publish ninety pages. Some start getting indexed by Google. By month three, you have two hundred seventy pages live. Your earlier pages are starting to rank. Traffic is growing. You're seeing your first commissions. By month six, you have five hundred and forty pages. Real income is flowing. Multiple reviews are on page one of Google. Commissions are coming in from products you reviewed months ago. By month twelve — over a thousand pages. The compound effect is in full swing. Your month-one reviews are fully matured and ranking. Your month-six reviews are climbing. Your newest reviews are being indexed. It's like a snowball rolling downhill. It just keeps getting bigger. And the income follows the same curve. This is not get-rich-quick. This is get-rich-smart. Build the assets. Let them compound. Reap the rewards.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 35 — Multiple Review Types = Maximum Coverage -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Cover Every Angle</h2>
+  <div style="text-align:center;margin:0.5em 0;">
+    <div style="display:inline-block;background:rgba(107,63,160,0.08);border-radius:50%;width:100px;height:100px;line-height:100px;font-size:0.85em;font-weight:700;color:var(--purple);border:2px solid var(--purple);">GoHighLevel</div>
+  </div>
+  <div class="icon-row" style="margin-top:0.3em;">
+    <div style="text-align:center;font-size:0.85em;">
+      <div style="background:var(--purple);color:white;border-radius:8px;padding:0.4em 0.6em;font-weight:600;">Single Review</div>
+      <p style="color:#888;margin-top:0.2em;">"GoHighLevel Review 2026"</p>
+    </div>
+    <div style="text-align:center;font-size:0.85em;">
+      <div style="background:var(--crimson);color:white;border-radius:8px;padding:0.4em 0.6em;font-weight:600;">VS Comparison</div>
+      <p style="color:#888;margin-top:0.2em;">"GoHighLevel vs ClickFunnels"</p>
+    </div>
+    <div style="text-align:center;font-size:0.85em;">
+      <div style="background:var(--green);color:white;border-radius:8px;padding:0.4em 0.6em;font-weight:600;">Roundup</div>
+      <p style="color:#888;margin-top:0.2em;">"Best CRM Platforms 2026"</p>
+    </div>
+  </div>
+  <p style="font-size:0.95em;font-weight:600;color:var(--dark-purple);margin-top:0.5em;">1 product &#8594; 3+ pages &#8594; 3+ keywords &#8594; <strong style="color:var(--green);">3x the traffic</strong></p>
+  <aside class="notes">Now remember those three types of reviews I mentioned earlier? Here's where they become a strategy, not just content types. Take one product — let's say GoHighLevel. You write a single review: 'GoHighLevel Review 2026.' That targets one keyword. Then you write a comparison: 'GoHighLevel vs ClickFunnels.' That targets a completely different keyword. Then you include GoHighLevel in a roundup: 'Best CRM Platforms 2026.' That's a third keyword. One product. Three pages. Three different keywords. Three different search intents captured. Now do that across twenty product categories and you don't just have review pages — you have a web. A web of interconnected content that dominates the search landscape for your niche. Google sees your site as an authority. You rank faster. You rank higher. And your traffic multiplies because you're capturing buyers at every single stage of their research.</aside>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SLIDE 36 — The "Mailbox Money" Lifestyle -->
+<!-- ============================================================ -->
+<section class="slide-dark">
+  <h2 style="color:var(--gold);">Mailbox Money Is Real</h2>
+  <div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:0.8em 1.2em;margin:0.6em auto;max-width:450px;border-left:4px solid var(--gold);">
+    <p style="font-size:0.9em;color:var(--lavender);font-style:italic;">"I checked my email before my shift. There was a commission notification. Someone bought through my link. I hadn't done anything that day."</p>
+    <p style="font-size:0.8em;color:var(--gold);margin-top:0.3em;font-weight:600;">— Mike Filsaime, on his first affiliate commission</p>
+  </div>
+  <ul style="margin-top:0.5em;">
+    <li style="color:var(--lavender);">Commission deposits appearing <strong>automatically</strong></li>
+    <li style="color:var(--lavender);">Freedom: time, location, financial</li>
+    <li style="color:var(--lavender);">Each review page = a tiny employee that <strong>never asks for a raise</strong></li>
+  </ul>
+  <aside class="notes">I want to bring this back to something personal for a moment. Twenty years ago, when I was still at the car dealership, I got my first affiliate commission check. I'll never forget it. I checked my email in the morning — before my shift started — and there was a commission notification. Someone had bought through my affiliate link. I hadn't done anything that day. I hadn't even woken up when the sale happened. The recommendation I wrote weeks ago did the work for me. And that was the moment I understood what 'mailbox money' really meant. Money that shows up because of work you did in the past. Not trading hours for dollars. Not punching a clock. Assets working on your behalf. That's what these review pages are. Each one is a tiny employee that works for you twenty-four-seven and never asks for a raise. The lifestyle this creates is exactly what digital marketing has always promised but rarely delivered. Freedom of time. Freedom of location. Financial freedom. And with the AI tools available today, it's more achievable than it's ever been in the history of the internet.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 37 — Niche Selection Power -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Pick Your Playground</h2>
+  <div class="niche-grid" style="margin-top:0.5em;">
+    <div class="niche-card">
+      <div class="ni">&#128187;</div>
+      <div class="niche-info"><strong>SaaS & Software</strong><span>20-40% recurring</span></div>
+    </div>
+    <div class="niche-card">
+      <div class="ni">&#128722;</div>
+      <div class="niche-info"><strong>E-commerce</strong><span>Amazon Associates</span></div>
+    </div>
+    <div class="niche-card">
+      <div class="ni">&#128176;</div>
+      <div class="niche-info"><strong>Finance & Insurance</strong><span>High payouts per lead</span></div>
+    </div>
+    <div class="niche-card">
+      <div class="ni">&#129505;</div>
+      <div class="niche-info"><strong>Health & Wellness</strong><span>Massive market</span></div>
+    </div>
+    <div class="niche-card">
+      <div class="ni">&#127891;</div>
+      <div class="niche-info"><strong>Education & Courses</strong><span>Growing fast</span></div>
+    </div>
+    <div class="niche-card" style="background:rgba(107,63,160,0.12);">
+      <div class="ni">&#127919;</div>
+      <div class="niche-info"><strong style="color:var(--purple);">Your Niche Here</strong><span style="color:var(--purple);">You choose!</span></div>
+    </div>
+  </div>
+  <aside class="notes">And you get to choose your niche. What interests you? What do you already know about? SaaS and software — this is where the highest recurring commissions live. GoHighLevel, ClickFunnels, email platforms, CRM tools. These companies pay twenty to forty percent recurring because they know the lifetime value of a customer is huge. E-commerce and physical products — Amazon Associates. Billions of products to review. Lower commissions per sale, but massive volume. Finance and insurance — huge payouts per referral. Credit cards, investment platforms, insurance products. Some of these pay hundreds of dollars per lead. Health and wellness — enormous market. Supplements, fitness equipment, wellness apps. And education — online courses and training platforms. Growing like crazy. The point is — you're not limited to one niche. You can pick what you know, or pick what pays, or find the intersection of both. The model works across every industry because every industry has products and every product needs reviews.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 38 — Portfolio Diversification -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Don't Put Eggs in One Basket</h2>
+  <ul style="margin-top:0.5em;">
+    <li>Multiple sites across multiple niches = <strong style="color:var(--green);">stability</strong></li>
+    <li>If one niche dips, others keep earning</li>
+    <li>Different commission structures: one-time, recurring, hybrid</li>
+    <li>Jitendra built a <strong>network</strong>, not a single site</li>
+  </ul>
+  <div style="margin-top:0.6em;padding:0.5em 1em;background:rgba(46,204,113,0.08);border-radius:8px;display:inline-block;">
+    <p style="font-size:0.95em;font-weight:700;color:var(--dark-purple);">"Your portfolio of review sites <span style="color:var(--green);">IS</span> your retirement plan"</p>
+  </div>
+  <aside class="notes">And here's another strategic advantage that smart affiliate marketers use — diversification. You don't put all your eggs in one basket. You build multiple sites across multiple niches. If one niche gets more competitive or a product changes its affiliate program, your other sites keep earning. You're not dependent on any single product or any single niche. Some of your sites earn one-time commissions. Some earn recurring. Some earn from Amazon. Some earn from direct affiliate programs. It's a portfolio. And just like a stock portfolio, diversification protects you and creates stability. Jitendra didn't build one review site and call it a day. He built a network. A portfolio of digital assets. That's why he's at seven hundred thousand a year. He's diversified across niches, across products, across commission structures. Your portfolio of review sites isn't just a side income. If you build it right, it's your retirement plan.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 39 — The 90-Day Vision -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Where You'll Be in 90 Days</h2>
+  <div class="timeline-row" style="margin-top:0.5em;">
+    <div class="timeline-phase">
+      <h4>Days 1-30</h4>
+      <p>Learn the system<br>Publish 60-90 reviews<br><strong>Foundation</strong></p>
+    </div>
+    <div class="timeline-phase" style="border-top-color:var(--crimson);">
+      <h4 style="color:var(--crimson);">Days 31-60</h4>
+      <p>First rankings<br>First traffic<br><strong>First commissions</strong></p>
+    </div>
+    <div class="timeline-phase" style="border-top-color:var(--green);">
+      <h4 style="color:var(--green);">Days 61-90</h4>
+      <p>Momentum builds<br>Income consistent<br><strong>Portfolio growing</strong></p>
+    </div>
+  </div>
+  <p style="font-size:0.95em;font-weight:700;color:var(--purple);margin-top:0.6em;">"90 days from now, you could have a portfolio<br>generating income on autopilot"</p>
+  <aside class="notes">Let me paint a picture for you. Where could you be ninety days from now if you started today? Days one through thirty — you learn the system. You pick your niches. You start publishing. Even at a conservative pace, you've published sixty to ninety review pages by the end of month one. Days thirty-one through sixty — your earlier reviews start getting indexed by Google. You see your first traffic. You get your first click on an affiliate link. Maybe your first commission comes in. It's small, but it's real. And it's proof that the model works. Days sixty-one through ninety — momentum builds. Your best reviews are climbing the rankings. Traffic is growing weekly. Commissions are becoming more consistent. You're adding new reviews every day, and your older reviews are maturing. By day ninety, you could have a genuine portfolio of income-producing digital assets. Not a dream. Not a plan. A real, functioning, earning portfolio. And it only gets bigger from there.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 40 — Transition to Offer -->
+<!-- ============================================================ -->
+<section class="slide-dark">
+  <div class="progress-track">
+    <div class="progress-dot done">&#10003;</div>
+    <div class="progress-line" style="background:var(--green);opacity:1;"></div>
+    <div class="progress-dot done">&#10003;</div>
+    <div class="progress-line" style="background:var(--green);opacity:1;"></div>
+    <div class="progress-dot done">&#10003;</div>
+  </div>
+  <h2 style="margin-top:0.5em;font-size:1.4em;">All 3 Secrets Unlocked</h2>
+  <ul class="checklist" style="margin-top:0.4em;max-width:500px;margin-left:auto;margin-right:auto;">
+    <li style="color:var(--lavender);">Secret #1: The SEO Review Site Model</li>
+    <li style="color:var(--lavender);">Secret #2: The AI Revolution in Content</li>
+    <li style="color:var(--lavender);">Secret #3: The Virtual Vending Machine System</li>
+  </ul>
+  <p style="font-size:0.75em;color:var(--gold);font-weight:700;margin-top:0.8em;">"Now let me show you how to put it all together..."</p>
+  <aside class="notes">Alright. You now have all three secrets. Secret Number One — the model. You understand how affiliate review sites work and why they're one of the best online business models in existence. Secret Number Two — the tool. You know that AI has eliminated the bottleneck and made it possible to create review content in minutes instead of hours. Secret Number Three — the system. You know how to scale this into a portfolio of digital assets that compounds over time. Now — I promised you at the beginning that I'd share something at the end of this presentation. A tool that my team and I built specifically for this model. Something that takes everything I've taught you tonight and puts it into one platform so you can execute faster than ever. So let me show you exactly what we built.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 41 — Offer Introduction -->
+<!-- ============================================================ -->
+<section class="slide-brand">
+  <div style="margin-bottom:0.5em;">
+    <span class="tag gold">INTRODUCING</span>
+  </div>
+  <h1 style="font-size:2.4em;">Affiliate<span style="color:var(--gold);">Pages</span><span style="font-size:0.7em;vertical-align:super;opacity:0.7">.com</span></h1>
+  <p style="font-size:0.7em;margin-top:0.5em;opacity:0.9;">The all-in-one platform for building<br>income-producing affiliate review sites</p>
+  <p style="font-size:0.85em;margin-top:1em;opacity:0.7;">Built by <strong>Mike Filsaime</strong> + <strong>Jitendra Vaswani</strong></p>
+  <aside class="notes">I want to introduce you to AffiliatePages.com. This is the platform my team and I built — alongside Jitendra Vaswani — specifically for the model we've been talking about tonight. AffiliatePages is the all-in-one platform for building income-producing affiliate review sites. It combines AI content creation, SEO optimization, and WordPress publishing into one seamless system. We took everything Jitendra learned building his seven-hundred-thousand-dollar-a-year review site empire, and we turned it into a tool that anyone can use. Whether you've been doing affiliate marketing for years or you've never built a website in your life — this platform was designed for you.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 42 — The Stack Begins -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Here's What You Get</h2>
+  <p style="font-size:0.7em;color:var(--dark-purple);margin-top:0.5em;">I'm going to walk you through <strong>everything</strong> that's included</p>
+  <p style="font-size:0.95em;color:var(--purple);margin-top:0.3em;">And stack the value so you can see <strong>exactly</strong> what you're getting</p>
+  <div style="margin-top:1em;font-size:3em;">&#128230;</div>
+  <p style="font-size:0.85em;color:#999;margin-top:0.3em;">7 components, purpose-built for affiliate review success</p>
+  <aside class="notes">Now, I want to walk you through everything that's included when you join AffiliatePages today. And I'm going to do something I learned from my friend Russell Brunson — I'm going to stack the value so you can see exactly what you're getting. Every component I'm about to show you was purpose-built to help you create, optimize, and publish review content faster than anything else available. Let's start.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 43 — Stack Item #1: AI Review Writing Engine -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <span class="tag" style="background:var(--purple);">COMPONENT #1</span>
+  <h2>AI Review Writing Engine</h2>
+  <ul style="margin-top:0.4em;">
+    <li>Writes complete <strong>3,000+ word</strong> reviews in minutes</li>
+    <li>Features, pros/cons, pricing, alternatives, verdict</li>
+    <li>Natural, human-sounding tone</li>
+    <li>Single, comparison, and roundup formats</li>
+  </ul>
+  <div class="value-badge" style="font-size:0.75em;margin-top:0.6em;">Value: $2,997</div>
+  <aside class="notes">Component number one — the AI Review Writing Engine. This is the heart of AffiliatePages. It writes complete, three-thousand-plus word reviews in minutes. Not thin, surface-level articles. Deep, comprehensive reviews that cover everything a reader needs: features, pros and cons, pricing breakdowns, alternative options, and a clear verdict. The writing engine supports multiple review formats — single product reviews, head-to-head comparisons, and best-of roundups. And it writes in a natural, conversational tone that sounds like a real human expert wrote it. If I were to sell just this AI writing engine as a standalone tool, I'd price it at two thousand nine hundred and ninety-seven dollars. Because that's what it would cost you to hire a professional content writer to produce even a fraction of what this engine can do.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 44 — Stack Item #2: SEO Optimization System -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <span class="tag" style="background:var(--purple);">COMPONENT #2</span>
+  <h2>SEO Optimization System</h2>
+  <ul style="margin-top:0.4em;">
+    <li>Automatic keyword targeting</li>
+    <li>Proper header hierarchy (H1, H2, H3)</li>
+    <li>Meta descriptions & title tag optimization</li>
+    <li>Schema markup for rich snippets</li>
+    <li>Internal linking suggestions</li>
+  </ul>
+  <div class="value-badge" style="font-size:0.75em;margin-top:0.6em;">Value: $1,997</div>
+  <div style="font-size:0.8em;color:var(--purple);margin-top:0.2em;">Running total: $4,994</div>
+  <aside class="notes">Component number two — the SEO Optimization System. Remember, writing great content is only half the battle. It also has to rank. Our SEO system handles that automatically. Every review comes with keyword targeting built in. Proper header hierarchy. Optimized meta descriptions and title tags. Schema markup so your reviews show stars and ratings right in Google search results. And intelligent internal linking suggestions so your reviews strengthen each other. You don't need to know anything about SEO. The system handles it all behind the scenes. If you hired an SEO consultant to do this for every review, you'd be paying a hundred dollars per article minimum. Over the course of a year, that adds up fast. The standalone value of this SEO system is one thousand nine hundred and ninety-seven dollars.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 45 — Stack Item #3: WordPress Publishing Integration -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <span class="tag" style="background:var(--purple);">COMPONENT #3</span>
+  <h2>WordPress Publishing</h2>
+  <ul style="margin-top:0.4em;">
+    <li><strong>One-click publish</strong> directly to your WordPress site</li>
+    <li>Auto-formatting: headers, images, tables, CTAs</li>
+    <li>Compatible with popular themes (Astra, GeneratePress, etc.)</li>
+    <li>Multiple site support — one dashboard</li>
+  </ul>
+  <div class="value-badge" style="font-size:0.75em;margin-top:0.6em;">Value: $997</div>
+  <div style="font-size:0.8em;color:var(--purple);margin-top:0.2em;">Running total: $5,991</div>
+  <aside class="notes">Component number three — WordPress Publishing Integration. This is the bridge between creating your review and getting it live on the internet. With one click, your finished review publishes directly to your WordPress site. It's auto-formatted — headers, images, comparison tables, call-to-action buttons — everything is styled and ready to go. It works with all the popular WordPress themes. And if you're running multiple review sites across different niches, you can manage them all from one dashboard. No copying and pasting. No reformatting. No technical headaches. One click. Published. Live. Earning. The value of this integration alone is nine hundred and ninety-seven dollars.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 46 — Stack Item #4: Knowledge Base Builder -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <span class="tag" style="background:var(--purple);">COMPONENT #4</span>
+  <h2>Knowledge Base Builder</h2>
+  <ul style="margin-top:0.4em;">
+    <li>Feed AI <strong>real product data</strong> for accuracy</li>
+    <li>Crawl product websites automatically</li>
+    <li>Analyze competitor reviews that already rank</li>
+    <li>Store and reuse research across reviews</li>
+  </ul>
+  <div class="value-badge" style="font-size:0.75em;margin-top:0.6em;">Value: $997</div>
+  <div style="font-size:0.8em;color:var(--purple);margin-top:0.2em;">Running total: $6,988</div>
+  <aside class="notes">Component number four — the Knowledge Base Builder. This is the secret weapon I talked about earlier. Remember — gold in, gold out. The Knowledge Base Builder lets you feed the AI real product data so your reviews are accurate, detailed, and comprehensive. Just paste a product URL and the system crawls it automatically — pulling features, pricing, screenshots, everything. It analyzes competitor reviews that are already ranking on Google so the AI knows exactly what to include and how to make your review even better. And all of this research is stored in your Knowledge Base so you can reuse it across multiple reviews. Write a single product review, then use the same research to create a comparison or a roundup. Work smarter, not harder. The Knowledge Base Builder has a standalone value of nine hundred and ninety-seven dollars.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 47 — Stack Item #5: Jitendra's Training Program -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <span class="tag" style="background:var(--purple);">COMPONENT #5</span>
+  <h2>Jitendra's SEO Training</h2>
+  <div style="display:flex;gap:1em;align-items:center;margin:0.5em 0;">
+    <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--dark-purple));display:flex;align-items:center;justify-content:center;font-size:1.5em;color:white;flex-shrink:0;">JV</div>
+    <ul style="flex:1;">
+      <li>Complete training from a <strong>$700K/year</strong> affiliate marketer</li>
+      <li>Niche selection strategies</li>
+      <li>Keyword research mastery</li>
+      <li>Link building techniques &amp; monetization blueprints</li>
+    </ul>
+  </div>
+  <div class="value-badge" style="font-size:0.75em;margin-top:0.3em;">Value: $1,997</div>
+  <div style="font-size:0.8em;color:var(--purple);margin-top:0.2em;">Running total: $8,985</div>
+  <aside class="notes">Component number five — and this one is huge — Jitendra Vaswani's Complete SEO Affiliate Training Program. Having the tool is powerful. But having the tool plus the training from someone who makes seven hundred thousand a year using this exact model? That's a different level. Jitendra has put together a complete training program covering everything you need to know. Niche selection — how to pick niches with the right balance of opportunity and competition. Keyword research — how to find the exact phrases buyers are searching. Link building — how to get other sites to link to yours, which turbocharges your rankings. And monetization blueprints — exactly how to structure your affiliate relationships for maximum commissions. This isn't generic 'how to blog' training. This is a specific, proven playbook from someone who's done it at the highest level. The value of this training alone is one thousand nine hundred and ninety-seven dollars.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 48 — Stack Item #6: Multiple Review Types -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <span class="tag" style="background:var(--purple);">COMPONENT #6</span>
+  <h2>All Review Types Included</h2>
+  <div class="icon-row" style="margin-top:0.5em;">
+    <div class="icon-card" style="width:170px;background:rgba(107,63,160,0.06);border-radius:8px;padding:0.6em;">
+      <div class="ic">&#128196;</div>
+      <p>Single Product Reviews</p>
+    </div>
+    <div class="icon-card" style="width:170px;background:rgba(107,63,160,0.06);border-radius:8px;padding:0.6em;">
+      <div class="ic">&#9878;&#65039;</div>
+      <p>Head-to-Head Comparisons</p>
+    </div>
+    <div class="icon-card" style="width:170px;background:rgba(107,63,160,0.06);border-radius:8px;padding:0.6em;">
+      <div class="ic">&#127942;</div>
+      <p>Roundup / Best-of Lists</p>
+    </div>
+  </div>
+  <div class="value-badge" style="font-size:0.75em;margin-top:0.5em;">Value: $497</div>
+  <div style="font-size:0.8em;color:var(--purple);margin-top:0.2em;">Running total: $9,482</div>
+  <aside class="notes">Component number six — all three review types are included. Single product reviews, head-to-head comparisons, and roundup best-of lists. Each review type is optimized for its specific search intent. Single reviews target buyers researching a specific product. Comparisons target buyers choosing between options. Roundups target buyers exploring an entire category. Most tools only do one type. AffiliatePages does all three — because, as we discussed, covering all three types for a product category means you dominate the search results. The value of having all three review types built in is four hundred and ninety-seven dollars.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 49 — Stack Item #7: 3-Sites-Per-Day Workflow -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <span class="tag" style="background:var(--purple);">COMPONENT #7</span>
+  <h2>The 3-Per-Day Workflow</h2>
+  <ul style="margin-top:0.4em;">
+    <li>Structured daily workflow for maximum output</li>
+    <li>Templates and checklists included</li>
+    <li><strong>45 minutes/day</strong> = 90 reviews/month</li>
+    <li>Built-in tracking and progress dashboard</li>
+  </ul>
+  <div class="value-badge" style="font-size:0.75em;margin-top:0.6em;">Value: $497</div>
+  <div style="font-size:0.8em;color:var(--purple);margin-top:0.2em;">Running total: $9,979</div>
+  <aside class="notes">And component number seven — the Three-Sites-Per-Day Workflow System. It's one thing to have the tools. It's another to have the system that maximizes your output. We've built a structured daily workflow that guides you step by step through creating three review pages per day in forty-five minutes or less. Templates. Checklists. A progress dashboard that tracks your output and helps you stay consistent. This is the system Jitendra uses to manage his own portfolio of review sites. And now it's yours. The value of the workflow system is four hundred and ninety-seven dollars.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 50 — Total Stack Value -->
+<!-- ============================================================ -->
+<section class="slide-dark">
+  <h2 style="color:var(--gold);font-size:1.5em;">Total Value</h2>
+  <div style="margin:0.4em 0;">
+    <div class="stack-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--gold);"><span class="item-name" style="color:var(--lavender);">AI Review Writing Engine</span><span class="item-value" style="color:var(--gold);">$2,997</span></div>
+    <div class="stack-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--gold);"><span class="item-name" style="color:var(--lavender);">SEO Optimization System</span><span class="item-value" style="color:var(--gold);">$1,997</span></div>
+    <div class="stack-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--gold);"><span class="item-name" style="color:var(--lavender);">WordPress Publishing</span><span class="item-value" style="color:var(--gold);">$997</span></div>
+    <div class="stack-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--gold);"><span class="item-name" style="color:var(--lavender);">Knowledge Base Builder</span><span class="item-value" style="color:var(--gold);">$997</span></div>
+    <div class="stack-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--gold);"><span class="item-name" style="color:var(--lavender);">Jitendra's SEO Training</span><span class="item-value" style="color:var(--gold);">$1,997</span></div>
+    <div class="stack-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--gold);"><span class="item-name" style="color:var(--lavender);">All Review Types</span><span class="item-value" style="color:var(--gold);">$497</span></div>
+    <div class="stack-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--gold);"><span class="item-name" style="color:var(--lavender);">3-Per-Day Workflow</span><span class="item-value" style="color:var(--gold);">$497</span></div>
+  </div>
+  <div class="big-number gold" style="font-size:3em;margin-top:0.3em;">$9,979</div>
+  <p style="font-size:0.9em;color:var(--lavender);font-weight:600;">TOTAL VALUE</p>
+  <aside class="notes">Let's add it all up. The AI Review Writing Engine — two thousand nine hundred and ninety-seven dollars. The SEO Optimization System — one thousand nine hundred and ninety-seven. WordPress Publishing Integration — nine ninety-seven. Knowledge Base Builder — nine ninety-seven. Jitendra's Complete Training Program — one thousand nine hundred and ninety-seven. Multiple Review Types — four ninety-seven. The Three-Per-Day Workflow System — four ninety-seven. The total value of everything you're getting is nine thousand nine hundred and seventy-nine dollars. Now — I'm obviously not going to charge you that. But I want you to see what this is worth. Because when I tell you the price, I want you to understand the gap between the value and the investment.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 51 — Regular Price -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Regular Price</h2>
+  <div class="big-number purple" style="font-size:2.5em;">$149<span style="font-size:0.7em;font-weight:400;">/month</span></div>
+  <p style="font-size:0.95em;color:var(--dark-purple);">That's $1,788/year &mdash; less than <strong>$5/day</strong></p>
+  <p style="font-size:0.9em;color:var(--purple);margin-top:0.5em;font-weight:500;">For a tool that can generate thousands in monthly commissions</p>
+  <p style="font-size:0.75em;font-weight:700;color:var(--crimson);margin-top:0.8em;">But tonight, for everyone on this webinar...</p>
+  <aside class="notes">Our regular price for AffiliatePages is a hundred and forty-nine dollars per month. That's one thousand seven hundred and eighty-eight dollars per year. And honestly, at that price, it's a steal. That's less than five dollars a day for a platform that can help you generate thousands in monthly affiliate commissions. One single commission from a SaaS review could pay for months of the subscription. But tonight — for everyone on this live webinar — I have something much better.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 52 — Special Webinar Price -->
+<!-- ============================================================ -->
+<section class="slide-cta">
+  <span class="tag gold" style="font-size:0.9em;">4TH OF JULY SPECIAL</span>
+  <h2 style="font-size:1.5em;">Webinar Special</h2>
+  <p style="font-size:0.7em;margin:0.3em 0;"><span class="strikethrough" style="color:rgba(255,255,255,0.5);font-size:1.1em;">$1,788/year</span></p>
+  <div class="big-number" style="color:var(--gold);font-size:3.5em;">$497<span style="font-size:0.35em;font-weight:400;">/year</span></div>
+  <p style="font-size:0.7em;color:var(--green);font-weight:700;">72% OFF &mdash; Save $1,291!</p>
+  <p style="font-size:0.9em;color:var(--lavender);margin-top:0.3em;">That's less than <strong>$1.37/day</strong></p>
+  <p style="font-size:0.95em;color:var(--gold);font-weight:600;margin-top:0.5em;">"Declare your financial independence"</p>
+  <div class="cta-button green" style="margin-top:0.5em;">Get Started Now</div>
+  <aside class="notes">For everyone on this webinar tonight — and only for people on this live webinar — I'm offering AffiliatePages for four hundred and ninety-seven dollars for the entire first year. Let me say that again. Not four ninety-seven per month. Four hundred and ninety-seven dollars for the whole year. That's seventy-two percent off the regular annual price. Over twelve hundred dollars in savings. That works out to less than a dollar thirty-seven per day. A dollar and thirty-seven cents a day for a platform that gives you AI-powered review writing, SEO optimization, WordPress publishing, Jitendra's training, and everything else we just talked about. And I'm calling this our 4th of July Special — because this is your chance to declare your financial independence. Not with fireworks. With action. Four ninety-seven for the year. Tonight only.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 53 — Guarantee -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>30-Day Money-Back Guarantee</h2>
+  <div style="margin:0.6em auto;">
+    <div class="guarantee-badge" style="width:160px;height:160px;padding:35px 15px;font-size:0.9em;">
+      &#128737;&#65039;<br>
+      <strong style="font-size:1.3em;">30-DAY</strong><br>
+      MONEY-BACK<br>
+      GUARANTEE
+    </div>
+  </div>
+  <ul style="margin-top:0.4em;">
+    <li>Try AffiliatePages <strong>risk-free</strong> for 30 days</li>
+    <li>Don't love it? Email us for a <strong>full refund</strong></li>
+    <li>No questions asked. No hoops.</li>
+  </ul>
+  <p style="font-size:0.7em;font-weight:700;color:var(--purple);margin-top:0.4em;">"Your only risk is <span style="color:var(--crimson);">NOT</span> trying it"</p>
+  <aside class="notes">And I want to eliminate any risk you might be feeling. AffiliatePages comes with a thirty-day money-back guarantee. Take the platform. Use it. Build review sites. Publish content. See the results for yourself. And if at any point in the first thirty days you don't absolutely love it — email our support team and we'll refund every penny. No questions asked. No hoops to jump through. No guilt trip. Just a full refund. I'm offering this guarantee because I'm confident. I've seen what this platform can do. Jitendra has seen it. Our beta users have seen it. And I want you to see it too — completely risk-free. Your only risk tonight is NOT trying it. Walking away from this webinar and wondering 'what if.' That's the only risk on the table.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 54 — Who This Is For -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>This Is For You If...</h2>
+  <ul class="checklist" style="margin-top:0.5em;max-width:550px;margin-left:auto;margin-right:auto;text-align:left;">
+    <li>You want <strong>passive income</strong> without creating your own product</li>
+    <li>You're tired of <strong>trading hours for dollars</strong></li>
+    <li>You want to leverage <strong>AI</strong> to build real assets</li>
+    <li>You're willing to put in <strong>45 min/day</strong> to build your future</li>
+    <li>You believe in the power of <strong>SEO and organic traffic</strong></li>
+  </ul>
+  <p style="font-size:0.75em;font-weight:700;color:var(--crimson);margin-top:0.6em;">"If that's you — this is your moment."</p>
+  <aside class="notes">Let me be real about who this is for. AffiliatePages is for you if you want passive income without having to create your own product. If you're tired of trading hours for dollars. If you want to leverage AI to build real digital assets that pay you for years. If you're willing to invest forty-five minutes a day to build your financial future. And if you believe in the power of organic, free traffic from Google. If that sounds like you — this is your moment. This is the opportunity. The model is proven. The tool is built. The training is included. The price is right. And the guarantee removes all risk. The only variable is you. Are you going to take action?</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 55 — First CTA -->
+<!-- ============================================================ -->
+<section class="slide-cta">
+  <h2 style="font-size:1.5em;">Get AffiliatePages Now</h2>
+  <div style="font-family:'Playfair Display',serif;font-size:2em;font-weight:800;color:var(--white);margin:0.3em 0;">AffiliatePages.com</div>
+  <div class="big-number gold" style="font-size:2.5em;">$497<span style="font-size:0.35em;font-weight:400;">/year</span></div>
+  <p style="font-size:0.85em;color:var(--lavender);margin:0.2em 0;">One-time annual payment &bull; 30-day money-back guarantee</p>
+  <div class="cta-button green" style="font-size:0.8em;padding:0.6em 2em;">GET STARTED NOW &#8594;</div>
+  <p style="font-size:0.9em;color:var(--gold);font-weight:600;margin-top:0.6em;">"Click the link. Secure your spot. Start building tonight."</p>
+  <aside class="notes">Here's what to do right now. Go to AffiliatePages.com. Click the button to get started. Your investment is four hundred and ninety-seven dollars for the entire first year. You'll get immediate access to everything — the AI engine, the SEO system, WordPress publishing, the Knowledge Base, Jitendra's training, all review types, and the workflow system. And remember — you're protected by our thirty-day money-back guarantee. There is zero risk. Go to AffiliatePages.com right now. I'll leave this up while I continue, but don't wait. If this resonated with you tonight — if you saw yourself in what I described — take action now. Because the only difference between people who succeed and people who don't isn't talent or luck. It's action.</aside>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- SLIDE 56 — Objection Handling Intro -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2>Your Questions, Answered</h2>
+  <div style="font-size:3em;margin:0.5em 0;">&#128172;</div>
+  <p style="font-size:0.7em;color:var(--dark-purple);">"I know you might have some concerns"</p>
+  <p style="font-size:0.95em;color:var(--purple);font-weight:500;margin-top:0.3em;">Let me address the most common ones</p>
+  <aside class="notes">Now, before we move to the close, I know some of you might have a few concerns. And that's completely normal. You'd be irresponsible if you didn't think carefully before investing in anything. So let me address the most common questions and concerns I hear.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 57 — Objection: "I Don't Know SEO" -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <div class="objection-q">"I don't know anything about SEO"</div>
+  <ul style="margin-top:0.4em;">
+    <li><strong>You don't need to.</strong></li>
+    <li>The AI handles keyword research, headers, meta tags, and schema</li>
+    <li>Jitendra's training teaches you the fundamentals</li>
+    <li>SEO knowledge is <strong>built into the tool</strong></li>
+  </ul>
+  <p style="font-size:0.9em;color:var(--purple);margin-top:0.5em;font-style:italic;">"You don't need to know how a car engine works to drive to the grocery store."</p>
+  <aside class="notes">'I don't know anything about SEO.' Perfect. You don't need to. The AI handles keyword research, header structure, meta descriptions, schema markup — all of it. SEO knowledge is literally built into the tool. You press a button and get an SEO-optimized article. And if you want to learn — Jitendra's training program walks you through the fundamentals so you understand what's happening under the hood. But you don't need to understand it to benefit from it. You don't need to know how a car engine works to drive to the grocery store.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 58 — Objection: "I Can't Write" -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <div class="objection-q">"I can't write"</div>
+  <ul style="margin-top:0.4em;">
+    <li>The AI writes <strong>everything</strong></li>
+    <li>3,000+ word reviews generated automatically</li>
+    <li>Your job: <strong>paste a URL and click a button</strong></li>
+  </ul>
+  <p style="font-size:0.95em;color:var(--purple);font-weight:600;margin-top:0.5em;">"This is the best time in history to be a<br>non-writer who wants to publish content"</p>
+  <aside class="notes">'I can't write. I'm not a good writer.' Honestly? Even better. Because the AI writes everything. You're not writing three-thousand-word reviews. The AI is. Your job is to paste a product URL, choose your review type, and click a button. That's it. The AI produces content that reads like it was written by a professional copywriter who actually used the product. This is genuinely the best time in the history of the internet to be a non-writer who wants to publish content. The AI is your writer. You're the publisher.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 59 — Objection: "I've Tried Before" -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <div class="objection-q">"I've tried affiliate marketing before and failed"</div>
+  <ul style="margin-top:0.4em;">
+    <li>Previous attempts probably lacked: AI speed, SEO strategy, or the right system</li>
+    <li>This isn't "promote random links on social media"</li>
+    <li>This is a <strong>proven, systematic model</strong> with professional tools</li>
+  </ul>
+  <p style="font-size:0.95em;color:var(--purple);font-weight:600;margin-top:0.5em;">"This time is different because<br>the <span style="color:var(--crimson);">tools</span> are different"</p>
+  <aside class="notes">'I've tried affiliate marketing before and it didn't work.' I hear this a lot, and I respect your honesty. But let me ask you — when you tried before, did you have an AI that could write professional-grade reviews in minutes? Did you have a system that automatically optimized for SEO? Did you have a mentor making seven hundred thousand a year teaching you exactly what to do? Probably not. Most people who've 'tried affiliate marketing' were posting links on social media and hoping for the best. That's not this. This is a structured, systematic approach using professional tools and a proven model. This time is different because the tools are different. The landscape is different. And you have a step-by-step system instead of guesswork.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 60 — Objection: "Too Good to Be True?" -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <div class="objection-q">"This sounds too good to be true"</div>
+  <ul style="margin-top:0.4em;">
+    <li>Jitendra's $700K/year is <strong>public, verifiable</strong></li>
+    <li>The model (SEO affiliate marketing) has existed for <strong>20+ years</strong></li>
+    <li>AI has made it dramatically faster — that's the new variable</li>
+  </ul>
+  <p style="font-size:0.7em;font-weight:700;color:var(--purple);margin-top:0.5em;">"It's not too good to be true.<br>It's too good to <span style="color:var(--crimson);">ignore</span>."</p>
+  <aside class="notes">'This sounds too good to be true.' I appreciate the skepticism. Healthy skepticism is smart. So let me ground this in reality. The model — SEO affiliate marketing — isn't new. It's been around for over twenty years. People have been making a full-time living from review sites for a long time. What's new is the speed at which AI lets you do it. That's the variable that changed. Jitendra's results are public. His sites are live. You can go look at them right now. He's been featured in industry publications. He's spoken at conferences. This isn't a theory. It's a documented, proven business model that's now supercharged by AI. It's not too good to be true. It's too good to ignore.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 61 — Objection: "What If It Doesn't Work?" -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <div class="objection-q">"What if it doesn't work for me?"</div>
+  <div style="margin:0.5em auto;">
+    <div class="guarantee-badge" style="width:120px;height:120px;padding:25px 10px;font-size:0.8em;">
+      &#128737;&#65039;<br>
+      <strong>30-DAY</strong><br>
+      GUARANTEE
+    </div>
+  </div>
+  <ul style="margin-top:0.3em;">
+    <li>Full platform access — <strong>no feature restrictions</strong></li>
+    <li>Don't love it? <strong>Full refund</strong>, no questions asked</li>
+  </ul>
+  <p style="font-size:0.7em;font-weight:700;color:var(--green);margin-top:0.4em;">"You literally cannot lose"</p>
+  <aside class="notes">'What if it doesn't work for me? What if I buy it and I don't like it?' That's exactly why we have the thirty-day money-back guarantee. You get full access to everything. No feature restrictions. No 'lite' version. The full platform for thirty days. Use it. Build sites. See results. And if for any reason you decide it's not for you, email us and we'll refund you in full. No questions asked. You literally cannot lose money on this. Either AffiliatePages works for you and you build a portfolio of income-producing review sites... or it doesn't and you get your money back. That's the deal.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 62 — Quick-Fire Round -->
+<!-- ============================================================ -->
+<section class="slide-light">
+  <h2 style="font-size:1.4em;">More Quick Answers</h2>
+  <div style="margin-top:0.4em;text-align:left;max-width:600px;margin-left:auto;margin-right:auto;">
+    <div class="faq-item"><span class="q">"Do I need a website?"</span><span class="a">&#8594; WordPress site required (we show you how — 10 min)</span></div>
+    <div class="faq-item"><span class="q">"How long until I see results?"</span><span class="a">&#8594; Varies; some see traffic within 2-4 weeks</span></div>
+    <div class="faq-item"><span class="q">"Is this available internationally?"</span><span class="a">&#8594; Yes, available worldwide</span></div>
+    <div class="faq-item"><span class="q">"Do I need to buy anything else?"</span><span class="a">&#8594; Just WordPress hosting (~$5/mo)</span></div>
+    <div class="faq-item"><span class="q">"Can I cancel anytime?"</span><span class="a">&#8594; Yes, but tonight's price locks in your first year</span></div>
+  </div>
+  <aside class="notes">Let me rapid-fire a few more common questions. 'Do I need a website?' Yes — you'll need a WordPress site, and we show you exactly how to set one up. It takes about ten minutes. 'How long until I see results?' It varies. Some people see their first traffic within two to four weeks. Commissions depend on your niche and effort. 'Is this available internationally?' Yes — AffiliatePages works worldwide. If you can access the internet, you can use it. 'Do I need to buy anything else?' Just WordPress hosting, which runs about five bucks a month. That's it. 'Can I cancel anytime?' Yes, but the four-ninety-seven price locks in your entire first year. So there's nothing to cancel for twelve months. You've already paid. It's all yours.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 63 — Two Paths -->
+<!-- ============================================================ -->
+<section class="slide-dark">
+  <h2>Two Paths Forward</h2>
+  <div class="two-col" style="margin-top:0.6em;">
+    <div style="text-align:center;background:rgba(255,255,255,0.04);border-radius:12px;padding:1em;border:1px solid rgba(255,255,255,0.1);">
+      <div style="font-size:2em;margin-bottom:0.2em;">&#128564;</div>
+      <h3 style="font-size:0.7em;color:rgba(255,255,255,0.5);">Path 1: Do Nothing</h3>
+      <p style="font-size:0.8em;color:rgba(255,255,255,0.4);margin-top:0.3em;">Go back to your routine.<br>Hope something changes.<br>Nothing changes.</p>
+    </div>
+    <div style="text-align:center;background:rgba(46,204,113,0.1);border-radius:12px;padding:1em;border:2px solid var(--green);">
+      <div style="font-size:2em;margin-bottom:0.2em;">&#128640;</div>
+      <h3 style="font-size:0.7em;color:var(--green);">Path 2: Take Action</h3>
+      <p style="font-size:0.8em;color:var(--lavender);margin-top:0.3em;">Start building tonight.<br>45 minutes a day.<br>Create your future.</p>
+    </div>
+  </div>
+  <p style="font-size:0.95em;color:var(--gold);font-weight:700;margin-top:0.6em;">"One year from now, you'll wish you started today."</p>
+  <aside class="notes">Alright. We're at the moment of decision. And I want to be real with you — no pressure, no manipulation. Just honesty. You have two paths in front of you right now. Path one: you do nothing. You close this browser. You go back to your routine. You go back to trading hours for dollars, or scrolling through opportunities, or telling yourself you'll figure it out 'someday.' Nothing changes. Because nothing changed. Path two: you take action. You go to AffiliatePages.com right now. You invest four hundred and ninety-seven dollars in your future. And tonight — tonight — you start building your first review site. Forty-five minutes from now, you could have your first review page published. And a year from now, you could have a portfolio of over a thousand review pages, earning commissions on autopilot. I've been in this industry for twenty years. And the one thing I know for certain is this — one year from now, you'll wish you had started today.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 64 — Future Pacing -->
+<!-- ============================================================ -->
+<section class="slide-dark">
+  <h2 style="color:var(--gold);">Imagine 90 Days From Now</h2>
+  <ul style="margin-top:0.5em;">
+    <li style="color:var(--lavender);">Your review sites are <strong style="color:var(--green);">ranking on Google</strong></li>
+    <li style="color:var(--lavender);">Affiliate commissions hitting your account <strong style="color:var(--green);">weekly</strong></li>
+    <li style="color:var(--lavender);">Working <strong>45 minutes a day</strong>, not 8 hours</li>
+    <li style="color:var(--lavender);">You chose your own schedule — your own life</li>
+  </ul>
+  <div style="margin-top:0.8em;background:rgba(255,255,255,0.06);border-radius:10px;padding:0.5em 1em;display:inline-block;">
+    <p style="font-size:0.85em;color:var(--gold);">&#128241; New commission: <strong>$47.00</strong> &bull; &#128241; New commission: <strong>$29.10</strong></p>
+  </div>
+  <p style="font-size:0.95em;color:var(--lavender);font-weight:600;margin-top:0.5em;">"You didn't just watch a webinar. You <span style="color:var(--gold);">changed your future</span>."</p>
+  <aside class="notes">Close your eyes for a second. I want you to imagine something. It's ninety days from now. You took action tonight. You signed up for AffiliatePages. You spent forty-five minutes a day building review sites. You now have dozens — maybe hundreds — of review pages live. You open your laptop in the morning and check your affiliate dashboard. There are new commissions. Every day, there are new commissions. You didn't run any ads. You didn't make any phone calls. You didn't pitch anyone. Your review pages did the work. Google sent the traffic. The affiliate links did the selling. And you got paid. You smile. You close your laptop. You go enjoy your day. Because you built something that works for you even when you're not working. That's what this is about. Not just money. Freedom. Choice. Control. And it all started because you didn't just watch a webinar. You took action.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 65 — 4th of July Tie-In -->
+<!-- ============================================================ -->
+<section class="slide-dark" style="background:linear-gradient(135deg, #1A0E2E 0%, #2A1245 50%, #1A0E2E 100%);">
+  <h2 style="color:var(--white);font-size:1.6em;">Declare Your<br><span style="color:var(--gold);">Financial Independence</span></h2>
+  <ul style="margin-top:0.5em;">
+    <li style="color:var(--lavender);">Independence from the <strong>9-to-5</strong></li>
+    <li style="color:var(--lavender);">Independence from <strong>paycheck to paycheck</strong></li>
+    <li style="color:var(--lavender);">Independence from <strong>"someday"</strong></li>
+  </ul>
+  <div style="margin-top:0.8em;padding:0.5em 1em;background:rgba(244,197,66,0.1);border-radius:8px;display:inline-block;border:1px solid rgba(244,197,66,0.3);">
+    <p style="font-size:0.95em;font-weight:700;color:var(--gold);font-style:italic;">"Fireworks are great. Financial freedom is better."</p>
+  </div>
+  <aside class="notes">And I love the timing of this. We're coming up on the 4th of July — Independence Day. And I want you to think about what independence really means. Not just freedom from a government across an ocean two hundred and fifty years ago. Freedom from the 9-to-5 that's draining your life. Freedom from living paycheck to paycheck. Freedom from saying 'someday' and never doing anything about it. This 4th of July, declare your financial independence. Not with fireworks — with action. Fireworks are great. They're fun to watch. But they last fifteen minutes and then they're gone. Financial freedom? That lasts the rest of your life. So let the fireworks light up the sky. And let AffiliatePages light up your bank account.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 66 — Final CTA with Bonuses -->
+<!-- ============================================================ -->
+<section class="slide-cta">
+  <span class="tag" style="background:var(--crimson);font-size:0.85em;">BONUSES EXPIRE WHEN THIS WEBINAR ENDS</span>
+  <h2 style="font-size:1.4em;">Act Now — Bonuses Included</h2>
+  <div style="margin:0.4em 0;">
+    <div class="bonus-item">
+      <span class="b-num">#1</span>
+      <div class="b-info"><strong>Niche Selection Cheat Sheet</strong> — Jitendra's top 50 niches <span>($97 value)</span></div>
+    </div>
+    <div class="bonus-item">
+      <span class="b-num">#2</span>
+      <div class="b-info"><strong>First 30 Days Action Plan</strong> — day-by-day roadmap <span>($197 value)</span></div>
+    </div>
+    <div class="bonus-item">
+      <span class="b-num">#3</span>
+      <div class="b-info"><strong>Private Community Access</strong> — connect with other builders <span>($297 value)</span></div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;justify-content:center;gap:1em;margin-top:0.5em;flex-wrap:wrap;">
+    <div style="text-align:center;">
+      <div style="font-family:'Playfair Display',serif;font-size:1.6em;font-weight:800;color:var(--gold);">$497/year</div>
+      <p style="font-size:0.8em;color:var(--lavender);">+ $591 in bonuses FREE</p>
+    </div>
+    <div class="guarantee-badge" style="width:90px;height:90px;padding:18px 8px;font-size:0.7em;border-color:var(--green);color:var(--green);">
+      30-DAY<br>MONEY-BACK<br>GUARANTEE
+    </div>
+  </div>
+  <div class="cta-button green" style="font-size:0.8em;padding:0.6em 2em;margin-top:0.4em;">AffiliatePages.com &mdash; GET STARTED NOW &#8594;</div>
+  <aside class="notes">And here's one more thing. For everyone who takes action right now — while this webinar is still live — I'm including three exclusive bonuses. Bonus Number One: Jitendra's Niche Selection Cheat Sheet. This is a list of fifty proven niches, hand-picked by Jitendra himself. Niches with the right combination of traffic, competition level, and commission potential. This alone is worth ninety-seven dollars and it removes all the guesswork from day one. Bonus Number Two: The First Thirty Days Action Plan. A day-by-day roadmap for your first month with AffiliatePages. Exactly what to do on day one, day seven, day fourteen, day thirty. No confusion. No wondering what's next. Worth a hundred and ninety-seven dollars. And Bonus Number Three: Private Community Access. A community of other AffiliatePages users where you can ask questions, share wins, get feedback, and connect with people on the same journey. Worth two hundred and ninety-seven dollars. These three bonuses — five hundred and ninety-one dollars in total value — are only available for people who sign up during this live webinar. When this webinar ends, these bonuses disappear. So go to AffiliatePages.com right now. Four hundred and ninety-seven dollars for the year. Plus all three bonuses. Plus the thirty-day guarantee. This is the best deal we'll ever offer. And it's only here, only now.</aside>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 67 — Closing Slide -->
+<!-- ============================================================ -->
+<section class="slide-brand">
+  <div style="font-family:'Playfair Display',serif;font-size:2.2em;font-weight:800;color:var(--white);margin-bottom:0.2em;">AffiliatePages.com</div>
+  <div style="font-family:'Playfair Display',serif;font-size:1.3em;font-weight:700;color:var(--gold);margin-bottom:0.5em;">$497/year &mdash; 4th of July Special</div>
+  <p style="font-size:0.7em;color:var(--lavender);margin-bottom:0.8em;">"Your future is one click away"</p>
+  <div style="display:flex;justify-content:center;gap:2em;margin:0.5em 0;">
+    <div style="text-align:center;">
+      <div style="width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,0.15);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:1.4em;color:white;">MF</div>
+      <p style="font-size:0.75em;color:var(--lavender);margin-top:0.3em;">Mike Filsaime</p>
+    </div>
+    <div style="text-align:center;">
+      <div style="width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,0.15);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:1.4em;color:white;">JV</div>
+      <p style="font-size:0.75em;color:var(--lavender);margin-top:0.3em;">Jitendra Vaswani</p>
+    </div>
+  </div>
+  <p style="font-size:0.75em;font-weight:700;color:var(--gold);margin-top:0.5em;">"Go build your virtual vending machines"</p>
+  <p style="font-size:0.85em;color:var(--lavender);margin-top:0.5em;opacity:0.7;">Q&amp;A to follow — drop your questions in the chat</p>
+  <aside class="notes">That's it, everybody. That's the presentation. I just showed you three secrets that can genuinely change your financial future. The model — affiliate review sites work and the math is undeniable. The tool — AI has eliminated the bottleneck and made it faster than ever. The system — the Virtual Vending Machine approach lets you scale to a real, compounding income. AffiliatePages.com puts all of this into one platform. Four ninety-seven for the year. Jitendra's training included. All review types included. Thirty-day guarantee included. And three exclusive bonuses if you act right now. Go to AffiliatePages.com. Click the button. Start building your virtual vending machines tonight. I'm going to stick around for Q&A now, so if you have questions, drop them in the chat and I'll answer as many as I can. But don't wait for Q&A to sign up — go grab your spot now while the bonuses are still live. Thank you so much for spending this hour with me tonight. Now go build your future. I'll see you inside AffiliatePages.</aside>
+</section>
+
+</div><!-- /.slides -->
+</div><!-- /.reveal -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  slideNumber: true,
+  progress: true,
+  controls: true,
+  controlsTutorial: false,
+  center: true,
+  transition: 'slide',
+  transitionSpeed: 'default',
+  backgroundTransition: 'fade',
+  width: 1280,
+  height: 720,
+  margin: 0.04,
+  minScale: 0.5,
+  maxScale: 2.0,
+  plugins: [ RevealNotes ]
+});
+</script>
+</body>
+</html>
