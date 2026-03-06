@@ -6,17 +6,13 @@
   <title>Independence Day Sale — 70% Off AffiliatePages.com | $497/Year</title>
   <meta name="description" content="For 3 days only, lock in a full year of AffiliatePages.com for just $497. Build AI-powered affiliate review sites that rank, convert, and pay you month after month.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+3:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            'serif': ['Lora', 'Georgia', 'serif'],
-            'sans': ['Source Sans 3', 'Helvetica', 'Arial', 'sans-serif'],
+            serif: ['Lora', 'Georgia', 'serif'],
+            sans: ['Source Sans 3', 'Helvetica', 'Arial', 'sans-serif'],
           },
           colors: {
             'cta-red': '#E63946',
@@ -33,7 +29,19 @@
       }
     }
   </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Source+Sans+3:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
+    /* @theme block disabled - using Tailwind v3 CDN with tailwind.config */
     /* Base typography */
     body {
       font-family: 'Lora', Georgia, serif;

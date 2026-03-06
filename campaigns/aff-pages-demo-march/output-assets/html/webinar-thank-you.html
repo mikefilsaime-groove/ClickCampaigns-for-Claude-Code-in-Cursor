@@ -5,25 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>You're Registered! — AffiliatePages.com Independence Day Webinar</title>
   <meta name="description" content="You're confirmed for the AffiliatePages.com Independence Day webinar with Mike Filsaime & Jitendra. Check your email for details." />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'royal': '#6B3FA0',
+            'royal-dark': '#5A3488',
+            'royal-light': '#8B63BF',
+            'lavender': '#E8D9F0',
+            'lavender-light': '#F3ECF8',
+            'crimson': '#E63946',
+            'crimson-dark': '#C41E3A',
+            'dark-purple': '#3D1F5C',
+            'dark-purple-light': '#5C3A7A',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-    /* ── Tailwind v4 theme ── */
-    @theme {
-      --color-royal: #6B3FA0;
-      --color-royal-dark: #5A3488;
-      --color-royal-light: #8B63BF;
-      --color-lavender: #E8D9F0;
-      --color-lavender-light: #F3ECF8;
-      --color-crimson: #E63946;
-      --color-crimson-dark: #C41E3A;
-      --color-dark-purple: #3D1F5C;
-      --color-dark-purple-light: #5C3A7A;
-      --font-family-sans: 'Inter', system-ui, sans-serif;
-    }
+    /* @theme disabled - using Tailwind v3 CDN with tailwind.config */
 
     html { scroll-behavior: smooth; }
 

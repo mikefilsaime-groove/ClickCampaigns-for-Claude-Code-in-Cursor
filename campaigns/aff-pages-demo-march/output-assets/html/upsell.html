@@ -5,22 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>One-Time Offer — ClickCoach.io | Exclusive for AffiliatePages Members</title>
   <meta name="description" content="Special one-time offer: Get ClickCoach.io for just $297 (40% off) — exclusively for new AffiliatePages members.">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'amber-brand': '#F59E0B',
+            'amber-brand-dark': '#D97706',
+            'amber-dark': '#D97706',
+            'emerald-brand': '#10B981',
+            'emerald-brand-dark': '#059669',
+            'green-cta': '#22C55E',
+            'green-cta-hover': '#16A34A',
+            'urgency-red': '#DC2626',
+            'red-urgent': '#DC2626',
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'system-ui', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,500&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
-  <style type="text/tailwindcss">
-    @theme {
-      --color-amber-brand: #F59E0B;
-      --color-amber-dark: #D97706;
-      --color-green-cta: #22C55E;
-      --color-green-cta-hover: #16A34A;
-      --color-red-urgent: #DC2626;
-      --color-warm-50: #FFFBEB;
-      --color-warm-100: #FEF3C7;
-    }
-  </style>
+  <!-- @theme colors disabled - using Tailwind v3 CDN -->
   <style>
     body {
       font-family: 'DM Sans', system-ui, sans-serif;

@@ -5,33 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Checkout — AffiliatePages.com Independence Sale | $497/Year</title>
   <meta name="description" content="Complete your order and lock in the 4th of July Independence Sale price. Get AffiliatePages.com full annual access for just $497 — save $1,291 off regular pricing." />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'green-cta': '#22C55E',
+            'green-cta-hover': '#16A34A',
+            'green-cta-dark': '#15803D',
+            'urgency-red': '#DC2626',
+            'urgency-red-dark': '#991B1B',
+            'savings-gold': '#F59E0B',
+            'trust-blue': '#2563EB',
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'system-ui', 'sans-serif'],
+            serif: ['DM Serif Display', 'Georgia', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=DM+Serif+Display&display=swap');
 
-    @theme {
-      --color-green-cta: #22C55E;
-      --color-green-cta-hover: #16A34A;
-      --color-green-cta-dark: #15803D;
-      --color-urgency-red: #DC2626;
-      --color-urgency-red-dark: #991B1B;
-      --color-savings-gold: #F59E0B;
-      --color-slate-950: #020617;
-      --color-slate-800: #1E293B;
-      --color-slate-700: #334155;
-      --color-slate-600: #475569;
-      --color-slate-500: #64748B;
-      --color-slate-400: #94A3B8;
-      --color-slate-300: #CBD5E1;
-      --color-slate-200: #E2E8F0;
-      --color-slate-100: #F1F5F9;
-      --color-slate-50: #F8FAFC;
-      --color-trust-blue: #2563EB;
-      --font-family-sans: 'DM Sans', system-ui, sans-serif;
-      --font-family-serif: 'DM Serif Display', Georgia, serif;
-    }
+    /* @theme disabled - using Tailwind v3 CDN with tailwind.config */
 
     html { scroll-behavior: smooth; }
 

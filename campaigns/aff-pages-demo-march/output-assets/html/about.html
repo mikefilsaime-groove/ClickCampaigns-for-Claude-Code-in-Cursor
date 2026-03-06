@@ -5,22 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us — AffiliatePages.com | Our Story</title>
     <meta name="description" content="Meet the founders of AffiliatePages.com — Mike Filsaime and Jitendra. Discover the mailbox money origin story and the mission to become the #1 affiliate website builder in the world.">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'royal': '#6B3FA0',
+              'royal-dark': '#5A3488',
+              'royal-light': '#8B63BF',
+              'royal-purple': '#6B3FA0',
+              'royal-purple-light': '#8B63BF',
+              'royal-purple-dark': '#5A3488',
+              'lavender': '#E8D9F0',
+              'lavender-light': '#F3ECF8',
+              'lavender-soft': '#E8D9F0',
+              'lavender-mist': '#F3ECF8',
+              'crimson': '#E63946',
+              'crimson-dark': '#C41E3A',
+              'dark-purple': '#3D1F5C',
+              'dark-purple-light': '#5C3A7A',
+              'deep-purple': '#2D1545',
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
-    <style type="text/tailwindcss">
-        @theme {
-            --color-royal-purple: #6B3FA0;
-            --color-royal-purple-dark: #5A3488;
-            --color-royal-purple-light: #7E52B3;
-            --color-lavender-mist: #E8D9F0;
-            --color-lavender-soft: #F3ECF8;
-            --color-crimson: #E63946;
-            --color-crimson-dark: #C41E3A;
-            --color-dark-purple: #3D1F5C;
-            --color-deep-purple: #2D1645;
-        }
-    </style>
+    <!-- @theme colors disabled - using Tailwind v3 CDN -->
     <style>
         html { scroll-behavior: smooth; }
 
