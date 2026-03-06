@@ -524,6 +524,38 @@ When building large campaigns with multiple independent assets, you may spawn su
 
 ---
 
+## MANDATORY: Skill File Requirements
+
+**STOP. No deliverable may be created without FIRST reading the matching skill file(s).**
+
+Every asset requires TWO skill lookups before you write a single line:
+
+1. **Marketing skill** (from `skills-and-instructions/skills/funnels/` or `skills/tasks/`) — defines WHAT to write (structure, frameworks, persuasion elements)
+2. **Production skill** (from `skills-and-instructions/skills/production/`) — defines HOW to output it (design quality, formatting, technical standards)
+
+### Pre-Creation Checklist
+
+Before creating ANY deliverable, confirm:
+
+- [ ] Identified and READ the matching marketing skill file (e.g., `funnels/vsl-hybrid/SKILL.md` for a VSL page)
+- [ ] Identified and READ the matching production skill file (e.g., `production/frontend-design/SKILL.md` for HTML)
+- [ ] For HTML pages: Tailwind CDN is v3 (`cdn.tailwindcss.com`), NOT v4
+- [ ] For HTML pages with custom colors: `tailwind.config` defines ALL custom class names used on the page
+
+### Post-Creation Verification
+
+After creating any HTML page, verify:
+
+- [ ] Grep for all custom color classes (e.g., `bg-royal`, `text-crimson`) — every one has a definition in `tailwind.config`
+- [ ] No `//` comments inside `<style>` blocks (CSS only uses `/* */`)
+- [ ] No unclosed `/*` comments — every `/*` has a matching `*/`
+- [ ] Page opened in browser/Playwright with 0 console errors
+- [ ] Full-page screenshot confirms all sections render with correct colors and content
+
+**If you cannot find a matching skill file, ASK the user before proceeding. Do not guess or improvise the structure.**
+
+---
+
 ## Quality Standards
 
 All deliverables are:
@@ -535,13 +567,30 @@ All deliverables are:
 ### Required CDN Includes (in every HTML file)
 
 ```html
-<!-- Tailwind CSS v4 -->
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- Tailwind CSS (v3 CDN - required for single-file pages) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Custom colors (define ALL custom Tailwind classes used on the page) -->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          // Add every custom color this page uses, e.g.:
+          // 'royal': '#6B3FA0',
+          // 'crimson': '#E63946',
+        }
+      }
+    }
+  }
+</script>
 
 <!-- Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest"></script>
 <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
 ```
+
+> **NEVER use `@tailwindcss/browser@4`** — The v4 browser CDN does not reliably support `@theme` in `<style>` blocks for single-file HTML. Use `cdn.tailwindcss.com` (v3) with `tailwind.config` JS objects for custom colors. See `docs/tailwind-failure-postmortem.md` for details.
 
 > **Note:** Tailwind's CDN is officially "for development" but works well for marketing pages where portability matters more than micro-optimization. For high-traffic pages, consider a build step.
 
@@ -551,6 +600,16 @@ All deliverables are:
 <i data-lucide="arrow-right" class="w-5 h-5"></i>
 <i data-lucide="star" class="w-4 h-4 text-yellow-400"></i>
 ```
+
+### CSS Safety Rules
+
+These rules prevent catastrophic styling failures (see `docs/tailwind-failure-postmortem.md`):
+
+- **`//` is NOT valid CSS.** Only use `/* */` for CSS comments. Double-slash is JavaScript syntax — inside a `<style>` tag it breaks CSS parsing.
+- **Every `/*` MUST have a matching `*/`.** One unclosed comment can eat an entire stylesheet.
+- **Never comment out large CSS blocks.** Delete them or keep them. Half-commented CSS (e.g., commenting out `@theme` but leaving the closing `}`) creates parsing disasters.
+- **Never use `<style type="text/tailwindcss">`** — this is a Tailwind v3-specific attribute that fails silently when content is malformed. Use standard `<style>` tags.
+- **After creating any page with custom Tailwind colors**, grep for all custom class usages and verify each one is defined in `tailwind.config`. A single undefined color class means invisible text or missing backgrounds.
 
 ### Funnel Design Specifications
 

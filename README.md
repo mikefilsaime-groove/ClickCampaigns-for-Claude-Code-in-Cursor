@@ -361,8 +361,21 @@ All HTML assets are production-ready, self-contained single files.
 ### Required CDN Includes
 
 ```html
-<!-- Tailwind CSS v4 -->
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- Tailwind CSS (v3 CDN - required for single-file pages) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Custom colors (if page uses custom Tailwind classes) -->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          // Define every custom color this page uses
+        }
+      }
+    }
+  }
+</script>
 
 <!-- Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest"></script>
