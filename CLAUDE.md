@@ -8,7 +8,14 @@
 
 **Check if `.clickcampaigns.json` exists in the project root.**
 
-- **If it EXISTS:** Setup is complete. Read it to determine the mode (`solo` or `agency`), then follow the instructions in this file. If this file still contains only this setup gate (not the full instructions), read the appropriate template directly: `setup/templates/CLAUDE-solo.md` or `setup/templates/CLAUDE-agency.md` based on the mode in `.clickcampaigns.json`.
+- **If it EXISTS and mode is `"token"`:** Campaign is loaded from ClickCampaigns.ai via auth token.
+  Read `.clickcampaigns.json` for campaign details, then follow `setup/templates/CLAUDE-token.md`.
+
+- **If it EXISTS and mode is `"file"`:** Campaign was loaded from a downloaded project file.
+  Read `.clickcampaigns.json` for campaign details, then follow the appropriate template
+  (`setup/templates/CLAUDE-solo.md` or `setup/templates/CLAUDE-agency.md`) using the loaded context.
+
+- **If it EXISTS and mode is `"solo"` or `"agency"`:** Setup is complete. Read it to determine the mode, then follow the instructions in this file. If this file still contains only this setup gate (not the full instructions), read the appropriate template directly: `setup/templates/CLAUDE-solo.md` or `setup/templates/CLAUDE-agency.md` based on the mode in `.clickcampaigns.json`.
 
 - **If it does NOT exist:** This is a first-time setup. Read and follow `setup/SETUP.md` to run the setup wizard. The wizard will rewrite this file with the full instructions for the user's chosen mode.
 

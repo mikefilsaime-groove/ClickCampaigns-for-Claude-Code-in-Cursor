@@ -8,13 +8,14 @@
 
 Say to the user:
 
-> "Welcome to ClickCampaigns! Before we start building, I need to set things up.
+> "Welcome to ClickCampaigns! How would you like to work?
 >
-> **How will you be using ClickCampaigns?**
-> 1. **I'm a business/marketer** - I'm working on my own company's campaigns
-> 2. **I'm an agency** - I work with multiple clients, each with their own campaigns"
+> 1. **Marketing Strategist** — I'll guide you through everything step by step, help you choose funnels, write copy, and build pages
+> 2. **Self-Directed** — You already know what you want. Just tell me and I'll execute
+> 3. **Load a ClickCampaigns Project File** — You have a downloaded project folder from ClickCampaigns.ai
+> 4. **Connect with Auth Token** — You have a `cc-` auth token from ClickCampaigns.ai"
 
-Then ask:
+Then (for options 1 and 2 only) ask:
 
 > "One more question - will you be viewing or editing the Markdown files in Obsidian?
 > 1. **Yes** - use Obsidian conventions (YAML frontmatter, callout blocks)
@@ -22,7 +23,9 @@ Then ask:
 
 ---
 
-## Step 2: Create Configuration
+## Option 1 or 2: Solo / Self-Directed Mode
+
+### Step 2: Create Configuration
 
 Create `.clickcampaigns.json` in the project root:
 
@@ -31,50 +34,166 @@ Create `.clickcampaigns.json` in the project root:
   "mode": "solo",
   "obsidian": false,
   "setupDate": "YYYY-MM-DD",
-  "version": "1.0"
+  "version": "1.1"
 }
 ```
 
-- Set `mode` to `"solo"` or `"agency"` based on their answer
+- Set `mode` to `"solo"` for both options 1 and 2
 - Set `obsidian` to `true` if they chose Yes for Obsidian
 - Set `setupDate` to today's date
 
----
+### Step 3: Install CLAUDE.md
 
-## Step 3: Install CLAUDE.md
-
-**This is the critical step.** Read the appropriate template and REPLACE the entire `CLAUDE.md` file with it:
-
-- **If solo mode:** Read `setup/templates/CLAUDE-solo.md` and write its contents to `CLAUDE.md`
-- **If agency mode:** Read `setup/templates/CLAUDE-agency.md` and write its contents to `CLAUDE.md`
+Read `setup/templates/CLAUDE-solo.md` and REPLACE the entire `CLAUDE.md` file with it.
 
 **Also update AGENTS.md:**
-- **If solo mode:** Read `setup/templates/AGENTS-solo.md` and write its contents to `AGENTS.md`
-- **If agency mode:** Read `setup/templates/AGENTS-agency.md` and write its contents to `AGENTS.md`
+Read `setup/templates/AGENTS-solo.md` and write its contents to `AGENTS.md`.
 
----
+### Step 4: Create Folders
 
-## Step 4: Create Folders
-
-**If solo mode**, ensure these folders exist:
+Ensure these folders exist:
 - `brand-kit/brand-knowledge-base/`
 - `brand-kit/brand-style-guide/`
 - `campaigns/`
 
-**If agency mode**, ensure this folder exists:
-- `clients/`
+### Step 5: Confirm and Continue
+
+Say:
+> "Setup complete! ClickCampaigns is configured for your business. What campaign would you like to build?"
+
+**For option 1 (Strategist):** Follow the full guided session-start flow from the installed CLAUDE.md instructions.
+
+**For option 2 (Self-Directed):** Skip the guided questioning. Ask the user what they want to build and execute immediately.
 
 ---
 
-## Step 5: Confirm and Continue
+## Option 3: Load a ClickCampaigns Project File
 
-**If solo mode**, say:
-> "Setup complete! ClickCampaigns is configured for your business. What campaign would you like to build?"
+The user has a downloaded project folder from ClickCampaigns.ai (a folder with campaign-brief.md, brand-kit/, selected-work/, etc.).
 
-**If agency mode**, say:
-> "Setup complete! ClickCampaigns is configured for agency use. Which client are we working with today?"
+### Step 2: Get the folder path
 
-**Then continue working as if you just read the new CLAUDE.md** (you wrote it). Follow the session-start flow from the installed instructions.
+Ask: "Please provide the path to your downloaded ClickCampaigns project folder."
+
+### Step 3: Read and load the project
+
+1. Read all files in the provided folder:
+   - `campaign-brief.md` — campaign goals and settings
+   - `brand-kit/brand-knowledge-base/brand-knowledge-base.md`
+   - `brand-kit/brand-style-guide/brand-style-guide.md`
+   - `selected-work/funnels-and-pages.md`
+   - `selected-work/tasks.md`
+   - `skill-map.md` (if present) — maps tasks to skill files
+   - `execution-order.md` (if present) — recommended build order
+
+2. Copy brand files into this repo's `brand-kit/`:
+   - Copy knowledge base to `brand-kit/brand-knowledge-base/`
+   - Copy style guide to `brand-kit/brand-style-guide/`
+
+3. Create a campaign folder from the campaign name:
+   - `campaigns/[campaign-name]/output-assets/html/`
+   - `campaigns/[campaign-name]/output-assets/documents/`
+   - `campaigns/[campaign-name]/output-assets/emails/`
+   - `campaigns/[campaign-name]/output-assets/ads/`
+
+### Step 4: Create Configuration
+
+```json
+{
+  "mode": "file",
+  "campaignName": "Campaign Name from brief",
+  "sourceFolder": "/path/to/downloaded/folder",
+  "obsidian": false,
+  "setupDate": "YYYY-MM-DD",
+  "version": "1.1"
+}
+```
+
+### Step 5: Install CLAUDE.md
+
+Read `setup/templates/CLAUDE-solo.md` and REPLACE the entire `CLAUDE.md` file with it.
+
+Also: Read `setup/templates/AGENTS-solo.md` and write to `AGENTS.md`.
+
+### Step 6: Confirm and Continue
+
+Say:
+> "Project loaded! Campaign '[name]' is ready with [X] tasks. Brand files are installed.
+>
+> Here's what's selected: [list from tasks.md and funnels-and-pages.md]
+>
+> Which task should I work on first? Or say 'all' to execute in order."
+
+If `skill-map.md` was present, use it to read the matching SKILL.md before each task.
+If `execution-order.md` was present, suggest following that order.
+
+---
+
+## Option 4: Connect with Auth Token
+
+The user has a `cc-` auth token from ClickCampaigns.ai.
+
+### Step 2: Get and verify the token
+
+Ask: "Please paste your auth token (starts with `cc-`)."
+
+Once received, verify it:
+```bash
+node scripts/cc-api.js verify <token>
+```
+
+If invalid, tell the user and ask them to generate a new token at ClickCampaigns.ai.
+
+### Step 3: Fetch campaign data
+
+```bash
+node scripts/cc-api.js fetch <token>
+```
+
+This returns full campaign JSON. Parse the output and extract:
+- Campaign name, description, settings
+- Brand kit (knowledge base + style guide markdown)
+- Selected work items with skill paths
+- Task instructions
+- Execution plan (if available)
+
+### Step 4: Install campaign locally
+
+1. Write brand files to `brand-kit/`:
+   - `brand-kit/brand-knowledge-base/brand-knowledge-base.md`
+   - `brand-kit/brand-style-guide/brand-style-guide.md`
+
+2. Create campaign folder: `campaigns/[campaign-name]/output-assets/` with subfolders
+
+3. Create `.clickcampaigns.json`:
+
+```json
+{
+  "mode": "token",
+  "token": "cc-abc123...",
+  "apiUrl": "https://clickcampaigns.ai",
+  "campaignId": 123,
+  "campaignName": "Campaign Name",
+  "obsidian": false,
+  "setupDate": "YYYY-MM-DD",
+  "version": "1.1"
+}
+```
+
+### Step 5: Install CLAUDE.md
+
+Read `setup/templates/CLAUDE-token.md` and REPLACE the entire `CLAUDE.md` file with it.
+
+Also: Read `setup/templates/AGENTS-solo.md` and write to `AGENTS.md`.
+
+### Step 6: Confirm and Continue
+
+Say:
+> "Connected to ClickCampaigns.ai! Campaign '[name]' loaded with [X] tasks.
+>
+> Tasks: [list with statuses]
+>
+> Which task should I work on first? Or say 'all' to execute in order."
 
 ---
 

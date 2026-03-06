@@ -8,7 +8,10 @@
     "pexels": "node scripts/pexels-search.js",
     "generate-image": "node scripts/generate-image.js",
     "clone-page": "node scripts/clone-page.js",
-    "html-to-pdf": "node scripts/html-to-pdf.js"
+    "html-to-pdf": "node scripts/html-to-pdf.js",
+    "cc:fetch": "node scripts/cc-api.js fetch",
+    "cc:verify": "node scripts/cc-api.js verify",
+    "cc:status": "node scripts/cc-api.js status"
   },
   "dependencies": {
     "pexels": "^1.4.0",
