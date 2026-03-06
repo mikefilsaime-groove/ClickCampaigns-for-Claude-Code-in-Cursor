@@ -29,3 +29,7 @@ If you cannot read `CLAUDE.md`, here are the essentials:
 3. **Production skills**: `skills-and-instructions/skills/production/` (frontend-design, pptx, pdf, docx)
 4. **HTML requires**: Tailwind CSS v4 CDN + Lucide Icons
 5. **All output must be**: production-ready, mobile-responsive, self-contained, no placeholders
+6. **Creative tools** (require API keys in `.env`):
+   - `node scripts/pexels-search.js "query"` — Stock photos (Pexels)
+   - `node scripts/generate-image.js "prompt" output.png` — AI images (Nano Banana Pro / Gemini)
+   - `node scripts/clone-page.js "url" output.html` — Clone any webpage (Firecrawl)
