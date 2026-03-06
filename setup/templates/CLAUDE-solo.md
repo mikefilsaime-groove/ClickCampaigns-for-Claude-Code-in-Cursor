@@ -516,7 +516,7 @@ See `production/copy-critique/SKILL.md` for full details.
 
 ### Parallel Execution
 
-When building large campaigns with multiple independent assets, you may spawn subagents to work on them in parallel. Use your judgment:
+When building large campaigns with multiple independent assets, you may spawn subagents to work on them in parallel — **but only if your tool supports it** (e.g., Claude Code's Agent tool). If you do not have subagent capabilities, work sequentially instead. Use your judgment:
 
 - **Parallelize** when tasks are independent (e.g., building the opt-in page while writing the email sequence)
 - **Stay sequential** when one task depends on another's output (e.g., in Workflow C, Ryan's copy must exist before Cassidy designs the page around it)
