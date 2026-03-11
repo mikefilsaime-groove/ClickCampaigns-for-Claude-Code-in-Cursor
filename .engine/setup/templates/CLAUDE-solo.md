@@ -903,6 +903,31 @@ Check `.clickcampaigns.json` for the `obsidian` setting.
 | `list specialists` | Show the team |
 | `status` | Show current campaign and what's been built |
 | `reset setup` | Re-run the first-time setup wizard (switch between solo/agency mode) |
+| `set up Google Workspace` | Connect Google Workspace integration (Drive, Gmail, Sheets, etc.) |
+| `export to Drive` | Upload campaign assets to Google Drive |
+| `export to Gmail` | Create Gmail drafts from email sequences |
+
+---
+
+## Google Workspace Integration
+
+**Check `.clickcampaigns.json` for `"googleWorkspace": true`** before using any `gws` commands.
+
+If Google Workspace is enabled, you can use `gws` commands to export assets:
+
+- **Drive:** Upload HTML pages, documents, PDFs to Google Drive
+- **Gmail:** Create drafts from email sequences (always drafts, never auto-send)
+- **Sheets:** Create campaign trackers, export email schedules
+- **Slides:** Create presentations from campaign content
+- **Calendar:** Add launch dates and send schedules
+- **YouTube:** Upload video content
+
+**Reference:** `.engine/integrations/google-workspace/USE-CASES.md` has all the recipes and command examples.
+
+**If not enabled** and the user asks to export to Google Workspace:
+> "Google Workspace isn't connected yet. Want me to set it up? It takes about 5-10 minutes."
+
+Then follow the setup steps in `.engine/integrations/google-workspace/INSTALL.md` and update `.clickcampaigns.json` with `"googleWorkspace": true`.
 
 ---
 

@@ -33,6 +33,7 @@ Create `.clickcampaigns.json` in the project root:
 {
   "mode": "solo",
   "obsidian": false,
+  "googleWorkspace": false,
   "setupDate": "YYYY-MM-DD",
   "version": "1.1"
 }
@@ -104,6 +105,7 @@ Ask: "Please provide the path to your downloaded ClickCampaigns project folder."
   "campaignName": "Campaign Name from brief",
   "sourceFolder": "/path/to/downloaded/folder",
   "obsidian": false,
+  "googleWorkspace": false,
   "setupDate": "YYYY-MM-DD",
   "version": "1.1"
 }
@@ -175,6 +177,7 @@ This returns full campaign JSON. Parse the output and extract:
   "campaignId": 123,
   "campaignName": "Campaign Name",
   "obsidian": false,
+  "googleWorkspace": false,
   "setupDate": "YYYY-MM-DD",
   "version": "1.1"
 }
@@ -215,6 +218,58 @@ node .engine/scripts/cc-skills.js login
 ```
 
 This opens the browser for the user to log in and generate a CLI token. Production skills (HTML design, PDF, PPTX, DOCX) are available locally without authentication.
+
+---
+
+## Google Workspace Integration (Optional)
+
+After completing skills authentication (or if the user skips it), offer the Google Workspace integration:
+
+> "One more thing — would you like to connect **Google Workspace**?
+>
+> This lets me export campaign assets directly to your Google Drive, create Gmail drafts, build Google Sheets, Slides, and more.
+>
+> 1. **Yes, set it up** — I'll walk you through the install (5-10 minutes)
+> 2. **Tell me more** — I'll explain what it does and you can decide
+> 3. **Skip for now** — You can always enable this later"
+
+**If they choose 1 (Yes):**
+
+1. Check if `gws` is already installed:
+   ```bash
+   gws --version 2>/dev/null
+   ```
+
+2. If not installed, run:
+   ```bash
+   npm install -g @googleworkspace/cli
+   ```
+
+3. Guide them through auth setup:
+   ```bash
+   gws auth setup
+   ```
+   If they don't have `gcloud`, walk them through the manual OAuth setup described in `.engine/integrations/google-workspace/INSTALL.md`.
+
+4. Test the connection:
+   ```bash
+   gws drive files list --params '{"pageSize": 3}'
+   ```
+
+5. Update `.clickcampaigns.json` — add `"googleWorkspace": true`
+
+6. Confirm:
+   > "Google Workspace is connected! I can now export assets to your Drive, Gmail, Sheets, Slides, and Calendar. Just ask anytime."
+
+**If they choose 2 (Tell me more):**
+
+Read `.engine/integrations/google-workspace/README.md` and summarize the key benefits, then ask if they want to proceed with setup.
+
+**If they choose 3 (Skip):**
+
+Update `.clickcampaigns.json` — add `"googleWorkspace": false`. Continue with the rest of setup.
+
+> "No problem. You can say **'set up Google Workspace'** anytime to enable it later."
 
 ---
 
