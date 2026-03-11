@@ -25,7 +25,7 @@ Before doing any work, check if `.clickcampaigns.json` exists in the project roo
 If you cannot read `CLAUDE.md`, here are the essentials:
 
 1. **Check `.clickcampaigns.json`** to determine if setup is complete and what mode is active
-2. **Skill files**: `.engine/skills-and-instructions/skills/funnels/` and `skills/tasks/`
+2. **Skill files**: `.engine/skills-and-instructions/skills/funnels/` and `.engine/skills-and-instructions/skills/tasks/`
 3. **Production skills**: `.engine/skills-and-instructions/skills/production/` (frontend-design, pptx, pdf, docx)
 4. **HTML requires**: Tailwind CSS v4 CDN + Lucide Icons
 5. **All output must be**: production-ready, mobile-responsive, self-contained, no placeholders
