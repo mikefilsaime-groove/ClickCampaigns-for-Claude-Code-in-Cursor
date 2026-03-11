@@ -6,7 +6,7 @@
 
 ## IMPORTANT: Read the Full Instructions First
 
-**Read `setup/templates/CLAUDE-solo.md` for ALL standard instructions** — quality standards, workflows, styling guide, production skills, CDN includes, image tools, specialist team, etc.
+**Read `.engine/setup/templates/CLAUDE-solo.md` for ALL standard instructions** — quality standards, workflows, styling guide, production skills, CDN includes, image tools, specialist team, etc.
 
 **This file ONLY overrides the session-start flow.** Everything else in CLAUDE-solo.md applies as-is.
 
@@ -22,7 +22,7 @@ At the start of every session:
 2. **Read brand files** from `brand-kit/` (they were installed during setup)
 3. **Fetch latest campaign data** from the API:
    ```bash
-   node scripts/cc-api.js fetch <token>
+   node .engine/scripts/cc-api.js fetch <token>
    ```
 4. **Display campaign status:**
 
@@ -45,15 +45,15 @@ In token mode, each task has a `skillPath` from the API response. **Before execu
 
 1. Fetch the marketing skill from the API:
    ```bash
-   node scripts/cc-skills.js fetch {skillPath}
+   node .engine/scripts/cc-skills.js fetch {skillPath}
    ```
-   Example: `node scripts/cc-skills.js fetch funnels/product-launch-plf/SKILL.md`
+   Example: `node .engine/scripts/cc-skills.js fetch funnels/product-launch-plf/SKILL.md`
 2. Follow the skill's instructions exactly
-3. Also read the production skill for the output type (local file: `skills-and-instructions/skills/production/`)
+3. Also read the production skill for the output type (local file: `.engine/skills-and-instructions/skills/production/`)
 
 This is not optional. Every task MUST be preceded by fetching its skill file.
 
-**If you get an auth error:** Tell the user to run `node scripts/cc-skills.js login` to authenticate.
+**If you get an auth error:** Tell the user to run `node .engine/scripts/cc-skills.js login` to authenticate.
 
 ---
 
@@ -62,7 +62,7 @@ This is not optional. Every task MUST be preceded by fetching its skill file.
 **After completing each task**, report status back to ClickCampaigns.ai:
 
 ```bash
-node scripts/cc-api.js status <token> <taskId> completed
+node .engine/scripts/cc-api.js status <token> <taskId> completed
 ```
 
 Replace `<taskId>` with the task's catalog ID (e.g., `copy.vsl_script`, `email.launch`).
@@ -71,7 +71,7 @@ Valid statuses: `pending`, `in_progress`, `completed`
 
 **Before starting a task**, optionally mark it in-progress:
 ```bash
-node scripts/cc-api.js status <token> <taskId> in_progress
+node .engine/scripts/cc-api.js status <token> <taskId> in_progress
 ```
 
 ---
@@ -80,14 +80,14 @@ node scripts/cc-api.js status <token> <taskId> in_progress
 
 For each task:
 
-1. Mark as in_progress: `node scripts/cc-api.js status <token> <taskId> in_progress`
-2. Fetch the skill: `node scripts/cc-skills.js fetch {skillPath}`
+1. Mark as in_progress: `node .engine/scripts/cc-api.js status <token> <taskId> in_progress`
+2. Fetch the skill: `node .engine/scripts/cc-skills.js fetch {skillPath}`
 3. Read the production skill for the output format
 4. Read brand files for voice/style context
 5. Check for task-specific custom instructions from the API response (`taskInstructions`)
 6. Execute the task following the appropriate workflow (A, B, C, D, or E from CLAUDE-solo.md)
 7. Save output to `campaigns/[campaign-name]/output-assets/`
-8. Mark as completed: `node scripts/cc-api.js status <token> <taskId> completed`
+8. Mark as completed: `node .engine/scripts/cc-api.js status <token> <taskId> completed`
 
 ---
 

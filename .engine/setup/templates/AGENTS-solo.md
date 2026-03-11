@@ -7,7 +7,7 @@
 All agent instructions live in **`CLAUDE.md`** — the single source of truth.
 
 **Before doing any work, read `CLAUDE.md` in this project root.** It contains:
-- Client selection workflow (always ask which client first)
+- Campaign selection workflow (ask what we're working on)
 - Folder structure and file conventions
 - Five asset creation workflows (A through E)
 - Styling and design guidelines
@@ -31,10 +31,10 @@ All agent instructions live in **`CLAUDE.md`** — the single source of truth.
 
 If you cannot read `CLAUDE.md`, here are the essentials:
 
-1. **Always ask which client** before doing any work
-2. **Client folders**: `clients/[client-name]/campaigns/[campaign-name]/output-assets/`
-3. **Brand files**: Check `clients/[client-name]/brand-kit/` and campaign-level `brand-kit/`
-4. **Marketing skills**: Fetch via `node scripts/cc-skills.js fetch <path>` (funnels/ and tasks/)
-5. **Production skills**: `skills-and-instructions/skills/production/` (local — frontend-design, pptx, pdf, docx)
+1. **Ask what campaign** we're working on before doing any work
+2. **Campaign folders**: `campaigns/[campaign-name]/output-assets/`
+3. **Brand files**: Check `brand-kit/` (project root) and campaign-level `brand-kit/`
+4. **Marketing skills**: Fetch via `node .engine/scripts/cc-skills.js fetch <path>` (funnels/ and tasks/)
+5. **Production skills**: `.engine/skills-and-instructions/skills/production/` (local — frontend-design, pptx, pdf, docx)
 6. **HTML requires**: Tailwind CSS v4 CDN + Lucide Icons
 7. **All output must be**: production-ready, mobile-responsive, self-contained, no placeholders

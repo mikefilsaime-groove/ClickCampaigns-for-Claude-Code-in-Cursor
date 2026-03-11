@@ -5,7 +5,7 @@ Marketing skills (funnels and tasks) are loaded on-demand from the ClickCampaign
 ## Setup
 
 ```bash
-node scripts/cc-skills.js login
+node .engine/scripts/cc-skills.js login
 ```
 
 This opens your browser to authenticate with your ClickCampaigns account.
@@ -14,13 +14,13 @@ This opens your browser to authenticate with your ClickCampaigns account.
 
 ```bash
 # List all available skills
-node scripts/cc-skills.js list
+node .engine/scripts/cc-skills.js list
 
 # Fetch a specific skill
-node scripts/cc-skills.js fetch funnels/product-launch-plf/SKILL.md
+node .engine/scripts/cc-skills.js fetch funnels/product-launch-plf/SKILL.md
 
 # Check if your token is valid
-node scripts/cc-skills.js verify
+node .engine/scripts/cc-skills.js verify
 ```
 
 ## What's Local

@@ -33,9 +33,9 @@ Place the `ClickCampaigns-for-Claude-Code-in-Cursor/` folder anywhere on your ma
 ### 2. Install Dependencies (Optional — for image generation, PDF, and page cloning)
 
 ```bash
-npm run setup
-cp .env.example .env
-# Add your API keys to .env:
+cd .engine && npm run setup
+cp .engine/.env.example .engine/.env
+# Add your API keys to .engine/.env:
 #   GEMINI_API_KEY=your-key    (AI image generation)
 #   PEXELS_API_KEY=your-key    (stock photo search)
 #   FIRECRAWL_API_KEY=your-key (Clone Page feature)
@@ -140,20 +140,21 @@ ClickCampaigns/
 ├── CLAUDE.md                         # AI agent instructions (configured for your mode)
 ├── AGENTS.md                         # Pointer for Codex/other tools → reads CLAUDE.md
 ├── README.md                         # This file
-├── package.json                      # Node.js dependencies (image scripts)
 │
-├── setup/templates/                  # Setup wizard templates (don't modify)
-├── agents/                           # 22 specialist profiles
-├── funnels/                          # 26 funnel type reference
-├── tasks/                            # 25+ task category reference
-├── templates/                        # Brand kit templates
-│
-├── skills-and-instructions/skills/
-│   ├── funnels/                      # 26 funnel skill files
-│   ├── tasks/                        # 25+ task skill files
-│   └── production/                   # HTML, PPTX, PDF, DOCX production skills
-│
-└── scripts/                          # Image, clone page, and PDF utilities
+└── .engine/                          # Engine internals (don't modify)
+    ├── package.json                  # Node.js dependencies (image scripts)
+    ├── setup/templates/              # Setup wizard templates
+    ├── agents/                       # 22 specialist profiles
+    ├── funnels/                      # 26 funnel type reference
+    ├── tasks/                        # 25+ task category reference
+    ├── templates/                    # Brand kit templates
+    │
+    ├── skills-and-instructions/skills/
+    │   ├── funnels/                  # 26 funnel skill files
+    │   ├── tasks/                    # 25+ task skill files
+    │   └── production/              # HTML, PPTX, PDF, DOCX production skills
+    │
+    └── scripts/                     # Image, clone page, and PDF utilities
 ```
 
 ---
@@ -194,7 +195,7 @@ Alex coordinates 22 marketing specialists, each with a distinct persona, experti
 | **Sage** | Analytics & Tracking |
 | **Jamie** | Course & Education |
 
-Full profiles with backstories and special instructions: [agents/Agents-List.md](agents/Agents-List.md)
+Full profiles with backstories and special instructions: [.engine/agents/Agents-List.md](.engine/agents/Agents-List.md)
 
 ---
 
@@ -222,7 +223,7 @@ Full profiles with backstories and special instructions: [agents/Agents-List.md]
 
 Plus 9 more specialized funnel types. Each has available pages (opt-in, sales, checkout, upsell, downsell, thank you, etc.).
 
-Full details: [funnels/Funnel-Pages-Checklist.md](funnels/Funnel-Pages-Checklist.md)
+Full details: [.engine/funnels/Funnel-Pages-Checklist.md](.engine/funnels/Funnel-Pages-Checklist.md)
 
 ---
 
@@ -265,7 +266,7 @@ Full details: [funnels/Funnel-Pages-Checklist.md](funnels/Funnel-Pages-Checklist
 ### And More
 SEO strategy, social media systems, CRM automation, analytics setup, design briefs, course launches, ecommerce extras, influencer partnerships...
 
-Full details: [tasks/Task-Checklist.md](tasks/Task-Checklist.md)
+Full details: [.engine/tasks/Task-Checklist.md](.engine/tasks/Task-Checklist.md)
 
 ---
 
@@ -281,8 +282,8 @@ Captures your visual identity — colors, fonts, imagery style, brand personalit
 
 ### Template Files
 Start from the included templates:
-- [templates/brand-knowledge-base-template.md](templates/brand-knowledge-base-template.md)
-- [templates/brand-style-guide-template.md](templates/brand-style-guide-template.md)
+- [.engine/templates/brand-knowledge-base-template.md](.engine/templates/brand-knowledge-base-template.md)
+- [.engine/templates/brand-style-guide-template.md](.engine/templates/brand-style-guide-template.md)
 
 ### Brand File Locations
 
@@ -333,23 +334,23 @@ Production skills ensure high-quality final output. Available as both skill file
 
 | Asset Type | Skill File | Claude Code Command |
 |------------|-----------|---------------------|
-| **HTML pages** | `skills/production/frontend-design/SKILL.md` | `/frontend-design` |
-| **Copy critique** | `skills/production/copy-critique/SKILL.md` | — |
-| **PowerPoint decks** | `skills/production/pptx/SKILL.md` | `/pptx` |
-| **PDF documents** | `skills/production/pdf/SKILL.md` | `/pdf` |
-| **Word documents** | `skills/production/docx/SKILL.md` | `/docx` |
+| **HTML pages** | `.engine/skills-and-instructions/skills/production/frontend-design/SKILL.md` | `/frontend-design` |
+| **Copy critique** | `.engine/skills-and-instructions/skills/production/copy-critique/SKILL.md` | — |
+| **PowerPoint decks** | `.engine/skills-and-instructions/skills/production/pptx/SKILL.md` | `/pptx` |
+| **PDF documents** | `.engine/skills-and-instructions/skills/production/pdf/SKILL.md` | `/pdf` |
+| **Word documents** | `.engine/skills-and-instructions/skills/production/docx/SKILL.md` | `/docx` |
 
 ### How Skills Work Together
 
-- **Marketing skills** (`skills/funnels/`, `skills/tasks/`) = **WHAT** to write (frameworks, structure, persuasion)
-- **Production skills** (`skills/production/`) = **HOW** to output it (design, formatting, file generation)
-- **Copy critique** (`skills/production/copy-critique/`) = **QUALITY** — single-pass direct response review applied to every asset
+- **Marketing skills** (`.engine/skills-and-instructions/skills/funnels/`, `.engine/skills-and-instructions/skills/tasks/`) = **WHAT** to write (frameworks, structure, persuasion)
+- **Production skills** (`.engine/skills-and-instructions/skills/production/`) = **HOW** to output it (design, formatting, file generation)
+- **Copy critique** (`.engine/skills-and-instructions/skills/production/copy-critique/`) = **QUALITY** — single-pass direct response review applied to every asset
 
 ### Example: Building a Sales Page
 
-1. Read the marketing skill: `skills/funnels/vsl-hybrid/SKILL.md`
+1. Read the marketing skill: `.engine/skills-and-instructions/skills/funnels/vsl-hybrid/SKILL.md`
 2. Ryan writes the copy following direct response principles
-3. Read the production skill: `skills/production/frontend-design/SKILL.md`
+3. Read the production skill: `.engine/skills-and-instructions/skills/production/frontend-design/SKILL.md`
 4. Cassidy creates production-quality HTML following design guidelines
 
 ---
@@ -412,14 +413,14 @@ Two image sources are available for campaign assets:
 
 **Search Pexels for stock photos:**
 ```bash
-node scripts/pexels-search.js "business team celebrating" 5
+node .engine/scripts/pexels-search.js "business team celebrating" 5
 ```
 Returns URLs you can use directly in HTML/CSS.
 
 **Generate AI image with Gemini:**
 ```bash
 # Path depends on your mode (solo or agency):
-node scripts/generate-image.js "Professional team in modern office" campaigns/[campaign]/output-assets/images/hero.png
+node .engine/scripts/generate-image.js "Professional team in modern office" campaigns/[campaign]/output-assets/images/hero.png
 ```
 Saves image file to specified path.
 
@@ -439,14 +440,14 @@ Saves image file to specified path.
 
 Clone any existing webpage into a self-contained HTML file. Uses [Firecrawl](https://www.firecrawl.dev/) to scrape the page, embed all CSS inline, remove tracking scripts, and extract the site's branding.
 
-**Requires:** `FIRECRAWL_API_KEY` in `.env`
+**Requires:** `FIRECRAWL_API_KEY` in `.engine/.env`
 
 ```bash
 # Solo mode:
-node scripts/clone-page.js "https://example.com/sales-page" campaigns/[campaign]/output-assets/html/cloned-page.html
+node .engine/scripts/clone-page.js "https://example.com/sales-page" campaigns/[campaign]/output-assets/html/cloned-page.html
 
 # Agency mode:
-node scripts/clone-page.js "https://example.com/sales-page" clients/[client]/campaigns/[campaign]/output-assets/html/cloned-page.html
+node .engine/scripts/clone-page.js "https://example.com/sales-page" clients/[client]/campaigns/[campaign]/output-assets/html/cloned-page.html
 ```
 
 **What it produces:**
@@ -466,19 +467,19 @@ Convert any HTML page into a professional PDF using Playwright's Chromium engine
 
 ```bash
 # Basic conversion:
-node scripts/html-to-pdf.js campaigns/[campaign]/output-assets/html/lead-magnet.html
+node .engine/scripts/html-to-pdf.js campaigns/[campaign]/output-assets/html/lead-magnet.html
 
 # Custom output path:
-node scripts/html-to-pdf.js input.html output.pdf
+node .engine/scripts/html-to-pdf.js input.html output.pdf
 
 # With options:
-node scripts/html-to-pdf.js input.html output.pdf --page-numbers --letter
-node scripts/html-to-pdf.js input.html output.pdf --landscape --no-margin --scale=0.8
+node .engine/scripts/html-to-pdf.js input.html output.pdf --page-numbers --letter
+node .engine/scripts/html-to-pdf.js input.html output.pdf --landscape --no-margin --scale=0.8
 ```
 
 **Options:** `--landscape`, `--letter` (US Letter vs A4), `--no-margin`, `--scale=N`, `--header="text"`, `--footer="text"`, `--page-numbers`, `--no-background`, `--wait=N`
 
-**One-time setup:** `npx playwright install chromium` (included in `npm run setup`)
+**One-time setup:** `npx playwright install chromium` (included in `cd .engine && npm run setup`)
 
 **Workflow:** Alex's team builds beautiful HTML/CSS first (Kendall writes, Lena designs), then converts to PDF — the PDF inherits all the styling.
 
@@ -676,7 +677,7 @@ Double-click the HTML file in Finder — works fine since all files are self-con
 | **`CLAUDE.md`** | AI agent instructions — starts as setup wizard, then configured for your mode | All tools (directly or via pointer) |
 | **`AGENTS.md`** | Pointer file — tells agents to check setup and read `CLAUDE.md` | Codex and tools that look for AGENTS.md |
 | **`.clickcampaigns.json`** | Configuration file — stores mode (solo/agency) and preferences | Created during setup, read by agents |
-| **`setup/templates/`** | Mode-specific templates — used during setup and mode switching | Read by agents during setup only |
+| **`.engine/setup/templates/`** | Mode-specific templates — used during setup and mode switching | Read by agents during setup only |
 | **`README.md`** | Human-facing documentation (this file) | Developers on GitHub |
 
 The system is AI-tool agnostic — the intelligence lives in the skill files and agent personas, not in any specific platform. `CLAUDE.md` is the canonical instruction set regardless of which tool you use.
@@ -701,17 +702,17 @@ All API keys are optional. Core functionality (copy, funnels, emails, ads) works
 |------|-------|
 | AI agent instructions | `CLAUDE.md` (configured for your mode), `AGENTS.md` (pointer for Codex) |
 | Setup configuration | `.clickcampaigns.json` (created during first-time setup) |
-| Setup templates | `setup/templates/` (mode-specific CLAUDE.md/AGENTS.md templates) |
-| Specialist profiles | [agents/Agents-List.md](agents/Agents-List.md) |
-| Funnel reference | [funnels/Funnel-Pages-Checklist.md](funnels/Funnel-Pages-Checklist.md) |
-| Task reference | [tasks/Task-Checklist.md](tasks/Task-Checklist.md) |
-| Brand kit templates | `templates/` |
-| Funnel skill files | `skills-and-instructions/skills/funnels/[type]/SKILL.md` |
-| Task skill files | `skills-and-instructions/skills/tasks/[type]/SKILL.md` |
-| Production skills | `skills-and-instructions/skills/production/[type]/SKILL.md` |
-| Image scripts | `scripts/pexels-search.js`, `scripts/generate-image.js` |
-| Clone page script | `scripts/clone-page.js` |
-| HTML-to-PDF script | `scripts/html-to-pdf.js` |
+| Setup templates | `.engine/setup/templates/` (mode-specific CLAUDE.md/AGENTS.md templates) |
+| Specialist profiles | [.engine/agents/Agents-List.md](.engine/agents/Agents-List.md) |
+| Funnel reference | [.engine/funnels/Funnel-Pages-Checklist.md](.engine/funnels/Funnel-Pages-Checklist.md) |
+| Task reference | [.engine/tasks/Task-Checklist.md](.engine/tasks/Task-Checklist.md) |
+| Brand kit templates | `.engine/templates/` |
+| Funnel skill files | `.engine/skills-and-instructions/skills/funnels/[type]/SKILL.md` |
+| Task skill files | `.engine/skills-and-instructions/skills/tasks/[type]/SKILL.md` |
+| Production skills | `.engine/skills-and-instructions/skills/production/[type]/SKILL.md` |
+| Image scripts | `.engine/scripts/pexels-search.js`, `.engine/scripts/generate-image.js` |
+| Clone page script | `.engine/scripts/clone-page.js` |
+| HTML-to-PDF script | `.engine/scripts/html-to-pdf.js` |
 | Campaign workspaces (solo) | `campaigns/[campaign-name]/` |
 | Client workspaces (agency) | `clients/[client-name]/` |
 

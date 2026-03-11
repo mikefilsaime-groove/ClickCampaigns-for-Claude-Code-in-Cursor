@@ -44,10 +44,10 @@ Create `.clickcampaigns.json` in the project root:
 
 ### Step 3: Install CLAUDE.md
 
-Read `setup/templates/CLAUDE-solo.md` and REPLACE the entire `CLAUDE.md` file with it.
+Read `.engine/setup/templates/CLAUDE-solo.md` and REPLACE the entire `CLAUDE.md` file with it.
 
 **Also update AGENTS.md:**
-Read `setup/templates/AGENTS-solo.md` and write its contents to `AGENTS.md`.
+Read `.engine/setup/templates/AGENTS-solo.md` and write its contents to `AGENTS.md`.
 
 ### Step 4: Create Folders
 
@@ -111,9 +111,9 @@ Ask: "Please provide the path to your downloaded ClickCampaigns project folder."
 
 ### Step 5: Install CLAUDE.md
 
-Read `setup/templates/CLAUDE-solo.md` and REPLACE the entire `CLAUDE.md` file with it.
+Read `.engine/setup/templates/CLAUDE-solo.md` and REPLACE the entire `CLAUDE.md` file with it.
 
-Also: Read `setup/templates/AGENTS-solo.md` and write to `AGENTS.md`.
+Also: Read `.engine/setup/templates/AGENTS-solo.md` and write to `AGENTS.md`.
 
 ### Step 6: Confirm and Continue
 
@@ -139,7 +139,7 @@ Ask: "Please paste your auth token (starts with `cc-`)."
 
 Once received, verify it:
 ```bash
-node scripts/cc-api.js verify <token>
+node .engine/scripts/cc-api.js verify <token>
 ```
 
 If invalid, tell the user and ask them to generate a new token at ClickCampaigns.ai.
@@ -147,7 +147,7 @@ If invalid, tell the user and ask them to generate a new token at ClickCampaigns
 ### Step 3: Fetch campaign data
 
 ```bash
-node scripts/cc-api.js fetch <token>
+node .engine/scripts/cc-api.js fetch <token>
 ```
 
 This returns full campaign JSON. Parse the output and extract:
@@ -182,9 +182,9 @@ This returns full campaign JSON. Parse the output and extract:
 
 ### Step 5: Install CLAUDE.md
 
-Read `setup/templates/CLAUDE-token.md` and REPLACE the entire `CLAUDE.md` file with it.
+Read `.engine/setup/templates/CLAUDE-token.md` and REPLACE the entire `CLAUDE.md` file with it.
 
-Also: Read `setup/templates/AGENTS-solo.md` and write to `AGENTS.md`.
+Also: Read `.engine/setup/templates/AGENTS-solo.md` and write to `AGENTS.md`.
 
 ### Step 6: Confirm and Continue
 
@@ -202,16 +202,16 @@ Say:
 After completing any setup option above, check if marketing skills access is authenticated:
 
 ```bash
-node scripts/cc-skills.js verify
+node .engine/scripts/cc-skills.js verify
 ```
 
 If not authenticated, ask:
 > "To access the full marketing skill library, you'll need to authenticate with your ClickCampaigns account.
-> Would you like to authenticate now? (You can always do this later with `node scripts/cc-skills.js login`)"
+> Would you like to authenticate now? (You can always do this later with `node .engine/scripts/cc-skills.js login`)"
 
 If yes, run:
 ```bash
-node scripts/cc-skills.js login
+node .engine/scripts/cc-skills.js login
 ```
 
 This opens the browser for the user to log in and generate a CLI token. Production skills (HTML design, PDF, PPTX, DOCX) are available locally without authentication.
@@ -223,6 +223,6 @@ This opens the browser for the user to log in and generate a CLI token. Producti
 The user can say `reset setup` at any time. When they do:
 
 1. Delete `.clickcampaigns.json`
-2. Re-read this file (`setup/SETUP.md`)
+2. Re-read this file (`.engine/setup/SETUP.md`)
 3. Run the wizard again from Step 1
 4. This will overwrite `CLAUDE.md` and `AGENTS.md` with the new mode's templates

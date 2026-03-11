@@ -25,11 +25,11 @@ Before doing any work, check if `.clickcampaigns.json` exists in the project roo
 If you cannot read `CLAUDE.md`, here are the essentials:
 
 1. **Check `.clickcampaigns.json`** to determine if setup is complete and what mode is active
-2. **Skill files**: `skills-and-instructions/skills/funnels/` and `skills/tasks/`
-3. **Production skills**: `skills-and-instructions/skills/production/` (frontend-design, pptx, pdf, docx)
+2. **Skill files**: `.engine/skills-and-instructions/skills/funnels/` and `skills/tasks/`
+3. **Production skills**: `.engine/skills-and-instructions/skills/production/` (frontend-design, pptx, pdf, docx)
 4. **HTML requires**: Tailwind CSS v4 CDN + Lucide Icons
 5. **All output must be**: production-ready, mobile-responsive, self-contained, no placeholders
-6. **Creative tools** (require API keys in `.env`):
-   - `node scripts/pexels-search.js "query"` — Stock photos (Pexels)
-   - `node scripts/generate-image.js "prompt" output.png` — AI images (Nano Banana Pro / Gemini)
-   - `node scripts/clone-page.js "url" output.html` — Clone any webpage (Firecrawl)
+6. **Creative tools** (require API keys in `.engine/.env`):
+   - `node .engine/scripts/pexels-search.js "query"` — Stock photos (Pexels)
+   - `node .engine/scripts/generate-image.js "prompt" output.png` — AI images (Nano Banana Pro / Gemini)
+   - `node .engine/scripts/clone-page.js "url" output.html` — Clone any webpage (Firecrawl)
