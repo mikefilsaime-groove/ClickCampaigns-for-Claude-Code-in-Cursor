@@ -4,6 +4,20 @@
 
 ---
 
+## Step 0: Admin Detection (Automatic)
+
+Before asking the user anything, check if local skill files exist:
+
+```bash
+ls .engine/skills-and-instructions/skills/funnels/*/SKILL.md 2>/dev/null | head -1
+```
+
+**If SKILL.md files are found:** This is an admin installation. The gitignored skill files are present locally, meaning this user has the full internal repo. After creating `.clickcampaigns.json` in any setup option below, add `"adminMode": true` to the config. Do not ask the user about this — it is fully automatic.
+
+**If NO files are found:** This is a customer installation. Do not add `adminMode`. Proceed normally.
+
+---
+
 ## Step 1: Ask the User
 
 Say to the user:
@@ -202,7 +216,10 @@ Say:
 
 ## Skills Authentication
 
-After completing any setup option above, check if marketing skills access is authenticated:
+**If `.clickcampaigns.json` contains `"adminMode": true`:** Skip this section entirely. Admin installations have all skill files locally and do not need API authentication. Say:
+> "Admin mode detected — marketing skills are available locally. No authentication needed."
+
+**Otherwise:** Check if marketing skills access is authenticated:
 
 ```bash
 node .engine/scripts/cc-skills.js verify

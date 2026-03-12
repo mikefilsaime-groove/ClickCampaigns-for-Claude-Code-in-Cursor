@@ -15,7 +15,7 @@
  */
 
 import { config } from "dotenv";
-import { readFileSync, writeFileSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, readdirSync } from "fs";
 import { join } from "path";
 import { execSync } from "child_process";
 import { createInterface } from "readline";
@@ -27,6 +27,7 @@ const API_URL = (
 ).replace(/\/$/, "");
 
 const CONFIG_PATH = join(process.cwd(), ".clickcampaigns.json");
+const SKILLS_BASE = join(process.cwd(), ".engine/skills-and-instructions/skills");
 
 const [, , command, ...rest] = process.argv;
 
@@ -158,6 +159,17 @@ async function main() {
         process.exit(1);
       }
 
+      // Admin mode: read from local filesystem
+      const fetchCfg = readConfig();
+      if (fetchCfg.adminMode) {
+        const localPath = join(SKILLS_BASE, skillPath);
+        if (existsSync(localPath)) {
+          process.stdout.write(readFileSync(localPath, "utf-8"));
+          break;
+        }
+        console.error(`[admin] Local file not found: ${localPath}, falling back to API...`);
+      }
+
       const token = getToken();
       if (!token) {
         console.error(
@@ -174,6 +186,13 @@ async function main() {
     }
 
     case "verify": {
+      // Admin mode: skills are local, no token needed
+      const verifyCfg = readConfig();
+      if (verifyCfg.adminMode) {
+        console.log("Admin mode active. Skills are read from local files. No authentication required.");
+        break;
+      }
+
       const token = getToken();
       if (!token) {
         console.error(
@@ -197,6 +216,38 @@ async function main() {
     }
 
     case "list": {
+      // Admin mode: scan local skill directories
+      const listCfg = readConfig();
+      if (listCfg.adminMode) {
+        let count = 0;
+        for (const category of ["funnels", "tasks"]) {
+          const categoryPath = join(SKILLS_BASE, category);
+          if (!existsSync(categoryPath)) continue;
+          const entries = readdirSync(categoryPath, { withFileTypes: true });
+          for (const entry of entries) {
+            if (!entry.isDirectory()) continue;
+            const skillFile = join(categoryPath, entry.name, "SKILL.md");
+            if (existsSync(skillFile)) {
+              console.log(`${category}/${entry.name}/SKILL.md`);
+              count++;
+            }
+            // Check for sub-skills (e.g., tasks/website/booking-calendar/)
+            const subDir = join(categoryPath, entry.name);
+            const subEntries = readdirSync(subDir, { withFileTypes: true });
+            for (const sub of subEntries) {
+              if (!sub.isDirectory()) continue;
+              const subSkillFile = join(subDir, sub.name, "SKILL.md");
+              if (existsSync(subSkillFile)) {
+                console.log(`${category}/${entry.name}/${sub.name}/SKILL.md`);
+                count++;
+              }
+            }
+          }
+        }
+        if (count === 0) console.log("No local skills found.");
+        break;
+      }
+
       const token = getToken();
       if (!token) {
         console.error(
