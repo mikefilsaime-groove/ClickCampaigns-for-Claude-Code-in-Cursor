@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mike Filsaime — Builder. Visionary. Pioneer.</title>
+  <meta name="description" content="Mike Filsaime has generated $175M+ building the platforms 250,000 marketers depend on. Now he's pioneering the agentic marketing revolution.">
+  <meta property="og:title" content="Mike Filsaime — Builder. Visionary. Pioneer.">
+  <meta property="og:description" content="20 years. $175M. 250,000 customers. From WebinarJam and Kartra to the AI agents that replace them all.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v3 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'gold': '#D97706',
+            'gold-light': '#F59E0B',
+            'gold-dark': '#B45309',
+            'gold-pale': '#FEF3C7',
+            'cream': '#FFFBEB',
+            'charcoal': '#1C1917',
+            'charcoal-light': '#292524',
+            'charcoal-subtle': '#44403C',
+          },
+          fontFamily: {
+            'display': ['"Instrument Serif"', 'Georgia', 'serif'],
+            'sans': ['"DM Sans"', 'system-ui', 'sans-serif'],
+            'mono': ['"JetBrains Mono"', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', system-ui, sans-serif; }
+
+    /* ---- Gradient text ---- */
+    .gradient-text {
+      background: linear-gradient(135deg, #D97706, #F59E0B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ---- Accent line ---- */
+    .accent-line { width: 48px; height: 3px; background: linear-gradient(90deg, #D97706, #F59E0B); border-radius: 2px; }
+
+    /* ---- Top gradient bar ---- */
+    .top-bar { height: 4px; background: linear-gradient(90deg, #B45309, #D97706, #F59E0B, #D97706, #B45309); }
+
+    /* ---- Buttons ---- */
+    .btn-primary { background: linear-gradient(135deg, #D97706, #B45309); color: white; transition: all 0.25s ease; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(217,119,6,0.4), 0 10px 30px rgba(0,0,0,0.15); }
+    .btn-secondary { border: 2px solid #D97706; color: #B45309; transition: all 0.25s ease; }
+    .btn-secondary:hover { background: rgba(217,119,6,0.08); transform: translateY(-1px); }
+    .dark .btn-secondary { color: #F59E0B; }
+    .dark .btn-secondary:hover { background: rgba(217,119,6,0.15); }
+    .btn-white { background: white; color: #B45309; font-weight: 600; transition: all 0.25s ease; }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+    .btn-outline-white { border: 2px solid rgba(255,255,255,0.4); color: white; transition: all 0.25s ease; }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+    /* ---- Card hover ---- */
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(217,119,6,0.12), 0 8px 24px rgba(0,0,0,0.08); }
+    .dark .card-hover:hover { box-shadow: 0 20px 60px rgba(217,119,6,0.15), 0 8px 24px rgba(0,0,0,0.3); }
+
+    /* ---- Dark contrast section ---- */
+    .section-dark { background: linear-gradient(160deg, #1C1917 0%, #292524 40%, #1C1917 100%); }
+    .dark .section-dark { background: linear-gradient(160deg, #111010 0%, #1C1917 40%, #111010 100%); }
+
+    /* ---- Image overlay ---- */
+    .img-overlay { position: relative; background-size: cover; background-position: center; }
+    .img-overlay::before { content: ''; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(28,25,23,0.92), rgba(41,37,36,0.82)); }
+
+    /* ---- Portfolio item ---- */
+    .portfolio-item { border-left: 3px solid rgba(255,255,255,0.12); padding-left: 1.5rem; transition: all 0.3s ease; }
+    .portfolio-item:hover { border-left-color: #F59E0B; background: rgba(255,255,255,0.04); border-radius: 0 0.75rem 0.75rem 0; }
+
+    /* ---- Animations ---- */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-in { animation: fadeInUp 0.7s ease forwards; opacity: 0; }
+    .d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.2s; } .d3 { animation-delay: 0.3s; } .d4 { animation-delay: 0.4s; }
+
+    /* ---- Quote mark ---- */
+    .quote-mark { font-family: 'Instrument Serif', Georgia, serif; font-size: 140px; line-height: 1; color: #D97706; opacity: 0.12; position: absolute; top: -24px; left: 16px; }
+
+    /* ---- Stat divider ---- */
+    .stat-divider { width: 1px; height: 40px; background: linear-gradient(180deg, transparent, #D4D4D8, transparent); }
+    .dark .stat-divider { background: linear-gradient(180deg, transparent, #44403C, transparent); }
+
+    /* ---- Theme toggle ---- */
+    .theme-toggle { transition: all 0.25s ease; }
+    .theme-toggle:hover { transform: rotate(15deg); color: #D97706; }
+    .dark .theme-toggle-moon { display: none; }
+    .theme-toggle-sun { display: none; }
+    .dark .theme-toggle-sun { display: block; }
+  </style>
+
+  <!-- Prevent flash of wrong theme -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('mf-theme');
+      if (saved !== 'light') {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+<body class="bg-white dark:bg-charcoal text-stone-950 dark:text-stone-50 antialiased overflow-x-hidden">
+
+  <!-- Top accent bar -->
+  <div class="top-bar"></div>
+
+  <!-- ============================================ -->
+  <!-- NAVIGATION -->
+  <!-- ============================================ -->
+  <nav class="sticky top-0 z-50 bg-white/90 dark:bg-charcoal/90 backdrop-blur-xl border-b border-stone-100 dark:border-charcoal-subtle">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="font-display text-2xl italic text-stone-950 dark:text-white">
+        MF <span class="text-sm font-sans font-medium text-stone-400 dark:text-stone-500 ml-1 hidden sm:inline">Mike Filsaime</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#story" class="text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-gold transition-colors">Story</a>
+        <a href="#portfolio" class="text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-gold transition-colors">Portfolio</a>
+        <a href="#now" class="text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-gold transition-colors">Now</a>
+        <a href="#speaking" class="text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-gold transition-colors">Speaking</a>
+        <button id="themeToggle" class="theme-toggle p-2 rounded-lg text-stone-500 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-charcoal-light" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="w-5 h-5 theme-toggle-moon"></i>
+          <i data-lucide="sun" class="w-5 h-5 theme-toggle-sun"></i>
+        </button>
+        <a href="https://scale.gg" target="_blank" class="btn-primary text-sm font-medium px-5 py-2.5 rounded-xl inline-flex items-center gap-2">
+          Explore Scale.gg <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+      <div class="flex items-center gap-3 md:hidden">
+        <button id="themeToggleMobile" class="theme-toggle p-2 rounded-lg text-stone-500 dark:text-stone-400" aria-label="Toggle dark mode">
+          <i data-lucide="moon" class="w-5 h-5 theme-toggle-moon"></i>
+          <i data-lucide="sun" class="w-5 h-5 theme-toggle-sun"></i>
+        </button>
+        <button id="menuBtn" class="p-2 text-stone-950 dark:text-white" aria-label="Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-stone-100 dark:border-charcoal-subtle px-6 py-4 bg-white dark:bg-charcoal flex flex-col gap-4">
+      <a href="#story" class="py-2 font-medium text-stone-950 dark:text-white">Story</a>
+      <a href="#portfolio" class="py-2 font-medium text-stone-950 dark:text-white">Portfolio</a>
+      <a href="#now" class="py-2 font-medium text-stone-950 dark:text-white">Now</a>
+      <a href="#speaking" class="py-2 font-medium text-stone-950 dark:text-white">Speaking</a>
+      <a href="https://scale.gg" target="_blank" class="btn-primary text-sm font-medium px-5 py-3 rounded-xl text-center">Explore Scale.gg</a>
+    </div>
+  </nav>
+
+  <!-- ============================================ -->
+  <!-- HERO — Split: Copy + Mike's photo -->
+  <!-- ============================================ -->
+  <section class="pt-16 pb-8 lg:pt-24 lg:pb-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Copy Column -->
+        <div>
+          <div class="animate-in flex items-center gap-3 mb-6">
+            <div class="accent-line"></div>
+            <span class="text-sm font-mono tracking-widest uppercase text-gold">Builder &middot; Visionary &middot; Pioneer</span>
+          </div>
+
+          <h1 class="animate-in d1 font-display text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4rem] leading-[1.08] mb-6 text-stone-950 dark:text-white">
+            I've spent 20 years building the platforms marketers depend on.
+            <span class="gradient-text italic"> Now I'm building what replaces them.</span>
+          </h1>
+
+          <p class="animate-in d2 text-lg lg:text-xl text-stone-500 dark:text-stone-400 max-w-xl mb-8 leading-relaxed">
+            WebinarJam. Kartra. Groove. $175M in revenue. 250,000 customers. And the thing I'm building now makes all of it look like version 1.0.
+          </p>
+
+          <div class="animate-in d3 flex flex-col sm:flex-row gap-4">
+            <a href="https://clickcampaigns.ai" target="_blank" class="btn-primary font-medium px-8 py-4 rounded-xl text-center inline-flex items-center justify-center gap-2 text-lg">
+              <i data-lucide="bot" class="w-5 h-5"></i> Try ClickCampaigns
+            </a>
+            <a href="https://scale.gg" target="_blank" class="btn-secondary font-medium px-8 py-4 rounded-xl text-center inline-flex items-center justify-center gap-2 text-lg">
+              Explore Scale.gg <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Photo Column -->
+        <div class="animate-in d2 relative flex justify-center lg:justify-end">
+          <div class="relative">
+            <img src="../images/mike-proxy-image.png"
+                 alt="Mike Filsaime"
+                 class="w-full max-w-md rounded-2xl shadow-2xl object-cover" style="filter: grayscale(100%);">
+            <!-- Floating accent card -->
+            <div class="absolute -bottom-5 -left-5 lg:-left-8 bg-white dark:bg-charcoal-light rounded-xl shadow-xl border border-stone-100 dark:border-charcoal-subtle p-4">
+              <p class="text-xs font-mono text-stone-400 dark:text-stone-500 uppercase tracking-wider">Since 2006</p>
+              <p class="text-lg font-bold text-gold">First $1M Launch</p>
+              <p class="text-xs text-stone-500">2nd marketer in history</p>
+            </div>
+            <!-- Decorative gradient blur -->
+            <div class="absolute -z-10 top-8 -right-8 w-72 h-72 bg-gold/15 rounded-full blur-3xl"></div>
+            <div class="absolute -z-10 -bottom-8 left-0 w-56 h-56 bg-gold-light/10 rounded-full blur-3xl"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- STATS + TRUST BAR -->
+  <!-- ============================================ -->
+  <section class="bg-stone-50 dark:bg-charcoal-light border-y border-stone-200 dark:border-charcoal-subtle py-8 lg:py-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="flex items-center gap-8 lg:gap-12 flex-wrap justify-center lg:justify-start">
+          <div class="text-center lg:text-left">
+            <p class="text-3xl lg:text-4xl font-bold text-stone-950 dark:text-white">$175M<span class="text-gold">+</span></p>
+            <p class="text-xs mt-1 uppercase tracking-wider text-stone-400 dark:text-stone-500">Revenue Generated</p>
+          </div>
+          <div class="stat-divider hidden sm:block"></div>
+          <div class="text-center lg:text-left">
+            <p class="text-3xl lg:text-4xl font-bold text-stone-950 dark:text-white">250K<span class="text-gold">+</span></p>
+            <p class="text-xs mt-1 uppercase tracking-wider text-stone-400 dark:text-stone-500">Customers Served</p>
+          </div>
+          <div class="stat-divider hidden sm:block"></div>
+          <div class="text-center lg:text-left">
+            <p class="text-3xl lg:text-4xl font-bold text-stone-950 dark:text-white">3M<span class="text-gold">+</span></p>
+            <p class="text-xs mt-1 uppercase tracking-wider text-stone-400 dark:text-stone-500">Email Subscribers</p>
+          </div>
+          <div class="stat-divider hidden sm:block"></div>
+          <div class="text-center lg:text-left">
+            <p class="text-3xl lg:text-4xl font-bold text-stone-950 dark:text-white">20<span class="text-gold">+</span></p>
+            <p class="text-xs mt-1 uppercase tracking-wider text-stone-400 dark:text-stone-500">Years Building</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-6">
+          <span class="text-xs font-mono uppercase tracking-wider text-stone-400 dark:text-stone-500">As seen on</span>
+          <span class="text-sm font-bold text-stone-500 dark:text-stone-400">CBS</span>
+          <span class="text-stone-300 dark:text-charcoal-subtle">|</span>
+          <span class="text-sm font-bold text-stone-500 dark:text-stone-400">NBC</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- MY STORY — Ryan's copy, personal narrative -->
+  <!-- ============================================ -->
+  <section id="story" class="py-24 lg:py-32">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="accent-line"></div>
+        <span class="text-sm font-mono tracking-widest uppercase text-gold">My Story</span>
+      </div>
+
+      <h2 class="font-display text-3xl lg:text-5xl mb-10 text-stone-950 dark:text-white leading-tight">
+        Every product I've ever built started with one question:
+        <span class="italic gradient-text"> What should marketing look like five years from now?</span>
+      </h2>
+
+      <div class="space-y-6 text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
+        <p>
+          In 2006, I became the second marketer in history to generate $1 million from a single product launch. Not because I had the biggest audience or the best product — but because I understood something others didn't: <strong class="text-stone-900 dark:text-white">the way people buy was about to change, and the marketers who built the infrastructure for that change would win.</strong>
+        </p>
+
+        <p>
+          That insight led me to build <strong class="text-stone-900 dark:text-white">WebinarJam</strong> — the platform that turned live webinars into the #1 selling tool in digital marketing. Then <strong class="text-stone-900 dark:text-white">EverWebinar</strong>, which automated the entire process. Then <strong class="text-stone-900 dark:text-white">Kartra</strong>, the first true all-in-one marketing platform. Then <strong class="text-stone-900 dark:text-white">Groove</strong>, which took it even further.
+        </p>
+
+        <p>
+          Every single time, I saw the shift before others did. And every time, I built the platform that made the shift possible.
+        </p>
+
+        <div class="border-l-4 border-gold pl-6 py-2 my-8">
+          <p class="font-display text-2xl lg:text-3xl italic text-stone-900 dark:text-white">
+            "AI isn't just another tool. It's the end of marketing as we know it."
+          </p>
+        </div>
+
+        <p>
+          Today, the shift is bigger than anything that came before. I'm not talking about "AI-assisted" marketing. Not chatbots. I'm talking about <strong class="text-gold dark:text-gold-light">autonomous AI agents</strong> that plan your campaigns, write your copy, design your pages, launch your ads, and optimize everything — in real time, without you lifting a finger.
+        </p>
+
+        <p>
+          I call it <strong class="text-stone-900 dark:text-white">agentic marketing.</strong> And I'm not just talking about it — I'm building it right now with ClickCampaigns, Scale.gg, and GodMode.
+        </p>
+
+        <p>
+          The next 24 months will separate the marketers who adapt from those who become irrelevant. I intend to be on the right side of that line — and bring as many people with me as I can.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- PORTFOLIO — Dark charcoal section for contrast -->
+  <!-- ============================================ -->
+  <section id="portfolio" class="section-dark py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <div class="accent-line"></div>
+          <span class="text-sm font-mono tracking-widest uppercase text-gold-light">Two Decades of Building</span>
+          <div class="accent-line"></div>
+        </div>
+        <h2 class="font-display text-4xl lg:text-5xl text-white">Everything I've Built</h2>
+        <p class="text-lg text-stone-400 mt-4 max-w-2xl mx-auto">
+          From the first million-dollar launch to the AI revolution — a track record of seeing what's next and building it before anyone else.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="portfolio-item py-5 pr-5">
+          <span class="text-xs font-mono text-gold-light">2006</span>
+          <h3 class="text-lg font-bold text-white mt-1">ButterflyMarketing</h3>
+          <p class="text-sm text-stone-400 mt-2">Pioneered viral marketing systems before "going viral" was a concept. One of the earliest automated referral engines in digital marketing.</p>
+        </div>
+
+        <div class="portfolio-item py-5 pr-5">
+          <span class="text-xs font-mono text-gold-light">2006</span>
+          <h3 class="text-lg font-bold text-white mt-1">First $1M Product Launch</h3>
+          <p class="text-sm text-stone-400 mt-2">Became the 2nd marketer in history to hit $1M from a single launch — then went on to create more million-dollar launches than any marketer alive.</p>
+        </div>
+
+        <div class="portfolio-item py-5 pr-5">
+          <span class="text-xs font-mono text-gold-light">2009</span>
+          <h3 class="text-lg font-bold text-white mt-1">Launch Tree</h3>
+          <p class="text-sm text-stone-400 mt-2">Co-created with Anik Singal. The gold standard for funnel optimization — still one of the most respected frameworks in the industry.</p>
+        </div>
+
+        <div class="portfolio-item py-5 pr-5">
+          <span class="text-xs font-mono text-gold-light">2014</span>
+          <h3 class="text-lg font-bold text-white mt-1">WebinarJam</h3>
+          <p class="text-sm text-stone-400 mt-2">Built the platform that made live webinars the #1 selling tool in digital marketing. Used by tens of thousands of marketers worldwide.</p>
+        </div>
+
+        <div class="portfolio-item py-5 pr-5">
+          <span class="text-xs font-mono text-gold-light">2015</span>
+          <h3 class="text-lg font-bold text-white mt-1">EverWebinar</h3>
+          <p class="text-sm text-stone-400 mt-2">The automated webinar platform that let marketers sell 24/7. Turned a live event into an evergreen revenue machine.</p>
+        </div>
+
+        <div class="portfolio-item py-5 pr-5">
+          <span class="text-xs font-mono text-gold-light">2017</span>
+          <h3 class="text-lg font-bold text-white mt-1">Kartra</h3>
+          <p class="text-sm text-stone-400 mt-2">The first true all-in-one marketing platform — pages, email, memberships, checkout, helpdesk, calendars — all in one system.</p>
+        </div>
+
+        <div class="portfolio-item py-5 pr-5">
+          <span class="text-xs font-mono text-gold-light">2020</span>
+          <h3 class="text-lg font-bold text-white mt-1">GrooveDigital</h3>
+          <p class="text-sm text-stone-400 mt-2">Co-founded the next evolution of the all-in-one platform — CRM, marketing automation, and digital sales tools at massive scale.</p>
+        </div>
+
+        <div class="portfolio-item py-5 pr-5">
+          <span class="text-xs font-mono text-gold-light">2009 – Present</span>
+          <h3 class="text-lg font-bold text-white mt-1">Marketers Cruise</h3>
+          <p class="text-sm text-stone-400 mt-2">17+ consecutive years. The longest-running marketing networking event in the industry. Every year on the water, every year legendary.</p>
+        </div>
+
+        <div class="portfolio-item py-5 pr-5">
+          <span class="text-xs font-mono text-gold-light">2025</span>
+          <h3 class="text-lg font-bold text-white mt-1">Shelby Oaks <span class="text-gold-light text-xs font-mono ml-1">FILM</span></h3>
+          <p class="text-sm text-stone-400 mt-2">Executive Producer. A feature film directed by Chris Stuckmann — because building things that matter isn't limited to marketing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- WHAT I'M BUILDING NOW — Current companies -->
+  <!-- ============================================ -->
+  <section id="now" class="py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <div class="accent-line"></div>
+          <span class="text-sm font-mono tracking-widest uppercase text-gold">What I'm Building Now</span>
+          <div class="accent-line"></div>
+        </div>
+        <h2 class="font-display text-4xl lg:text-5xl text-stone-950 dark:text-white">The Agentic Marketing Ecosystem</h2>
+        <p class="text-lg text-stone-500 dark:text-stone-400 mt-4 max-w-2xl mx-auto">
+          I don't just talk about the future of marketing. I build it.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- ClickCampaigns -->
+        <a href="https://clickcampaigns.ai" target="_blank" class="card-hover group block p-8 rounded-2xl bg-white dark:bg-charcoal-light border border-stone-200 dark:border-charcoal-subtle shadow-sm">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center">
+              <i data-lucide="bot" class="w-6 h-6 text-gold"></i>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-5 h-5 text-gold opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </div>
+          <h3 class="text-xl font-bold text-stone-950 dark:text-white mb-3">ClickCampaigns</h3>
+          <p class="text-stone-600 dark:text-stone-400 leading-relaxed mb-4">
+            Imagine 22 marketing specialists — a copywriter, a designer, a media buyer, an email strategist — all working on your campaign simultaneously. That's ClickCampaigns. Except they're AI agents, they work in minutes, and they never sleep.
+          </p>
+          <span class="text-gold text-sm font-semibold inline-flex items-center gap-1">
+            clickcampaigns.ai <i data-lucide="arrow-right" class="w-3 h-3 group-hover:translate-x-1 transition-transform"></i>
+          </span>
+        </a>
+
+        <!-- Scale.gg -->
+        <a href="https://scale.gg" target="_blank" class="card-hover group block p-8 rounded-2xl bg-white dark:bg-charcoal-light border border-stone-200 dark:border-charcoal-subtle shadow-sm">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl bg-gold-light/10 flex items-center justify-center">
+              <i data-lucide="rocket" class="w-6 h-6 text-gold-light"></i>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-5 h-5 text-gold-light opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </div>
+          <h3 class="text-xl font-bold text-stone-950 dark:text-white mb-3">Scale.gg</h3>
+          <p class="text-stone-600 dark:text-stone-400 leading-relaxed mb-4">
+            The AI marketing ecosystem where I share everything I'm learning, building, and deploying. Tools, training, and a community of marketers who are building the future alongside me.
+          </p>
+          <span class="text-gold-light text-sm font-semibold inline-flex items-center gap-1">
+            scale.gg <i data-lucide="arrow-right" class="w-3 h-3 group-hover:translate-x-1 transition-transform"></i>
+          </span>
+        </a>
+
+        <!-- GodMode -->
+        <div class="card-hover p-8 rounded-2xl bg-gradient-to-br from-charcoal to-charcoal-light relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-gold/8 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+          <div class="relative z-10">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center">
+                <i data-lucide="zap" class="w-6 h-6 text-gold-light"></i>
+              </div>
+              <span class="text-[10px] font-mono px-3 py-1 rounded-full bg-gold/15 text-gold-light uppercase tracking-wider">Flagship</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">GodMode</h3>
+            <p class="text-stone-400 leading-relaxed mb-4">
+              The flagship. Autonomous AI agent teams that don't just assist your marketing — they plan, execute, and optimize your entire operation. The app. The mastermind. The future.
+            </p>
+            <div class="flex gap-3">
+              <span class="text-[11px] font-mono px-3 py-1 rounded bg-white/10 text-stone-300">APP</span>
+              <span class="text-[11px] font-mono px-3 py-1 rounded bg-white/10 text-stone-300">MASTERMIND</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Marketers Cruise -->
+        <a href="https://marketerscruise.com" target="_blank" class="card-hover group block rounded-2xl overflow-hidden border border-stone-200 dark:border-charcoal-subtle shadow-sm">
+          <div class="h-56 bg-cover" style="background-image: url('https://images.pexels.com/photos/32609063/pexels-photo-32609063.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-position: center 75%;"></div>
+          <div class="p-8 bg-white dark:bg-charcoal-light">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-xl font-bold text-stone-950 dark:text-white">Marketers Cruise</h3>
+              <span class="text-[10px] font-mono px-3 py-1 rounded-full bg-gold/10 text-gold uppercase tracking-wider whitespace-nowrap">17+ Years</span>
+            </div>
+            <p class="text-stone-600 dark:text-stone-400 leading-relaxed mb-3">
+              The only marketing event where the deals happen at the pool deck, the connections last a lifetime, and the ocean views aren't a metaphor. Every year on the water.
+            </p>
+            <span class="text-gold text-sm font-semibold inline-flex items-center gap-1">
+              marketerscruise.com <i data-lucide="arrow-right" class="w-3 h-3 group-hover:translate-x-1 transition-transform"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- TESTIMONIALS -->
+  <!-- ============================================ -->
+  <section class="py-24 lg:py-32 bg-stone-50 dark:bg-charcoal-light">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-display text-4xl lg:text-5xl text-stone-950 dark:text-white">What They Say About Mike</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Tony Robbins -->
+        <div class="relative p-8 rounded-2xl bg-white dark:bg-charcoal border border-stone-200 dark:border-charcoal-subtle shadow-sm">
+          <div class="quote-mark">&ldquo;</div>
+          <p class="text-base leading-relaxed mb-6 italic text-stone-700 dark:text-stone-300 relative z-10">
+            "I deeply, deeply appreciate the fact that you took the time to give me your marketing insights. I don't take that lightly... least of all someone with your level of caring and insight and marketing genius."
+          </p>
+          <div class="flex items-center gap-4">
+            <img src="https://assets.grooveapps.com/images/5daeb623b256c50e25993cc6/1625705810_Tony_Robbins.jpeg" alt="Tony Robbins" class="w-14 h-14 rounded-full object-cover border-2 border-gold/20">
+            <div>
+              <p class="font-bold text-stone-950 dark:text-white">Tony Robbins</p>
+              <p class="text-sm text-stone-500">Life &amp; business strategist</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rich Schefren -->
+        <div class="relative p-8 rounded-2xl bg-white dark:bg-charcoal border border-stone-200 dark:border-charcoal-subtle shadow-sm">
+          <div class="quote-mark">&ldquo;</div>
+          <p class="text-base leading-relaxed mb-6 italic text-stone-700 dark:text-stone-300 relative z-10">
+            "Nobody, and I mean nobody, knows how to take a raw rookie online and show them the specific steps to make money fast better than Mike Filsaime. He'll not only make it simple, he'll make it very profitable."
+          </p>
+          <div class="flex items-center gap-4">
+            <img src="https://assets.grooveapps.com/images/5daeb623b256c50e25993cc6/1625705942_2021-07-07_20-54-30.png" alt="Rich Schefren" class="w-14 h-14 rounded-full object-cover border-2 border-gold/20">
+            <div>
+              <p class="font-bold text-stone-950 dark:text-white">Rich Schefren</p>
+              <p class="text-sm text-stone-500">Internet marketing pioneer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SPEAKING — Image bg with charcoal overlay -->
+  <!-- ============================================ -->
+  <section id="speaking" class="relative py-24 lg:py-32 img-overlay" style="background-image: url('../images/speaking-bg.png');">
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="accent-line"></div>
+            <span class="text-sm font-mono tracking-widest uppercase text-gold-light">Speaking &amp; Keynotes</span>
+          </div>
+          <h2 class="font-display text-4xl lg:text-5xl text-white mb-6 leading-tight">
+            On Stage &amp;<br><span class="italic text-gold-light">On Camera</span>
+          </h2>
+          <p class="text-lg text-stone-300 leading-relaxed mb-4">
+            Current keynote: <strong class="text-white">"The Agentic Marketing Revolution"</strong>
+          </p>
+          <p class="text-stone-400 leading-relaxed mb-8">
+            How autonomous AI agents are collapsing weeks of marketing into hours — and why the next 24 months will separate the winners from everyone else. A talk for marketers, founders, and anyone who wants to understand what's actually coming.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="mailto:speaking@mikefilsaime.com" class="btn-white px-6 py-3 rounded-xl text-center inline-flex items-center justify-center gap-2">
+              <i data-lucide="mail" class="w-5 h-5"></i> Book Mike to Speak
+            </a>
+            <a href="https://youtube.com/@MikeFilsaime" target="_blank" class="btn-outline-white px-6 py-3 rounded-xl text-center inline-flex items-center justify-center gap-2">
+              <i data-lucide="play" class="w-5 h-5"></i> Watch Keynotes
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex items-center justify-center">
+          <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <h3 class="text-white font-bold text-lg mb-4">Popular Topics</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <i data-lucide="mic" class="w-5 h-5 text-gold-light mt-0.5 flex-shrink-0"></i>
+                <span class="text-stone-300">The Agentic Marketing Revolution</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="mic" class="w-5 h-5 text-gold-light mt-0.5 flex-shrink-0"></i>
+                <span class="text-stone-300">From AI Tools to AI Agents: The $175M Playbook</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="mic" class="w-5 h-5 text-gold-light mt-0.5 flex-shrink-0"></i>
+                <span class="text-stone-300">Building the Future of Marketing (Live)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="mic" class="w-5 h-5 text-gold-light mt-0.5 flex-shrink-0"></i>
+                <span class="text-stone-300">The Death of DIY Marketing</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CTA — Charcoal overlay section -->
+  <!-- ============================================ -->
+  <section class="relative py-24 lg:py-32 img-overlay" style="background-image: url('../images/cta-bg.png');">
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <h2 class="font-display text-4xl lg:text-6xl text-white mb-6 leading-tight">
+        The Marketers Who Win<br><span class="text-gold-light italic">Aren't Using AI Tools.</span>
+      </h2>
+      <p class="text-xl text-stone-300 max-w-xl mx-auto mb-10 leading-relaxed">
+        They're deploying AI agents. I've built the platforms. I've done the launches. Now I'm building the agents that do it all — and you can be part of it.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://clickcampaigns.ai" target="_blank" class="btn-white px-8 py-4 rounded-xl text-center inline-flex items-center justify-center gap-2 text-lg">
+          <i data-lucide="bot" class="w-5 h-5"></i> Launch ClickCampaigns
+        </a>
+        <a href="https://marketerscruise.com" target="_blank" class="btn-outline-white px-8 py-4 rounded-xl text-center inline-flex items-center justify-center gap-2 text-lg">
+          <i data-lucide="ship" class="w-5 h-5"></i> Join the Cruise
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================ -->
+  <footer class="bg-charcoal text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <span class="font-display text-xl italic">MF</span>
+          <span class="text-sm text-stone-500">&copy; 2026 MikeFilsaime.com, Inc.</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="https://youtube.com/@MikeFilsaime" target="_blank" class="text-stone-500 hover:text-gold-light transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+          <a href="#" class="text-stone-500 hover:text-gold-light transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+          <a href="#" class="text-stone-500 hover:text-gold-light transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+          <span class="text-stone-700">|</span>
+          <a href="#" class="text-sm text-stone-500 hover:text-gold-light transition-colors">Privacy</a>
+          <a href="#" class="text-sm text-stone-500 hover:text-gold-light transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- SCRIPTS -->
+  <!-- ============================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+
+      // Theme toggle
+      function toggleTheme() {
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        localStorage.setItem('mf-theme', isDark ? 'dark' : 'light');
+        // Re-render Lucide icons so the correct toggle icon shows
+        lucide.createIcons();
+      }
+      document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+      document.getElementById('themeToggleMobile').addEventListener('click', toggleTheme);
+
+      // Mobile menu
+      const menu = document.getElementById('mobileMenu');
+      document.getElementById('menuBtn').addEventListener('click', () => menu.classList.toggle('hidden'));
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+      // Nav bg on scroll
+      const nav = document.querySelector('nav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          nav.classList.add('shadow-sm');
+        } else {
+          nav.classList.remove('shadow-sm');
+        }
+      });
+
+      // Intersection Observer for scroll animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('animate-in'); observer.unobserve(e.target); }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.card-hover, .portfolio-item, [data-animate]').forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>
