@@ -66,7 +66,7 @@
 
     /* ---- Buttons ---- */
     .btn-primary { background: linear-gradient(135deg, #D97706, #B45309); color: white; transition: all 0.25s ease; }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(217,119,6,0.4), 0 10px 30px rgba(0,0,0,0.15); }
+    .btn-primary:hover { animation: bounce 0.6s ease infinite; box-shadow: 0 0 30px rgba(217,119,6,0.4), 0 10px 30px rgba(0,0,0,0.15); }
     .btn-secondary { border: 2px solid #D97706; color: #B45309; transition: all 0.25s ease; }
     .btn-secondary:hover { background: rgba(217,119,6,0.08); transform: translateY(-1px); }
     .dark .btn-secondary { color: #F59E0B; }
@@ -97,6 +97,12 @@
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
     .animate-in { animation: fadeInUp 0.7s ease forwards; opacity: 0; }
     .d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.2s; } .d3 { animation-delay: 0.3s; } .d4 { animation-delay: 0.4s; }
+    
+    /* ---- Bounce animation ---- */
+    @keyframes bounce { 
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
 
     /* ---- Quote mark ---- */
     .quote-mark { font-family: 'Instrument Serif', Georgia, serif; font-size: 140px; line-height: 1; color: #D97706; opacity: 0.12; position: absolute; top: -24px; left: 16px; }
@@ -270,7 +276,7 @@
 
       <h2 class="font-display text-3xl lg:text-5xl mb-10 text-stone-950 dark:text-white leading-tight">
         Every product I've ever built started with one question:
-        <span class="italic gradient-text"> What should marketing look like five years from now?</span>
+        <span class="italic gradient-text"> What should marketing look like five years from now?!</span>
       </h2>
 
       <div class="space-y-6 text-lg text-stone-600 dark:text-stone-400 leading-relaxed">
