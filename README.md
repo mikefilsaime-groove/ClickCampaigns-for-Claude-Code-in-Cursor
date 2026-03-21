@@ -1,5 +1,12 @@
 # ClickCampaigns for Claude Code
 
+> **This repo has been archived.** Download the framework from [clickcampaigns.ai](https://clickcampaigns.ai/god-mode) using the God Mode VS Code extension or your account dashboard.
+
+---
+
+<details>
+<summary>Original README (archived)</summary>
+
 > Build production-ready marketing campaigns entirely inside Claude Code, Cursor, or any AI coding agent.
 
 **Alex**, your AI Campaign Manager, coordinates a team of 22 marketing specialists to create complete campaign assets: HTML funnel pages, email sequences, VSL scripts, ad copy, webinar slide decks, lead magnet PDFs, and more — all from natural language requests.
@@ -740,3 +747,5 @@ With a single conversation, Alex and the team can produce:
 ---
 
 *Built by Mike Filsaime. Powered by direct response marketing frameworks refined over 20+ years.*
+
+</details>
