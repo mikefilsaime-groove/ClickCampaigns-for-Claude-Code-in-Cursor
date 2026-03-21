@@ -28,12 +28,12 @@ The God Mode ecosystem consists of four components that work together:
 |---|-----------|------|------|---------|
 | 1 | **ClickCampaigns SaaS** | ClickCampaigns-ai | `server/`, `client/` | Web app + API + database (clickcampaigns.ai) |
 | 2 | **GodMode-App** (this repo) | GodMode-App | `/` (root) | Portable prompt framework (22 agents, 26 funnels, 25+ tasks) |
-| 3 | **God Mode Electron App** | ClickCampaigns-ai | `god-mode/` | Desktop shell with embedded SaaS webviews |
-| 4 | **VS Code Extension** | ClickCampaigns-ai | `extensions/clickcampaigns-god-mode/` | Editor-native control plane (**recommended path** for Cursor/VS Code) |
+| 3 | **God Mode Electron App** (Legacy) | ClickCampaigns-ai | `legacy-god-mode-electron-app/` | Desktop shell with embedded SaaS webviews — no longer actively maintained |
+| 4 | **VS Code Extension** | ClickCampaigns-ai | `GodMode-VSCode-extension/clickcampaigns-god-mode/` | Editor-native control plane (**the primary and recommended path**) |
 
 ### How they relate:
 
-- **Components 3 and 4** are two ways to do the same thing: authenticate, download this repo, and manage tokens. The extension is the recommended path for editor users; Electron stays for standalone desktop users.
+- **Component 4 (VS Code Extension)** is THE recommended way to authenticate, download this repo, and manage tokens. **Component 3 (Electron App) is legacy** and no longer actively maintained.
 - **This repo (Component 2)** is the framework that users clone/download and open in Claude Code or Cursor. It's what the AI agents actually interact with.
 - **Component 1 (SaaS)** is the backend that provides token auth, campaign data sync, protected skill files, and the web UI.
 
@@ -44,20 +44,20 @@ The God Mode ecosystem consists of four components that work together:
 **Location:** `/Users/mikefilsaime/GitHub/ClickCampaigns-ai`
 **GitHub:** `MonarchLabsLLC/clickcampaigns-ai` (private)
 
-ClickCampaigns-ai is the **SaaS platform** (web app + API + database) that powers clickcampaigns.ai. Inside it live both the Electron app and the VS Code extension.
+ClickCampaigns-ai is the **SaaS platform** (web app + API + database) that powers clickcampaigns.ai. Inside it live the legacy Electron app and the VS Code extension (the recommended path).
 
 ### What lives where:
 
 | Component | Repo | Path |
 |-----------|------|------|
 | Prompt engineering framework (this) | GodMode-App | `/` (root) |
-| God Mode Electron app | ClickCampaigns-ai | `god-mode/` |
-| VS Code extension | ClickCampaigns-ai | `extensions/clickcampaigns-god-mode/` |
+| God Mode Electron app (legacy) | ClickCampaigns-ai | `legacy-god-mode-electron-app/` |
+| VS Code extension (recommended) | ClickCampaigns-ai | `GodMode-VSCode-extension/clickcampaigns-god-mode/` |
 | SaaS backend (Express/Node) | ClickCampaigns-ai | `server/` |
 | SaaS frontend (React) | ClickCampaigns-ai | `client/` |
 | God Mode hub page (web) | ClickCampaigns-ai | `client/src/pages/god-mode.tsx` |
 | Extension download page | ClickCampaigns-ai | `client/src/pages/vscode-extension.tsx` |
-| Electron download page | ClickCampaigns-ai | `client/src/pages/god-mode-thank-you.tsx` |
+| Electron download page (legacy) | ClickCampaigns-ai | `client/src/pages/god-mode-thank-you.tsx` |
 | In-app user guide | ClickCampaigns-ai | `client/src/pages/god-mode-guide.tsx` |
 | CLI token management page | ClickCampaigns-ai | `client/src/pages/cli-auth.tsx` |
 | CI/CD build workflow (Electron) | ClickCampaigns-ai | `.github/workflows/god-mode-release.yml` |
@@ -75,7 +75,7 @@ There are three ways users get this repo:
 | Method | Where | How |
 |--------|-------|-----|
 | **VS Code Extension** (recommended) | Command palette → "God Mode: Download Framework Repo" | Extension downloads ZIP, extracts, writes `.clickcampaigns.json` with stored token |
-| **Electron App** | Sidebar → "Download Repo" | Electron downloads ZIP via IPC, extracts, writes token to `.clickcampaigns.json` |
+| **Electron App** (legacy) | Sidebar → "Download Repo" | Electron downloads ZIP via IPC, extracts, writes token to `.clickcampaigns.json` |
 | **Manual** | Terminal or browser | `git clone` or download ZIP from GitHub, manually create `.clickcampaigns.json` |
 
 All three methods download from: `https://github.com/ClickCampaigns/ClickCampaigns-for-Claude-Code/archive/refs/heads/main.zip`
@@ -94,7 +94,7 @@ ClickCampaigns.ai SaaS (/cli-auth page)
         │
         │  User generates cliauth-* token
         ▼
-VS Code Extension (SecretStorage)     OR     Electron App (electron-store)
+VS Code Extension (SecretStorage)     OR     Electron App (legacy, electron-store)
         │                                            │
         │  User pastes token                         │  User pastes token
         │  Stored in VS Code SecretStorage           │  Stored in electron-store
@@ -181,14 +181,16 @@ Written by the VS Code extension, Electron app, or setup wizard:
 
 ## Build & Release Pipeline
 
-### Electron App
+### Electron App (Legacy)
+
+> **Note:** The Electron app is legacy and no longer actively maintained. The VS Code extension is the recommended path.
 
 Built and released via GitHub Actions on the ClickCampaigns-ai repo.
 
 ```bash
 cd /Users/mikefilsaime/GitHub/ClickCampaigns-ai
 
-# 1. Bump version in god-mode/package.json
+# 1. Bump version in legacy-god-mode-electron-app/package.json
 # 2. Commit the change
 # 3. Tag and push:
 git tag godmode-v1.2.0
@@ -199,14 +201,14 @@ git push origin godmode-v1.2.0
 **Workflow:** `.github/workflows/god-mode-release.yml` → 3 parallel builds (Mac .dmg, Windows .exe, Linux .AppImage) → GitHub Release
 
 **Download proxy:** `GET /api/downloads/god-mode/:platform` → redirects to GitHub S3 CDN
-**Customer-facing download page:** `clickcampaigns.ai/god-mode-thank-you`
+**Customer-facing download page:** `clickcampaigns.ai/god-mode-thank-you` (legacy)
 
 ### VS Code Extension
 
 Published to **Open VSX** (for Cursor) and distributed as **`.vsix` sideload** (for VS Code and direct download).
 
 **Extension download page:** `clickcampaigns.ai/vscode-extension`
-**Source:** `ClickCampaigns-ai/extensions/clickcampaigns-god-mode/`
+**Source:** `ClickCampaigns-ai/GodMode-VSCode-extension/clickcampaigns-god-mode/`
 
 ---
 
@@ -234,12 +236,12 @@ Published to **Open VSX** (for Cursor) and distributed as **`.vsix` sideload** (
 │  ├─ cliAuthTokens table   (token, userId, expiry, revocation)   │
 │  └─ campaignTokens table  (token, campaignId, expiry)           │
 │                                                                   │
-│  god-mode/ (Electron App Source)                                 │
+│  legacy-god-mode-electron-app/ (Electron App — LEGACY)           │
 │  ├─ Main process: window mgmt, IPC, download, webview auth      │
 │  ├─ Renderer: React UI (AuthGate, Sidebar, pages + webviews)    │
 │  └─ Preload: 8 APIs via window.godmode                          │
 │                                                                   │
-│  extensions/clickcampaigns-god-mode/ (VS Code Extension)         │
+│  GodMode-VSCode-extension/clickcampaigns-god-mode/ (VS Code)    │
 │  ├─ Auth-first TreeView sidebar (activity bar)                   │
 │  ├─ SecretStorage for CLI + campaign tokens                      │
 │  ├─ Framework ZIP download + folder picker                       │
@@ -316,12 +318,12 @@ Published to **Open VSX** (for Cursor) and distributed as **`.vsix` sideload** (
 
 | File | Purpose |
 |------|---------|
-| `god-mode/package.json` | Electron app config (version, electron-builder) |
-| `god-mode/src/main/index.ts` | Main Electron process (IPC, download, auth) |
-| `god-mode/src/renderer/App.tsx` | React app router + webview integration |
-| `god-mode/src/renderer/components/AuthGate.tsx` | CLI token authentication screen |
-| `extensions/clickcampaigns-god-mode/package.json` | VS Code extension config |
-| `extensions/clickcampaigns-god-mode/src/extension.ts` | Extension entry point (TreeView, commands) |
+| `legacy-god-mode-electron-app/package.json` | Electron app config (legacy) |
+| `legacy-god-mode-electron-app/src/main/index.ts` | Main Electron process (legacy) |
+| `legacy-god-mode-electron-app/src/renderer/App.tsx` | React app router + webview integration (legacy) |
+| `legacy-god-mode-electron-app/src/renderer/components/AuthGate.tsx` | CLI token authentication screen (legacy) |
+| `GodMode-VSCode-extension/clickcampaigns-god-mode/package.json` | VS Code extension config (recommended) |
+| `GodMode-VSCode-extension/clickcampaigns-god-mode/src/extension.ts` | Extension entry point (TreeView, commands) |
 | `client/src/pages/god-mode.tsx` | God Mode hub page (hidden, opened by extension) |
 | `client/src/pages/vscode-extension.tsx` | Extension download page |
 | `client/src/pages/god-mode-thank-you.tsx` | Electron download page |
